@@ -1,0 +1,6 @@
+{
+  "css.completion.completePropertyWithSemicolon": true,
+  "less.completion.completePropertyWithSemicolon": true,
+  "scss.completion.completePropertyWithSemicolon": true,
+  "javascript.format.insertSpaceAfterSemicolonInForStatements": false
+}
