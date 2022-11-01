@@ -47,3 +47,8 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 --------------------------------------------------------------------
 Para colocar o meu site no Firebase com atualizações no github, eu segui os passos desse vídeo => https://youtu.be/eLfvY48lJQA
+
+--------------------------------------------------------------------
+Vídeos que eu testei para criar a applicação
+https://youtu.be/A6q2TTO2yr0 = crud que para mim não deu certo. 
+https://youtu.be/glvQ6PvbfzY
