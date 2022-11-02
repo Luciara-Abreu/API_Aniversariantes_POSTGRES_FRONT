@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #d8c3c3;
+  ;
+}
+
+body,
+#root {
+  height: 100%;
+  background-color: #f4f4f4;
+}
