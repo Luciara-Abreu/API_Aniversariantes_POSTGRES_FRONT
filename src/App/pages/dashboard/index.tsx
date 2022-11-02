@@ -1,31 +1,36 @@
-import { useRef } from 'react';
+//import { useRef } from 'react';
 import { useHistory } from 'react-router-dom';
-import { TableContainer } from './styles';
+import Header from '../../components/Header';
+import { Container, Body } from './styles';
 
 export const Dashboard = () => {
   const history = useHistory();
 
   const handleClick = () => {
     history.push('/entrar')
-  }
-  
-
-  
+  }  
 
   return (
-    <TableContainer>      
-      <div>        
-        <button>Agenda Aniversariantes</button>
-      </div>
-      
+    <Container>     
+      <Header /> 
 
-
-
+      <Body>        
+      <div>     
+      <h3> TESSSTETESSSTE
+      TESSSTE
+      TESSSTE TESSSTETESSSTE
+      TESSSTE TESSSTETESSSTETESSSTE
+      TESSSTE TESSSTETESSSTETESSSTETESSSTE
+      TESSSTE
+      TESSSTETESSSTETESSSTETESSSTETESSSTETESSSTETESSSTE
+      TESSSTETESSSTETESSSTETESSSTETESSSTETESSSTETESSSTETESSSTE </h3>
+      </div>  
+        
       <div>        
         <button onClick={handleClick}>Pagina de Login</button>
       </div>
-    </TableContainer>
-
+      </Body>
+    </Container>
   );
 }
       // <div>
