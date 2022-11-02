@@ -17,9 +17,7 @@ const Header: React.FC = () => {
         <Button><button onClick={handleClick}>Top 10</button></Button>
         <Button><button onClick={handleClick}>Consulta por Mes</button></Button>
         <Button><button onClick={handleClick}>Add Aniversariantes</button></Button>  
-  </ButtonContainer>
-  
-  
+  </ButtonContainer>  
 </HeaderContainer>
   )
 }
