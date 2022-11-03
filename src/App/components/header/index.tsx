@@ -1,6 +1,8 @@
 import React from "react";
-import { ButtonContainer, HeaderContainer, Button } from "./styles";
+
 import { useHistory } from 'react-router-dom';
+import { Button, ButtonContainer, HeaderContainer } from "./styles";
+import ButtonAnel from '../buttons/anel/index'
 // https://youtu.be/AXKc4WhgLSA - criar header com typeScript
 
 const Header: React.FC = () => {
@@ -13,10 +15,13 @@ const Header: React.FC = () => {
   return (
 <HeaderContainer>
   <h1 className="header-logo">** Agenda Aniversariantes **</h1>
-  <ButtonContainer>        
+  <ButtonContainer>  
+    <ButtonAnel />     
+      
         <Button><button onClick={handleClick}>Top 10</button></Button>
-        <Button><button onClick={handleClick}>Consulta por Mes</button></Button>
-        <Button><button onClick={handleClick}>Add Aniversariantes</button></Button>  
+        <Button><button onClick={handleClick}>Consulta por mês</button></Button>
+        <Button><button onClick={handleClick}>Add aniversariantes</button></Button>  
+
   </ButtonContainer>  
 </HeaderContainer>
   )

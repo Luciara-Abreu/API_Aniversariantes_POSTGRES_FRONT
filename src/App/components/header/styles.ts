@@ -9,9 +9,8 @@ const HeaderContainer = styled.div`
 `
 const ButtonContainer = styled.div`
   width: 100%;
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr 1fr;
-  justify-content: space-between;
   gap: 1rem;
   //background: red; // cor para visualização de exemplo
 `

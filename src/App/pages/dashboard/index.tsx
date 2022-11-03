@@ -1,5 +1,5 @@
 //import { useRef } from 'react';
-import Header from '../../components/Header';
+import Header from '../../components/header/index';
 import { ContainerDash, Body } from './styles';
 
 export const Dashboard = () => {
