@@ -52,4 +52,31 @@ etapa muito importante é fazer o build do projeto == yarn build
 --------------------------------------------------------------------
 Vídeos que eu testei para criar a applicação
 https://youtu.be/A6q2TTO2yr0 = crud que para mim não deu certo. 
-https://youtu.be/glvQ6PvbfzY
+https://youtu.be/glvQ6PvbfzY = 
+https://www.youtube.com/watch?v=AXKc4WhgLSA = Criar Header
+----------------------------------------------------------------------
+Sobre altura total e largura total.
+Em vez de px, em, rem ou pt utilizaremos vh e vw
+
+vh: view height, ou seja, a altura da view (tela) do usuário;
+vw: view width, ou seja, a largura total da view (tela) do usuário;
+https://www.horadecodar.com.br/2020/03/19/como-fazer-uma-div-com-altura-e-largura-da-tela-do-usuario/
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------

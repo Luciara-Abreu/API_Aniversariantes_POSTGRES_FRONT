@@ -1,19 +1,17 @@
 import styled from 'styled-components'
 
-const Container = styled.div`
-width: 100%;  
-box-sizing: border-box;
-background: black;
-
+const ContainerDash = styled.div`
+  height: 100vh;
+  width: 100vw;
 `
 
 const Body = styled.div`
-  width: 100%;  
+  width: 100%
 `
 
 
 
 export {
-  Container,
+  ContainerDash,
   Body
 }
