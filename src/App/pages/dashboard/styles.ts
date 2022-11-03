@@ -9,8 +9,6 @@ const Body = styled.div`
   width: 100%
 `
 
-
-
 export {
   ContainerDash,
   Body
