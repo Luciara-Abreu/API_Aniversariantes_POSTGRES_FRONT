@@ -8,7 +8,7 @@ export const Dashboard = () => {
     <ContainerDash>     
       <Header /> 
       <Body>       
-      <h3> TESSSTETESSSTE TESSSTESTE TESSSTETESSSTE </h3>
+      <h3> AQUI VAI UMA TABELA </h3>
       </Body>
     </ContainerDash>
   );

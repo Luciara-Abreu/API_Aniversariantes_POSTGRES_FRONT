@@ -54,6 +54,7 @@ Vídeos que eu testei para criar a applicação
 https://youtu.be/A6q2TTO2yr0 = crud que para mim não deu certo. 
 https://youtu.be/glvQ6PvbfzY = 
 https://www.youtube.com/watch?v=AXKc4WhgLSA = Criar Header
+https://edrodrigues.com.br/blog/20-incriveis-botoes-animados-de-css-puro/ = botões
 ----------------------------------------------------------------------
 Sobre altura total e largura total.
 Em vez de px, em, rem ou pt utilizaremos vh e vw
