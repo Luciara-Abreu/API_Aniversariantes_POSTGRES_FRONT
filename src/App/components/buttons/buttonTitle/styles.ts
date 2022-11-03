@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StylesButton = styled.div`
-width: 200%;
+width: 85%;
 
 body {
   display: -webkit-box;
@@ -28,7 +28,10 @@ body {
     font-size: 3rem;
   }
 }
+// o botão era amarelo #f1c40f
+
 .btn {
+  width: 100%; // af72dd
   box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -37,7 +40,7 @@ body {
   border: 2px solid #e74c3c;
   border-radius: 0.6em;
   color: #e74c3c;
-  cursor: pointer;
+  //cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -56,7 +59,7 @@ body {
 }
 .btn:hover, .btn:focus {
   color: #fff;
-  outline: 0;
+  outline: 0.05;
 }
 
 .fourth {

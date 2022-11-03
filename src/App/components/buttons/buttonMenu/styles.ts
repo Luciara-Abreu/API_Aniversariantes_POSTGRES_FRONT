@@ -1,33 +1,34 @@
 import styled from "styled-components";
 
 const BTrird = styled.div`
-
-  display: -webkit-box;
+width: 18.3%;
+body {
+    display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   -webkit-box-align: center;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center;
-
+  -ms-flex-line-pack: center;
+  lign-content: center;
 
 @media screen and (max-width: 600px) {
   h1 {
     font-size: 3rem;
   }
 }
-
+}
 .btn {
+  width: 100%;
   box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -46,7 +47,6 @@ const BTrird = styled.div`
   font-size: 0.6rem;
   font-weight: 100;
   line-height: 1;
-  //margin: 1px;
   padding: 1.2em 2.8em;
   text-decoration: none;
   text-align: center;
