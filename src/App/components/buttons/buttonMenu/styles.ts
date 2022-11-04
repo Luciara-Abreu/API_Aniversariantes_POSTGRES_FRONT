@@ -1,58 +1,20 @@
 import styled from "styled-components";
 
 const BTrird = styled.div`
-width: 18.3%;
-body {
-    display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  lign-content: center;
+  cursor: none;
 
-@media screen and (max-width: 600px) {
-  h1 {
-    font-size: 3rem;
-  }
-}
-}
 .btn {
-  width: 100%;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  display: flex;
   background-color: transparent;
   border: 2px solid #e74c3c;
   border-radius: 0.6em;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  font-size: 0.6rem;
-  font-weight: 100;
+  color: #e74c3c;
   line-height: 1;
-  padding: 1.2em 2.8em;
-  text-decoration: none;
-  text-align: center;
+  padding: 0.5em 3.3em 0.5em 3.3em;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 100;
+  font-weight: 600;
 }
 .btn:hover, .btn:focus {
   color: #fff;
@@ -70,7 +32,6 @@ body {
 .third:hover {
   box-shadow: 0 0 10px 0 #af72dd inset, 0 0 10px 4px #af72dd;
 }
-
 `
 export {
   BTrird
