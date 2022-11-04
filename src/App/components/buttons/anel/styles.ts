@@ -23,7 +23,6 @@ const StylesButtonAnel = styled.button`
   border-radius: 1000px;
   box-shadow: 12px 12px 24px rgba(79,209,197,.64);
   transition: all 0.3s ease-in-out 0s;
-  cursor: pointer;
   outline: none;
   position: relative;
   padding: 10px;

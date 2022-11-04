@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const BTrird = styled.div`
   display: flex;
-  cursor: none;
+
 
 .btn {
   display: flex;
@@ -15,6 +15,8 @@ const BTrird = styled.div`
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
+  cursor: pointer;
+
 }
 .btn:hover, .btn:focus {
   color: #fff;
