@@ -4,7 +4,7 @@ import { Routes } from "../src/App/routes";
 
 export const App = () => {
   return (
-    <div>
+    <div className="ef-glow">
       <Routes />
     </div>
   );

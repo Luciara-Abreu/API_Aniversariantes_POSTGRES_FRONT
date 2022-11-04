@@ -4,7 +4,7 @@ const HeaderContainer = styled.div`
   margin: 0;
   padding: 0.3% 0.3%; 
   box-sizing: border-box;
-  background: #d8c3c3;  
+  //background: #d8c3c3;  
   box-sizing: border-box;
 `
 const ContainerMenu = styled.div`

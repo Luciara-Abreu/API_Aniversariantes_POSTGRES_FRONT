@@ -18,8 +18,7 @@ const Header: React.FC = () => {
   <Date>     
   <ButtonLogoAnel/>  
   </Date>
-  </ContainerUp> 
-  
+  </ContainerUp>   
     <ContainerMenu>  
     <ButtonTrird width={"100%"} heigth={""}>TOP 10</ButtonTrird>
     <ButtonTrird width={"100%"} heigth={""}>CONSULTA MÊS</ButtonTrird>

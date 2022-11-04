@@ -3,7 +3,6 @@ import styled from "styled-components";
 const BTrird = styled.div`
   display: flex;
 
-
 .btn {
   display: flex;
   background-color: transparent;
@@ -15,6 +14,7 @@ const BTrird = styled.div`
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
+  text-shadow:0px 0px 3px #f05be6;
   cursor: pointer;
 
 }
@@ -28,7 +28,6 @@ const BTrird = styled.div`
   color: #fff;
 
   box-shadow: 0 0 40px 40px #af72dd  inset, 0 0 0 0 #af72dd;
-  -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
 }
 .third:hover {
