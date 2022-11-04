@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonLogoAnel from "../buttons/anel";
+import ButtonLogoAnel from "../buttons/anelDate";
 import ButtonTrird from "../buttons/buttonMenu";
 import ButtonTitle from "../buttons/buttonTitle";
 

@@ -9,7 +9,7 @@ const HeaderContainer = styled.div`
 `
 const ContainerMenu = styled.div`
   width: 100%;
-  margin: 3% 0 0.5% 0;
+  margin: 1% 0 1% 0;
   display: flex;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0.2rem;
