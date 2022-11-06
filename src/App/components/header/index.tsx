@@ -1,4 +1,5 @@
 import React from "react";
+import addUsers from "../../pages/addUsers";
 import ButtonLogoAnel from "../buttons/anelDate";
 import ButtonTrird from "../buttons/buttonMenu";
 import ButtonTitle from "../buttons/buttonTitle";
@@ -21,13 +22,16 @@ const Header: React.FC = () => {
   </ContainerUp>   
     <ContainerMenu>  
     <ButtonTrird width={"100%"} heigth={""}>TOP 10</ButtonTrird>
-    <ButtonTrird width={"100%"} heigth={""}>CONSULTA MÊS</ButtonTrird>
     <ButtonTrird width={"100%"} heigth={""}>ADD ANIVERSARIANTES</ButtonTrird>
+    <ButtonTrird width={"100%"} heigth={""}>CONSULTA MÊS</ButtonTrird>
   </ContainerMenu>  
     </HeaderContainer>
   )
 }
 
 export default Header
-//<button onClick={handleClick}>Consulta por mês</button></Button>
-//<h1 className="header-logo">** Agenda Aniversariantes **</h1>
+/*<button onClick={handleClick}>Consulta por mês</button></Button>
+<h1 className="header-logo">** Agenda Aniversariantes **</h1>
+
+
+*/

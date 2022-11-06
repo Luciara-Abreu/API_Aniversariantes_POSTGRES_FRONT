@@ -1,16 +1,18 @@
 //import { useRef } from 'react';
+import CrudFireBase from '../../bd/crudFirebase';
 import Header from '../../components/header/index';
-import { ContainerDash, Body } from './styles';
+import { Container, Body} from '../styles';
 
 export const Dashboard = () => {
 
   return (
-    <ContainerDash>     
+    <Container>     
       <Header /> 
       <Body>       
-      <h3> AQUI VAI UMA TABELA </h3>
+      <h1> AQUI VAI UMA TABELA </h1>      
+        <CrudFireBase />    
       </Body>
-    </ContainerDash>
+    </Container>
   );
 }
       // <div>
