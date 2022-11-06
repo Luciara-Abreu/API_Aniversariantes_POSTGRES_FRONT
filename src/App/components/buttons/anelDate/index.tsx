@@ -1,6 +1,5 @@
 import React from  'react'
 import { WrapButtonAnel, StylesButtonAnel} from "./styles";
-import { useHistory } from 'react-router-dom';
 
 type Props = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> & {}
 
@@ -11,15 +10,9 @@ const ButtonLogoAnel: React.FC = (props: Props) => {
   var ano = data.getFullYear()
   const dataAtual = dia + '/' + mes + '/' + ano
 
-  const history = useHistory();
-  const handleClick = () => {
-    history.push('/entrar')
-  }  
-      //<ToDate />
-
   return (
     <WrapButtonAnel>
-      <StylesButtonAnel className="button" onClick={handleClick}>
+      <StylesButtonAnel className="button">
       {dataAtual}
       </StylesButtonAnel>
     </WrapButtonAnel>
