@@ -1,7 +1,8 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
+import { ContainerButton } from '../stlyles.ts';
 import './styles'
-import { BTrird } from './styles'
+
 
 type Props = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> & {
   width: string;
@@ -17,10 +18,9 @@ const ConsultaMesButton = (props:Props) =>{
   }  
 
   return (
-<BTrird>
+<ContainerButton>
 <button {...props}  className="btn third" onClick={handleClick}/>
-
-</BTrird>
+</ContainerButton>
   )
 }
 
