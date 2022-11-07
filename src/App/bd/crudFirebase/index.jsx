@@ -10,6 +10,7 @@ const CrudFireBase = () => {
   const db = getFirestore(firebaseConfig)
   const usersCollectionRef = collection(db, "users")
 
+  // trás todos os dados que estão cadastrados no banco
   useEffect(() => {
     const getUsers = async () => {
       const data = await getDocs(usersCollectionRef)

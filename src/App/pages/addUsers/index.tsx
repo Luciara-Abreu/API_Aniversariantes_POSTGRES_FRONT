@@ -15,6 +15,7 @@ const AddUsers: React.FC = () => {
   const db = getFirestore(firebaseConfig)
   const usersCollectionRef = collection(db, "users")
   
+  //Add novos usuários no  banco de dados
   async function creatUsers() {    
     const user = await addDoc(usersCollectionRef,{
       name, email, birthDate,fone
