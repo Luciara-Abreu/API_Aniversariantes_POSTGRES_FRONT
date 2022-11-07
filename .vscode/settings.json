@@ -4,6 +4,7 @@
   "scss.completion.completePropertyWithSemicolon": true,
   "javascript.format.insertSpaceAfterSemicolonInForStatements": false,
   "cSpell.words": [
+    "cadastrados",
     "Trird"
   ]
 }
