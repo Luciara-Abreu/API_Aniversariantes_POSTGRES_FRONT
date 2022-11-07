@@ -1,8 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import { ContainerButton } from '../stlyles.ts';
-
-
+import { ContainerButton } from '../stlyles';
 
 type Props = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> & {
   width: string;
