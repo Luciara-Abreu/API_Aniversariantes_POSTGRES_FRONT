@@ -9,7 +9,7 @@ export const Dashboard = () => {
     <Container>     
       <Header /> 
       <Body>       
-      <h1> AQUI VAI UMA TABELA </h1>      
+      <h1> Aqui vai uma tabela com os aniversariantes da semana </h1>      
         <CrudFireBase />    
       </Body>
     </Container>

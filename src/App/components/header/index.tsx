@@ -1,10 +1,14 @@
 import React from "react";
-import addUsers from "../../pages/addUsers";
 import ButtonLogoAnel from "../buttons/anelDate";
-import ButtonTrird from "../buttons/buttonMenu";
 import ButtonTitle from "../buttons/buttonTitle";
+import AddUserButton from "../buttons/buttonMenu/buttonAddUser";
+import ConsultaMesButton from "../buttons/buttonMenu/buttonConultaMes";
+import Top10Button from "../buttons/buttonMenu/buttonTop10";
+
 
 import { Title, Date, ContainerMenu, HeaderContainer, ContainerUp } from "./styles";
+import DashboardButton from "../buttons/buttonMenu/buttonDash";
+import LoginButton from "../buttons/buttonMenu/buttonLogin";
 
 // https://youtu.be/AXKc4WhgLSA - criar header com typeScript
 
@@ -21,17 +25,14 @@ const Header: React.FC = () => {
   </Date>
   </ContainerUp>   
     <ContainerMenu>  
-    <ButtonTrird width={"100%"} heigth={""}>TOP 10</ButtonTrird>
-    <ButtonTrird width={"100%"} heigth={""}>ADD ANIVERSARIANTES</ButtonTrird>
-    <ButtonTrird width={"100%"} heigth={""}>CONSULTA MÊS</ButtonTrird>
+    <DashboardButton width={"100%"} heigth={""}>Dashboar</DashboardButton>
+    <Top10Button width={"100%"} heigth={""}>TOP 10</Top10Button>
+    <ConsultaMesButton width={"100%"} heigth={""}>CONSULTA MÊS</ConsultaMesButton>
+    <AddUserButton width={"100%"} heigth={""}>ADD ANIVERSARIANTES</AddUserButton>
+    <LoginButton width={"100%"} heigth={""}>Login</LoginButton>
   </ContainerMenu>  
     </HeaderContainer>
   )
 }
 
 export default Header
-/*<button onClick={handleClick}>Consulta por mês</button></Button>
-<h1 className="header-logo">** Agenda Aniversariantes **</h1>
-
-
-*/

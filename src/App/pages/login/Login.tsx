@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import Header from '../../components/header';
+import { Body, Container } from '../styles';
 
 export const Login = () => {
   const history = useHistory();
@@ -17,15 +19,6 @@ export const Login = () => {
     console.log(password)
   }, [email, password]);
 
-  /**
-   * Se eu coloco esse if fora do useEffect a cada letra digitada nos campos de
-   * input da página ele ia rodar o if e o else perguntando para o usuário se 
-   * ele quer logar. 
-   * Dentro do useEffect, por causa do segundo paramentro que é um array que pode 
-   * ou não ser vazio, ele só vai fazer essa função uma unica vez. 
-   * Obs.: Se usarmos o useEffect sem o segundo parametro ele irá se comportar 
-   * da mesma maneira que o if e else sem o useEffect.
-   */
   useEffect(() => {
     if (window.confirm('Você deseja logar?')) {
       console.log('Sim')
@@ -38,15 +31,6 @@ export const Login = () => {
     console.log(email, password)
   }, [email, password])
 
-  /* 
-  useEffect(() => {
-    console.log(email)
-  }, [email])
-
-  useEffect(() => {
-    console.log(password)
-  }, [password])
- */
 
   const emailLength = useMemo(() => {
     console.log('Executou')
@@ -58,8 +42,13 @@ export const Login = () => {
   }
 
   return (
-    <div>
-      <div>
+    
+    <Container>     
+      <Header /> 
+      <Body>       
+      <h1> Área de Login </h1>     
+
+            <div>
         <form action="">
 
           <label htmlFor="">
@@ -95,7 +84,9 @@ export const Login = () => {
       <p>Login</p>
       <div>
         <button onClick={handleClick}>Pagina inicial</button>
-      </div>
-    </div>
+      </div> 
+      </Body>
+    </Container>
+
   )
 }
