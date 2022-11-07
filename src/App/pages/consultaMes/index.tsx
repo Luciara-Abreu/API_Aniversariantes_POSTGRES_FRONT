@@ -8,8 +8,7 @@ const ConsultaMes = () => {
     <Container>     
       <Header /> 
       <Body>       
-      <h1> Aqui mostrará uma tabela de aniversariantes conforme mês selecionado </h1>      
-
+      <h1> Aqui mostrará uma tabela de aniversariantes conforme mês selecionado </h1>    
       </Body>
     </Container>
   );

@@ -8,6 +8,7 @@ const EditPage = () => {
     <Container>     
       <Header /> 
       <Body>    
+      <h1> Aqui vai mostrar campos para deletar ou editar dados </h1>    
         <EditUsers />    
       </Body>
     </Container>

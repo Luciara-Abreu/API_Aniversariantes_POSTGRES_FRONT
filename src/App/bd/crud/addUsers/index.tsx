@@ -1,9 +1,7 @@
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import firebaseConfig from '../../bd/config/firebase';
-import Header from '../../components/header';
-import { Body, Container } from '../ZStyles';
+import firebaseConfig from '../../config/firebase';
 
 
 const AddUsers: React.FC = () => {
@@ -29,9 +27,8 @@ const AddUsers: React.FC = () => {
     console.log(user)
   }
   return (
-    <Container>
-      <Header />
-      <Body> 
+    <div>
+      <div> 
         <input value={name} onChange={e => setName(e.target.value)}type="text" placeholder='Nome' />
         <input value={email} onChange={e => setEmail(e.target.value)}type="text" placeholder='E-mail' />
         <input value={birthDate} onChange={e => setBirthDate(e.target.value)}type="text" placeholder='Data de Nascimento' />
@@ -41,8 +38,8 @@ const AddUsers: React.FC = () => {
         <button onClick={creatUsers}>Add Aniversariantes </button>
         <button onClick={handleClick}>Editar Aniversariantes </button>
       </div>   
-      </Body>   
-    </Container>
+      </div>   
+    </div>
   )
 }
 

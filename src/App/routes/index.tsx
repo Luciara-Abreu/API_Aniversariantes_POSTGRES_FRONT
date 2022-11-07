@@ -1,11 +1,11 @@
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Login } from '../pages';
-import AddUsers from '../pages/addUsers';
 import consultaMes from '../pages/consultaMes';
 import { Dashboard } from '../pages/dashboard';
 import EditUsers from '../pages/editPage';
 import Top10 from '../pages/top10';
+import AddPage from '../pages/addPage';
 
 export const Routes = () => {
   return (
@@ -16,7 +16,7 @@ export const Routes = () => {
         <Route path='/entrar' exact component={Login} />
         <Route path='/top10' exact component={Top10} />
         <Route path='/consultaMes' exact component={consultaMes} />
-        <Route path='/addUsers' exact component={AddUsers} />
+        <Route path='/addPage' exact component={AddPage} />
         <Route path='/editar' exact component={EditUsers} />
 
 

@@ -11,7 +11,7 @@ const AddUserButton = (props:Props) =>{
   
   const history = useHistory();
   const handleClick = () => {
-    history.push('/addUsers')
+    history.push('/addPage')
   }  
 
   return (
