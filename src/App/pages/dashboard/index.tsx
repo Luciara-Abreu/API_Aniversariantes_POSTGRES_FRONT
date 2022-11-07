@@ -1,7 +1,7 @@
 //import { useRef } from 'react';
-import CrudFireBase from '../../bd/crudFirebase';
+import ListUsers from '../../bd/crud/listUsers';
 import Header from '../../components/header/index';
-import { Container, Body} from '../styles';
+import { Container, Body} from '../ZStyles';
 
 export const Dashboard = () => {
 
@@ -10,7 +10,7 @@ export const Dashboard = () => {
       <Header /> 
       <Body>       
       <h1> Aqui vai uma tabela com os aniversariantes da semana </h1>      
-        <CrudFireBase />    
+        <ListUsers />    
       </Body>
     </Container>
   );

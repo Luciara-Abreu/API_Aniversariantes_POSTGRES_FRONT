@@ -1,17 +1,17 @@
-//import { useRef } from 'react';
+import EditUsers from '../../bd/crud/editUsers';
 import Header from '../../components/header/index';
 import { Container, Body} from '../ZStyles';
 
-const Top10 = () => {
+const EditPage = () => {
 
   return (
     <Container>     
       <Header /> 
-      <Body>       
-      <h1> Aqui mostrará os 10 proximos aniversariantes do mês </h1>      
+      <Body>    
+        <EditUsers />    
       </Body>
     </Container>
   );
 }
 
-export default Top10
+export default EditPage

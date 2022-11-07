@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import Header from '../../components/header';
-import { Body, Container } from '../styles';
+import { Body, Container } from '../ZStyles';
 
 export const Login = () => {
   const history = useHistory();

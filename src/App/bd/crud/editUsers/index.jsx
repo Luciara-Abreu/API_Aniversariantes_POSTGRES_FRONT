@@ -1,11 +1,9 @@
-
-import { collection, getDocs, getFirestore } from "firebase/firestore"
+import { collection, getDocs, getFirestore, doc, deleteDoc } from "firebase/firestore"
 import { useState, useEffect } from "react"
-import firebaseConfig from "../config/firebase";
+import firebaseConfig from "../../config/firebase";
 // https://www.youtube.com/watch?v=gqbXnYhvB5E&t=264s
 
-const CrudFireBase = () => {
-
+const EditUsers = () => {
   const [users, setUsers] = useState([])
   const db = getFirestore(firebaseConfig)
   const usersCollectionRef = collection(db, "users")
@@ -21,14 +19,21 @@ const CrudFireBase = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  // Deleta aniversriantes
+  async function deleteUser(id) {
+    const userDoc = doc(db, 'users', id)
+    await deleteDoc(userDoc)
+  }
+
   return (
     <div>
       <ul>
         {users.map(users => {
           return (
             <div>
-              <li>{users.name}</li>
-              <li>{users.birthDate}</li>
+              <li>{users.name}
+                <button onClick={() => deleteUser(users.id)}>Deletar Aniversariante</button>
+              </li>
             </div>
           )
         })}
@@ -36,11 +41,4 @@ const CrudFireBase = () => {
     </div>
   )
 }
-export default CrudFireBase
-/*
-<h1>Nome: {name}{setName}</h1> 
-<h1>E-mail: {email}{setEmail}</h1>
-<h1>Data de nascimento: {birthDate}{setBirthDate}</h1>
-<h1>diversos: {users} {setUsers}</h1>
-
-*/
+export default EditUsers

@@ -1,11 +1,17 @@
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import firebaseConfig from '../../bd/config/firebase';
 import Header from '../../components/header';
-import { Body, Container } from '../styles';
+import { Body, Container } from '../ZStyles';
 
 
 const AddUsers: React.FC = () => {
+
+  const history = useHistory();
+  const handleClick = () => {
+    history.push('/editar')
+  }  
   
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -33,7 +39,7 @@ const AddUsers: React.FC = () => {
       
       <div>
         <button onClick={creatUsers}>Add Aniversariantes </button>
-
+        <button onClick={handleClick}>Editar Aniversariantes </button>
       </div>   
       </Body>   
     </Container>
