@@ -22,14 +22,11 @@ const ContainerUp =styled.div`
   gap: 0.2rem;
 `
 const Title =styled.div`
-width: 100%;
 display: flex;
 justify-content: flex-start;
 gap: 2rem;
 `
 const Date =styled.div`
-width: 50%;
-margin: 1%;
 display: flex;
 justify-content: center;
 gap: 1rem;

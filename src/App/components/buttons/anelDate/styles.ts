@@ -2,15 +2,15 @@ import styled from 'styled-components'
 
 
 const WrapButtonAnel = styled.div`
-  height: 100%;
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center
+  margin: auto;
+  padding-left: 15px;
   `
 
 const StylesButtonAnel = styled.button`
-  min-width: 150px;
-  min-height: 10px;
+  width: 100px;
+  height: 30px;
   font-family: 'Nunito', sans-serif;
   font-size: 12px;
   text-transform: uppercase;
