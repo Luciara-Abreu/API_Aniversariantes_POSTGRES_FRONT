@@ -22,12 +22,10 @@ const ContainerUp =styled.div`
 `
 const Title =styled.div`
 display: flex;
-background: blue;
 `
 const Date =styled.div`
 display: flex;
 justify-content: center;
-background: red;
 `
 export {
   HeaderContainer,
