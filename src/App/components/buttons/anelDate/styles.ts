@@ -9,7 +9,6 @@ const WrapButtonAnel = styled.div`
   `
 
 const StylesButtonAnel = styled.button`
-  width: 100px;
   height: 30px;
   font-family: 'Nunito', sans-serif;
   font-size: 12px;
@@ -18,7 +17,6 @@ const StylesButtonAnel = styled.button`
   font-weight: 700;
   color: #313133;
   background: #4FD1C5;
-  //background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
   border: none;
   border-radius: 1000px;
   box-shadow: 12px 12px 24px rgba(79,209,197,.64);
@@ -26,6 +24,22 @@ const StylesButtonAnel = styled.button`
   outline: none;
   position: relative;
   padding: 10px;
+
+  @media (max-width:900px) and (min-width:700px)  {
+  width: 15vw;
+  font:normal 5px;
+}
+@media (max-width:700px) and (min-width:500px)  {
+  width: 15vw;
+  font:normal 5px;
+  padding: 5px 3px 3px 5px;
+}
+@media (max-width:500px) and (min-width:200px)  {
+  width: 25vw;
+  font:normal 5px;
+  padding: 5px 3px 3px 5px;
+}
+
 
 &:hover, &:focus {
   color: #313133;

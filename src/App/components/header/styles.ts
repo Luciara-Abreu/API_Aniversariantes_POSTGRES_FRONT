@@ -19,17 +19,15 @@ const ContainerUp =styled.div`
   width: 100%;
   display: flex;
   grid-template-columns: 1fr 1fr;
-  gap: 0.2rem;
 `
 const Title =styled.div`
 display: flex;
-justify-content: flex-start;
-gap: 2rem;
+background: blue;
 `
 const Date =styled.div`
 display: flex;
 justify-content: center;
-gap: 1rem;
+background: red;
 `
 export {
   HeaderContainer,

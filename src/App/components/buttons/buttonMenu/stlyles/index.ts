@@ -17,6 +17,25 @@ const ContainerButton = styled.div`
   text-shadow:0px 0px 3px #f05be6;
   cursor: pointer;
 
+  @media (max-width:900px) and (min-width:700px)  {
+  width: 17vw;
+  font:normal 5px;
+  padding: 8px 20px 5px 20px;
+  justify-content: center;
+}
+@media (max-width:700px) and (min-width:500px)  {
+  width: 19vw;
+  font:normal 4px;
+  padding: 8px 20px 5px 20px;
+  justify-content: center;
+}
+@media (max-width:500px) and (min-width:200px)  {
+  width: 26vw;
+  font:normal 4px;
+  padding: 8px 20px 5px 20px;
+  justify-content: center;
+}
+
 }
 .btn:hover, .btn:focus {
   color: #fff;
