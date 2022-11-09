@@ -1,6 +1,6 @@
 import Header from '../../components/header';
 import { Container, Body, ButtonGoogle } from '../stylesGlobal/styles';
-import AuthGoogle from '../../services/auth/index'
+import AuthGoogle from '../../services/Api/index'
 
 
 export const Login = () => {
