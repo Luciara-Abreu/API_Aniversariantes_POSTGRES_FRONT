@@ -1,20 +1,14 @@
 import Header from '../../components/header';
-import { Container, Body, ButtonGoogle } from '../_Styles/styles';
-import { useContext } from "react";
-import { AuthGoogleContext } from "../../contexts/authGoogle";
+import { Container, Body, ButtonGoogle } from '../stylesGlobal/styles';
+
 
 export const Login = () => {
-  const { signInGoogle, signed } = useContext(AuthGoogleContext);
-  async function handleLoginFromGoogle() {
-    await signInGoogle();
-    console.log(signed)
-  }
 
   return (
     <Container>
       <Header />
       <Body>
-        <ButtonGoogle onClick={handleLoginFromGoogle}>Logar com o Google</ButtonGoogle>
+        <ButtonGoogle>Logar com o Google</ButtonGoogle>
       </Body>
     </Container>
   )
