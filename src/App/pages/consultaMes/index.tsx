@@ -1,6 +1,6 @@
 //import { useRef } from 'react';
 import Header from '../../components/header/index';
-import { Container, Body} from '../ZStyles';
+import { Container, Body } from '../_Styles/styles';
 
 const ConsultaMes = () => {
 

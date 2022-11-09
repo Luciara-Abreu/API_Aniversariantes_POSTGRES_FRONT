@@ -1,7 +1,7 @@
 //import { useRef } from 'react';
-import AddUsers from '../../bd/crud/addUsers';
+import AddUsers from '../../contexts/addUsers';
 import Header from '../../components/header/index';
-import { Container, Body} from '../ZStyles';
+import { Container, Body } from '../_Styles/styles';
 
 export const AddPage = () => {
 

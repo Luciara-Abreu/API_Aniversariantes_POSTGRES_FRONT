@@ -1,10 +1,45 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import Header from '../../components/header';
-import { Body, Container } from '../ZStyles';
+import { Container, Body, ButtonGoogle } from '../_Styles/styles';
+import { useContext } from "react";
+import { AuthGoogleContext } from "../../contexts/authGoogle";
 
 export const Login = () => {
-  const history = useHistory();
+  const { signInGoogle, signed } = useContext(AuthGoogleContext);
+  async function handleLoginFromGoogle() {
+    await signInGoogle();
+    console.log(signed)
+  }
+
+  return (
+    <Container>
+      <Header />
+      <Body>
+        <ButtonGoogle onClick={handleLoginFromGoogle}>Logar com o Google</ButtonGoogle>
+      </Body>
+    </Container>
+  )
+}
+
+
+/*
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read: if true;
+      allow write:if request.auth.uid != null;          
+    }
+  }
+}*/
+
+/**
+ * import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+  import { useHistory } from 'react-router-dom';
+  import Header from '../../components/header';
+  import { Body, Container } from '../ZStyles';
+
+
+ * const history = useHistory();
 
   const inputPasswordRef = useRef<HTMLInputElement>(null);
 
@@ -89,4 +124,4 @@ export const Login = () => {
     </Container>
 
   )
-}
+ */

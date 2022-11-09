@@ -1,6 +1,6 @@
-import EditUsers from '../../bd/crud/editUsers';
+import EditUsers from '../../contexts/editUsers';
 import Header from '../../components/header/index';
-import { Container, Body} from '../ZStyles';
+import { Container, Body } from '../_Styles/styles';
 
 const EditPage = () => {
 

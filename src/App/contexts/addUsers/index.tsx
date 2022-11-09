@@ -1,7 +1,7 @@
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import firebaseConfig from '../../config/firebase';
+import firebaseConfig from '../../services/config/firebase';
 
 
 const AddUsers: React.FC = () => {
@@ -22,7 +22,7 @@ const AddUsers: React.FC = () => {
   //Add novos usuários no  banco de dados
   async function creatUsers() {    
     const user = await addDoc(usersCollectionRef,{
-      name, email, birthDate,fone
+      name, email, birthDate, fone
     })
     console.log(user)
   }
@@ -44,3 +44,4 @@ const AddUsers: React.FC = () => {
 }
 
 export default AddUsers
+
