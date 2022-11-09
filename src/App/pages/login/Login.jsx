@@ -1,5 +1,6 @@
 import Header from '../../components/header';
 import { Container, Body, ButtonGoogle } from '../stylesGlobal/styles';
+import AuthGoogle from '../../services/auth/index'
 
 
 export const Login = () => {
@@ -8,7 +9,7 @@ export const Login = () => {
     <Container>
       <Header />
       <Body>
-        <ButtonGoogle>Logar com o Google</ButtonGoogle>
+        <AuthGoogle />
       </Body>
     </Container>
   )
