@@ -1,7 +1,7 @@
 //import { useRef } from 'react';
 import ListUsers from '../../contexts/listUsers';
 import Header from '../../components/header/index';
-import { Container, Body } from '../stylesGlobal/styles';
+import { Container, Body } from '../zstylesGlobal/styles';
 
 export const Dashboard = () => {
 

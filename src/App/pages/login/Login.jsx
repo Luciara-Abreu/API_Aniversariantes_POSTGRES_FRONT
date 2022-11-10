@@ -1,17 +1,45 @@
 import Header from '../../components/header';
-import { Container, Body } from '../stylesGlobal/styles';
 import AuthGoogle from '../../services/Api/index'
-
+import cake from '../../assets/Imag/cake2.gif'
+import {
+  ContainerRoot, Container, ContainerLogin, WrapLogin, LoginFormTitle, LogoForm, WrapInput  
+} from './styles';
 
 export const Login = () => {
 
+  //<Header />
   return (
-    <Container>
-      <Header />
-      <Body>
-        <AuthGoogle />
-      </Body>
-    </Container>
+    <ContainerRoot>
+      <Container>
+        <ContainerLogin>
+          <WrapLogin>
+            <form className='login-form'>
+              <LoginFormTitle>Bem vindo ao App de Aniversariantes</LoginFormTitle>
+              <LogoForm><img src={cake} alt="CakeNiver" /></LogoForm>
+
+              <WrapInput>
+                <input className='Input' type='email' />
+                <span className='FocusInput' data-placeholder='Email'></span>
+              </WrapInput>
+
+              <WrapInput>
+                <input className='Input' type='password' />
+                <span className='FocusInput' data-placeholder='Password'></span>
+              </WrapInput>
+
+              <div className='container-login-form-btn'>
+                <button className="login-form-btn">Login</button>
+              </div>
+
+              <div className="text-center-criarConta"></div>
+              <spn className="txt1">Não possui conta?</spn>
+              <a href="#" className="txt2">Criar Conta</a>
+            </form>
+            <AuthGoogle />
+          </WrapLogin>
+        </ContainerLogin>
+      </Container>
+    </ContainerRoot>
   )
 }
 

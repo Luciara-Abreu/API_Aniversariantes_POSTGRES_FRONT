@@ -1,6 +1,5 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
-import { ButtonGoogle } from './styles';
+import { ButtonGoogle } from '../stlyles'
 
 
 type Props = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> 

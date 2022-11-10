@@ -2,9 +2,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Login } from '../pages';
 import consultaMes from '../pages/consultaMes';
 import { Dashboard } from '../pages/dashboard';
-import EditUsers from '../pages/editPage';
+import EditUsers from '../pages/editAniver';
 import Top10 from '../pages/top10';
-import AddPage from '../pages/addPage';
+import AddPage from '../pages/addAniver';
 
 export const Routes = () => {
   return (
