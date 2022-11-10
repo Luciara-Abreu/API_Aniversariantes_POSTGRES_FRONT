@@ -1,7 +1,7 @@
 //import * as firebase from "firebase/app";
+import { initializeApp } from "firebase/app";
 import 'firebase/compat/auth'
 import 'firebase/compat/firestore'
-import { initializeApp } from "firebase/app"
 import "firebase/database";
 
 
