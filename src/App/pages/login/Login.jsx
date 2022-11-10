@@ -9,11 +9,7 @@ export const Login = () => {
     <Container>
       <Header />
       <Body>
-        <AuthGoogle>
-          <button>
-            Autenticar com Google
-          </button>
-        </AuthGoogle>
+        <AuthGoogle />
       </Body>
     </Container>
   )

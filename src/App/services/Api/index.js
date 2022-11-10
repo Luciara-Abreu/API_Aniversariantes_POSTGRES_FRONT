@@ -1,6 +1,6 @@
 //import * as firebase from "firebase/app";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { ButtonGoogle } from "../../pages/stylesGlobal/styles";
+import GoogleButton from "../../components/buttons/buttonMenu/buttonAuthGoogle";
 import firebaseConfig from '../config/firebase';
 
 const provider = new GoogleAuthProvider();
@@ -20,18 +20,14 @@ const AuthGoogle = () => {
         const credential = GoogleAuthProvider.credentialFromError(error);
         //console.log(credential)
       });
-
   }
-
   const actionLoginGoogle = () => {
     LogarComGoogle()
   }
 
   return (
     <>
-      <ButtonGoogle>
-      <button  className="btn third" onClick={actionLoginGoogle}/>
-      </ButtonGoogle>
+    <GoogleButton  onClick={actionLoginGoogle}>Autenticar com Google</GoogleButton>  
     </>
   )
 }
