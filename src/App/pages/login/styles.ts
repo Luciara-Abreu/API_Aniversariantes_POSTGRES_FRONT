@@ -27,6 +27,27 @@ const WrapLogin = styled.div`
 //para não gerar scrow na página
  overflow: hidden;
  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0, 2);
+
+ .text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.txt1 {
+  font-size: 14px;
+  color: #adadad;
+  line-height: 1.5;
+  padding-right: 5px;
+}
+
+.txt2 {
+  font-size: 14px;
+  color: #6a7dfe;
+  line-height: 1.5;
+  text-decoration: none;
+}
 `
 
 const LoginForm = styled.div`
@@ -123,6 +144,12 @@ margin-bottom: 37px;
   .input:focus + .FocusInput::before{
     width: 100%;
   }
+  .has-val + .FocusInput::after{
+    top: -15px;
+  }
+  .has-val + .FocusInput::before{
+    width: 100%;
+  }
 `
 
 const ContainerLoginFormBtn = styled.div`
@@ -152,6 +179,7 @@ const ContainerLoginFormBtn = styled.div`
   :hover{
 cursor: pointer;
   }
+  
 }
 `
 

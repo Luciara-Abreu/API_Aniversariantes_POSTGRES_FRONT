@@ -5,10 +5,13 @@ import {
   ContainerRoot, Container, ContainerLogin, WrapLogin, LoginFormTitle, LogoForm, WrapInput,
   ContainerLoginFormBtn
 } from './styles';
+import { useState } from 'react';
 
 export const Login = () => {
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
 
-  //<Header />
+  //<Header />  https://youtu.be/Bm50j2CqCXg
   return (
     <ContainerRoot>
       <Container>
@@ -19,12 +22,22 @@ export const Login = () => {
               <LogoForm><img src={cake} alt="CakeNiver" /></LogoForm>
 
               <WrapInput>
-                <input className='input' type='email' />
+                <input
+                  className={email !== "" ? 'has-val input' : 'input'}
+                  type='email'
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
+                />
                 <span className='FocusInput' data-placeholder='Email'></span>
               </WrapInput>
 
               <WrapInput>
-                <input className='input' type='password' />
+                <input
+                  className={password !== "" ? 'has-val input' : 'input'}
+                  type='password'
+                  value={password}
+                  onChange={e => setPassword(e.target.value)}
+                />
                 <span className='FocusInput' data-placeholder='Password'></span>
               </WrapInput>
 
@@ -32,7 +45,7 @@ export const Login = () => {
                 <button className="login-form-btn">Login</button>
               </ContainerLoginFormBtn>
 
-              <div className="text-center-criarConta"></div>
+              <div className="text-criarConta"></div>
               <spn className="txt1">Não possui conta?</spn>
               <a href="#" className="txt2">Criar Conta</a>
             </form>
