@@ -55,7 +55,7 @@ position: relative;
 border-bottom: 2px solid #adadad;
 margin-bottom: 37px;
 
-.Input{
+.input{
   width: 100%;
   height: 45px;
   padding: 0 5px;
@@ -65,9 +65,8 @@ margin-bottom: 37px;
   border: none;
   display:block;
   background: transparent;
-  //background: gray;
-
-  .FocusInput{
+}
+.FocusInput{
     position: absolute;
     display: block;
     width: 100%;
@@ -84,41 +83,78 @@ margin-bottom: 37px;
     display: block;
     position: absolute;
     bottom: -2px;
-    left:0;
-    width:0;
-    height:0;
-    -webkit-trasition:all 0.4s;
-    -o-trasition:all 0.4s;
-    -moz-transition:all 0.4s;
-
-    background-color: -webkit-linear-gradient(to left #21d4fd, #b721ff);
-    background-color: -o-linear-gradient(to left #21d4fd, #b721ff);
-    background-color: -moz-linear-gradient(to left #21d4fd, #b721ff);
-    background-color: linear-gradient(to left #21d4fd, #b721ff);
+    left: 0;
+    width: 0;
+    height: 2px;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    background: #6a7dfe;
+    background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
+    background: -o-linear-gradient(to left, #21d4fd, #b721ff);
+    background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
+    background: linear-gradient(to left, #21d4fd, #b721ff);
   }
   .FocusInput::after{
+    font-family: Nunito, sans-serif;
     font-size: 15px;
-    color: #999;
-    line-height: 1.2px;
-
-    content: attr(data-placeholder);
+    color: #999999;
+    line-height: 1.2;
+    content: attr(data-placeholder); 
     display: block;
     width: 100%;
     position: absolute;
-    top:16px;
+    top: 16px;
+    left: 0px;
     padding-left: 5px;
-
-    -webkit-trasition:all 0.4s;
-    -o-trasition:all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
     -moz-transition: all 0.4s;
+    transition: all 0.4s;
   }
 
-  .FocusInput:focus{
-    outline:0;
+  .input:focus {
+  outline: 0;
+}
+  .input:focus + .FocusInput::after{
+    top: -15px;
   }
+  .input:focus + .FocusInput::before{
+    width: 100%;
+  }
+`
 
+const ContainerLoginFormBtn = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 13px;
+
+  .login-form-btn{
+    font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background: #6a7dfe;
+  background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
+  background: -o-linear-gradient(to left, #21d4fd, #b721ff);
+  background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
+  background: linear-gradient(to left, #21d4fd, #b721ff);
+
+  :hover{
+cursor: pointer;
+  }
 }
 `
+
 
 export {
   ContainerRoot,
@@ -128,5 +164,6 @@ export {
   LoginForm,
   LoginFormTitle,
   LogoForm,
-  WrapInput  
+  WrapInput,
+  ContainerLoginFormBtn  
 }

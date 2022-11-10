@@ -2,7 +2,8 @@ import Header from '../../components/header';
 import AuthGoogle from '../../services/Api/index'
 import cake from '../../assets/Imag/cake2.gif'
 import {
-  ContainerRoot, Container, ContainerLogin, WrapLogin, LoginFormTitle, LogoForm, WrapInput  
+  ContainerRoot, Container, ContainerLogin, WrapLogin, LoginFormTitle, LogoForm, WrapInput,
+  ContainerLoginFormBtn
 } from './styles';
 
 export const Login = () => {
@@ -18,18 +19,18 @@ export const Login = () => {
               <LogoForm><img src={cake} alt="CakeNiver" /></LogoForm>
 
               <WrapInput>
-                <input className='Input' type='email' />
+                <input className='input' type='email' />
                 <span className='FocusInput' data-placeholder='Email'></span>
               </WrapInput>
 
               <WrapInput>
-                <input className='Input' type='password' />
+                <input className='input' type='password' />
                 <span className='FocusInput' data-placeholder='Password'></span>
               </WrapInput>
 
-              <div className='container-login-form-btn'>
+              <ContainerLoginFormBtn>
                 <button className="login-form-btn">Login</button>
-              </div>
+              </ContainerLoginFormBtn>
 
               <div className="text-center-criarConta"></div>
               <spn className="txt1">Não possui conta?</spn>
