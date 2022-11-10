@@ -1,5 +1,5 @@
 import Header from '../../components/header';
-import { Container, Body, ButtonGoogle } from '../stylesGlobal/styles';
+import { Container, Body } from '../stylesGlobal/styles';
 import AuthGoogle from '../../services/Api/index'
 
 
@@ -9,13 +9,17 @@ export const Login = () => {
     <Container>
       <Header />
       <Body>
-        <AuthGoogle />
+        <AuthGoogle>
+          <button>
+            Autenticar com Google
+          </button>
+        </AuthGoogle>
       </Body>
     </Container>
   )
 }
 
-
+// https://www.youtube.com/watch?v=Bm50j2CqCXg    ==>11:24
 /*
 rules_version = '2';
 service cloud.firestore {
