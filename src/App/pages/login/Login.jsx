@@ -2,8 +2,8 @@ import AuthGoogle from '../../services/Api/index'
 import { useHistory } from 'react-router-dom'
 import cake from '../../assets/Imag/cake2.gif'
 import {
-  ContainerRoot, Container, ContainerLogin, WrapLogin, LoginFormTitle, LogoForm, WrapInput,
-  ContainerLoginFormBtn
+  Container, ContainerLogin, WrapLogin, LoginForm, LoginFormTitle, LogoForm, WrapInput,
+  ContainerLoginFormBtn,DivLogo
 } from './styles';
 import { useState } from 'react';
 
@@ -18,47 +18,47 @@ export const Login = () => {
   }
 
   return (
-    <ContainerRoot>
-      <Container>
-        <ContainerLogin>
-          <WrapLogin>
-            <form className='login-form'>
-              <LoginFormTitle>Bem vindo ao App de Aniversariantes</LoginFormTitle>
-              <LogoForm><img src={cake} alt="CakeNiver" /></LogoForm>
+    <Container>
+      <ContainerLogin>
+        <WrapLogin>
+          <LoginForm>
+            <LoginFormTitle>Bem vindo ao App de Aniversariantes</LoginFormTitle>
+            <DivLogo>
+            <LogoForm><img src={cake} alt="CakeNiver" /></LogoForm>
+            </DivLogo>
+            <WrapInput>
+              <input
+                className={email !== "" ? 'has-val input' : 'input'}
+                type='email'
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+              />
+              <span className='FocusInput' data-placeholder='Email'></span>
+            </WrapInput>
 
-              <WrapInput>
-                <input
-                  className={email !== "" ? 'has-val input' : 'input'}
-                  type='email'
-                  value={email}
-                  onChange={e => setEmail(e.target.value)}
-                />
-                <span className='FocusInput' data-placeholder='Email'></span>
-              </WrapInput>
+            <WrapInput>
+              <input
+                className={password !== "" ? 'has-val input' : 'input'}
+                type='password'
+                value={password}
+                onChange={e => setPassword(e.target.value)}
+              />
+              <span className='FocusInput' data-placeholder='Password'></span>
+            </WrapInput>
 
-              <WrapInput>
-                <input
-                  className={password !== "" ? 'has-val input' : 'input'}
-                  type='password'
-                  value={password}
-                  onChange={e => setPassword(e.target.value)}
-                />
-                <span className='FocusInput' data-placeholder='Password'></span>
-              </WrapInput>
+            <ContainerLoginFormBtn>
+              <button className="login-form-btn">Login</button>
+            </ContainerLoginFormBtn>
 
-              <ContainerLoginFormBtn>
-                <button className="login-form-btn">Login</button>
-              </ContainerLoginFormBtn>
+            <div className="text-criarConta"></div>
+            <spn className="txt1">Não possui conta?</spn>
+            <a href="#" onClick={handleClick} className="txt2">Criar Conta</a>
+          </LoginForm>
+          <AuthGoogle />
+        </WrapLogin>
+      </ContainerLogin>
+    </Container>
 
-              <div className="text-criarConta"></div>
-              <spn className="txt1">Não possui conta?</spn>
-              <a href="#" onClick={handleClick} className="txt2">Criar Conta</a>
-            </form>
-            <AuthGoogle />
-          </WrapLogin>
-        </ContainerLogin>
-      </Container>
-    </ContainerRoot>
   )
 }
 

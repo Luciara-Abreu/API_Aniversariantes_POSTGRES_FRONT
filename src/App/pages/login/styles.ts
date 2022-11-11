@@ -1,39 +1,38 @@
 import styled from 'styled-components'
 
-const ContainerRoot = styled.div`
-margin: 0;
-padding: 0;
-height:0;
-box-sizing: border-box;
-`
+
 const Container = styled.div`
- width: 100%;
- margin: 0; 
+  width: 100vw;
+  margin: 0 auto;
 `
 const ContainerLogin = styled.div`
- display: flex;
- flex-wrap: wrap;
- align-items: center;
- justify-content: center;
- padding: 15px;
- background: #111;
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: #111;
 `
 const WrapLogin = styled.div`
- //width: 390px;
- width: 290px;
- background-color: #333;
- border-radius: 10px;
- padding: 10px 55px 10px 55px;
+  width: 390px;
+  height: auto;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 22px 24px 29px 28px;
+  //padding: 33px 55px 0px 55px;
 
 //para não gerar scrow na página
- overflow: hidden;
- box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0, 2);
+  overflow: hidden;
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0, 2);
 
- .text-center {
+  .text-criarConta {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .txt1 {
@@ -56,19 +55,22 @@ width: 100%;
 `
 
 const LoginFormTitle = styled.div`
-display:block;
-flex-wrap: wrap;
-font-size: 20px;
-color: azure;
-text-align: center;
+  font-family: Nunito, sans-serif;
+  display: block;
+  font-size: 30px;
+  color: azure;
+  text-align: center;
 `
 
+const DivLogo = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+`
 const LogoForm = styled.div`
-  width: 18vw;
-  display: block;
-  margin: 2% 0 10% 9%;
-  line-height: 1;
-  text-align: center;
+  width: 15vw;
+  height: 15vw;
 `
 const WrapInput = styled.div`
 width: 100%;
@@ -78,7 +80,7 @@ margin-bottom: 17px;
 
 .input{
   width: 100%;
-  height: 45px;
+  height: 40px;
   padding: 0 5px;
   font-size: 15px;
   color: #fff;
@@ -185,12 +187,12 @@ cursor: pointer;
 
 
 export {
-  ContainerRoot,
   Container,
   ContainerLogin,
   WrapLogin,
   LoginForm,
   LoginFormTitle,
+  DivLogo,
   LogoForm,
   WrapInput,
   ContainerLoginFormBtn  
