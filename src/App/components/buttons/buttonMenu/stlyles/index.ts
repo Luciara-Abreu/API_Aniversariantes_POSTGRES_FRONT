@@ -58,25 +58,25 @@ const ButtonGoogle = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding: 20px 10px 20px 10px;
+  padding: 15px 1px 20px 1px;
 
 .btn {
-  display: flex;
-  width: 22vw;
-  height: 6vw;
-  font:normal 5px;
-  padding: 20px 10px 20px 10px;
-  background-color: transparent;
-  border: 2px solid #e74c3c;
-  border-radius: 0.6em;
-  color: red;
-  line-height: 1;
-  padding: 0.5em 3.3em 0.5em 3.3em;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  line-height: 1.2;
   text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  text-shadow:0px 0px 3px #f05be6;
-  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background: #6a7dfe;
+  background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
+  background: -o-linear-gradient(to left, #21d4fd, #b721ff);
+  background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
+  background: linear-gradient(to left, #21d4fd, #b721ff);
 }
 
 .btn:hover, .btn:focus {

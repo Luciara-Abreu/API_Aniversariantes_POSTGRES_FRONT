@@ -1,5 +1,5 @@
-import Header from '../../components/header';
 import AuthGoogle from '../../services/Api/index'
+import { useHistory } from 'react-router-dom'
 import cake from '../../assets/Imag/cake2.gif'
 import {
   ContainerRoot, Container, ContainerLogin, WrapLogin, LoginFormTitle, LogoForm, WrapInput,
@@ -7,11 +7,16 @@ import {
 } from './styles';
 import { useState } from 'react';
 
+
 export const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
-  //<Header />  https://youtu.be/Bm50j2CqCXg
+  const history = useHistory();
+  const handleClick = () => {
+    history.push('/criarConta')
+  }
+
   return (
     <ContainerRoot>
       <Container>
@@ -47,7 +52,7 @@ export const Login = () => {
 
               <div className="text-criarConta"></div>
               <spn className="txt1">Não possui conta?</spn>
-              <a href="#" className="txt2">Criar Conta</a>
+              <a href="#" onClick={handleClick} className="txt2">Criar Conta</a>
             </form>
             <AuthGoogle />
           </WrapLogin>

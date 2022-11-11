@@ -9,7 +9,6 @@ type Props = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElemen
 
 const Top10Button = (props:Props) =>{  
   const history = useHistory();
-
   const handleClick = () => {
     history.push('/Top10')
   }  

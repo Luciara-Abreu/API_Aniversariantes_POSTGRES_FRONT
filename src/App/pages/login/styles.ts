@@ -19,7 +19,8 @@ const ContainerLogin = styled.div`
  background: #111;
 `
 const WrapLogin = styled.div`
- width: 390px;
+ //width: 390px;
+ width: 290px;
  background-color: #333;
  border-radius: 10px;
  padding: 10px 55px 10px 55px;
@@ -38,14 +39,14 @@ const WrapLogin = styled.div`
 .txt1 {
   font-size: 14px;
   color: #adadad;
-  line-height: 1.5;
+  line-height: 1;
   padding-right: 5px;
 }
 
 .txt2 {
   font-size: 14px;
   color: #6a7dfe;
-  line-height: 1.5;
+  line-height: 1;
   text-decoration: none;
 }
 `
@@ -57,24 +58,23 @@ width: 100%;
 const LoginFormTitle = styled.div`
 display:block;
 flex-wrap: wrap;
-font-size: 40px;
+font-size: 20px;
 color: azure;
 text-align: center;
 `
 
 const LogoForm = styled.div`
-  width: 100%;
+  width: 18vw;
   display: block;
-  margin: 0;
-  font-size: 40px;
-  line-height: 1%;
+  margin: 2% 0 10% 9%;
+  line-height: 1;
   text-align: center;
 `
 const WrapInput = styled.div`
 width: 100%;
 position: relative;
 border-bottom: 2px solid #adadad;
-margin-bottom: 37px;
+margin-bottom: 17px;
 
 .input{
   width: 100%;
@@ -82,7 +82,7 @@ margin-bottom: 37px;
   padding: 0 5px;
   font-size: 15px;
   color: #fff;
-  line-height: 1.2;
+  line-height: 1;
   border: none;
   display:block;
   background: transparent;
@@ -121,7 +121,7 @@ margin-bottom: 37px;
     font-family: Nunito, sans-serif;
     font-size: 15px;
     color: #999999;
-    line-height: 1.2;
+    line-height: 1;
     content: attr(data-placeholder); 
     display: block;
     width: 100%;
@@ -159,11 +159,11 @@ const ContainerLoginFormBtn = styled.div`
   padding-bottom: 13px;
 
   .login-form-btn{
-    font-size: 15px;
+  font-size: 15px;
   border: none;
   border-radius: 10px;
   color: #fff;
-  line-height: 1.2;
+  line-height: 1;
   text-transform: uppercase;
   display: flex;
   justify-content: center;

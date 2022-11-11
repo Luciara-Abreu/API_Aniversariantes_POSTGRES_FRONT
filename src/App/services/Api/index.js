@@ -27,7 +27,7 @@ const AuthGoogle = () => {
 
   return (
     <>
-    <GoogleButton  onClick={actionLoginGoogle}>Autenticar com Google</GoogleButton>  
+    <GoogleButton  onClick={actionLoginGoogle}>Logar com Google</GoogleButton>  
     </>
   )
 }
