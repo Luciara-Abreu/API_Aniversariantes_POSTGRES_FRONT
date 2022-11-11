@@ -1,5 +1,5 @@
-import { addDoc, collection, getFirestore } from 'firebase/firestore';
-import { useState } from 'react';
+import { addDoc, collection, getDocs, getFirestore } from 'firebase/firestore';
+import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import firebaseConfig from '../../services/config/firebase';
 import logo from '../../assets/Gifs/tresGatinhos.gif'
@@ -26,8 +26,17 @@ const AddAdmin = () => {
     const adm = await addDoc(admCollectionRef, {
       email, password
     })
-    console.log(adm)
+    //console.log(adm)
   }
+  //Tras todos usuários da tabela
+  useEffect(() => {
+    const getUsers = async () => {
+      const data = await getDocs(admCollectionRef)
+      const admUser = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
+      console.log(admUser)
+    }
+    getUsers()
+  }, [])
 
   return (
     <Container>
