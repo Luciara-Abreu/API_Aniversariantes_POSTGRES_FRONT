@@ -1,22 +1,32 @@
-import AuthGoogle from '../../services/Api/index'
+import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import { useState } from 'react';
-import { useHistory } from 'react-router-dom'
-import cake from '../../assets/Imag/cake2.gif'
+import { useHistory } from 'react-router-dom';
+import firebaseConfig from '../../services/config/firebase';
+import logo from '../../assets/Gifs/tresGatinhos.gif'
 import {
   Container, ContainerLogin, WrapLogin, LoginForm, LoginFormTitle, LogoForm, WrapInput,
   ContainerLoginFormBtn, DivLogo
 } from './styles';
 
-
-
-export const Login = () => {
+const AddAdmin = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
 
   const history = useHistory();
   const handleClick = () => {
-    history.push('/criarConta')
+    history.push('/entrar')
+  }
+
+  const db = getFirestore(firebaseConfig)
+  const admCollectionRef = collection(db, "admin")
+
+  //Add novos usuários no  banco de dados
+  async function creatAdmin() {
+    const adm = await addDoc(admCollectionRef, {
+      email, password
+    })
+    console.log(adm)
   }
 
   return (
@@ -24,9 +34,9 @@ export const Login = () => {
       <ContainerLogin>
         <WrapLogin>
           <LoginForm>
-            <LoginFormTitle>Bem vindo ao App de Aniversariantes</LoginFormTitle>
+            <LoginFormTitle>Faça um gatinho feliz! Se cadastre no App!</LoginFormTitle>
             <DivLogo>
-              <LogoForm><img src={cake} alt="CakeNiver" /></LogoForm>
+              <LogoForm><img src={logo} alt="CakeNiver" /></LogoForm>
             </DivLogo>
             <WrapInput>
               <input
@@ -49,20 +59,17 @@ export const Login = () => {
             </WrapInput>
 
             <ContainerLoginFormBtn>
-              <button className="login-form-btn">Login</button>
+              <button className="login-form-btn" onClick={creatAdmin}>Cadastrar</button>
             </ContainerLoginFormBtn>
-
-            <div className="text-criarConta"></div>
-            <spn className="txt1">Não possui conta?</spn>
-            <a href="#" onClick={handleClick} className="txt2">Criar Conta</a>
           </LoginForm>
-          <AuthGoogle />
         </WrapLogin>
       </ContainerLogin>
     </Container>
 
   )
 }
+
+export default AddAdmin
 
 // https://www.youtube.com/watch?v=Bm50j2CqCXg    ==>11:24
 /*
