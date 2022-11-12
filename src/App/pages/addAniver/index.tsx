@@ -1,18 +1,23 @@
 //import { useRef } from 'react';
 import AddUsers from '../../contexts/addUsers';
 import Header from '../../components/header/index';
-import { Container, Body } from '../zstylesGlobal/styles';
+import { Container, BodyContainer, BodyWrap, BodyForm } from '../zstylesGlobal/styles';
 
 export const AddPage = () => {
 
   return (
-    <Container>     
-      <Header /> 
-      <Body>       
-      <h1> Aqui vai mostrar campos para add novos aniversariantes </h1>      
-        <AddUsers />    
-      </Body>
-    </Container>
+
+<Container>     
+<Header /> 
+<BodyContainer> 
+  <BodyWrap>
+    <BodyForm>
+    <h1> Aqui vai mostrar campos para add novos aniversariantes </h1>      
+        <AddUsers />  
+    </BodyForm>
+    </BodyWrap>      
+</BodyContainer>
+</Container>
   );
 }
 

@@ -2,6 +2,7 @@
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 import { useState, useEffect } from "react"
 import firebaseConfig from "../../services/config/firebase";
+import { Container, ContainerSemana, Semanas, TileSemana, ContainerData, Data } from './styles'
 // https://www.youtube.com/watch?v=gqbXnYhvB5E&t=264s
 
 const ListUsers = () => {
@@ -22,17 +23,171 @@ const ListUsers = () => {
   }, [])
 
   return (
-    <div>
-      <ul>
-        {users.map(users => {
-          return (
-            <div>
-              <li>{users.name} {users.birthDate}</li>
-            </div>
-          )
-        })}
-      </ul>
-    </div>
+    <Container>
+      <ContainerSemana>
+        <Semanas>
+          <TileSemana>Domingo</TileSemana>
+          <Data>
+            <ContainerData> <p>Nome</p>
+              <ul>
+                {users.map(users => {
+                  return (
+                    <li>{users.name}</li>
+                  )
+                })}
+              </ul>
+            </ContainerData>
+            <ContainerData> <p>Birthdate</p>
+              <ul>
+                {users.map(users => {
+                  return (
+                    <li>{users.birthDate}</li>
+                  )
+                })}
+              </ul>
+            </ContainerData>
+          </Data>
+        </Semanas>
+        <Semanas>
+          <TileSemana>Segunda-feira</TileSemana>
+          <Data>
+            <ContainerData> Nome
+              <ul>
+                {users.map(users => {
+                  return (
+                    <li>{users.name}</li>
+                  )
+                })}
+              </ul>
+            </ContainerData>
+            <ContainerData> Bithdate
+              <ul>
+                {users.map(users => {
+                  return (
+                    <li>{users.birthDate}</li>
+                  )
+                })}
+              </ul>
+            </ContainerData>
+          </Data>
+        </Semanas>
+        <Semanas>
+          <TileSemana>Treça-feira</TileSemana>
+          <Data>
+            <ContainerData> Nome
+              <ul>
+                {users.map(users => {
+                  return (
+                    <li>{users.name}</li>
+                  )
+                })}
+              </ul>
+            </ContainerData>
+            <ContainerData> Bithdate
+              <ul>
+                {users.map(users => {
+                  return (
+                    <li>{users.birthDate}</li>
+                  )
+                })}
+              </ul>
+            </ContainerData>
+          </Data>
+        </Semanas>
+        <Semanas>
+          <TileSemana>Quarta-feira</TileSemana>
+          <Data>
+            <ContainerData> Nome
+              <ul>
+                {users.map(users => {
+                  return (
+                    <li>{users.name}</li>
+                  )
+                })}
+              </ul>
+            </ContainerData>
+            <ContainerData> Bithdate
+              <ul>
+                {users.map(users => {
+                  return (
+                    <li>{users.birthDate}</li>
+                  )
+                })}
+              </ul>
+            </ContainerData>
+          </Data>
+        </Semanas>
+        <Semanas>
+          <TileSemana>Quintafeira</TileSemana>
+          <Data>
+            <ContainerData> Nome
+              <ul>
+                {users.map(users => {
+                  return (
+                    <li>{users.name}</li>
+                  )
+                })}
+              </ul>
+            </ContainerData>
+            <ContainerData> Bithdate
+              <ul>
+                {users.map(users => {
+                  return (
+                    <li>{users.birthDate}</li>
+                  )
+                })}
+              </ul>
+            </ContainerData>
+          </Data>
+        </Semanas>
+        <Semanas>
+          <TileSemana>Sexta-feira</TileSemana>
+          <Data>
+            <ContainerData> Nome
+              <ul>
+                {users.map(users => {
+                  return (
+                    <li>{users.name}</li>
+                  )
+                })}
+              </ul>
+            </ContainerData>
+            <ContainerData> Bithdate
+              <ul>
+                {users.map(users => {
+                  return (
+                    <li>{users.birthDate}</li>
+                  )
+                })}
+              </ul>
+            </ContainerData>
+          </Data>
+        </Semanas>
+        <Semanas>
+          <TileSemana>Sababo</TileSemana>
+          <Data>
+            <ContainerData> Nome
+              <ul>
+                {users.map(users => {
+                  return (
+                    <li>{users.name}</li>
+                  )
+                })}
+              </ul>
+            </ContainerData>
+            <ContainerData> Bithdate
+              <ul>
+                {users.map(users => {
+                  return (
+                    <li>{users.birthDate}</li>
+                  )
+                })}
+              </ul>
+            </ContainerData>
+          </Data>
+        </Semanas>
+      </ContainerSemana>
+    </Container>
   )
 }
 export default ListUsers

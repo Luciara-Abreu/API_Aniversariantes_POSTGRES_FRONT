@@ -6,7 +6,7 @@ import ConsultaMesButton from "../buttons/buttonMenu/buttonConultaMes";
 import Top10Button from "../buttons/buttonMenu/buttonTop10";
 import { Title, Date, ContainerMenu, HeaderContainer, ContainerUp } from "./styles";
 import DashboardButton from "../buttons/buttonMenu/buttonDash";
-import LoginButton from "../buttons/buttonMenu/buttonLogin";
+//import LoginButton from "../buttons/buttonMenu/buttonLogin";
 
 
 // https://youtu.be/AXKc4WhgLSA - criar header com typeScript
@@ -17,7 +17,7 @@ const Header: React.FC = () => {
 <HeaderContainer>
 <ContainerUp> 
   <Title>     
-    <ButtonTitle>**AGENDA ANIVERSARIANTES **</ButtonTitle>
+    **AGENDA ANIVERSARIANTES **
   </Title> 
   <Date>     
   <ButtonLogoAnel/>  
@@ -28,10 +28,11 @@ const Header: React.FC = () => {
     <Top10Button width={"100%"} heigth={""}>TOP 10</Top10Button>
     <ConsultaMesButton width={"100%"} heigth={""}>CONSULTA MÊS</ConsultaMesButton>
     <AddUserButton width={"100%"} heigth={""}>ADD ANIVERSARIANTES</AddUserButton>
-    <LoginButton width={"100%"} heigth={""}>Login</LoginButton>
   </ContainerMenu>  
     </HeaderContainer>
   )
 }
 
 export default Header
+
+/*<LoginButton width={"100%"} heigth={""}>Login</LoginButton>*/

@@ -5,11 +5,13 @@ const WrapButtonAnel = styled.div`
   width: 100%;
   display: flex;
   margin: auto;
-  padding-left: 15px;
+  padding-left: 20%;
   `
 
 const StylesButtonAnel = styled.button`
-  height: 30px;
+  width: auto;
+  padding: 10px 20px 10px 20px;
+
   font-family: 'Nunito', sans-serif;
   font-size: 12px;
   text-transform: uppercase;
@@ -23,7 +25,6 @@ const StylesButtonAnel = styled.button`
   transition: all 0.3s ease-in-out 0s;
   outline: none;
   position: relative;
-  padding: 10px;
 
   @media (max-width:900px) and (min-width:700px)  {
   width: 15vw;

@@ -1,17 +1,21 @@
 //import { useRef } from 'react';
 import ListUsers from '../../contexts/listUsers';
 import Header from '../../components/header/index';
-import { Container, Body } from '../zstylesGlobal/styles';
+import { Container, BodyContainer, BodyWrap, BodyForm } from '../zstylesGlobal/styles';
 
 export const Dashboard = () => {
 
   return (
     <Container>     
       <Header /> 
-      <Body>       
+      <BodyContainer> 
+        <BodyWrap>
+          <BodyForm>
       <h1> Aqui vai uma tabela com os aniversariantes da semana </h1>      
         <ListUsers />    
-      </Body>
+          </BodyForm>
+          </BodyWrap>      
+      </BodyContainer>
     </Container>
   );
 }

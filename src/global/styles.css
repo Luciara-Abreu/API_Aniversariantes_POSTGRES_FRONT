@@ -9,5 +9,8 @@
 body,
 #root {
   box-sizing: border-box;
-  background-color: rgb(219, 219, 179);
+  background: linear-gradient(to left,#e8ebbb,#a6a6a9);
+
 }
+
+/*background-color: rgb(219, 219, 179);*/

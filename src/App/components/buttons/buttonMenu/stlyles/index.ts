@@ -15,6 +15,8 @@ const ContainerButton = styled.div`
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   text-shadow:0px 0px 3px #f05be6;
+  justify-content:center;
+  align-items:center;
   cursor: pointer;
 
   @media (max-width:900px) and (min-width:700px)  {
