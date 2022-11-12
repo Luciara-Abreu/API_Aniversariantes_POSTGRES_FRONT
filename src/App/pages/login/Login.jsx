@@ -1,7 +1,7 @@
 import AuthGoogle from '../../services/Api/index'
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom'
-import cake from '../../assets/Imag/cake2.gif'
+import cake from '../../assets/Gifs/cake2.gif'
 import {
   Container, ContainerLogin, WrapLogin, LoginForm, LoginFormTitle, LogoForm, WrapInput,
   ContainerLoginFormBtn, DivLogo

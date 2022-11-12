@@ -60,6 +60,7 @@ https://basedosdados.org/dataset/br-mec-prouni?bdm_table=microdados = Base de da
 https://console.cloud.google.com/bigquery?p=basedosdados&d=br_mec_prouni&t=dicionario&page=table&project=agenda-aniversariantes-51185&ws=!1m10!1m4!4m3!1sbasedosdados!2sbr_mec_prouni!3sdicionario!1m4!1m3!1sagenda-aniversariantes-51185!2sbquxjob_18ea355a_184475a73df!3sUS
 https://www.youtube.com/watch?v=Bm50j2CqCXg&t=33s = Tela de Login
 https://youtu.be/gqbXnYhvB5E = CRUD COM FIRESTORE
+https://youtu.be/cX0N3TNxumw = carrocel
 ----------------------------------------------------------------------
 Sobre altura total e largura total.
 Em vez de px, em, rem ou pt utilizaremos vh e vw

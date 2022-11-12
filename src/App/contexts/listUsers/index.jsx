@@ -49,9 +49,10 @@ const ListUsers = () => {
           </Data>
         </Semanas>
         <Semanas>
-          <TileSemana>Segunda-feira</TileSemana>
+          <TileSemana>Segunda-feira
+          </TileSemana>
           <Data>
-            <ContainerData> Nome
+            <ContainerData> <p>Nome</p>
               <ul>
                 {users.map(users => {
                   return (
@@ -60,7 +61,7 @@ const ListUsers = () => {
                 })}
               </ul>
             </ContainerData>
-            <ContainerData> Bithdate
+            <ContainerData> <p>Birthdate</p>
               <ul>
                 {users.map(users => {
                   return (
@@ -74,7 +75,7 @@ const ListUsers = () => {
         <Semanas>
           <TileSemana>Treça-feira</TileSemana>
           <Data>
-            <ContainerData> Nome
+            <ContainerData> <p>Nome</p>
               <ul>
                 {users.map(users => {
                   return (
@@ -83,7 +84,7 @@ const ListUsers = () => {
                 })}
               </ul>
             </ContainerData>
-            <ContainerData> Bithdate
+            <ContainerData> <p>Birthdate</p>
               <ul>
                 {users.map(users => {
                   return (
@@ -97,7 +98,7 @@ const ListUsers = () => {
         <Semanas>
           <TileSemana>Quarta-feira</TileSemana>
           <Data>
-            <ContainerData> Nome
+            <ContainerData> <p>Nome</p>
               <ul>
                 {users.map(users => {
                   return (
@@ -106,7 +107,7 @@ const ListUsers = () => {
                 })}
               </ul>
             </ContainerData>
-            <ContainerData> Bithdate
+            <ContainerData> <p>Birthdate</p>
               <ul>
                 {users.map(users => {
                   return (
@@ -120,7 +121,7 @@ const ListUsers = () => {
         <Semanas>
           <TileSemana>Quintafeira</TileSemana>
           <Data>
-            <ContainerData> Nome
+            <ContainerData> <p>Nome</p>
               <ul>
                 {users.map(users => {
                   return (
@@ -129,7 +130,7 @@ const ListUsers = () => {
                 })}
               </ul>
             </ContainerData>
-            <ContainerData> Bithdate
+            <ContainerData> <p>Birthdate</p>
               <ul>
                 {users.map(users => {
                   return (
@@ -143,7 +144,7 @@ const ListUsers = () => {
         <Semanas>
           <TileSemana>Sexta-feira</TileSemana>
           <Data>
-            <ContainerData> Nome
+            <ContainerData> <p>Nome</p>
               <ul>
                 {users.map(users => {
                   return (
@@ -152,7 +153,7 @@ const ListUsers = () => {
                 })}
               </ul>
             </ContainerData>
-            <ContainerData> Bithdate
+            <ContainerData> <p>Birthdate</p>
               <ul>
                 {users.map(users => {
                   return (
@@ -166,7 +167,7 @@ const ListUsers = () => {
         <Semanas>
           <TileSemana>Sababo</TileSemana>
           <Data>
-            <ContainerData> Nome
+            <ContainerData> <p>Nome</p>
               <ul>
                 {users.map(users => {
                   return (
@@ -175,7 +176,7 @@ const ListUsers = () => {
                 })}
               </ul>
             </ContainerData>
-            <ContainerData> Bithdate
+            <ContainerData> <p>Birthdate</p>
               <ul>
                 {users.map(users => {
                   return (

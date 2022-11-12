@@ -19,40 +19,43 @@ const Semanas = styled.div`
   overflow: hidden;
   color: azure;
   font: 10px;
-  padding: 0 5px 20px 2px;
+  //padding: 0 5px 20px 2px;
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
   background: -webkit-linear-gradient(to left, #696868, #545353);
   background: -o-linear-gradient(to left, #696868, #545353);
   background: -moz-linear-gradient(to left, #696868, #545353);
-  background: linear-gradient(to left, #696868, #545353);
+  background: linear-gradient(to left, #696868, #545353); 
+
 `
 
 const TileSemana = styled.div`
-  width: 14vw;
-  min-height: auto;
-  background-color: #414040;
+  width: 100%;
+  display: flex;
   border-radius: 10px;
-  overflow: hidden;
   color: azure;
   font: 10px;
-  padding: 10px 5px 10px 6px;
-  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px 5px 10px 10px;
+  text-shadow:0px 0px 3px #f05be6;
+  box-shadow:0px 4px 21px #000000;
+  justify-content: center;
+  align-items: center;
+ 
 `
 const Data = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   -ms-wrap-flow: auto;
-  font-size: 75%;
   gap: 3.5rem;
+  padding: 1px 5px 20px 2px;
   `
   const ContainerData = styled.div`
-  font-size: 75%;
   padding-bottom: 10%;
+  font-family: Nunito, sans-serif;
+  font-size: 11px;
 
-  .p{
+  p{
     padding: 10% 0 10% 0;
-    background: red;
   }
   `
 
