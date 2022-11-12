@@ -71,6 +71,7 @@ const DivLogo = styled.div`
 const LogoForm = styled.div`
   width: 15vw;
   height: 15vw;
+
 `
 const WrapInput = styled.div`
 width: 100%;

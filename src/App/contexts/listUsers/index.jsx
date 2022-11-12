@@ -28,8 +28,9 @@ const ListUsers = () => {
         <Semanas>
           <TileSemana>Domingo</TileSemana>
           <Data>
-            <ContainerData> <p>Nome</p>
+            <ContainerData>
               <ul>
+                <p>Nome</p>
                 {users.map(users => {
                   return (
                     <li>{users.name}</li>
@@ -37,8 +38,9 @@ const ListUsers = () => {
                 })}
               </ul>
             </ContainerData>
-            <ContainerData> <p>Birthdate</p>
+            <ContainerData>
               <ul>
+                <p>Birthdate</p>
                 {users.map(users => {
                   return (
                     <li>{users.birthDate}</li>
@@ -52,8 +54,9 @@ const ListUsers = () => {
           <TileSemana>Segunda-feira
           </TileSemana>
           <Data>
-            <ContainerData> <p>Nome</p>
+            <ContainerData>
               <ul>
+                <p>Nome</p>
                 {users.map(users => {
                   return (
                     <li>{users.name}</li>
@@ -61,8 +64,9 @@ const ListUsers = () => {
                 })}
               </ul>
             </ContainerData>
-            <ContainerData> <p>Birthdate</p>
+            <ContainerData>
               <ul>
+                <p>Birthdate</p>
                 {users.map(users => {
                   return (
                     <li>{users.birthDate}</li>
@@ -75,8 +79,9 @@ const ListUsers = () => {
         <Semanas>
           <TileSemana>Treça-feira</TileSemana>
           <Data>
-            <ContainerData> <p>Nome</p>
+            <ContainerData>
               <ul>
+                <p>Nome</p>
                 {users.map(users => {
                   return (
                     <li>{users.name}</li>
@@ -84,8 +89,9 @@ const ListUsers = () => {
                 })}
               </ul>
             </ContainerData>
-            <ContainerData> <p>Birthdate</p>
+            <ContainerData>
               <ul>
+                <p>Birthdate</p>
                 {users.map(users => {
                   return (
                     <li>{users.birthDate}</li>
@@ -98,8 +104,9 @@ const ListUsers = () => {
         <Semanas>
           <TileSemana>Quarta-feira</TileSemana>
           <Data>
-            <ContainerData> <p>Nome</p>
+            <ContainerData>
               <ul>
+                <p>Nome</p>
                 {users.map(users => {
                   return (
                     <li>{users.name}</li>
@@ -107,8 +114,9 @@ const ListUsers = () => {
                 })}
               </ul>
             </ContainerData>
-            <ContainerData> <p>Birthdate</p>
+            <ContainerData>
               <ul>
+                <p>Birthdate</p>
                 {users.map(users => {
                   return (
                     <li>{users.birthDate}</li>
@@ -119,10 +127,11 @@ const ListUsers = () => {
           </Data>
         </Semanas>
         <Semanas>
-          <TileSemana>Quintafeira</TileSemana>
+          <TileSemana>Quinta-feira</TileSemana>
           <Data>
-            <ContainerData> <p>Nome</p>
+            <ContainerData>
               <ul>
+                <p>Nome</p>
                 {users.map(users => {
                   return (
                     <li>{users.name}</li>
@@ -130,8 +139,9 @@ const ListUsers = () => {
                 })}
               </ul>
             </ContainerData>
-            <ContainerData> <p>Birthdate</p>
+            <ContainerData>
               <ul>
+                <p>Birthdate</p>
                 {users.map(users => {
                   return (
                     <li>{users.birthDate}</li>
@@ -144,8 +154,9 @@ const ListUsers = () => {
         <Semanas>
           <TileSemana>Sexta-feira</TileSemana>
           <Data>
-            <ContainerData> <p>Nome</p>
+            <ContainerData>
               <ul>
+                <p>Nome</p>
                 {users.map(users => {
                   return (
                     <li>{users.name}</li>
@@ -153,8 +164,9 @@ const ListUsers = () => {
                 })}
               </ul>
             </ContainerData>
-            <ContainerData> <p>Birthdate</p>
+            <ContainerData>
               <ul>
+                <p>Birthdate</p>
                 {users.map(users => {
                   return (
                     <li>{users.birthDate}</li>
@@ -167,8 +179,9 @@ const ListUsers = () => {
         <Semanas>
           <TileSemana>Sababo</TileSemana>
           <Data>
-            <ContainerData> <p>Nome</p>
+            <ContainerData>
               <ul>
+                <p>Nome</p>
                 {users.map(users => {
                   return (
                     <li>{users.name}</li>
@@ -176,8 +189,9 @@ const ListUsers = () => {
                 })}
               </ul>
             </ContainerData>
-            <ContainerData> <p>Birthdate</p>
+            <ContainerData>
               <ul>
+                <p>Birthdate</p>
                 {users.map(users => {
                   return (
                     <li>{users.birthDate}</li>

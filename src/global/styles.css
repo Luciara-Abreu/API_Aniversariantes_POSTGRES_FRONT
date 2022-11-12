@@ -5,12 +5,12 @@
   box-sizing: border-box;
 }
 
-
-body,
 #root {
   box-sizing: border-box;
-  background: linear-gradient(to left,#e8ebbb,#a6a6a9);
-
+  background-color: #333;
 }
 
 /*background-color: rgb(219, 219, 179);*/
+/* background: linear-gradient(to left,#ffed4d,#b8b2b2);*/
+/*   background-color: #333;
+     background: #111;*/
