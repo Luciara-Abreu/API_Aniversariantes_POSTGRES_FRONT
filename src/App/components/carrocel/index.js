@@ -23,10 +23,10 @@ function Carroucel() {
       <ListUsers />
       </ContainerCarrocel>    
       <ContainerButtons>
-        <ButtonRight onClick={handleLeftClick}>
+        <ButtonRight className= "buttonRight" onClick={handleLeftClick}>
           <img src={button} alt="Botão1"/>
         </ButtonRight>
-        <ButtonLefth onClick={handleRightClick}>
+        <ButtonLefth className="buttonLefth" onClick={handleRightClick}>
           <img src={button} alt="Botão2"/>
         </ButtonLefth>
       </ContainerButtons>

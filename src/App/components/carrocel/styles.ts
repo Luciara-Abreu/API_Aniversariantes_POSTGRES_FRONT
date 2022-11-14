@@ -32,8 +32,8 @@ const ButtonRight = styled.div`
   cursor: pointer;
   transform: rotate(180deg);
   img {
-    width:5%
-  }
+    width:4%;
+  }  
 `
 const ButtonLefth = styled.div`
   width: 100%;
@@ -43,8 +43,8 @@ const ButtonLefth = styled.div`
   border: none;
   cursor: pointer; 
   img {
-    width:5%
-  }
+    width:4%
+  } 
 `
 
 export {

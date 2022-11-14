@@ -7,6 +7,7 @@ const HeaderContainer = styled.div`
   const Title =styled.div`
   display: flex;
   color: #fff;
+  text-shadow:0px 0px 3px #f05be6;
   font-size: 30px;
   `
   const Date =styled.div`
@@ -15,7 +16,6 @@ const HeaderContainer = styled.div`
   `
   const ContainerUp =styled.div`
   width: 100%;
-  border-radius: 10px;
   overflow: hidden;
   padding: 20px 55px 33px 55px;
   display: flex;

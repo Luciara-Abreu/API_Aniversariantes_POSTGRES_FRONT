@@ -9,7 +9,6 @@ const BodyWrap = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  border-radius: 11px;
   overflow: hidden;
   padding: 30px 50px 25px 50px;
 

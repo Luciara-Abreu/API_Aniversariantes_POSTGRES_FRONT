@@ -64,7 +64,7 @@ const StylesButtonAnel = styled.button`
   animation: ring 1.5s infinite;
 }
 
-&::hover::after, &::focus::after {
+&:hover::after, &:focus::after {
   animation: none;
   display: none;
 }
