@@ -2,7 +2,7 @@
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 import { useState, useEffect } from "react"
 import firebaseConfig from "../../services/config/firebase";
-import { Container, ContainerSemana, Semanas, TileSemana, ContainerData, Data } from './styles'
+import { Container, ContainerSemana, Semanas, TileSemana, SubTitles, HR, Data } from './styles'
 // https://www.youtube.com/watch?v=gqbXnYhvB5E&t=264s
 
 const ListUsers = () => {
@@ -27,180 +27,229 @@ const ListUsers = () => {
       <ContainerSemana>
         <Semanas>
           <TileSemana>Domingo</TileSemana>
+          <SubTitles>
+            <p className="Name">Nome</p>
+            <p className="birthdate">Data Nasc.</p>
+          </SubTitles>
+          <HR> ____________________________________ </HR>
           <Data>
-            <ContainerData>
+            <div className="ContainerName">
               <ul>
-                <p>Nome</p>
                 {users.map(users => {
                   return (
-                    <li>{users.name}</li>
+                    <li>
+                      {users.name}
+                    </li>
                   )
                 })}
               </ul>
-            </ContainerData>
-            <ContainerData>
+            </div>
+            <div className="ContainerBirthdate">
               <ul>
-                <p>Birthdate</p>
                 {users.map(users => {
                   return (
-                    <li>{users.birthDate}</li>
+                    <li>
+                      {users.birthDate}
+                    </li>
                   )
                 })}
               </ul>
-            </ContainerData>
+            </div>
           </Data>
         </Semanas>
         <Semanas>
-          <TileSemana>Segunda-feira
-          </TileSemana>
+          <TileSemana>Segunga-Feira</TileSemana>
+          <SubTitles>
+            <p className="Name">Nome</p>
+            <p className="birthdate">Data Nasc.</p>
+          </SubTitles>
+          <HR> ____________________________________ </HR>
           <Data>
-            <ContainerData>
+            <div className="ContainerName">
               <ul>
-                <p>Nome</p>
                 {users.map(users => {
                   return (
-                    <li>{users.name}</li>
+                    <li>
+                      {users.name}
+                    </li>
                   )
                 })}
               </ul>
-            </ContainerData>
-            <ContainerData>
+            </div>
+            <div className="ContainerBirthdate">
               <ul>
-                <p>Birthdate</p>
                 {users.map(users => {
                   return (
-                    <li>{users.birthDate}</li>
+                    <li>
+                      {users.birthDate}
+                    </li>
                   )
                 })}
               </ul>
-            </ContainerData>
+            </div>
           </Data>
         </Semanas>
         <Semanas>
-          <TileSemana>Treça-feira</TileSemana>
+          <TileSemana>Terça-Feira</TileSemana>
+          <SubTitles>
+            <p className="Name">Nome</p>
+            <p className="birthdate">Data Nasc.</p>
+          </SubTitles>
+          <HR> ____________________________________ </HR>
           <Data>
-            <ContainerData>
+            <div className="ContainerName">
               <ul>
-                <p>Nome</p>
                 {users.map(users => {
                   return (
-                    <li>{users.name}</li>
+                    <li>
+                      {users.name}
+                    </li>
                   )
                 })}
               </ul>
-            </ContainerData>
-            <ContainerData>
+            </div>
+            <div className="ContainerBirthdate">
               <ul>
-                <p>Birthdate</p>
                 {users.map(users => {
                   return (
-                    <li>{users.birthDate}</li>
+                    <li>
+                      {users.birthDate}
+                    </li>
                   )
                 })}
               </ul>
-            </ContainerData>
+            </div>
           </Data>
         </Semanas>
         <Semanas>
-          <TileSemana>Quarta-feira</TileSemana>
+          <TileSemana>Quarta-Feira</TileSemana>
+          <SubTitles>
+            <p className="Name">Nome</p>
+            <p className="birthdate">Data Nasc.</p>
+          </SubTitles>
+          <HR> ____________________________________ </HR>
           <Data>
-            <ContainerData>
+            <div className="ContainerName">
               <ul>
-                <p>Nome</p>
                 {users.map(users => {
                   return (
-                    <li>{users.name}</li>
+                    <li>
+                      {users.name}
+                    </li>
                   )
                 })}
               </ul>
-            </ContainerData>
-            <ContainerData>
+            </div>
+            <div className="ContainerBirthdate">
               <ul>
-                <p>Birthdate</p>
                 {users.map(users => {
                   return (
-                    <li>{users.birthDate}</li>
+                    <li>
+                      {users.birthDate}
+                    </li>
                   )
                 })}
               </ul>
-            </ContainerData>
+            </div>
           </Data>
         </Semanas>
         <Semanas>
-          <TileSemana>Quinta-feira</TileSemana>
+          <TileSemana>Quinta-Feira</TileSemana>
+          <SubTitles>
+            <p className="Name">Nome</p>
+            <p className="birthdate">Data Nasc.</p>
+          </SubTitles>
+          <HR> ____________________________________ </HR>
           <Data>
-            <ContainerData>
+            <div className="ContainerName">
               <ul>
-                <p>Nome</p>
                 {users.map(users => {
                   return (
-                    <li>{users.name}</li>
+                    <li>
+                      {users.name}
+                    </li>
                   )
                 })}
               </ul>
-            </ContainerData>
-            <ContainerData>
+            </div>
+            <div className="ContainerBirthdate">
               <ul>
-                <p>Birthdate</p>
                 {users.map(users => {
                   return (
-                    <li>{users.birthDate}</li>
+                    <li>
+                      {users.birthDate}
+                    </li>
                   )
                 })}
               </ul>
-            </ContainerData>
+            </div>
           </Data>
         </Semanas>
         <Semanas>
-          <TileSemana>Sexta-feira</TileSemana>
+          <TileSemana>Sexta-Feira</TileSemana>
+          <SubTitles>
+            <p className="Name">Nome</p>
+            <p className="birthdate">Data Nasc.</p>
+          </SubTitles>
+          <HR> ____________________________________ </HR>
           <Data>
-            <ContainerData>
+            <div className="ContainerName">
               <ul>
-                <p>Nome</p>
                 {users.map(users => {
                   return (
-                    <li>{users.name}</li>
+                    <li>
+                      {users.name}
+                    </li>
                   )
                 })}
               </ul>
-            </ContainerData>
-            <ContainerData>
+            </div>
+            <div className="ContainerBirthdate">
               <ul>
-                <p>Birthdate</p>
                 {users.map(users => {
                   return (
-                    <li>{users.birthDate}</li>
+                    <li>
+                      {users.birthDate}
+                    </li>
                   )
                 })}
               </ul>
-            </ContainerData>
+            </div>
           </Data>
         </Semanas>
         <Semanas>
-          <TileSemana>Sababo</TileSemana>
+          <TileSemana>Sábado</TileSemana>
+          <SubTitles>
+            <p className="Name">Nome</p>
+            <p className="birthdate">Data Nasc.</p>
+          </SubTitles>
+          <HR> ____________________________________ </HR>
           <Data>
-            <ContainerData>
+            <div className="ContainerName">
               <ul>
-                <p>Nome</p>
                 {users.map(users => {
                   return (
-                    <li>{users.name}</li>
+                    <li>
+                      {users.name}
+                    </li>
                   )
                 })}
               </ul>
-            </ContainerData>
-            <ContainerData>
+            </div>
+            <div className="ContainerBirthdate">
               <ul>
-                <p>Birthdate</p>
                 {users.map(users => {
                   return (
-                    <li>{users.birthDate}</li>
+                    <li>
+                      {users.birthDate}
+                    </li>
                   )
                 })}
               </ul>
-            </ContainerData>
+            </div>
           </Data>
         </Semanas>
+
       </ContainerSemana>
     </Container>
   )

@@ -25,10 +25,10 @@ function Carroucel() {
     
       <ContainerButtons>
         <ButtonRight onClick={handleLeftClick}>
-          <img src={button} />
+          <img src={button} alt="Botão1"/>
         </ButtonRight>
         <ButtonLefth onClick={handleRightClick}>
-          <img src={button} />
+          <img src={button} alt="Botão2"/>
         </ButtonLefth>
       </ContainerButtons>
     </Container>

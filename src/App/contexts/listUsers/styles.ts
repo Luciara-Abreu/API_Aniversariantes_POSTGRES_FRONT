@@ -1,83 +1,88 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
-  width: 100%;
+  width: 100vw;
 `
 const ContainerSemana = styled.div`
-  width: 100%;
+  width: 180%;
+  min-height: 31vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   margin: 0 0 0 0.1%;
-  gap: 0.2rem;
+  gap: 0.3rem;
+
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+  background: -webkit-linear-gradient(to left, #696868, #afa9a9);
+  background: -o-linear-gradient(to left, #696868, #afa9a9);
+  background: -moz-linear-gradient(to left, #696868, #afa9a9);
+  background: linear-gradient(to left, #696868, #afa9a9); 
 `
 const Semanas = styled.div`
-  width: 25vw;
-  min-height: 28vw;
-  border-radius: 10px;
+  width: 100%;
   overflow: hidden;
+  gap: 5rem;
   color: azure;
   font: 10px;
-  padding: 0 0 0 2px;
+  border-radius: 10px;
+  padding: 1px 0 0 5px;
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
   background: -webkit-linear-gradient(to left, #696868, #545353);
   background: -o-linear-gradient(to left, #696868, #545353);
   background: -moz-linear-gradient(to left, #696868, #545353);
   background: linear-gradient(to left, #696868, #545353); 
-
 `
 
 const TileSemana = styled.div`
-  width: 100%;
+  width: 22.6vw;
+  height: 6vh;
   display: flex;
   border-radius: 10px;
   color: azure;
   font: 10px;
+  border-radius: 10px;  
+  margin: -1px 0px 0px -9px;
   padding: 10px 5px 10px 10px;
   text-shadow:0px 0px 3px #f05be6;
   box-shadow:0px 4px 21px #000000;
   justify-content: center;
-  align-items: center;
- 
+  align-items: center; 
 `
-const Data = styled.div`
-  width: 100%; 
-  display: flex;  
-  justify-content: space-between;
-  background: green;
+const SubTitles = styled.div`  
+    display: flex;  
+    justify-content: space-between;
+    margin: 2px 0px -12px 0;
+    p.Name{
+      width: 72%;
+      text-shadow:0px 0px 3px #f05be6;
+  } 
+    p.birthdate{
+      width: 28%;
+      text-shadow:0px 0px 3px #f05be6;
+  } 
   `
-  const ContainerData = styled.div`
-  width: 50%; 
+const HR = styled.div`
+  margin:0;
+  text-shadow:0px 0px 3px #f05be6;  
+  padding: 0px 0 6px 0;
+  `
+const Data = styled.div`
   display: flex;  
   justify-content: space-between;
 
-  font-family: Nunito, sans-serif;
+  div.ContainerName{
+    width: 72%;
+    font-family: Nunito, sans-serif;
   font-size: 15px;
-  background: yellow;
+    }
+  div.ContainerBirthdate{
+    width: 28%;
+    font-family: Nunito, sans-serif;
+  font-size: 15px;
+  }
 
   ul{
-  width: 100%;
   list-style: none;  
-  display: flex;  
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background: blue;
 }
-li{
-  width: 100%;
-  display: flex;  
-  justify-content: space-between;
-  background: red;
-}
-  
-  /*ul{ 
-    p{
-      padding: 10% 0 10% 0;
-    }
-    li{
-      list-style: none
-    }    
-  }*/
-
   `
 
 
@@ -86,6 +91,7 @@ export {
   ContainerSemana,
   Semanas,  
   TileSemana,
-  ContainerData,
+  SubTitles,
+  HR,  
   Data
 }
