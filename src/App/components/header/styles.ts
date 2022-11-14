@@ -31,7 +31,7 @@ const ContainerMenu = styled.div`
   width: 75%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 1% 0 1% 0;
+  margin: 0.5% 0 1% 4%;
   gap: 0.2rem;
 `
 export {
