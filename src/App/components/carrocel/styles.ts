@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
-max-width: 88vw;
+max-width: 100%;
 `
 const ContainerCarrocel = styled.div`
   display: flex;

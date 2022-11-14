@@ -1,6 +1,6 @@
 //import { useRef } from 'react';
 import Header from '../../components/header/index';
-import { Container, BodyContainer, BodyWrap, BodyForm } from '../zstylesGlobal/styles';
+import { Container, BodyContainer, BodyWrap } from '../zstylesGlobal/styles';
 
 const ConsultaMes = () => {
 
@@ -9,9 +9,7 @@ const ConsultaMes = () => {
 <Header /> 
 <BodyContainer> 
   <BodyWrap>
-    <BodyForm>
     <h1> Aqui mostrará uma tabela de aniversariantes conforme mês selecionado </h1>    
-    </BodyForm>
     </BodyWrap>      
 </BodyContainer>
 </Container>

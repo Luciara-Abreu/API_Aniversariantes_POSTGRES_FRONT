@@ -1,6 +1,6 @@
 //import { useRef } from 'react';
 import Header from '../../components/header/index';
-import { Container, BodyContainer, BodyWrap, BodyForm } from '../zstylesGlobal/styles';
+import { Container, BodyContainer, BodyWrap } from '../zstylesGlobal/styles';
 
 
 const Top10 = () => {
@@ -10,10 +10,7 @@ const Top10 = () => {
 <Header /> 
 <BodyContainer> 
   <BodyWrap>
-    <BodyForm>
     <h1> Aqui mostrará os 10 proximos aniversariantes do mês </h1>    
-  
-    </BodyForm>
     </BodyWrap>      
 </BodyContainer>
 </Container>

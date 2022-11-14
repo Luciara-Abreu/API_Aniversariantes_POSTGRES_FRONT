@@ -1,7 +1,7 @@
 //import { useRef } from 'react';
 import AddUsers from '../../contexts/addUsers';
 import Header from '../../components/header/index';
-import { Container, BodyContainer, BodyWrap, BodyForm } from '../zstylesGlobal/styles';
+import { Container, BodyContainer, BodyWrap } from '../zstylesGlobal/styles';
 
 export const AddPage = () => {
 
@@ -9,12 +9,10 @@ export const AddPage = () => {
 
 <Container>     
 <Header /> 
+    <h1> Aqui vai mostrar campos para add novos aniversariantes </h1>      
 <BodyContainer> 
   <BodyWrap>
-    <BodyForm>
-    <h1> Aqui vai mostrar campos para add novos aniversariantes </h1>      
         <AddUsers />  
-    </BodyForm>
     </BodyWrap>      
 </BodyContainer>
 </Container>

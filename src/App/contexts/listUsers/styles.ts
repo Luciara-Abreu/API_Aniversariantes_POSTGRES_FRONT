@@ -1,31 +1,28 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
-  width: 100vw;
+  width: 100%;
 `
 const ContainerSemana = styled.div`
-  width: 180%;
+  width: 235%;
   min-height: 31vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  margin: 0 0 0 0.1%;
-  gap: 0.3rem;
+  gap: 0.1rem;
 
-  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
-  background: -webkit-linear-gradient(to left, #696868, #afa9a9);
-  background: -o-linear-gradient(to left, #696868, #afa9a9);
-  background: -moz-linear-gradient(to left, #696868, #afa9a9);
-  background: linear-gradient(to left, #696868, #afa9a9); 
+  background: -webkit-linear-gradient(to left, #bdebf5, #dbbee9);
+  background: -o-linear-gradient(to left, #bdebf5, #dbbee9);
+  background: -moz-linear-gradient(to left, #bdebf5, #dbbee9);
+  background: linear-gradient(to left, #bdebf5, #dbbee9);
 `
 const Semanas = styled.div`
   width: 100%;
   overflow: hidden;
-  gap: 5rem;
   color: azure;
   font: 10px;
   border-radius: 10px;
   padding: 1px 0 0 5px;
-  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 5 5px 10px 5px rgb(239 227 238);
   background: -webkit-linear-gradient(to left, #696868, #545353);
   background: -o-linear-gradient(to left, #696868, #545353);
   background: -moz-linear-gradient(to left, #696868, #545353);
@@ -33,7 +30,7 @@ const Semanas = styled.div`
 `
 
 const TileSemana = styled.div`
-  width: 22.6vw;
+  width: 31.4vw;
   height: 6vh;
   display: flex;
   border-radius: 10px;
@@ -50,32 +47,38 @@ const TileSemana = styled.div`
 const SubTitles = styled.div`  
     display: flex;  
     justify-content: space-between;
-    margin: 2px 0px -12px 0;
+    margin: 3px 0px -12px 0;
     p.Name{
-      width: 72%;
+      width: 77%;
+      margin: 0 10px 0 10px;
+      padding: 0 0 0 10px;
       text-shadow:0px 0px 3px #f05be6;
   } 
     p.birthdate{
-      width: 28%;
+      width: 23%;
+      margin: 0 10px 0 10px;
       text-shadow:0px 0px 3px #f05be6;
   } 
   `
 const HR = styled.div`
   margin:0;
   text-shadow:0px 0px 3px #f05be6;  
-  padding: 0px 0 6px 0;
+  margin: 0 14px 6px 18px;
   `
 const Data = styled.div`
   display: flex;  
   justify-content: space-between;
 
   div.ContainerName{
-    width: 72%;
+    width: 77%;
+    margin: 0 10px 0 10px;
+    padding: 0 0 0 10px;
     font-family: Nunito, sans-serif;
-  font-size: 15px;
+    font-size: 15px;
     }
   div.ContainerBirthdate{
-    width: 28%;
+    width: 23%;
+      margin: 0 10px 0 10px;
     font-family: Nunito, sans-serif;
   font-size: 15px;
   }

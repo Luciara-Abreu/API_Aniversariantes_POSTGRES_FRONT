@@ -21,8 +21,7 @@ function Carroucel() {
     <Container>
       <ContainerCarrocel ref={carousel}>
       <ListUsers />
-      </ContainerCarrocel>
-    
+      </ContainerCarrocel>    
       <ContainerButtons>
         <ButtonRight onClick={handleLeftClick}>
           <img src={button} alt="Botão1"/>

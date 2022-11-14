@@ -1,7 +1,6 @@
 //import { useRef } from 'react';
-import ListUsers from '../../contexts/listUsers';
 import Header from '../../components/header/index';
-import { Container, BodyContainer, BodyWrap, BodyForm } from '../zstylesGlobal/styles';
+import { Container, BodyWrap } from './styles';
 import Carrocel from '../../components/carrocel';
 
 export const Dashboard = () => {
@@ -9,14 +8,9 @@ export const Dashboard = () => {
   return (
     <Container>     
       <Header /> 
-      <BodyContainer> 
         <BodyWrap>
-          <BodyForm>
-      <h1> Aqui vai uma tabela com os aniversariantes da semana </h1>      
-        <Carrocel/>   
-          </BodyForm>
-          </BodyWrap>      
-      </BodyContainer>
+        <Carrocel/> 
+        </BodyWrap>
     </Container>
   );
 }
