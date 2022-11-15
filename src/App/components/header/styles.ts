@@ -42,7 +42,7 @@ const HeaderContainer = styled.div`
 @media screen and (max-width: 600px) {
   width: 50px;
 }
-  @media screen and (max-width: 396px) {
+@media screen and (max-width: 350px) {
     width: 30px;
 }
   `
@@ -60,7 +60,7 @@ background: #525252;
   width: 100%;
   height: 80px; 
 }
-  @media screen and (max-width: 396px) {
+@media screen and (max-width: 350px) {
     width: 100%;
     height: 80px; 
 }
