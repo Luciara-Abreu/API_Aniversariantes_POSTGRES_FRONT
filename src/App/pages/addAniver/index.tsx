@@ -8,8 +8,7 @@ export const AddPage = () => {
   return (
 
 <Container>     
-<Header /> 
-    <h1> Aqui vai mostrar campos para add novos aniversariantes </h1>      
+<Header />   
 <BodyContainer> 
   <BodyWrap>
         <AddUsers />  

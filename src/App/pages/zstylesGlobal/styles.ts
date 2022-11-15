@@ -14,10 +14,7 @@ const BodyWrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 11px;
     overflow: hidden;
-    //margin: 0 1% 0 1%;
-    padding: 15px 10px 7px 19px;
 
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
   //background: -webkit-linear-gradient(to left, #bdebf5, #dbbee9);
