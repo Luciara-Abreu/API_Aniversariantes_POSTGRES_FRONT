@@ -25,13 +25,14 @@ const HeaderContainer = styled.div`
   color: #fff;
   text-shadow:0px 0px 3px #f05be6;
   font-size: 35px;
+  font-weight: bold;
   box-sizing: border-box;
 
   @media screen and (max-width: 600px) {
     font-size: 30px;
 }
-  @media screen and (max-width: 320px) {
-    font-size: 20px;
+  @media screen and (max-width: 396px) {
+    font-size: 22px;
 }
   `
   const Date =styled.div`
@@ -41,20 +42,28 @@ const HeaderContainer = styled.div`
 @media screen and (max-width: 600px) {
   width: 50px;
 }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 396px) {
     width: 30px;
 }
   `
 
 const ContainerMenu =styled.div`    
 width: 100%;
-height: 40px;
+height: 45px;
 display: flex;
 justify-content: center; 
 align-items: center;
-gap: 0.7px;
 box-shadow: 0px 5px 20px #000;
 background: #525252;
+
+@media screen and (max-width: 600px) {
+  width: 100%;
+  height: 80px; 
+}
+  @media screen and (max-width: 396px) {
+    width: 100%;
+    height: 80px; 
+}
 `
 
 export {

@@ -9,13 +9,13 @@ const Header: React.FC = () => {
 
   return (
 <HeaderContainer>
-<ContainerUp> 
-  <Title>     
-    **AGENDA ANIVERSARIANTES **
-  </Title> 
-</ContainerUp>   
-    <ContainerMenu>  
-<ButtonsMenu />
+  <ContainerUp> 
+    <Title>     
+      **AGENDA ANIVERSARIANTES **
+    </Title> 
+  </ContainerUp>   
+  <ContainerMenu>  
+    <ButtonsMenu />
   </ContainerMenu>  
   </HeaderContainer>
   )

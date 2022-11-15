@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
 const ContainerButton = styled.div`
+  margin:0;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:1.5px;
   height: 70%;
-  margin:0%;
 
 .btn {  
   background-color: transparent;
@@ -14,19 +18,16 @@ const ContainerButton = styled.div`
   font-family: 'Montserrat', sans-serif;
   text-shadow:0px 0px 3px #f05be6;
   cursor: pointer;
-
   padding: 0.5em 3.3em 0.5em 3.3em;
   font-weight: 600;
 
-  @media screen and (max-width: 600px) {
-  flex-wrap: wrap;
-  padding: 0.5em 1.3em 0.5em 1.3em;
-  font: 20px;
-  background: red;
+  @media screen and (max-width: 396px) {
+    padding: 0.1em 1em 0.1em 1em;
+    justify-content: center;
 }
-  @media screen and (max-width: 320px) {
-  padding: 0.5em 3.3em 0.5em 3.3em;
-  font-weight: 100;
+@media screen and (max-width: 600px) {
+  padding: 0.4em 1.3em 0.4em 1.3em;
+  font: 20px;
 }
 
 }
