@@ -29,10 +29,10 @@ const HeaderContainer = styled.div`
   box-sizing: border-box;
 
   @media screen and (max-width: 600px) {
-    font-size: 30px;
+    font-size: 23px;
 }
-  @media screen and (max-width: 396px) {
-    font-size: 22px;
+  @media screen and (max-width: 350px) {
+    font-size: 15px;
 }
   `
   const Date =styled.div`
