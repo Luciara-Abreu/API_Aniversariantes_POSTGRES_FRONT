@@ -2,7 +2,7 @@ import { StylesTile } from './styles'
 
 type Props = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> & {}
 
-  const ButtonTitle = (props:Props) =>{  
+  const ButtonLogoTitle = (props:Props) =>{  
 
   return(
     <StylesTile>
@@ -11,4 +11,4 @@ type Props = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElemen
   )
 }
 
-export default ButtonTitle
+export default ButtonLogoTitle

@@ -1,17 +1,11 @@
 import React from "react";
-import ButtonLogoAnel from "../buttons/anelDate";
-import ButtonTitle from "../buttons/buttonTitle";
-import AddUserButton from "../buttons/buttonMenu/buttonAddUser";
-import ConsultaMesButton from "../buttons/buttonMenu/buttonConultaMes";
-import Top10Button from "../buttons/buttonMenu/buttonTop10";
-import { Title, Date, ContainerMenu, HeaderContainer, ContainerUp } from "./styles";
-import DashboardButton from "../buttons/buttonMenu/buttonDash";
-//import LoginButton from "../buttons/buttonMenu/buttonLogin";
-
+import { Title, ContainerMenu, HeaderContainer, ContainerUp } from "./styles";
+import ButtonsMenu from "../buttons/buttonsMenu";
 
 // https://youtu.be/AXKc4WhgLSA - criar header com typeScript
 
 const Header: React.FC = () => {  
+
 
   return (
 <HeaderContainer>
@@ -19,20 +13,14 @@ const Header: React.FC = () => {
   <Title>     
     **AGENDA ANIVERSARIANTES **
   </Title> 
-  <Date>     
-  <ButtonLogoAnel/>  
-  </Date>
-  </ContainerUp>   
+</ContainerUp>   
     <ContainerMenu>  
-    <DashboardButton width={"100%"} heigth={""}>Dashboar</DashboardButton>
-    <Top10Button width={"100%"} heigth={""}>TOP 10</Top10Button>
-    <ConsultaMesButton width={"100%"} heigth={""}>CONSULTA MÊS</ConsultaMesButton>
-    <AddUserButton width={"100%"} heigth={""}>ADD ANIVERSARIANTES</AddUserButton>
+<ButtonsMenu />
   </ContainerMenu>  
-    </HeaderContainer>
+  </HeaderContainer>
   )
 }
 
 export default Header
 
-/*<LoginButton width={"100%"} heigth={""}>Login</LoginButton>*/
+ /* <DashboardButton>Dashboar</DashboardButton>*/

@@ -1,41 +1,32 @@
 import styled from "styled-components";
 
 const ContainerButton = styled.div`
-  display: flex;
+  width: 100%;
+  height: 70%;
+  margin:0%;
 
-.btn {
-  display: flex;
+.btn {  
   background-color: transparent;
   border: 2px solid #e74c3c;
   border-radius: 0.6em;
   color: #e74c3c;
-  line-height: 1;
-  padding: 0.5em 3.3em 0.5em 3.3em;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
   text-shadow:0px 0px 3px #f05be6;
-  justify-content:center;
-  align-items:center;
   cursor: pointer;
 
-  @media (max-width:900px) and (min-width:700px)  {
-  width: 17vw;
-  font:normal 5px;
-  padding: 8px 20px 5px 20px;
-  justify-content: center;
+  padding: 0.5em 3.3em 0.5em 3.3em;
+  font-weight: 600;
+
+  @media screen and (max-width: 600px) {
+  flex-wrap: wrap;
+  padding: 0.5em 1.3em 0.5em 1.3em;
+  font: 20px;
+  background: red;
 }
-@media (max-width:700px) and (min-width:500px)  {
-  width: 19vw;
-  font:normal 4px;
-  padding: 8px 20px 5px 20px;
-  justify-content: center;
-}
-@media (max-width:500px) and (min-width:200px)  {
-  width: 26vw;
-  font:normal 4px;
-  padding: 8px 20px 5px 20px;
-  justify-content: center;
+  @media screen and (max-width: 320px) {
+  padding: 0.5em 3.3em 0.5em 3.3em;
+  font-weight: 100;
 }
 
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ButtonGoogle } from '../stlyles'
+import { ButtonGoogle } from './styles'
 
 
 type Props = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> 

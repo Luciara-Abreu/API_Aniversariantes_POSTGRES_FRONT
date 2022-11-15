@@ -5,13 +5,9 @@ max-width: 100%;
 `
 const ContainerCarrocel = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   overflow-x: auto;
   scroll-behavior: smooth;
-  box-shadow: 12px 12px 12px 12px rgba(241 228 228 / 20%);
-  background-color: #e1e1e1;  
-  border-radius: 10px;
+  box-shadow: 1px 1px 13px 5px rgb(200 198 213);
 
 ::-webkit-scrollbar {
   display: none;

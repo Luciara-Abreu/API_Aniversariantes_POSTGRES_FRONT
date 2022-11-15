@@ -3,9 +3,7 @@ import styled from 'styled-components'
 
 const WrapButtonAnel = styled.div`
   width: 100%;
-  display: flex;
   margin: auto;
-  padding-left: 20%;
   `
 
 const StylesButtonAnel = styled.button`
@@ -25,22 +23,6 @@ const StylesButtonAnel = styled.button`
   transition: all 0.3s ease-in-out 0s;
   outline: none;
   position: relative;
-
-  @media (max-width:900px) and (min-width:700px)  {
-  width: 15vw;
-  font:normal 5px;
-}
-@media (max-width:700px) and (min-width:500px)  {
-  width: 15vw;
-  font:normal 5px;
-  padding: 5px 3px 3px 5px;
-}
-@media (max-width:500px) and (min-width:200px)  {
-  width: 25vw;
-  font:normal 5px;
-  padding: 5px 3px 3px 5px;
-}
-
 
 &:hover, &:focus {
   color: #313133;
