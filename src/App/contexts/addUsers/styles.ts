@@ -6,7 +6,7 @@ const ContainerRoot = styled.div`
 
 const Container = styled.div`
   width: 100vw;
-  min-height: 84.6vh;
+  min-height: 82vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -18,13 +18,22 @@ const Container = styled.div`
   background: -moz-linear-gradient(to left, #bdebf5, #dbbee9);
   background: linear-gradient(to left, #bdebf5, #dbbee9);
 
+  @media (max-width: 768px)and (min-width: 481px) {
+    min-height: 84.7vh;
+    padding: 5px 5px 30px 5px; 
+}
+  @media (max-width: 480px)and (min-width: 320px) {
+    min-height: 80vh;
+    padding: 5px 5px 30px 5px; 
+  }
+
 `
 const Body = styled.div`
   width: 50%;
   height: 70vh;
   border-radius: 10px;
   overflow: hidden;
-  padding: 27px 55px 30px 55px;  
+  padding: 20px 55px 0px 55px;  
   background: #333;
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
   h1{
