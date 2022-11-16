@@ -18,10 +18,11 @@ const ContainerLogin = styled.div`
 `
 const WrapLogin = styled.div`
   width: 390px;
-  height: auto;
+  //height: auto;
+  height: 90vh;
   background-color: #333;
   border-radius: 10px;
-  padding: 22px 24px 2px 28px;
+  padding: 20px 24px 10px 28px;
 
 //para não gerar scrow na página
   overflow: hidden;
@@ -58,6 +59,7 @@ const WrapLogin = styled.div`
 
 const LoginForm = styled.div`
 width: 100%;
+padding-bottom: 1px;
 
 @media (max-width: 768px)and (min-width: 481px) {
     width: 340px;
@@ -79,15 +81,17 @@ const LoginFormTitle = styled.div`
 const DivLogo = styled.div`
   width: 90px;
   margin-left: 35px;
-  padding-bottom: 20px;
+  padding-bottom: 120px;
 
   @media (max-width: 768px)and (min-width: 481px) {
     width: 50px;
     margin-left: 35px;
+    padding-bottom: 30px;
 }
   @media (max-width: 480px)and (min-width: 320px) {
     width: 30px;
     margin-left: 35px;
+    padding-bottom: 30px;
   }
 `
 const LogoForm = styled.div`
