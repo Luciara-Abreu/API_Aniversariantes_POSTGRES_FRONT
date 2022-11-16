@@ -54,12 +54,11 @@ export const Login = () => {
             <ContainerLoginFormBtn>
               <button className="login-form-btn">Login</button>
             </ContainerLoginFormBtn>
-
+            <AuthGoogle />
             <div className="text-criarConta"></div>
             <spn className="txt1">Não possui conta?</spn>
             <a href="#" onClick={handleClick} className="txt2">Criar Conta</a>
           </LoginForm>
-          <AuthGoogle />
         </WrapLogin>
       </ContainerLogin>
     </Container>

@@ -4,7 +4,7 @@ const ButtonGoogle = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding: 15px 1px 20px 1px;
+  padding: 8px 1px 8px 1px;
 
 .btn {
   font-size: 15px;

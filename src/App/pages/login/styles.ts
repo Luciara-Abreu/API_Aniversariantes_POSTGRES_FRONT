@@ -18,11 +18,11 @@ const ContainerLogin = styled.div`
 `
 const WrapLogin = styled.div`
   width: 390px;
-  //height: auto;
-  height: 90vh;
+  height: auto;
+  //height: 94vh;
   background-color: #333;
   border-radius: 10px;
-  padding: 20px 24px 10px 28px;
+  padding: 10px 24px 10px 28px;
 
 //para não gerar scrow na página
   overflow: hidden;
@@ -36,9 +36,11 @@ const WrapLogin = styled.div`
 
   @media (max-width: 768px)and (min-width: 481px) {
     width: 340px;
+    height: auto;
 }
   @media (max-width: 480px)and (min-width: 320px) {
     width: 320px;
+    height: auto;
   }
 }
 
@@ -59,14 +61,14 @@ const WrapLogin = styled.div`
 
 const LoginForm = styled.div`
 width: 100%;
-padding-bottom: 1px;
+//padding-bottom: 1px;
 
 @media (max-width: 768px)and (min-width: 481px) {
     width: 340px;
-    height: 70vh;
+  //  height: 67vh;
 }
   @media (max-width: 480px)and (min-width: 320px) {
-    height: 70vh;
+ //   height: 67vh;
   }
 `
 
@@ -79,19 +81,17 @@ const LoginFormTitle = styled.div`
 `
 
 const DivLogo = styled.div`
-  width: 90px;
+  width: 85px;
   margin-left: 35px;
   padding-bottom: 120px;
 
   @media (max-width: 768px)and (min-width: 481px) {
-    width: 50px;
     margin-left: 35px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
   @media (max-width: 480px)and (min-width: 320px) {
-    width: 30px;
     margin-left: 35px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
   }
 `
 const LogoForm = styled.div`
@@ -198,7 +198,7 @@ const ContainerLoginFormBtn = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 13px;
+  padding: 19px 0 0 0;
 
   .login-form-btn{
   font-size: 15px;
@@ -223,6 +223,14 @@ cursor: pointer;
   }
   
 }
+
+@media (max-width: 768px)and (min-width: 481px) {
+  padding: 20px 0 0 0;
+}
+  @media (max-width: 480px)and (min-width: 320px) {
+    padding: 20px 0 0 0;
+  }
+
 `
 
 
