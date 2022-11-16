@@ -50,7 +50,7 @@ const Body = styled.div`
     padding: 0 0 20px 0;
     color: #fff;
     text-shadow: 0px 0px 3px #f05be6;
-    font:bold 20px "Courier New", Courier, monospace;
+    font:bold 25px "Courier New", Courier, monospace;
   }
 }
   @media (max-width: 480px)and (min-width: 320px) {
@@ -61,7 +61,7 @@ const Body = styled.div`
     padding: 0 0 20px 0;
     color: #fff;
     text-shadow: 0px 0px 3px #f05be6;
-    font:bold 17px "Courier New", Courier, monospace;
+    font:bold 21px "Courier New", Courier, monospace;
   }
   }
 `
@@ -70,7 +70,8 @@ const WrapInput = styled.div`
 width: 100%;
 position: relative;
 border-bottom: 2px solid #adadad;
-margin-bottom: 17px;
+//margin-bottom: 17px;
+margin-bottom: 10px;
 
 .input{
   width: 100%;

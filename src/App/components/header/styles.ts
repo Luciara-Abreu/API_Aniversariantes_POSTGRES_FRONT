@@ -56,14 +56,14 @@ align-items: center;
 box-shadow: 0px 5px 20px #000;
 background: #525252;
 
-@media screen and (max-width: 600px) {
+@media (max-width: 768px)and (min-width: 481px) {
   width: 100%;
   height: 80px; 
 }
-@media screen and (max-width: 350px) {
+  @media (max-width: 480px)and (min-width: 320px) {
     width: 100%;
     height: 80px; 
-}
+  }
 `
 
 export {
