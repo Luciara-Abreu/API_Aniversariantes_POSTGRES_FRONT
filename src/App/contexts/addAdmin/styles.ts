@@ -63,10 +63,20 @@ const LoginFormTitle = styled.div`
 `
 
 const DivLogo = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content:center;
-  align-items:center; 
+  width: 85px;
+  margin-left: 35px;
+  padding: 30px 0 30px 0;
+
+  @media (max-width: 768px)and (min-width: 481px) {
+    height: 250px;
+    margin-left: 35px;
+    padding-bottom: 20px;
+}
+  @media (max-width: 480px)and (min-width: 320px) {
+    height: 250px;
+    margin-left: 35px;
+    padding-bottom: 20px;
+  }
 `
 const LogoForm = styled.div`
   width: 15vw;

@@ -4,7 +4,7 @@ import consultaMes from '../pages/consultaMes';
 import { Dashboard } from '../pages/dashboard';
 import EditUsers from '../pages/editAniver';
 import Top10 from '../pages/top10';
-import AddPage from '../pages/addAniver';
+import AddPage from '../pages/addUsers';
 import criarConta from '../pages/criarConta';
 
 export const Routes = () => {
