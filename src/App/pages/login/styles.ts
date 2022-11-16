@@ -21,8 +21,7 @@ const WrapLogin = styled.div`
   height: auto;
   background-color: #333;
   border-radius: 10px;
-  padding: 22px 24px 29px 28px;
-  //padding: 33px 55px 0px 55px;
+  padding: 22px 24px 2px 28px;
 
 //para não gerar scrow na página
   overflow: hidden;
@@ -33,6 +32,13 @@ const WrapLogin = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+
+  @media (max-width: 768px)and (min-width: 481px) {
+    width: 340px;
+}
+  @media (max-width: 480px)and (min-width: 320px) {
+    width: 320px;
+  }
 }
 
 .txt1 {
@@ -52,6 +58,14 @@ const WrapLogin = styled.div`
 
 const LoginForm = styled.div`
 width: 100%;
+
+@media (max-width: 768px)and (min-width: 481px) {
+    width: 340px;
+    height: 70vh;
+}
+  @media (max-width: 480px)and (min-width: 320px) {
+    height: 70vh;
+  }
 `
 
 const LoginFormTitle = styled.div`
@@ -63,15 +77,37 @@ const LoginFormTitle = styled.div`
 `
 
 const DivLogo = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content:center;
-  align-items:center;
+  width: 90px;
+  margin-left: 35px;
+  padding-bottom: 20px;
+
+  @media (max-width: 768px)and (min-width: 481px) {
+    width: 50px;
+    margin-left: 35px;
+}
+  @media (max-width: 480px)and (min-width: 320px) {
+    width: 30px;
+    margin-left: 35px;
+  }
 `
 const LogoForm = styled.div`
   width: 15vw;
-  height: 15vw;
+  height: 15vh;
+
+  
+  @media (max-width: 768px)and (min-width: 481px) {
+    width: 10vw;
+    height: 30vh;
+}
+  @media (max-width: 480px)and (min-width: 320px) {
+    width: 10vw;
+    height: 30vh;
+  }
 `
+const ContainerInput = styled.div`
+width: 100%;
+`
+
 const WrapInput = styled.div`
 width: 100%;
 position: relative;
@@ -195,5 +231,6 @@ export {
   DivLogo,
   LogoForm,
   WrapInput,
+  ContainerInput,
   ContainerLoginFormBtn  
 }

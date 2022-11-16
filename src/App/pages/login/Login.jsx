@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom'
 import cake from '../../assets/Gifs/cake2.gif'
 import {
   Container, ContainerLogin, WrapLogin, LoginForm, LoginFormTitle, LogoForm, WrapInput,
-  ContainerLoginFormBtn, DivLogo
+  ContainerInput, ContainerLoginFormBtn, DivLogo
 } from './styles';
 
 
@@ -28,25 +28,28 @@ export const Login = () => {
             <DivLogo>
               <LogoForm><img src={cake} alt="CakeNiver" /></LogoForm>
             </DivLogo>
-            <WrapInput>
-              <input
-                className={email !== "" ? 'has-val input' : 'input'}
-                type='email'
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-              />
-              <span className='FocusInput' data-placeholder='Email'></span>
-            </WrapInput>
 
-            <WrapInput>
-              <input
-                className={password !== "" ? 'has-val input' : 'input'}
-                type='password'
-                value={password}
-                onChange={e => setPassword(e.target.value)}
-              />
-              <span className='FocusInput' data-placeholder='Password'></span>
-            </WrapInput>
+            <ContainerInput>
+              <WrapInput>
+                <input
+                  className={email !== "" ? 'has-val input' : 'input'}
+                  type='email'
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
+                />
+                <span className='FocusInput' data-placeholder='Email'></span>
+              </WrapInput>
+
+              <WrapInput>
+                <input
+                  className={password !== "" ? 'has-val input' : 'input'}
+                  type='password'
+                  value={password}
+                  onChange={e => setPassword(e.target.value)}
+                />
+                <span className='FocusInput' data-placeholder='Password'></span>
+              </WrapInput>
+            </ContainerInput>
 
             <ContainerLoginFormBtn>
               <button className="login-form-btn">Login</button>
