@@ -41,14 +41,13 @@ const Body = styled.div`
     color: #fff;
     text-shadow: 0px 0px 3px #f05be6;
     font:normal 25px "Courier New", Courier, monospace;
-  }
+  }    
 
-    
   @media (max-width: 768px)and (min-width: 481px) {
   width: 75%;
   height: 70vh;
   h1{
-    padding: 5px;
+    padding: 0 0 20px 0;
     color: #fff;
     text-shadow: 0px 0px 3px #f05be6;
     font:bold 20px "Courier New", Courier, monospace;
@@ -57,8 +56,9 @@ const Body = styled.div`
   @media (max-width: 480px)and (min-width: 320px) {
   width: 96%;
   height: 70vh;
+  padding: 27px 25px 50px 25px;
   h1{
-    padding: 5px;
+    padding: 0 0 20px 0;
     color: #fff;
     text-shadow: 0px 0px 3px #f05be6;
     font:bold 17px "Courier New", Courier, monospace;
@@ -135,13 +135,13 @@ margin-bottom: 17px;
   outline: 0;
 }
   .input:focus + .FocusInput::after{
-    top: -15px;
+    top: -8px;
   }
   .input:focus + .FocusInput::before{
     width: 100%;
   }
   .has-val + .FocusInput::after{
-    top: -15px;
+    top: -8px;
   }
   .has-val + .FocusInput::before{
     width: 100%;
