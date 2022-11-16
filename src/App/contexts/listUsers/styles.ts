@@ -27,6 +27,15 @@ const Semanas = styled.div`
   background: -o-linear-gradient(to left, #696868, #545353);
   background: -moz-linear-gradient(to left, #696868, #545353);
   background: linear-gradient(to left, #696868, #545353); 
+
+@media (max-width: 768px)and (min-width: 481px) {
+  width: 430px;
+  height: 89.5vw;
+}
+@media (max-width: 480px)and (min-width: 320px) {
+  width: 378px;
+  height: 134vw;
+}
 `
 
 const TileSemana = styled.div`
@@ -43,6 +52,16 @@ const TileSemana = styled.div`
   box-shadow:0px 4px 21px #000000;
   justify-content: center;
   align-items: center; 
+
+
+  @media (max-width: 768px)and (min-width: 481px) {
+  width: 72.5vw;
+  height: 6vh;
+}
+@media (max-width: 480px)and (min-width: 320px) {
+  width: 95.5vw;
+  height: 6vh;
+}
 `
 const SubTitles = styled.div`  
     display: flex;  

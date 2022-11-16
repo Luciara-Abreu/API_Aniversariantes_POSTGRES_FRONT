@@ -16,6 +16,13 @@ const BodyWrap = styled.div`
   background: -o-linear-gradient(to left, #bdebf5, #dbbee9);
   background: -moz-linear-gradient(to left, #bdebf5, #dbbee9);
   background: linear-gradient(to left, #bdebf5, #dbbee9);
+
+  @media (max-width: 768px)and (min-width: 481px) {
+    padding: 30px 25px 25px 25px;
+}
+  @media (max-width: 480px)and (min-width: 320px) {
+    padding: 30px 10px 25px 10px;
+  }
   `
 
 export {
