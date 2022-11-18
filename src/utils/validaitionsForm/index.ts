@@ -80,13 +80,37 @@ const maskPhone = (value: string) => {
 
 
 const schema = yup.object({
-  name: yup.string().required("Campo Obrigatório"),
-  email: yup.string().email("Digite um e-mail válido").required("Campo Obrigatório"),
-  birthdate: yup.string().required("Campo Obrigatório"),
-  fone: yup.string().required("Campo Obrigatório"),
-  //password: yup.string().min(6, "A senha deve de ter pelo menos 6 digitos").required("Campo Obrigatório"),
-  //confirmPassword: yup.string().oneOf([yup.ref("password")], "As senhas devem ser iguais").required("Campo Obrigatório"),
-}).required();
+  name: yup
+  .string()
+  .min(10, "Nome inválido")
+  .required("Campo Obrigatório"),
+
+  email: yup
+  .string()
+  .email("Digite um email válido")
+  .required("O email é obrigatório"),
+
+  birthdate: yup
+  .string()
+  .min(8, "Data inválida")
+  .required("Campo Obrigatório"),
+
+  fone: yup
+  .string()
+  .min(10, "Numero inválido")
+  .required("Campo Obrigatório"),
+
+  password: yup
+  .string()
+  .min(6, "A senha deve ter pelo menos 6 digitos")
+  .required("A senha é obrigatória"),
+
+confirmPassword: yup
+  .string()
+  .required("Confirmar a senha é obrigatório")
+  .oneOf([yup.ref("password")], "As senhas devem ser iguais"),
+})
+.required();
 
 
 

@@ -9,9 +9,11 @@ import { schema, maskPhone } from "../../../utils/validaitionsForm";
 
 
 const EditUsers = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const { register, handleSubmit, watch, formState: { errors } } = useForm({
     resolver: yupResolver(schema)
   });
+
+  console.log(watch("name"));
 
   const [users, setUsers] = useState([])
   const db = getFirestore(firebaseConfig)
@@ -62,16 +64,15 @@ const EditUsers = () => {
                   {...register("name", { required: true })}
                   value={name}
                   onChange={e => setName(e.target.value)} />
-                <span className='FocusInput' data-placeholder='Digite o nome para Editar?'></span>
+                <span className='FocusInput' data-placeholder='Digite o nome completo do aniversariante'></span>
                 <span className="MessageError">{errors.name?.message}</span>
               </label>
             </WrapInput>
 
-
             <WrapInput>
               <label>
                 <input className={email !== "" ? 'has-val input' : 'input'}
-                  {...register("email", { required: true })}
+                  type="text" {...register("email")}
                   value={email}
                   onChange={e => setEmail(e.target.value)} />
                 <span className='FocusInput' data-placeholder='e-mail'></span>
@@ -83,7 +84,7 @@ const EditUsers = () => {
               <WrapInput>
                 <label>
                   <input className={birthDate !== "" ? 'has-val input' : 'input'}
-                    {...register("birthDate", { required: true })}
+                    {...register("birthDate")}
                     value={birthDate}
                     onChange={e => setBirthDate(e.target.value)} />
                   <span className='FocusInput' data-placeholder='Data de Nascimento.'></span>
@@ -94,7 +95,7 @@ const EditUsers = () => {
               <WrapInput>
                 <label>
                   <input className={fone !== "" ? 'has-val input' : 'input'}
-                    {...register("fone", { required: true })}
+                    {...register("fone")}
                     value={maskPhone.fone}
                     onChange={e => setFone(e.target.value)} />
                   <span className='FocusInput' data-placeholder='Fone / Wahts.'></span>

@@ -70,7 +70,7 @@ const WrapInput = styled.div`
 width: 100%;
 position: relative;
 border-bottom: 2px solid #adadad;
-margin-bottom: 25px;
+margin-bottom: 45px;
 
 ul{
   list-style: none;  
