@@ -2,7 +2,7 @@ import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import firebaseConfig from '../../services/config/firebase';
-import { ContainerRoot, Container,Body,WrapInput, ContainerButton } from './styles';
+import { ContainerRoot, Container,Body,WrapInput, ContainerButton, BesideInputContainer } from './styles';
 
 
 const AddUsers: React.FC = () => {
@@ -48,6 +48,7 @@ const AddUsers: React.FC = () => {
         <span className='FocusInput' data-placeholder='e-mail'></span>
         </WrapInput>
 
+        <BesideInputContainer>
         <WrapInput>
         <input className={birthDate !== "" ? 'has-val input' : 'input'}
                 type='birthDate'
@@ -63,13 +64,12 @@ const AddUsers: React.FC = () => {
                 onChange={e => setFone(e.target.value)} />
         <span className='FocusInput' data-placeholder='Fone / WhatsApp'></span>        
         </WrapInput>
+        </BesideInputContainer> 
       
       <ContainerButton>
         <button className="login-form-btn" onClick={creatUsers}>Add Aniversariantes </button>
-      </ContainerButton>   
-      <ContainerButton>
         <button className="login-form-btn" onClick={handleClick}>Editar Aniversariantes </button>
-      </ContainerButton>   
+      </ContainerButton>       
       </Body>   
     </Container>
     </ContainerRoot>

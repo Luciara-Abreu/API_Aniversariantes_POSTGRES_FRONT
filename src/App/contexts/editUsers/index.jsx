@@ -62,7 +62,7 @@ const EditUsers = () => {
                   {...register("name", { required: true })}
                   value={name}
                   onChange={e => setName(e.target.value)} />
-                <span className='FocusInput' data-placeholder='Nome completo'></span>
+                <span className='FocusInput' data-placeholder='Digite o nome para Editar?'></span>
                 <span className="MessageError">{errors.name?.message}</span>
               </label>
             </WrapInput>

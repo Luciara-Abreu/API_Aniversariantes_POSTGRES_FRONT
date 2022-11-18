@@ -37,11 +37,11 @@ const Body = styled.div`
   background: #333;
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
   h1{
-    padding: 0 0 10px 77px;
+    padding: 0 0 40px 25px;
     color: #fff;
     text-shadow: 0px 0px 3px #f05be6;
-    font:normal 25px "Courier New", Courier, monospace;
-  }    
+    font: bold 30px "Courier New", Courier, monospace;
+  }     
 
   @media (max-width: 768px)and (min-width: 481px) {
   width: 75%;
@@ -71,7 +71,7 @@ width: 100%;
 position: relative;
 border-bottom: 2px solid #adadad;
 //margin-bottom: 17px;
-margin-bottom: 10px;
+margin-bottom: 25px;
 
 .input{
   width: 100%;
@@ -161,6 +161,7 @@ const ContainerButton = styled.div`
   display: flex;
   justify-content: center;
   padding-bottom: 10px;
+  padding: 40px 0 10px 0;
   gap: 5px;
 
   .login-form-btn{
@@ -188,10 +189,17 @@ cursor: pointer;
   }
 `
 
+const BesideInputContainer = styled.div`
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1rem;
+`
+
 export {
   ContainerRoot,
   Container,
   Body,
   WrapInput,
   ContainerButton,
+  BesideInputContainer
 }
