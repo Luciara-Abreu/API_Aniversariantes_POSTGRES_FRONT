@@ -70,8 +70,8 @@ const WrapInput = styled.div`
 width: 100%;
 position: relative;
 border-bottom: 2px solid #adadad;
-//margin-bottom: 17px;
 margin-bottom: 25px;
+
 ul{
   list-style: none;  
 }
@@ -85,10 +85,9 @@ ul{
 .input{
   width: 100%;
   height: 40px;
-  //padding: 0 5px;
+  padding: 0 0 0 5px;
   font-size: 15px;
   color: #000;
-  padding: 0 0 0 5px;
   line-height: 1;
   border: none;
   display:block;
@@ -152,7 +151,7 @@ ul{
     width: 100%;
   }
  .has-val + .FocusInput::after{
-    top: -5px;
+    top: -17px;
   }
   .has-val + .FocusInput::before{
     width: 100%;
@@ -167,7 +166,7 @@ ul{
   }
 `
 
-const BesideInputContainer = styled.div`
+ const BesideInputContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;

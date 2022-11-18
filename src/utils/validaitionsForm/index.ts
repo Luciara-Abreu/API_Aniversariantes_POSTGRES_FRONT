@@ -1,5 +1,5 @@
-import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
+
 
 const dateTostring = (date?: string | null): string => {
   const birthDate = date?.split('-')
@@ -87,6 +87,8 @@ const schema = yup.object({
   //password: yup.string().min(6, "A senha deve de ter pelo menos 6 digitos").required("Campo Obrigatório"),
   //confirmPassword: yup.string().oneOf([yup.ref("password")], "As senhas devem ser iguais").required("Campo Obrigatório"),
 }).required();
+
+
 
 export {
   dateTostring,

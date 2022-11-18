@@ -4,7 +4,7 @@ import firebaseConfig from "../../services/config/firebase"
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useState, useEffect } from "react"
 import { useForm } from "react-hook-form"
-import { schema } from "../../../utils/validaitionsForm";
+import { schema, maskPhone } from "../../../utils/validaitionsForm";
 // https://www.youtube.com/watch?v=gqbXnYhvB5E&t=264s
 
 
@@ -56,17 +56,17 @@ const EditUsers = () => {
         <Body>
           <form onSubmit={handleSubmit(onSubmit)}>
             <h1> Editar dados do aniversariante </h1>
-
             <WrapInput>
               <label>
                 <input className={name !== "" ? 'has-val input' : 'input'}
                   {...register("name", { required: true })}
                   value={name}
                   onChange={e => setName(e.target.value)} />
-                <span className='FocusInput' data-placeholder='Nome Completo'></span>
+                <span className='FocusInput' data-placeholder='Nome completo'></span>
                 <span className="MessageError">{errors.name?.message}</span>
               </label>
             </WrapInput>
+
 
             <WrapInput>
               <label>
@@ -95,9 +95,9 @@ const EditUsers = () => {
                 <label>
                   <input className={fone !== "" ? 'has-val input' : 'input'}
                     {...register("fone", { required: true })}
-                    value={fone}
+                    value={maskPhone.fone}
                     onChange={e => setFone(e.target.value)} />
-                  <span className='FocusInput' data-placeholder='Fone / WhatsApp'></span>
+                  <span className='FocusInput' data-placeholder='Fone / Wahts.'></span>
                   <span className="MessageError">{errors.fone?.message}</span>
                 </label>
               </WrapInput>
