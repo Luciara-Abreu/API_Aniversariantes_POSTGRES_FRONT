@@ -22,7 +22,7 @@ const BodyWrap = styled.div`
 }
   @media (max-width: 480px)and (min-width: 320px) {
     padding: 30px 10px 25px 10px;
-  }
+  }  
   `
 
 export {

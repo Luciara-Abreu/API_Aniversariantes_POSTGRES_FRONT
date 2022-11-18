@@ -33,7 +33,8 @@ const Semanas = styled.div`
   height: 89.5vw;
 }
 @media (max-width: 480px)and (min-width: 320px) {
-  width: 378px;
+  //width: 378px; 
+  width: 394px; 
   height: 134vw;
 }
 `

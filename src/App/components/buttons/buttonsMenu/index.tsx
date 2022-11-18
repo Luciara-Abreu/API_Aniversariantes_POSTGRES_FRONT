@@ -30,8 +30,8 @@ const ButtonsMenu = (props:Props) =>{
 <ContainerButton>
 <button {...props}  className="btn third" onClick={handleClickHome}>DashBoard</button>
 <button {...props}  className="btn third" onClick={handleClickTop10}>Top 10</button>
-<button {...props}  className="btn third" onClick={handleClickAddAniver}>Add Aniver</button>
 <button {...props}  className="btn third" onClick={handleClickConsultaMes}>Consulta Mes</button>
+<button {...props}  className="btn third" onClick={handleClickAddAniver}>Add Aniver</button>
 <button {...props}  className="btn third" onClick={handleClickLogin}>Login</button>
 
 </ContainerButton>

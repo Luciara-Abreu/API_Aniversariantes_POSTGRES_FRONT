@@ -37,10 +37,10 @@ const Body = styled.div`
   background: #333;
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
   h1{
-    padding: 0 0 10px 77px;
+    padding: 0 0 40px 10px;
     color: #fff;
     text-shadow: 0px 0px 3px #f05be6;
-    font:normal 25px "Courier New", Courier, monospace;
+    font: bold 30px "Courier New", Courier, monospace;
   }    
 
   @media (max-width: 768px)and (min-width: 481px) {
@@ -71,18 +71,28 @@ width: 100%;
 position: relative;
 border-bottom: 2px solid #adadad;
 //margin-bottom: 17px;
-margin-bottom: 10px;
+margin-bottom: 25px;
+ul{
+  list-style: none;  
+}
+
+.MessageError{
+  color: red;
+  position: absolute;
+  margin-top: 5px;
+}
 
 .input{
   width: 100%;
   height: 40px;
-  padding: 0 5px;
+  //padding: 0 5px;
   font-size: 15px;
-  color: #fff;
+  color: #000;
+  padding: 0 0 0 5px;
   line-height: 1;
   border: none;
   display:block;
-  background: transparent;
+  background: #fff;
 }
 .FocusInput{
     position: absolute;
@@ -136,17 +146,19 @@ margin-bottom: 10px;
   outline: 0;
 }
   .input:focus + .FocusInput::after{
-    top: -8px;
+    top: -17px;
   }
   .input:focus + .FocusInput::before{
     width: 100%;
   }
-  .has-val + .FocusInput::after{
-    top: -8px;
+ .has-val + .FocusInput::after{
+    top: -5px;
   }
   .has-val + .FocusInput::before{
     width: 100%;
   }
+
+
   @media (max-width: 768px)and (min-width: 481px) {
   padding: 20px 0 0 0;
 }
@@ -155,12 +167,16 @@ margin-bottom: 10px;
   }
 `
 
-
+const BesideInputContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+`
 
 const ContainerButton = styled.div`
   display: flex;
   justify-content: center;
-  padding-bottom: 10px;
+  padding: 40px 0 10px 0;
   gap: 5px;
 
   .login-form-btn{
@@ -194,4 +210,5 @@ export {
   Body,
   WrapInput,
   ContainerButton,
+  BesideInputContainer,
 }
