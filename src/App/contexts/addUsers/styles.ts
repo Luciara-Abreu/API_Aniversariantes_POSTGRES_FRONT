@@ -71,7 +71,13 @@ width: 100%;
 position: relative;
 border-bottom: 2px solid #adadad;
 //margin-bottom: 17px;
-margin-bottom: 45px;
+margin-bottom: 35px;
+
+.MessageError{
+  color: red;
+  position: absolute;
+  margin-top: 5px;
+}
 
 .input{
   width: 100%;
@@ -194,6 +200,8 @@ display: grid;
 grid-template-columns: 1fr 1fr;
 gap: 1rem;
 `
+
+
 
 export {
   ContainerRoot,
