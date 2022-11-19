@@ -61,6 +61,9 @@ https://console.cloud.google.com/bigquery?p=basedosdados&d=br_mec_prouni&t=dicio
 https://www.youtube.com/watch?v=Bm50j2CqCXg&t=33s = Tela de Login
 https://youtu.be/gqbXnYhvB5E = CRUD COM FIRESTORE
 https://youtu.be/cX0N3TNxumw = carrocel
+https://youtu.be/selI69g6oc4 = React Hook Forms
+https://react-hook-form.com/get-started#Handleerrors
+
 ----------------------------------------------------------------------
 Sobre altura total e largura total.
 Em vez de px, em, rem ou pt utilizaremos vh e vw
