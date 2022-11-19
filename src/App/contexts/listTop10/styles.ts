@@ -16,7 +16,7 @@ const ContainerTop10 = styled.div`
   
 `
 const ListTop10 = styled.div`
-    width: 74vw;
+    width: 60vw;
     height: 50vh;
     overflow: hidden;
     color: azure;
@@ -44,7 +44,7 @@ const ListTop10 = styled.div`
 `
 
 const TitleTop10 = styled.div`
-  width: 74.4vw;
+  width: 60.5vw;
   height: 6vh;
   display: flex;
   border-radius: 10px;
@@ -84,13 +84,13 @@ const Data = styled.div`
   }
 
   &.ContainerName{
-    width: 35vw;  
+    width: 25vw;  
     font-family: Nunito, sans-serif;
     font-size: 15px;
     margin-left: 20px;
     padding-left: 10px;
     }
-    
+
   &.ContainerBirthdate{
     width: 7vw;
     font-family: Nunito, sans-serif;
@@ -111,13 +111,15 @@ const Data = styled.div`
     margin: 0 10px;
   }
   `
+
+
   const SubTitles = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding-top: 5px; 
   
 p.Name{
-  width: 35vw;  
+  width: 25vw;  
     font-family: Nunito, sans-serif;
     font-size: 15px;
     margin-left: 20px;

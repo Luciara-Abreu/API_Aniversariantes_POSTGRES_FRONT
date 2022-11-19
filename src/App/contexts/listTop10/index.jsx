@@ -2,7 +2,7 @@
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 import { useState, useEffect } from "react"
 import firebaseConfig from "../../services/config/firebase";
-import { Container, ContainerTop10, ListTop10, TitleTop10, SubTitles, HR, Data, BesideInputContainer} from './styles'
+import { Container, ContainerTop10, ListTop10, TitleTop10, SubTitles, HR, Data, BesideInputContainer } from './styles'
 // https://www.youtube.com/watch?v=gqbXnYhvB5E&t=264s
 
 const ListTOP10 = () => {
@@ -10,7 +10,7 @@ const ListTOP10 = () => {
   const [users, setUsers] = useState([])
   const db = getFirestore(firebaseConfig)
   const usersCollectionRef = collection(db, "users")
-
+ 
   // trás todos os dados que estão cadastrados no banco
   useEffect(() => {
     const getUsers = async () => {
@@ -21,6 +21,12 @@ const ListTOP10 = () => {
     getUsers()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  const getUsers = async () => {
+    const data = await getDocs(usersCollectionRef)
+    return console.log(data);
+  }
+
 
   return (
     <Container>
@@ -36,7 +42,7 @@ const ListTOP10 = () => {
           </SubTitles>
 
 
-          <HR> ______________________________________________________________________________________________________ </HR>
+          <HR> ________________________________________________________________________________________________ </HR>
           <BesideInputContainer>
             <Data className="ContainerName">
               <ul>
@@ -63,7 +69,7 @@ const ListTOP10 = () => {
             </Data>
 
             <Data className="ContainerEmail">
-            <ul>
+              <ul>
                 {users.map(users => {
                   return (
                     <li>
@@ -74,7 +80,7 @@ const ListTOP10 = () => {
               </ul>
             </Data>
             <Data className="ContainerWhatsApp">
-            <ul>
+              <ul>
                 {users.map(users => {
                   return (
                     <li>
@@ -83,7 +89,7 @@ const ListTOP10 = () => {
                   )
                 })}
               </ul>
-             </Data>
+            </Data>
           </BesideInputContainer>
         </ListTop10>
       </ContainerTop10>
