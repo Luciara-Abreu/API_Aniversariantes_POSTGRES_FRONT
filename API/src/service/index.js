@@ -11,7 +11,7 @@ admin.initializeApp({
 });
 
 
-//GET  http://api.agenda-de-aniversariantes
+//GET 
 app.get('/users', (req, res)=> {
   admin.firestore()
   .collection("usersCollectionRef")
@@ -27,22 +27,9 @@ app.get('/users', (req, res)=> {
 
 
 //GET  http://api.agenda-de-aniversariantes/:id
-
-
-
 //POST http://api.agenda-de-aniversariantes
-
-
-
 //PUT GET http://api.agenda-de-aniversariantes/:id
-
-
-
 //DELETE GET http://api.agenda-de-aniversariantes/:id
-
-
-
-
 
 app.listen(port, () => console.log( `Server running on port ================>>>> ${port}`));
 

@@ -2,7 +2,7 @@
 
 
 API/node_modules
-API/db
+API/src/db
 *.
 
 
@@ -21,6 +21,7 @@ API/db
 
 # misc
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
