@@ -1,13 +1,14 @@
 
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 import { useState, useEffect } from "react"
-import firebaseConfig from "../../services/config/firebase";
 import { Container, ContainerSemana, Semanas, TileSemana, SubTitles, HR, Data } from './styles'
 // https://www.youtube.com/watch?v=gqbXnYhvB5E&t=264s
 
-const ListUsers = () => {
+import firebaseConfig from "../../services/config/firebase";
 
-  const [users, setUsers] = useState([])
+const ListUsers = () => {  
+  const [users, setUsers] = useState([])  
+
   const db = getFirestore(firebaseConfig)
   const usersCollectionRef = collection(db, "users")
 
