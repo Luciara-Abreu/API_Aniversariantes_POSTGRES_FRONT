@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 --------------------------------------------------------------------
 Vídeos que eu testei para criar a applicação
+<Não é fácil>
 
 https://youtu.be/eLfvY48lJQA = Para colocar o meu site no Firebase com atualizações no github, eu segui os passos desse vídeo =>  = Canal da Alexia Kattah
 comando para atualizar as dependencias firebase deploy --only hosting
