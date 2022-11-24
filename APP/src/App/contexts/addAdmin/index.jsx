@@ -1,7 +1,7 @@
 import { addDoc, collection, getDocs, getFirestore } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import firebaseConfig from '../../db/config/firebase';
+import firebaseConfig from '../../services/config/firebase';
 import logo from '../../assets/Gifs/tresGatinhos.gif'
 import {
   Container, ContainerLogin, WrapLogin, LoginForm, LoginFormTitle, LogoForm, WrapInput,

@@ -1,6 +1,6 @@
 import EditUsers from '../../contexts/editUsers';
 import Header from '../../components/header/index';
-import { Container, BodyContainer, BodyWrap } from './styles';
+import { Container, BodyContainer, BodyWrap } from '../zstylesGlobal/styles';
 
 const EditPage = () => {
 

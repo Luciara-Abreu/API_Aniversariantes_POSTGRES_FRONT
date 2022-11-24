@@ -1,10 +1,10 @@
 import { collection, addDoc, getDocs, getFirestore, doc, deleteDoc } from "firebase/firestore"
 import { ContainerRoot, Container, Body, WrapInput, ContainerButton, BesideInputContainer } from './styles'
-import firebaseConfig from "../../db/config/firebase"
+import firebaseConfig from "../../services/config/firebase"
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useState, useEffect } from "react"
 import { useForm } from "react-hook-form"
-import { schema, maskPhone } from "../../utils/validaitionsForm/index";
+import { schema, maskPhone } from "../../../utils/validaitionsForm";
 // https://www.youtube.com/watch?v=gqbXnYhvB5E&t=264s
 
 

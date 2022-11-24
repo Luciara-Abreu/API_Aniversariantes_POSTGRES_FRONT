@@ -1,7 +1,7 @@
 //import { useRef } from 'react';
 import Header from '../../components/header/index';
 import ListTOP10 from '../../contexts/listTop10';
-import { Container, BodyContainer, BodyWrap } from './styles';
+import { Container, BodyContainer, BodyWrap } from '../zstylesGlobal/styles';
 
 
 const Top10 = () => {
