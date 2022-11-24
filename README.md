@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 --------------------------------------------------------------------
 Vídeos que eu testei para criar a applicação
-<Não é fácil>
 
 https://youtu.be/eLfvY48lJQA = Para colocar o meu site no Firebase com atualizações no github, eu segui os passos desse vídeo =>  = Canal da Alexia Kattah
 comando para atualizar as dependencias firebase deploy --only hosting
@@ -4846,6 +4844,3 @@ https://www.horadecodar.com.br/2020/03/19/como-fazer-uma-div-com-altura-e-largur
   "tipo_bolsa": "2",
   "modalidade_ensino": "1"
 }]
-=======
-# Agenda_Aniversariantes
->>>>>>> f692f0fee855d874b85ecc61f8859e567eab5147
