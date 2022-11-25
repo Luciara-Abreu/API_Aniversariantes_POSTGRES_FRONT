@@ -12,9 +12,9 @@ admin.initializeApp({
 
 
 //GET 
-app.get('/users', (req, res)=> {
+app.get('/listUsers', (req, res)=> {
   admin.firestore()
-  .collection("usersCollectionRef")
+  .collection("users")
   .get()
   .then(snapshot => {
     const usersDb = snapshot.docs.map(doc => ({
