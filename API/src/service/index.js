@@ -1,7 +1,9 @@
-import {} from 'dotenv/config'
-import express from 'express'
-import admin from "firebase-admin"
-import serviceAccount from "../db/account/accountKey.json"
+var  {} = require("dotenv/config")
+var express = require("express")
+var admin = require("firebase-admin")
+var serviceAccount = require("../db/account/accountKey.json")
+
+
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
