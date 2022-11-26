@@ -1,12 +1,15 @@
 import {} from 'dotenv/config'
 import express from 'express'
 import admin from "firebase-admin"
+import serviceAccount from "../db/account/accountKey.json"
 
-admin.initializeApp();
-//const db = admin.firestore();
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+});
 
 const app = express()
 const port = 6000  
+
 
 //GET 
 app.get('/listUsers', (req, res)=> {
