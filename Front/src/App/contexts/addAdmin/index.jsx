@@ -1,6 +1,5 @@
 import { addDoc, collection, getDocs, getFirestore } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
 import firebaseConfig from '../../db/config/firebase';
 import logo from '../../assets/Gifs/tresGatinhos.gif'
 import {
@@ -13,11 +12,6 @@ const AddAdmin = () => {
   const [password, setPassword] = useState("")
   //https://www.youtube.com/watch?v=gqbXnYhvB5E 20:58
 
-  const history = useHistory();
-  const handleClick = () => {
-    history.push('/login')
-  }
-
   const db = getFirestore(firebaseConfig)
   const admCollectionRef = collection(db, "admin")
 
@@ -26,7 +20,7 @@ const AddAdmin = () => {
     const adm = await addDoc(admCollectionRef, {
       email, password
     })
-    //console.log(adm)
+    console.log(adm)
   }
   //Tras todos usuários da tabela
   useEffect(() => {
