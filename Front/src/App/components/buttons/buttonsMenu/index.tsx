@@ -11,7 +11,7 @@ const ButtonsMenu = (props:Props) =>{
     history.push('/')
   }  
   const handleClickLogin = () => {
-    history.push('/entrar')
+    history.push('/login')
   }  
   
   const handleClickAddAniver = () => {

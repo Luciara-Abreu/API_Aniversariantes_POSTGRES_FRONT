@@ -14,9 +14,3 @@ export const Dashboard = () => {
     </Container>
   );
 }
-// <div>
-//<ListUsers /> 
-      //const counterRef = useRef({ counter: 0 })
-      //<p>Contador: {counterRef.current.counter}</p>
-      //  <button onClick={() => counterRef.current.counter++}>Somar</button>
-      // </div>

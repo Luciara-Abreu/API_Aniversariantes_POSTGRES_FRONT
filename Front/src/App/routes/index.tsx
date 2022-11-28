@@ -13,7 +13,7 @@ export const Routes = () => {
       <Switch>
         <Route path='/' exact component={Dashboard} />
         <Route path='/criarConta' exact component={criarConta} />
-        <Route path='/entrar' exact component={Login} />
+        <Route path='/login' exact component={Login} />
         <Route path='/top10' exact component={Top10} />
         <Route path='/consultaMes' exact component={consultaMes} />
         <Route path='/addPage' exact component={AddPage} />

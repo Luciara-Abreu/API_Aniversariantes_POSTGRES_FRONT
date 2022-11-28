@@ -16,8 +16,13 @@ https://youtu.be/gqbXnYhvB5E = CRUD COM FIRESTORE
 https://youtu.be/cX0N3TNxumw = carrocel
 https://youtu.be/selI69g6oc4 = React Hook Forms
 https://react-hook-form.com/get-started#Handleerrors
+--------------------------------------------------------------------------------------
+https://youtu.be/-0e-mLEn_ck = HTML, CSS e Javascript - Criando uma aplicação completa de controle de gastos - #01
+https://youtu.be/XxxHbenRgH4 = Página básica de Login só com HTML - #02
+
 
 ----------------------------------------------------------------------
+CSS 
 Sobre altura total e largura total.
 Em vez de px, em, rem ou pt utilizaremos vh e vw
 
