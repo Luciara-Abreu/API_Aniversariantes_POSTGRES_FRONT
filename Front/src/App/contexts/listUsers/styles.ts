@@ -6,6 +6,7 @@ const Container = styled.div`
 const ContainerSemana = styled.div`
   width: 235%;
   min-height: 31vw;
+  height: 70vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0.1rem;

@@ -8,6 +8,7 @@ const ContainerCarrocel = styled.div`
   overflow-x: auto;
   scroll-behavior: smooth;
   box-shadow: 1px 1px 13px 5px rgb(200 198 213);
+  //box-shadow: 0px 5px 20px #000;
 
 ::-webkit-scrollbar {
   display: none;

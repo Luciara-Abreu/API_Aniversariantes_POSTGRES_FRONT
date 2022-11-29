@@ -7,7 +7,6 @@ min-height: 100vh;
  background: -o-linear-gradient(to left, #bdebf5, #dbbee9);
  background: -moz-linear-gradient(to left, #bdebf5, #dbbee9);
  background: linear-gradient(to left, #bdebf5, #dbbee9); 
-
 `
 
 const  Area = styled.div`
