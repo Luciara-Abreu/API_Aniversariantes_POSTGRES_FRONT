@@ -32,7 +32,7 @@ const ListUsers = () => {
             <p className="Name">Nome</p>
             <p className="birthdate">Data Nasc.</p>
           </SubTitles>
-          <HR> _______________________________________________ </HR>
+          <HR> ____________________________________________________ </HR>
           <Data>
             <div className="ContainerName">
               <ul>
@@ -64,7 +64,7 @@ const ListUsers = () => {
             <p className="Name">Nome</p>
             <p className="birthdate">Data Nasc.</p>
           </SubTitles>
-          <HR> _______________________________________________ </HR>
+          <HR> ____________________________________________________ </HR>
           <Data>
             <div className="ContainerName">
               <ul>
@@ -96,7 +96,7 @@ const ListUsers = () => {
             <p className="Name">Nome</p>
             <p className="birthdate">Data Nasc.</p>
           </SubTitles>
-          <HR> _______________________________________________ </HR>
+          <HR> ____________________________________________________ </HR>
           <Data>
             <div className="ContainerName">
               <ul>
@@ -128,7 +128,7 @@ const ListUsers = () => {
             <p className="Name">Nome</p>
             <p className="birthdate">Data Nasc.</p>
           </SubTitles>
-          <HR> _______________________________________________ </HR>
+          <HR> ____________________________________________________ </HR>
           <Data>
             <div className="ContainerName">
               <ul>
@@ -160,7 +160,7 @@ const ListUsers = () => {
             <p className="Name">Nome</p>
             <p className="birthdate">Data Nasc.</p>
           </SubTitles>
-          <HR> _______________________________________________ </HR>
+          <HR> ____________________________________________________ </HR>
           <Data>
             <div className="ContainerName">
               <ul>
@@ -192,7 +192,7 @@ const ListUsers = () => {
             <p className="Name">Nome</p>
             <p className="birthdate">Data Nasc.</p>
           </SubTitles>
-          <HR> _______________________________________________ </HR>
+          <HR> ____________________________________________________ </HR>
           <Data>
             <div className="ContainerName">
               <ul>
@@ -224,7 +224,7 @@ const ListUsers = () => {
             <p className="Name">Nome</p>
             <p className="birthdate">Data Nasc.</p>
           </SubTitles>
-          <HR> _______________________________________________ </HR>
+          <HR> ____________________________________________________ </HR>
           <Data>
             <div className="ContainerName">
               <ul>
