@@ -4,8 +4,7 @@ const Container = styled.div`
   width: 100%;
 `
 const ContainerSemana = styled.div`
-  width: 235%;
-  min-height: 31vw;
+  width: 350%;
   height: 70vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -41,7 +40,7 @@ const Semanas = styled.div`
 `
 
 const TileSemana = styled.div`
-  width: 31.4vw;
+  width: 35vw;
   height: 6vh;
   display: flex;
   border-radius: 10px;
