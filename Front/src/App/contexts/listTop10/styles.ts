@@ -2,11 +2,10 @@ import styled from 'styled-components'
 
 
 const Container = styled.div`
-  width: 100%;
+  width: 99.7%;
   height: 70vh;
   border-radius: 10px;
   overflow: hidden;
-  padding: 20px 55px 0px 55px;  
   overflow: hidden;
   color: azure;
   font: 10px;
@@ -31,13 +30,11 @@ const Container = styled.div`
 `
 
 const TitleTop10 = styled.div`
-  width: 60.5vw;
-  height: 6vh;
+  width: 69.9vw;
+  height: 6.1vh;
   display: flex;
-  border-radius: 10px;
   color: azure;
   font: 10px;
-  border-radius: 10px;  
   margin: -1px 0px 0px -9px;
   padding: 10px 5px 10px 10px;
   text-shadow:0px 0px 3px #f05be6;
@@ -72,10 +69,10 @@ const Data = styled.div`
 
   &.ContainerName{
     width: 25vw;  
+    margin: 0 10px 0 10px;
+    padding: 0 0 0 10px;
     font-family: Nunito, sans-serif;
     font-size: 15px;
-    margin-left: 20px;
-    padding-left: 10px;
     }
 
   &.ContainerBirthdate{
@@ -99,36 +96,47 @@ const Data = styled.div`
   }
   `
 
+const SubTitless = styled.div`  
+    display: flex;  
+    justify-content: space-between;
+    margin: 3px 0px -12px 0;
+    p.Name{
+      width: 77%;
+      margin: 0 10px 0 10px;
+      padding: 0 0 0 10px;
+      text-shadow:0px 0px 3px #f05be6;
+  } 
+    p.birthdate{
+      width: 23%;
+      margin: 0 10px 0 10px;
+      text-shadow:0px 0px 3px #f05be6;
+  } 
+  `
 
   const SubTitles = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding-top: 5px; 
+  grid-template-columns: 1fr 1fr 1fr 1fr;  
+  margin: 3px 0px -12px 0;
+  font-size: 15px;
+  text-shadow:0px 0px 3px #f05be6;
   
 p.Name{
   width: 25vw;  
-    font-family: Nunito, sans-serif;
-    font-size: 15px;
-    margin-left: 20px;
-    padding-left: 10px;
+    margin: 0 10px 0 10px;
+    padding: 1px 0 0 10px;
+
   }
 p.birthdate{
   width: 7vw;
-  font-family: Nunito, sans-serif;
-  font-size: 15px; 
   }
 
 p.email{
   width: 10vw;
-  font-family: Nunito, sans-serif;
-  font-size: 15px;
   margin-left:-50px;
   }
 
 p.whatsApp{
   width: 10vw;
-  font-family: Nunito, sans-serif;
-  font-size: 15px; 
   margin: 0 10px;
   }
   `

@@ -43,10 +43,8 @@ const TileSemana = styled.div`
   width: 35vw;
   height: 6vh;
   display: flex;
-  border-radius: 10px;
   color: azure;
   font: 10px;
-  border-radius: 10px;  
   margin: -1px 0px 0px -9px;
   padding: 10px 5px 10px 10px;
   text-shadow:0px 0px 3px #f05be6;
