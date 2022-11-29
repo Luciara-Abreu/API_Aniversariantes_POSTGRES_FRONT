@@ -1,16 +1,13 @@
 //import { useRef } from 'react';
-import Header from '../../components/header/index';
-import { Container, BodyWrap } from './styles';
+import Header from '../../components/Header/index';
 import Carrocel from '../../components/carrocel';
+import Theme from '../../components/Theme';
 
 export const Dashboard = () => {
 
   return (
-    <Container>     
-      <Header /> 
-        <BodyWrap>
+    <Theme>  
         <Carrocel/> 
-        </BodyWrap>
-    </Container>
+    </Theme>
   );
 }

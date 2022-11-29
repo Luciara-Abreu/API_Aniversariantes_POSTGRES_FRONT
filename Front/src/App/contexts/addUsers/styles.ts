@@ -1,41 +1,14 @@
 import styled from 'styled-components'
 
-const ContainerRoot = styled.div`
-  width: 100%;
-`
-
 const Container = styled.div`
-  width: 100vw;
-  min-height: 82vh;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 5px; 
-
-  background: -webkit-linear-gradient(to left, #bdebf5, #dbbee9);
-  background: -o-linear-gradient(to left, #bdebf5, #dbbee9);
-  background: -moz-linear-gradient(to left, #bdebf5, #dbbee9);
-  background: linear-gradient(to left, #bdebf5, #dbbee9);
-
-  @media (max-width: 768px)and (min-width: 481px) {
-    min-height: 84.7vh;
-    padding: 5px 5px 30px 5px; 
-}
-  @media (max-width: 480px)and (min-width: 320px) {
-    min-height: 80vh;
-    padding: 5px 5px 30px 5px; 
-  }
-
-`
-const Body = styled.div`
-  width: 50%;
+  width: 100%;
   height: 70vh;
   border-radius: 10px;
   overflow: hidden;
   padding: 20px 55px 0px 55px;  
   background: #333;
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+
   h1{
     padding: 0 0 40px 25px;
     color: #fff;
@@ -204,9 +177,7 @@ gap: 1rem;
 
 
 export {
-  ContainerRoot,
   Container,
-  Body,
   WrapInput,
   ContainerButton,
   BesideInputContainer

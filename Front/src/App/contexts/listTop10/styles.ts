@@ -1,36 +1,23 @@
 import styled from 'styled-components'
 
+
 const Container = styled.div`
   width: 100%;
-`
-const ContainerTop10 = styled.div`
-  width: 100vw;
-  min-height: 82vh;
-  display: flex;
-  justify-content: center;
-  
-  background: -webkit-linear-gradient(to left, #bdebf5, #dbbee9);
-  background: -o-linear-gradient(to left, #bdebf5, #dbbee9);
-  background: -moz-linear-gradient(to left, #bdebf5, #dbbee9);
-  background: linear-gradient(to left, #bdebf5, #dbbee9);
-  
-`
-const ListTop10 = styled.div`
-    width: 60vw;
-    height: 50vh;
-    overflow: hidden;
-    color: azure;
-    font: 10px;
-    border-radius: 10px;
-    margin: 100px 0 30px 0px;
-    padding: 1px 0 0 5px;
-  box-shadow: 5 5px 10px 5px rgb(239 227 238);
-  
+  height: 70vh;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px 55px 0px 55px;  
+  overflow: hidden;
+  color: azure;
+  font: 10px;
+  box-shadow: 1px 1px 13px 5px rgb(200 198 213);
+
   background: -webkit-linear-gradient(to left, #696868, #545353);
   background: -o-linear-gradient(to left, #696868, #545353);
   background: -moz-linear-gradient(to left, #696868, #545353);
-  background: linear-gradient(to left, #696868, #545353); 
+  background: linear-gradient(to left, #696868, #545353);
 
+ 
 
 @media (max-width: 768px)and (min-width: 481px) {
   width: 430px;
@@ -153,9 +140,7 @@ p.whatsApp{
 
 
 export {
-  Container,
-  ContainerTop10,
-  ListTop10,  
+  Container,  
   TitleTop10,
   SubTitles,
   HR,  

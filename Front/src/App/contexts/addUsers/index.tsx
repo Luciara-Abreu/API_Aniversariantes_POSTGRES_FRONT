@@ -2,7 +2,7 @@ import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import firebaseConfig from '../../db/config/firebase';
-import { ContainerRoot, Container,Body,WrapInput, ContainerButton, BesideInputContainer } from './styles';
+import { Container, WrapInput, ContainerButton, BesideInputContainer } from './styles';
 
 
 const AddUsers: React.FC = () => {
@@ -28,9 +28,7 @@ const AddUsers: React.FC = () => {
     console.log(user)
   }
   return (
-    <ContainerRoot>
-    <Container>
-      <Body> 
+      <Container> 
         <h1> Preencha os dados abaixo </h1> 
         <WrapInput>
         <input className={name !== "" ? 'has-val input' : 'input'}
@@ -70,9 +68,7 @@ const AddUsers: React.FC = () => {
         <button className="login-form-btn" onClick={creatUsers}>Add Aniversariantes </button>
         <button className="login-form-btn" onClick={handleClick}>Editar Aniversariantes </button>
       </ContainerButton>       
-      </Body>   
-    </Container>
-    </ContainerRoot>
+      </Container>   
   )
 }
 
