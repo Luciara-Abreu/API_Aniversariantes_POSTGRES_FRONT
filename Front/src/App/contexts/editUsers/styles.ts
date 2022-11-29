@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 const Container = styled.div`
-  width: 100%;
+  width: 99.7%;
   height: 70vh;
   border-radius: 10px;
   overflow: hidden;
