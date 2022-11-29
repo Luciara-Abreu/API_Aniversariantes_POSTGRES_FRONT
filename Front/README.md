@@ -30,6 +30,13 @@ vh: view height, ou seja, a altura da view (tela) do usuário;
 vw: view width, ou seja, a largura total da view (tela) do usuário;
 https://www.horadecodar.com.br/2020/03/19/como-fazer-uma-div-com-altura-e-largura-da-tela-do-usuario/
 ----------------------------------------------------------------------
+https://youtu.be/W1Ed9TEMGJU = Formulário multi-etapas em React (com Typescript) - Projeto 5 - Desafio 5em5 (React)
+[] Context = É onde armazena os dados globalmente
+[] Reducer = O cara que executa ações específicas (Agrupamento de ações)
+[] provider = é o ambiente onde eu tenho acesso aos dados do contexto
+[] Hook = simplifica o acesso das informações nas páginas e tbm simplific como alterar as informações
+
+
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------
