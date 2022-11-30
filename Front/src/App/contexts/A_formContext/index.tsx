@@ -6,7 +6,8 @@ type StateType = {
   name: string,
   email: string,
   fone: string,
-  birthdate:string
+  birthdate:string,
+  password: string
 }
 
 type ActionType = {
@@ -30,7 +31,8 @@ children: ReactNode
   setName,
   setEmail,
   setFone,
-  setBirthdate
+  setBirthdate,
+  password
 }
 
 const initialData: StateType = {
@@ -38,7 +40,8 @@ const initialData: StateType = {
   name: '',
   email: '',
   fone: '',
-  birthdate:''
+  birthdate:'',
+  password: ''
 }
 
 //Context
@@ -58,6 +61,8 @@ const formReducer = (state: StateType, action: ActionType) => {
       return {...state, fone: action.payload}
     case FormAction.setBirthdate:
       return {...state, birthdate: action.payload}
+    case FormAction.password:
+      return {...state, password: action.payload}
     default:
       return state 
   }
