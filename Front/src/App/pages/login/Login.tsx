@@ -14,12 +14,14 @@ export const Login = () => {
   }
 
   const { state, dispatch } = useForm()
+  //Mudar email
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
     dispatch({
       type:FormAction.setEmail,
       payload: e.target.value
     })
   }
+  //Mudar senha
   const handlePasswordChange = (e: ChangeEvent<HTMLInputElement>) => {
     dispatch({
       type:FormAction.password,

@@ -1,23 +1,26 @@
 import React from "react";
-import { Title, ContainerMenu, HeaderContainer, ContainerUp } from "./styles";
+import * as S from './styles';
 import ButtonsMenu from "../buttons/buttonsMenu";
+import { useForm } from '../../contexts/A_formContext/index'
+
 
 // https://youtu.be/AXKc4WhgLSA - criar header com typeScript
 
 const Header: React.FC = () => {  
-
+  const { state } = useForm()
 
   return (
-<HeaderContainer>
-  <ContainerUp> 
-    <Title>     
+<S.HeaderContainer>
+  <S.ContainerUp> 
+    <S.Title>     
       **AGENDA ANIVERSARIANTES **
-    </Title> 
-  </ContainerUp>   
-  <ContainerMenu>  
+    </S.Title> 
+      <p>Seja bem vindo(a)!{state.name}</p>
+  </S.ContainerUp>   
+  <S.ContainerMenu>  
     <ButtonsMenu />
-  </ContainerMenu>  
-  </HeaderContainer>
+  </S.ContainerMenu>  
+  </S.HeaderContainer>
   )
 }
 
