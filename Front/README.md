@@ -35,8 +35,7 @@ https://youtu.be/W1Ed9TEMGJU = Formulário multi-etapas em React (com Typescript
 [ok] Reducer = O cara que executa ações específicas (Agrupamento de ações)
 [ok] provider = é o ambiente onde eu tenho acesso aos dados do contexto
 [ok] Hook = simplifica o acesso das informações nas páginas e tbm simplific como alterar as informações9
-
-
 ----------------------------------------------------------------------
+https://youtu.be/W1Ed9TEMGJU = Galeria de Fotos em React (com Typescript e Firebase) - Projeto 3 - Desafio 5em5 (React)
 ----------------------------------------------------------------------
 ----------------------------------------------------------------------

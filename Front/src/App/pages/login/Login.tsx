@@ -2,7 +2,7 @@ import AuthGoogle from '../../services/authGoogle/index'
 import { useHistory } from 'react-router-dom'
 import cake from '../../assets/Gifs/cake2.gif'
 import * as  S from './styles'
-import { useForm, FormAction } from '../../contexts/A_formContext/index'
+import { useFormContext, FormAction } from '../../contexts/A_formContext/index'
 import { ChangeEvent } from 'react'
 
 
@@ -13,7 +13,7 @@ export const Login = () => {
     history.push('/criarConta')
   }
 
-  const { state, dispatch } = useForm()
+  const { state, dispatch } = useFormContext()
   //Mudar email
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
     dispatch({

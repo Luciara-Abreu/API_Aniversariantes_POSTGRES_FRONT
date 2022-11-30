@@ -1,14 +1,15 @@
 // [ok] Context [] Reducer [] provider [] Hook 
 import { createContext, ReactNode, useContext,  useReducer } from 'react'
 
-type StateType = {
-  currentStep: number,
+export interface IUserType {
+  id: string,
   name: string,
   email: string,
   fone: string,
   birthdate:string,
   password: string
 }
+
 
 type ActionType = {
   type: FormAction,
@@ -17,7 +18,7 @@ type ActionType = {
 }
 
 type ContextType = {
-  state: StateType,
+  state: IUserType,
   dispatch: (action: ActionType ) => void
 }
 
@@ -35,8 +36,8 @@ children: ReactNode
   password
 }
 
-const initialData: StateType = {
-  currentStep: 0,
+const initialData: IUserType = {
+  id: '',
   name: '',
   email: '',
   fone: '',
@@ -49,7 +50,7 @@ const FormContext = createContext<ContextType | undefined>(undefined)
 
 
 //Reducer
-const formReducer = (state: StateType, action: ActionType) => {
+const formReducer = (state: IUserType, action: ActionType) => {
   switch(action.type){
     case FormAction.setCurrentStep:
       return {...state, currentStep: action.payload}
@@ -85,7 +86,7 @@ const value = { state, dispatch}
 }
 
 // context Hook
-export const useForm = () => {
+export const useFormContext = () => {
 const context = useContext(FormContext)
 if(context ===undefined){
   throw new Error("useForm precisa ser usado dentro do FormProvider")

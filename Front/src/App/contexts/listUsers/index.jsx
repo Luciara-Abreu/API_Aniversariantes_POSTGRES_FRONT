@@ -2,11 +2,13 @@
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 import { useState, useEffect } from "react"
 import { Container, ContainerSemana, Semanas, TileSemana, SubTitles, HR, Data } from './styles'
+import { useFormContext } from '../../contexts/A_formContext/index'
 // https://www.youtube.com/watch?v=gqbXnYhvB5E&t=264s
 
 import firebaseConfig from "../../db/config/firebase";
 
 const ListUsers = () => {
+  const { state } = useFormContext()
   const [users, setUsers] = useState([])
 
   const db = getFirestore(firebaseConfig)
@@ -14,12 +16,16 @@ const ListUsers = () => {
 
   // trás todos os dados que estão cadastrados no banco
   useEffect(() => {
-    const getUsers = async () => {
-      const data = await getDocs(usersCollectionRef)
-      const usersCadastrados = (data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-      setUsers(usersCadastrados)
+    if (state.name === '') {
+      history.push('/login')
+    } else {
+      const getUsers = async () => {
+        const data = await getDocs(usersCollectionRef)
+        const usersCadastrados = (data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+        setUsers(usersCadastrados)
+      }
+      getUsers()
     }
-    getUsers()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
