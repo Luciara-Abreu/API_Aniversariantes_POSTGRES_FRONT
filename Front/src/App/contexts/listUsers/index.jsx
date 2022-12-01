@@ -3,21 +3,23 @@ import { collection, getDocs, getFirestore } from "firebase/firestore"
 import { useState, useEffect } from "react"
 import { Container, ContainerSemana, Semanas, TileSemana, SubTitles, HR, Data } from './styles'
 import { useFormContext } from '../../contexts/A_formContext/index'
+import { useHistory } from 'react-router-dom'
 // https://www.youtube.com/watch?v=gqbXnYhvB5E&t=264s
 
-import firebaseConfig from "../../db/config/firebase";
+import firebaseConfig from "../../libs/firebase";
 
 const ListUsers = () => {
+  const { history } = useHistory()
   const { state } = useFormContext()
   const [users, setUsers] = useState([])
 
   const db = getFirestore(firebaseConfig)
   const usersCollectionRef = collection(db, "users")
 
-  // trás todos os dados que estão cadastrados no banco
+  /*// trás todos os dados que estão cadastrados no banco
   useEffect(() => {
     if (state.name === '') {
-      history.push('/login')
+      history.push('/')// aqui tem que ir para a página de login
     } else {
       const getUsers = async () => {
         const data = await getDocs(usersCollectionRef)
@@ -26,6 +28,18 @@ const ListUsers = () => {
       }
       getUsers()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+  */
+  // trás todos os dados que estão cadastrados no banco
+
+  useEffect(() => {
+    const getUsers = async () => {
+      const data = await getDocs(usersCollectionRef)
+      const usersCadastrados = (data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+      setUsers(usersCadastrados)
+    }
+    getUsers()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -262,10 +276,3 @@ const ListUsers = () => {
   )
 }
 export default ListUsers
-/*
-<h1>Nome: {name}{setName}</h1> 
-<h1>E-mail: {email}{setEmail}</h1>
-<h1>Data de nascimento: {birthDate}{setBirthDate}</h1>
-<h1>diversos: {users} {setUsers}</h1>
-
-*/

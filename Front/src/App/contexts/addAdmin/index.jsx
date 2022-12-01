@@ -1,6 +1,6 @@
 import { addDoc, collection, getDocs, getFirestore } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
-import firebaseConfig from '../../db/config/firebase';
+import firebaseConfig from '../../libs/firebase';
 import logo from '../../assets/Gifs/tresGatinhos.gif'
 import {
   Container, ContainerLogin, WrapLogin, LoginForm, LoginFormTitle, LogoForm, WrapInput,

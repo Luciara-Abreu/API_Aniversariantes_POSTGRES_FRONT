@@ -1,13 +1,13 @@
 import { collection, addDoc, getDocs, getFirestore, doc, deleteDoc } from "firebase/firestore"
 import { Container, WrapInput, ContainerButton, BesideInputContainer } from './styles'
-import firebaseConfig from "../../db/config/firebase"
+import firebaseConfig from "../../libs/firebase"
 import { useEffect, useState } from "react"
-import { useFormContext, FormAction, IUserType } from '../../contexts/A_formContext/index'
+import { useFormContext, FormAction } from '../../contexts/A_formContext/index'
 import { ChangeEvent } from 'react'
 import { useForm } from "react-hook-form"
 
 
-const EditUsers= ({id, name }:IUserType )=> {
+const EditUsers= ()=> {
 
   const {  handleSubmit} = useForm();
   const { state, dispatch } = useFormContext()
@@ -90,7 +90,7 @@ const EditUsers= ({id, name }:IUserType )=> {
             <select {...users.map(users => {
               return (
                 <li>
-                  {users.name}
+                  ***
                 </li>
               )
             })}
