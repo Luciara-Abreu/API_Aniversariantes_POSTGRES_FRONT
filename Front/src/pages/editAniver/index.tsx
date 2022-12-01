@@ -1,4 +1,4 @@
-import EditUsers from '../../contexts/editUsers';
+import EditUsers from '../../components/editUsers';
 import Theme from '../../components/Theme';
 
 const EditPage = () => {

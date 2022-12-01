@@ -1,9 +1,10 @@
-import AuthGoogle from '../../services/authGoogle/index'
+
 import { useHistory } from 'react-router-dom'
 import cake from '../../assets/Gifs/cake2.gif'
 import * as  S from './styles'
-import { useFormContext, FormAction } from '../../contexts/A_formContext/index'
+import { useFormContext, FormAction } from '../../contexts/formContext/index'
 import { ChangeEvent } from 'react'
+import AuthGoogle from '../../services/authGoogle'
 
 
 export const Login = () => {

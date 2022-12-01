@@ -1,7 +1,7 @@
-import {  useRef } from 'react';
+import { useRef } from 'react';
 import button from '../../assets/Imag/216151_right_chevron_icon.png'
-import ListUsers from '../../contexts/listUsers/index'
-import { Container, ContainerCarrocel, ContainerButtons,ButtonRight, ButtonLefth } from './styles'
+import ListUsers from '../listUsers/index'
+import { Container, ContainerCarrocel, ContainerButtons, ButtonRight, ButtonLefth } from './styles'
 
 function Carroucel() {
   const carousel = useRef(null);
@@ -20,14 +20,14 @@ function Carroucel() {
   return (
     <Container>
       <ContainerCarrocel ref={carousel}>
-      <ListUsers />
-      </ContainerCarrocel>    
+        <ListUsers />
+      </ContainerCarrocel>
       <ContainerButtons>
-        <ButtonRight className= "buttonRight" onClick={handleLeftClick}>
-          <img src={button} alt="Botão1"/>
+        <ButtonRight className="buttonRight" onClick={handleLeftClick}>
+          <img src={button} alt="Botão1" />
         </ButtonRight>
         <ButtonLefth className="buttonLefth" onClick={handleRightClick}>
-          <img src={button} alt="Botão2"/>
+          <img src={button} alt="Botão2" />
         </ButtonLefth>
       </ContainerButtons>
     </Container>

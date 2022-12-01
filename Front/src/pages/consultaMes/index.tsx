@@ -1,7 +1,5 @@
 //import { useRef } from 'react';
-import Header from '../../components/Header/index';
 import Theme from '../../components/Theme';
-import { Container, BodyContainer, BodyWrap } from '../zstylesGlobal/styles';
 
 const ConsultaMes = () => {
 

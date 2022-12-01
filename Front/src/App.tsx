@@ -1,6 +1,6 @@
 //import { BrowserRouter, Route } from 'react-router-dom';
-import { FormProvider } from './App/contexts/A_formContext/index';
-import { Routes } from "../src/App/routes";
+import { FormProvider } from './contexts/formContext/index';
+import { Routes } from "./routes";
 
 
 export const App = () => {

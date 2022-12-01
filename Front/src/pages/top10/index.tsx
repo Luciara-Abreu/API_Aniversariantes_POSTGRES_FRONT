@@ -1,6 +1,6 @@
 //import { useRef } from 'react';
 import Theme from '../../components/Theme';
-import ListTOP10 from '../../contexts/listTop10';
+import ListTOP10 from '../../components/listTop10';
 
 
 const Top10 = () => {

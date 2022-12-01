@@ -1,5 +1,5 @@
 
-import AddAdmin from '../../contexts/addAdmin'
+import AddAdmin from '../../components/addAdmin'
 
 const CriarConta = ()=>{
 

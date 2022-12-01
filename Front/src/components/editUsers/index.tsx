@@ -2,7 +2,7 @@ import { collection, addDoc, getDocs, getFirestore, doc, deleteDoc } from "fireb
 import { Container, WrapInput, ContainerButton, BesideInputContainer } from './styles'
 import firebaseConfig from "../../libs/firebase"
 import { useEffect, useState } from "react"
-import { useFormContext, FormAction } from '../../contexts/A_formContext/index'
+import { useFormContext, FormAction } from '../../contexts/formContext/index'
 import { ChangeEvent } from 'react'
 import { useForm } from "react-hook-form"
 
@@ -86,17 +86,7 @@ const EditUsers= ()=> {
       <form onSubmit={handleSubmit(onSubmit)}>
         <h1> Editar dados do aniversariante </h1>
         <WrapInput>
-          <label>
-            <select {...users.map(users => {
-              return (
-                <li>
-                  ***
-                </li>
-              )
-            })}
-            >
-              Selecione o usuário a ser alterado
-            </select>
+          <label>      
             <input className={state.name !== "" ? 'has-val input' : 'input'}
               value={state.name}
               onChange={handleNameChange} />
