@@ -9,6 +9,5 @@ const auth = useContext(AuthContext)
 if(!auth.user){
   return <Login />
 }
-
 return children
 }
