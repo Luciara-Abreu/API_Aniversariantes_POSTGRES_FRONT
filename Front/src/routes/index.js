@@ -12,11 +12,12 @@ export const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path='/login' exact component={Login}/>
-
+        <Route path='/login'       exact component={Login}/>
         <Route path='/'            exact component={Dashboard}/>
         <Route path='/criarConta'  exact component={CriarConta}/>
-        <Route path='/top10'       exact component={<RequireAuth><Top10/></RequireAuth>} />
+        <RequireAuth>
+        <Route path='/top10'       exact component={Top10}/>
+        </RequireAuth>
         <Route path='/consultaMes' exact component={ConsultaMes}/>
         <Route path='/addPage'     exact component={AddPage}/>
         <Route path='/editar'      exact component={EditUsers}/> 
@@ -26,13 +27,3 @@ export const Routes = () => {
   }
 
 
-
-/**
- *       <Route path='/login'       exact component={Login} />
-        <Route path='/'            exact component={Dashboard} />
-        <Route path='/criarConta'  exact component={CriarConta} />
-        <Route path='/top10'       exact component={<RequireAuth><Top10/></RequireAuth>} />
-        <Route path='/consultaMes' exact component={ConsultaMes} />
-        <Route path='/addPage'     exact component={AddPage} />
-        <Route path='/editar'      exact component={EditUsers} />
- */
