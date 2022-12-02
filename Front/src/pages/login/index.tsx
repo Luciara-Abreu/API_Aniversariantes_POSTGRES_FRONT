@@ -7,7 +7,7 @@ import { ChangeEvent } from 'react'
 import AuthGoogle from '../../services/authGoogle'
 
 
-export const Login = () => {
+const Login = () => {
 
   const history = useHistory();
   const handleClick = () => {
@@ -83,3 +83,5 @@ export const Login = () => {
 
   )
 }
+
+export default Login

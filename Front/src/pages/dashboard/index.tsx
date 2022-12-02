@@ -2,7 +2,7 @@
 import Carrocel from '../../components/carrocel';
 import Theme from '../../components/Theme';
 
-export const Dashboard = () => {
+ const Dashboard = () => {
 
   return (
     <Theme>  
@@ -10,3 +10,5 @@ export const Dashboard = () => {
     </Theme>
   );
 }
+
+export default Dashboard
