@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { useFormAuthContext } from '../../../hooks/contextHook';
 import { ContainerButton } from './styles';
@@ -12,12 +12,9 @@ const ButtonsMenu = (props:Props) =>{
   const handleClickHome = () => {
     history.push('/')
   }  
-  const handleClickLogin = () => {
-    history.push('/login')
-  }  
   
   const handleClickAddAniver = () => {
-    history.push('/addPage')
+    history.push('/addAniver')
   }  
 
   const handleClickTop10 = () => {

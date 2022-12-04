@@ -2,35 +2,17 @@
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 import { useState, useEffect } from "react"
 import { Container, ContainerSemana, Semanas, TileSemana, SubTitles, HR, Data } from './styles'
-
-import { useHistory } from 'react-router-dom'
+import firebaseConfig from "../../libs/firebase"
 // https://www.youtube.com/watch?v=gqbXnYhvB5E&t=264s
 
-import firebaseConfig from "../../libs/firebase";
 
 const ListUsers = () => {
-  const { history } = useHistory()
   //const { state } = useFormAuthContext()
   const [users, setUsers] = useState([])
 
   const db = getFirestore(firebaseConfig)
   const usersCollectionRef = collection(db, "users")
 
-  /*// trás todos os dados que estão cadastrados no banco
-  useEffect(() => {
-    if (state.name === '') {
-      history.push('/')// aqui tem que ir para a página de login
-    } else {
-      const getUsers = async () => {
-        const data = await getDocs(usersCollectionRef)
-        const usersCadastrados = (data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-        setUsers(usersCadastrados)
-      }
-      getUsers()
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-  */
   // trás todos os dados que estão cadastrados no banco
 
   useEffect(() => {

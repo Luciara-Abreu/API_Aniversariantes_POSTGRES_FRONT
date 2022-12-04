@@ -34,22 +34,30 @@ const Login = () => {
       payload: e.target.value
     })
   }
-  const handleNextStep = ()=>{
-    if(value.state.email !== ''){
-      history.push('/')
+  /*
+  const handleLogin = async () =>{
+    if(value.state.email && value.state.password){
+      const isLogged = await auth?.signin(value.state.email, value.state.password)
+        if(isLogged) {
+          history.push('/')
+        }
     }else {
       alert("Digite seus dados para entrar")
     }
   }
-/*
-  const handleLogin = async () =>{
-    if(state.email && state.password){
-      const isLogged = await auth.signin(state.email, state.password)
+  */
+
+  const handleLogin = () =>{
+    if(value.state.email && value.state.password){
+      const isLogged = auth?.signin(value.state.email, value.state.password)
         if(isLogged) {
           history.push('/')
         }
+    }else {
+      alert("Digite seus dados para entrar")
     }
-  }*/
+  }
+  
 //    <S.LoginFormTitle>Bem vindo ao App de Aniversariantes</S.LoginFormTitle>
   return (
     <S.Container>
@@ -84,7 +92,7 @@ const Login = () => {
             </S.ContainerInput>
 
             <S.ContainerLoginFormBtn>
-              <button type="submit" onClick={handleNextStep}className="login-form-btn">Login</button>
+              <button type="submit" onClick={handleLogin}className="login-form-btn">Login</button>
             </S.ContainerLoginFormBtn>
             <AuthGoogle />
             <div className="text-criarConta"></div>

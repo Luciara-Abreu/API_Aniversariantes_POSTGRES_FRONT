@@ -2,7 +2,7 @@
 import AddUsers from '../../components/addUsers';
 import Theme from '../../components/Theme';
 
-export const AddPage = () => {
+export const addAniver = () => {
 
   return (
 <Theme>   
@@ -11,4 +11,4 @@ export const AddPage = () => {
   );
 }
 
-export default AddPage
+export default addAniver

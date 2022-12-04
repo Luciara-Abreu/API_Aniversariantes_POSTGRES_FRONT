@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import EditUsers from '../components/editUsers';
 import { RequireAuth } from '../contexts/Auth/RequireAuth';
-import { AddPage } from '../pages';
+import addAniver  from '../pages/addAniver';
 import ConsultaMes from '../pages/consultaMes';
 import CriarConta from '../pages/criarConta';
 import Dashboard from '../pages/dashboard';
@@ -18,7 +18,7 @@ export const Routes = () => {
         <Route path='/consultaMes' exact component={ConsultaMes}/>
         <RequireAuth>
         <Route path='/criarConta'  exact component={CriarConta}/>
-        <Route path='/addPage'     exact component={AddPage}/>
+        <Route path='/addAniver'     exact component={addAniver}/>
         <Route path='/editar'      exact component={EditUsers}/> 
         </RequireAuth>
       </Switch>

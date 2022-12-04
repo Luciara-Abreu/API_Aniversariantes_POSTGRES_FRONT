@@ -46,8 +46,6 @@ const EditUsers= ()=> {
   const db = getFirestore(firebaseConfig)
   const usersCollectionRef = collection(db, "users")
 
-  // trás todos os dados que estão cadastrados no banco
-  const [users] = useState([])
   
   useEffect(() => {
     const getUsers = async () => {

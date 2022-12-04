@@ -1,5 +1,5 @@
 
-  export * from './addUsers/index'
+  export * from './addAniver/index'
   export * from './consultaMes/index'
   export * from './criarConta/index'
   export * from './dashboard/index'
