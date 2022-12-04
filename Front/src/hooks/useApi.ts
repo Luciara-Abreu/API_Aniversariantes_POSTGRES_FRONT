@@ -4,6 +4,7 @@ const api = axios.create({
   baseURL: process.env.React_APP_API
 })
 
+
 //hook
 export const useApi = () => ({
   validateToken: async (token: string) => {
@@ -12,6 +13,10 @@ export const useApi = () => ({
   },
   
   signin: async(email: string, password: string)=>{
+    return {
+      user: {id:3, name: 'Luci', email: 'luci@gmail.com'},
+      token: '123456789'
+    }
     const response = await api.post('./signin', {email, password})
     return response.data
   },

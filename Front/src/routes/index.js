@@ -17,7 +17,7 @@ export const Routes = () => {
         <Route path='/top10'       exact component={Top10}/>
         <Route path='/consultaMes' exact component={ConsultaMes}/>
         <RequireAuth>
-        <Route path='/addAniver'     exact component={addAniver}/>
+        <Route path='/addAniver'   exact component={addAniver}/>
         <Route path='/criarConta'  exact component={CriarConta}/>
         <Route path='/editar'      exact component={EditUsers}/> 
         </RequireAuth>

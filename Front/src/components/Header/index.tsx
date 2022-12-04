@@ -1,15 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import * as S from './styles';
 import ButtonsMenu from "../buttons/buttonsMenu";
-import { useFormAuthContext } from "../../hooks/contextHook";
+import { AuthContext } from "../../contexts/Auth/AuthContext";
 
 
 // https://youtu.be/AXKc4WhgLSA - criar header com typeScript
 
 const Header: React.FC = () => {  
-  const { value } = useFormAuthContext()
-
-
+  const auth = useContext(AuthContext)
 
   return (
 <S.HeaderContainer>
@@ -17,7 +15,7 @@ const Header: React.FC = () => {
     <S.Title>     
       **AGENDA ANIVERSARIANTES **
     </S.Title>
-    <p>Seja bem vindo(a)! {value.state.name}</p>
+    <p>Seja bem vindo(a) {auth?.user?.name}!</p>
   </S.ContainerUp>   
   <S.ContainerMenu>  
     <ButtonsMenu />
