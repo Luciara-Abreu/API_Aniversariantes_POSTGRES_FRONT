@@ -2,47 +2,61 @@
 import { useHistory } from 'react-router-dom'
 import cake from '../../assets/Gifs/cake2.gif'
 import * as  S from './styles'
-import { useFormContext, FormAction } from '../../contexts/formContext/index'
-import { ChangeEvent } from 'react'
+
+import { ChangeEvent, useContext } from 'react'
 import AuthGoogle from '../../services/authGoogle'
+import { AuthContext } from '../../contexts/Auth/AuthContext'
+import { FormAction } from '../../interfaces/User'
+import { useFormAuthContext } from '../../hooks/contextHook'
+
 
 
 const Login = () => {
-
+  
+  const auth = useContext(AuthContext)
   const history = useHistory();
   const handleClick = () => {
     history.push('/criarConta')
   }
 
-  const { state, dispatch } = useFormContext()
+  const { value } = useFormAuthContext()
   //Mudar email
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
-    dispatch({
+    value.dispatch({
       type:FormAction.setEmail,
       payload: e.target.value
     })
   }
   //Mudar senha
   const handlePasswordChange = (e: ChangeEvent<HTMLInputElement>) => {
-    dispatch({
+    value.dispatch({
       type:FormAction.password,
       payload: e.target.value
     })
   }
   const handleNextStep = ()=>{
-    if(state.email !== ''){
+    if(value.state.email !== ''){
       history.push('/')
     }else {
       alert("Digite seus dados para entrar")
     }
   }
-
+/*
+  const handleLogin = async () =>{
+    if(state.email && state.password){
+      const isLogged = await auth.signin(state.email, state.password)
+        if(isLogged) {
+          history.push('/')
+        }
+    }
+  }*/
+//    <S.LoginFormTitle>Bem vindo ao App de Aniversariantes</S.LoginFormTitle>
   return (
     <S.Container>
       <S.ContainerLogin>
         <S.WrapLogin>
           <S.LoginForm>        
-          <S.LoginFormTitle>Bem vindo ao App de Aniversariantes</S.LoginFormTitle>
+          <S.LoginFormTitle>{value.state.email}</S.LoginFormTitle>
             <S.DivLogo>
               <S.LogoForm><img src={cake} alt="CakeNiver" /></S.LogoForm>
             </S.DivLogo>
@@ -50,9 +64,9 @@ const Login = () => {
             <S.ContainerInput>
               <S.WrapInput>
                 <input
-                  className={state.email !== "" ? 'has-val input' : 'input'}
+                  className={value.state.email !== "" ? 'has-val input' : 'input'}
                   type='email'
-                  value={state.email}
+                  value={value.state.email}
                   onChange={handleEmailChange}
                 />
                 <span className='FocusInput' data-placeholder='Email'></span>
@@ -60,9 +74,9 @@ const Login = () => {
 
               <S.WrapInput>
                 <input
-                  className={state.password !== "" ? 'has-val input' : 'input'}
+                  className={value.state.password !== "" ? 'has-val input' : 'input'}
                   type='password'
-                  value={state.password}
+                  value={value.state.password}
                   onChange={handlePasswordChange}
                 />
                 <span className='FocusInput' data-placeholder='Password'></span>

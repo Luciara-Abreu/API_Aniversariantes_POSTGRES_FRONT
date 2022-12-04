@@ -2,15 +2,14 @@ import { collection, addDoc, getDocs, getFirestore, doc, deleteDoc } from "fireb
 import { Container, WrapInput, ContainerButton, BesideInputContainer } from './styles'
 import firebaseConfig from "../../libs/firebase"
 import { useEffect, useState } from "react"
-import { useFormContext, FormAction } from '../../contexts/formContext/index'
 import { ChangeEvent } from 'react'
 import { useForm } from "react-hook-form"
+import { FormAction } from "../../interfaces/User"
 
 
 const EditUsers= ()=> {
-
   const {  handleSubmit} = useForm();
-  const { state, dispatch } = useFormContext()
+  const { state, dispatch } = useFormAuthContext()
 
   //Chenge Name
   const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -70,7 +69,6 @@ const EditUsers= ()=> {
   const emailChange = handleEmailChange
   const birthdateChange = handleBirthdateChange
   const foneChange = handleFoneChange
-
 
     //Salvar no banco os dados dos usuários 
     async function onSubmit() {
@@ -137,4 +135,8 @@ const EditUsers= ()=> {
 }
 export default EditUsers
 
+
+function useFormAuthContext(): { state: any; dispatch: any } {
+  throw new Error("Function not implemented.")
+}
 //  <button className="login-form-btn" onClick={() => deleteUser(users.id)}>Deletar </button>

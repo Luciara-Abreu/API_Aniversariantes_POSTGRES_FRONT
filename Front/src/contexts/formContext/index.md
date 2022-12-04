@@ -75,6 +75,9 @@ Ou seja, iremos importar lá no App.tsx acima do Router ele é o componente prin
 pois ele que disponibiliza os dados dos usuários para toda a aplicação
 */
 
+
+//const FormContext = createContext<ContextType | undefined>(undefined)
+
 export const FormProvider = ({children}: ProviderType)=> {
 const[state, dispatch] = useReducer(formReducer, initialData)
 const value = { state, dispatch}

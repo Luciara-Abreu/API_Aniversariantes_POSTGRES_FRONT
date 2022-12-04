@@ -2,7 +2,7 @@
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 import { useState, useEffect } from "react"
 import { Container, ContainerSemana, Semanas, TileSemana, SubTitles, HR, Data } from './styles'
-import { useFormContext } from '../../contexts/formContext/index'
+
 import { useHistory } from 'react-router-dom'
 // https://www.youtube.com/watch?v=gqbXnYhvB5E&t=264s
 
@@ -10,7 +10,7 @@ import firebaseConfig from "../../libs/firebase";
 
 const ListUsers = () => {
   const { history } = useHistory()
-  const { state } = useFormContext()
+  //const { state } = useFormAuthContext()
   const [users, setUsers] = useState([])
 
   const db = getFirestore(firebaseConfig)

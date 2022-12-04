@@ -1,15 +1,24 @@
 //Provider vai usar o contexto = AuthContext
 
-import { useState } from "react"
+import { ReactNode, useReducer, useState } from "react"
 import { useApi } from "../../hooks/useApi"
-import { User } from "../../interfaces/User"
+import { initialData, IUserType } from "../../interfaces/User"
 import { AuthContext } from "./AuthContext"
+import { formReducer } from "./AuthReducer"
 // https://youtu.be/iD94avNeoXM 56:00
 
-export const AuthProvider = ({children}: {children: JSX.Element}) =>{
+type ProviderType = {
+  children: ReactNode
+  }
+  
+
+export const AuthProvider = ({children}:ProviderType) =>{
   //um state para salvar o usuário 
-  const [user, setUser]= useState<User | null>(null)
+  const [user, setUser]= useState<IUserType | null>(null)
   const api = useApi()
+
+  const[state, dispatch] = useReducer(formReducer, initialData)
+  const value = { state, dispatch}
 
   const signin = async (email: string, password: string)=> {
     //requisição ao back-end
@@ -27,10 +36,10 @@ export const AuthProvider = ({children}: {children: JSX.Element}) =>{
     setUser(null);
 }
 
-  return (
-    <AuthContext.Provider value= {{user, signin, signout}}>
-      {children}
-    </AuthContext.Provider>
+return (
+  <AuthContext.Provider value= {{user, signout, signin, value}}>
+    {children}
+  </AuthContext.Provider>
 
-  )
+)
 }
