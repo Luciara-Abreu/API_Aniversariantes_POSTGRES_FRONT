@@ -49,9 +49,10 @@ const Login = () => {
 
   const handleLogin = () =>{
     if(value.state.email && value.state.password){
-      const isLogged = auth?.signin(value.state.email, value.state.password)
+      const isLogged =  auth?.signin(value.state.email, value.state.password)
         if(isLogged) {
           history.push('/')
+          console.log(value.state.email, value.state.password)
         }
     }else {
       alert("Digite seus dados para entrar")

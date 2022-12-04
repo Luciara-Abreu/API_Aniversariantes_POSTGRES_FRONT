@@ -1,7 +1,6 @@
 //Provider vai usar o contexto = AuthContext
 import { ActionType, FormAction, IUserType } from "../../interfaces/User"
 
-
 //Reducer
 export const formReducer = (state: IUserType, action: ActionType) => {
 

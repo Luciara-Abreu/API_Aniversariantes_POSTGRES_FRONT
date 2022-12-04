@@ -21,7 +21,6 @@ export const AuthProvider = ({children}:ProviderType) =>{
   const value = { state, dispatch}
 
   const signin = async (email: string, password: string)=> {
-    //requisição ao back-end
     const data = await api.signin(email, password)
     if(data.user && data.token){
       setUser(data.user)

@@ -1,14 +1,17 @@
-import { collection, addDoc, getDocs, getFirestore, doc, deleteDoc } from "firebase/firestore"
+import { collection, addDoc, getDocs, getFirestore} from "firebase/firestore"
 import { Container, WrapInput, ContainerButton, BesideInputContainer } from './styles'
 import firebaseConfig from "../../libs/firebase"
-import { useEffect, useState } from "react"
+import { useEffect} from "react"
 import { ChangeEvent } from 'react'
 import { useForm } from "react-hook-form"
 import { FormAction } from "../../interfaces/User"
 
 
 const EditUsers= ()=> {
-  const {  handleSubmit} = useForm();
+  const {handleSubmit} = useForm();
+  const db = getFirestore(firebaseConfig)
+  const usersCollectionRef = collection(db, "users")
+
   const { state, dispatch } = useFormAuthContext()
 
   //Chenge Name
@@ -41,11 +44,6 @@ const EditUsers= ()=> {
       payload: e.target.value
     })
   }
-
-
-  const db = getFirestore(firebaseConfig)
-  const usersCollectionRef = collection(db, "users")
-
   
   useEffect(() => {
     const getUsers = async () => {
@@ -57,11 +55,6 @@ const EditUsers= ()=> {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // Deleta aniversriantes
-    async function deleteUser(id: string) {
-    const userDoc = doc(db, 'users', id)
-    await deleteDoc(userDoc)
-  }
 
   const nameChange = handleNameChange
   const emailChange = handleEmailChange
@@ -125,7 +118,6 @@ const EditUsers= ()=> {
 
         <ContainerButton>
           <button className="login-form-btn" onClick={onSubmit}>Salvar </button>
-        
         </ContainerButton>
       </form>
     </Container>
@@ -134,7 +126,8 @@ const EditUsers= ()=> {
 export default EditUsers
 
 
+
 function useFormAuthContext(): { state: any; dispatch: any } {
   throw new Error("Function not implemented.")
 }
-//  <button className="login-form-btn" onClick={() => deleteUser(users.id)}>Deletar </button>
+

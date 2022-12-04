@@ -7,7 +7,6 @@ import firebaseConfig from "../../libs/firebase"
 
 
 const ListUsers = () => {
-  //const { state } = useFormAuthContext()
   const [users, setUsers] = useState([])
 
   const db = getFirestore(firebaseConfig)
