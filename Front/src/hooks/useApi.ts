@@ -8,6 +8,10 @@ const api = axios.create({
 //hook
 export const useApi = () => ({
   validateToken: async (token: string) => {
+    return {
+      user: {id:3, name: 'Luci', email: 'luci@gmail.com'}
+    }
+
     const response = await api.post('./validate', {token})
     return response.data
   },
@@ -23,6 +27,7 @@ export const useApi = () => ({
 
   logout: async () => {
     return { status: true };
+    
     const response = await api.post('/logout');
     return response.data;
 }

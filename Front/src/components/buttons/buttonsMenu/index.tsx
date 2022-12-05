@@ -28,7 +28,8 @@ const ButtonsMenu = (props:Props) =>{
 
   const handleLogout = async () => {
     await auth.signout();
-    window.location.href = window.location.href;
+    //window.location.href = window.location.href;
+    history.push('/')
   }
 
   return (
