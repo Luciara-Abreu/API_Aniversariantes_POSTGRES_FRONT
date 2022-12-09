@@ -59,9 +59,16 @@ const WrapLogin = styled.div`
 }
 `
 
+const CriarConta = styled.div`
+width: 100%;
+display: flex;
+justify-content: space-between;
+`
+
 const LoginForm = styled.div`
 width: 100%;
 //padding-bottom: 1px;
+
 
 @media (max-width: 768px)and (min-width: 481px) {
     width: 340px;
@@ -238,6 +245,7 @@ export {
   LoginFormTitle,
   DivLogo,
   LogoForm,
+  CriarConta,
   WrapInput,
   ContainerInput,
   ContainerLoginFormBtn  

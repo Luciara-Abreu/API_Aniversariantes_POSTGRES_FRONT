@@ -1,13 +1,15 @@
-import { useContext } from "react"
-import Login from '../../pages/login/index'
-import { AuthContext } from "./AuthContext"
+import { useContext } from "react";
+import { useHistory} from "react-router-dom";
 
-export const RequireAuth = ({children}: {children: JSX.Element}) => {
-//validar se tem usuário logado
-const auth = useContext(AuthContext)
+import { AuthContext } from "./AuthContext";
 
-if(!auth?.user){
-  return <Login />
-}
-return children
+export const RequireAuth = ({ children }: { children: JSX.Element }) => {
+    const auth = useContext(AuthContext);
+    const history = useHistory();
+
+    if (!auth.user) {
+        history.push('/login')
+    }
+
+    return children;
 }

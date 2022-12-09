@@ -1,14 +1,19 @@
 //import { useRef } from 'react';
 import AddUsers from '../../components/addUsers';
 import Theme from '../../components/Theme';
+import { RequireAuth } from '../../contexts/Auth/RequireAuth';
 
-export const addAniver = () => {
+ const AddAniver = () => {
 
   return (
-<Theme>   
-<AddUsers />  
-</Theme>
+    <RequireAuth>
+      <Theme>   
+        <AddUsers />  
+      </Theme>
+    </RequireAuth>
   );
 }
 
-export default addAniver
+export default AddAniver
+
+

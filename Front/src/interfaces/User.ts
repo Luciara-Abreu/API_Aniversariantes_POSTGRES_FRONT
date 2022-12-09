@@ -15,16 +15,14 @@ export type ActionType = {
 }
 
 export enum FormAction {
-  setCurrentStep,  //Qual é a etapa
- //Set... trocar os dados do state  
  setName,
  setEmail,
  setFone,
  setBirthdate,
- password
+ setPassword
 }
 
-export type ContextType = {
+export type ChangeContextType = {
   state: IUserType,
   dispatch: (action: ActionType ) => void
 }

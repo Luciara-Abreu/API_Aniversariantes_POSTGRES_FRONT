@@ -1,10 +1,11 @@
 import { useContext } from "react"
-import { AuthContext } from "../contexts/Auth/AuthContext"
+import { ChangeContext } from "../contexts/Change/ChangeContext"
+
 
 
 // context Hook
-export const useFormAuthContext = () => {
-  const context = useContext(AuthContext)
+export const useChangeContext = () => {
+  const context = useContext(ChangeContext)
   if(context ===undefined){
     throw new Error("useForm precisa ser usado dentro do FormProvider")
   }

@@ -5,8 +5,6 @@ import { ActionType, FormAction, IUserType } from "../../interfaces/User"
 export const formReducer = (state: IUserType, action: ActionType) => {
 
   switch(action.type){
-    case FormAction.setCurrentStep:
-      return {...state, currentStep: action.payload}
     case FormAction.setName:
       return {...state, name: action.payload}
     case FormAction.setEmail:
@@ -15,7 +13,7 @@ export const formReducer = (state: IUserType, action: ActionType) => {
       return {...state, fone: action.payload}
     case FormAction.setBirthdate:
       return {...state, birthdate: action.payload}
-    case FormAction.password:
+    case FormAction.setPassword:
       return {...state, password: action.payload}
     default:
       return state 

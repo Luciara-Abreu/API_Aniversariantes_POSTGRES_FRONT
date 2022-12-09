@@ -2,70 +2,57 @@
 import { useHistory } from 'react-router-dom'
 import cake from '../../assets/Gifs/cake2.gif'
 import * as  S from './styles'
-
-import { ChangeEvent, useContext } from 'react'
+import { ChangeEvent, useContext, useState } from 'react'
 import AuthGoogle from '../../services/authGoogle'
 import { AuthContext } from '../../contexts/Auth/AuthContext'
-import { FormAction } from '../../interfaces/User'
-import { useFormAuthContext } from '../../hooks/contextHook'
+//import { AuthContext } from '../../contexts/Auth/AuthContext'
 
-
-
-const Login = () => {
-  
+const Login = () => {  
+  //const auth = useContext(AuthContext);  
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const auth = useContext(AuthContext)
+  
   const history = useHistory();
   const handleClick = () => {
     history.push('/criarConta')
   }
 
-  const { value } = useFormAuthContext()
-  //Mudar email
-  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
-    value.dispatch({
-      type:FormAction.setEmail,
-      payload: e.target.value
-    })
-  }
-  //Mudar senha
-  const handlePasswordChange = (e: ChangeEvent<HTMLInputElement>) => {
-    value.dispatch({
-      type:FormAction.password,
-      payload: e.target.value
-    })
-  }
-  /*
-  const handleLogin = async () =>{
-    if(value.state.email && value.state.password){
-      const isLogged = await auth?.signin(value.state.email, value.state.password)
-        if(isLogged) {
-          history.push('/')
-        }
-    }else {
-      alert("Digite seus dados para entrar")
-    }
-  }
-  */
+  const handleEmailInput = (event: ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.target.value);
+}
 
-  const handleLogin = () =>{
-    if(value.state.email && value.state.password){
-      const isLogged =  auth?.signin(value.state.email, value.state.password)
-        if(isLogged) {
-          history.push('/')
-          console.log(value.state.email, value.state.password)
+const handlePasswordInput = (event: ChangeEvent<HTMLInputElement>) => {
+    setPassword(event.target.value);
+}
+
+/*const handleLogin = async () => {
+    if (email && password) {
+        const isLogged = await auth.signin(email, password);
+        if (isLogged) {
+            history.push('/');
+        } else {
+            alert("Não deu certo.");
         }
-    }else {
-      alert("Digite seus dados para entrar")
+        console.log(isLogged)
     }
+}*/
+
+const handleLogin = () => {
+    if (email && password) {
+      history.push('/');
+    } else {
+          alert("Faça o login com seu e-mail e sua senha.");
+        }
   }
   
-//    <S.LoginFormTitle>Bem vindo ao App de Aniversariantes</S.LoginFormTitle>
+  
   return (
     <S.Container>
       <S.ContainerLogin>
         <S.WrapLogin>
           <S.LoginForm>        
-          <S.LoginFormTitle>{value.state.email}</S.LoginFormTitle>
+          <S.LoginFormTitle>Bem vindo ao App de Aniversariantes</S.LoginFormTitle>
             <S.DivLogo>
               <S.LogoForm><img src={cake} alt="CakeNiver" /></S.LogoForm>
             </S.DivLogo>
@@ -73,32 +60,34 @@ const Login = () => {
             <S.ContainerInput>
               <S.WrapInput>
                 <input
-                  className={value.state.email !== "" ? 'has-val input' : 'input'}
-                  type='email'
-                  value={value.state.email}
-                  onChange={handleEmailChange}
+                  className={email !== "" ? 'has-val input' : 'input'}
+                  type="text"
+                  value={email}
+                  onChange={handleEmailInput}
                 />
                 <span className='FocusInput' data-placeholder='Email'></span>
               </S.WrapInput>
 
               <S.WrapInput>
                 <input
-                  className={value.state.password !== "" ? 'has-val input' : 'input'}
-                  type='password'
-                  value={value.state.password}
-                  onChange={handlePasswordChange}
+                  className={password !== "" ? 'has-val input' : 'input'}
+                  type="password"
+                  value={password}
+                  onChange={handlePasswordInput}
                 />
                 <span className='FocusInput' data-placeholder='Password'></span>
               </S.WrapInput>
             </S.ContainerInput>
 
             <S.ContainerLoginFormBtn>
-              <button type="submit" onClick={handleLogin}className="login-form-btn">Login</button>
+              <button onClick={handleLogin}className="login-form-btn">Login</button>
             </S.ContainerLoginFormBtn>
+
             <AuthGoogle />
-            <div className="text-criarConta"></div>
+            <S.CriarConta className="text-criarConta">
             <div className="txt1">Não possui conta?</div>
-            <a href="#" onClick={handleClick} className="txt2">Criar Conta</a>
+            <button onClick={handleClick} className="txt2">Criar Conta</button>
+            </S.CriarConta>
           </S.LoginForm>
         </S.WrapLogin>
       </S.ContainerLogin>

@@ -1,10 +1,10 @@
 import { collection, addDoc, getDocs, getFirestore} from "firebase/firestore"
 import { Container, WrapInput, ContainerButton, BesideInputContainer } from './styles'
 import firebaseConfig from "../../libs/firebase"
-import { useEffect} from "react"
-import { ChangeEvent } from 'react'
+import { ChangeEvent, useEffect } from 'react'
 import { useForm } from "react-hook-form"
 import { FormAction } from "../../interfaces/User"
+import { useChangeContext } from "../../hooks/contextHook"
 
 
 const EditUsers= ()=> {
@@ -12,7 +12,7 @@ const EditUsers= ()=> {
   const db = getFirestore(firebaseConfig)
   const usersCollectionRef = collection(db, "users")
 
-  const { state, dispatch } = useFormAuthContext()
+  const { state, dispatch } = useChangeContext()
 
   //Chenge Name
   const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -125,9 +125,4 @@ const EditUsers= ()=> {
 }
 export default EditUsers
 
-
-
-function useFormAuthContext(): { state: any; dispatch: any } {
-  throw new Error("Function not implemented.")
-}
 

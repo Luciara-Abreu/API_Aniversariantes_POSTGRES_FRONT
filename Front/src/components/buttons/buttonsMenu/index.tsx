@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useHistory } from 'react-router-dom'
-import { useFormAuthContext } from '../../../hooks/contextHook';
+import { AuthContext } from '../../../contexts/Auth/AuthContext';
+
 import { ContainerButton } from './styles';
 
 type Props = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> 
 
 const ButtonsMenu = (props:Props) =>{  
-  const auth = useFormAuthContext();
+  const auth = useContext(AuthContext);
   const history = useHistory();
 
   const handleClickHome = () => {
@@ -29,7 +30,7 @@ const ButtonsMenu = (props:Props) =>{
   const handleLogout = async () => {
     await auth.signout();
     //window.location.href = window.location.href;
-    history.push('/')
+    window.location.reload()
   }
 
   return (
