@@ -1,11 +1,11 @@
 //import * as firebase from "firebase/app";
 import { initializeApp } from "firebase/app";
-//import { getStorage } from 'firebase/storage';
+import { getAuth } from 'firebase/auth';
 import 'firebase/compat/auth'
 import 'firebase/compat/firestore'
 import "firebase/database";
 
-var firebaseConfig = initializeApp({
+var firebaseConfig = {
   apiKey: "AIzaSyCXDY3YsF2qWBuo2tQ1-vYZz6kTrv0BVMw",
   authDomain: "agenda-aniversariantes-51185.firebaseapp.com",
   databaseURL:"https://agenda-aniversariantes-51185-default-rtdb.firebaseio.com",
@@ -14,27 +14,12 @@ var firebaseConfig = initializeApp({
   messagingSenderId: "952173678197",
   appId: "1:952173678197:web:41da4c1c9a395348a8f23c",
   measurementId: "G-WQVTZC01HL",
-});
+}
 
 
-export default firebaseConfig;
+const app = initializeApp(firebaseConfig)
 
-//const firedb = firebase.initializeApp(firebaseConfig);
-//export default firedb.database().ref();
-
-/**
- * // Use this to initialize the firebase App
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-
-// Use these for db & auth
-const db = firebaseApp.firestore();
-const auth = firebase.auth();
-
-export { auth, db };
-
- */
-
-  
+export const auth = getAuth(app)
 
 
 /**

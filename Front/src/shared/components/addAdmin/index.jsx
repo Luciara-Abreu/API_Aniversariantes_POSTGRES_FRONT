@@ -1,6 +1,6 @@
 import { addDoc, collection, getDocs, getFirestore } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
-import firebaseConfig from '../../libs/firebase';
+import { app } from '../../api/libs/firebase';
 import logo from '../../assets/Gifs/tresGatinhos.gif'
 import {
   Container, ContainerLogin, WrapLogin, LoginForm, LoginFormTitle, LogoForm, WrapInput,
@@ -12,7 +12,7 @@ const AddAdmin = () => {
   const [password, setPassword] = useState("")
   //https://www.youtube.com/watch?v=gqbXnYhvB5E 20:58
 
-  const db = getFirestore(firebaseConfig)
+  const db = getFirestore(app)
   const admCollectionRef = collection(db, "admin")
 
   //Add novos usuários no  banco de dados

@@ -1,12 +1,12 @@
 //import * as firebase from "firebase/app";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import firebaseConfig from '../../libs/firebase';
+import { app } from '../../api/libs/firebase';
 import GoogleButton from "../../components/buttons/buttonAuthGoogle";
 
 const provider = new GoogleAuthProvider();
 
 const AuthGoogle = () => {
-  const auth = getAuth(firebaseConfig);
+  const auth = getAuth(app);
 
   const LogarComGoogle = () => {
     signInWithPopup(auth, provider)

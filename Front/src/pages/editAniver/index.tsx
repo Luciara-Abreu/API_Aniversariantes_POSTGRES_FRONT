@@ -1,5 +1,5 @@
-import EditUsers from '../../components/editUsers';
-import Theme from '../../components/Theme';
+import EditUsers from "../../shared/components/editUsers"
+import Theme from "../../shared/components/Theme"
 
 const EditPage = () => {
 

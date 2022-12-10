@@ -1,9 +1,9 @@
 import React from "react"
 import ReactDOM from "react-dom/client";
 import { App } from "./App"
-import { AuthProvider } from "./contexts/Auth/AuthProvider";
-import { ChangeProvider } from "./contexts/Change/ChangeProvider";
 import './global/styles.css'
+import { AuthProvider } from "./shared/contexts/Auth/AuthProvider";
+import { ChangeProvider } from "./shared/contexts/Change/ChangeProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 

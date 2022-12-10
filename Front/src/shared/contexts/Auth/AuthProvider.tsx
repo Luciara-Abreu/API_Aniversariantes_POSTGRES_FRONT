@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { useApi } from "../../hooks/useApi";
+import { useApi } from '../../api/useApi';
 import { IUserType } from "../../interfaces/User";
 import { AuthContext } from "./AuthContext";
+
 
 export const AuthProvider = ({ children }: { children: JSX.Element }) => {
     const [user, setUser] = useState<IUserType | null>(null);
@@ -22,9 +23,8 @@ export const AuthProvider = ({ children }: { children: JSX.Element }) => {
 
     const signin = async (email: string, password: string) => {
         const data = await api.signin(email, password);
-        if (data.user && data.token) {
-            setUser(data.user);
-            setToken(data.token);
+        if (data.user) {
+            setUser(user);
             return true;
         }
         return false;
@@ -42,7 +42,7 @@ export const AuthProvider = ({ children }: { children: JSX.Element }) => {
     }
 
     return (
-        <AuthContext.Provider value={{ user, signin, signout }}>
+        <AuthContext.Provider value = {{user, signin, signout}}>
             {children}
         </AuthContext.Provider>
     );

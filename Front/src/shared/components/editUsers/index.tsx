@@ -1,6 +1,6 @@
 import { collection, addDoc, getDocs, getFirestore} from "firebase/firestore"
 import { Container, WrapInput, ContainerButton, BesideInputContainer } from './styles'
-import firebaseConfig from "../../libs/firebase"
+import { app } from "../../api/libs/firebase"
 import { ChangeEvent, useEffect } from 'react'
 import { useForm } from "react-hook-form"
 import { FormAction } from "../../interfaces/User"
@@ -9,7 +9,7 @@ import { useChangeContext } from "../../hooks/contextHook"
 
 const EditUsers= ()=> {
   const {handleSubmit} = useForm();
-  const db = getFirestore(firebaseConfig)
+  const db = getFirestore(app)
   const usersCollectionRef = collection(db, "users")
 
   const { state, dispatch } = useChangeContext()

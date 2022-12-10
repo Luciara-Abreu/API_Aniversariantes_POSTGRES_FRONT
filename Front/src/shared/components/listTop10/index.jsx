@@ -1,14 +1,15 @@
 
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 import { useState, useEffect } from "react"
-import firebaseConfig from "../../libs/firebase";
+import { app } from "../../api/libs/firebase";
 import { Container, TitleTop10, SubTitles, HR, Data, BesideInputContainer } from './styles'
 // https://www.youtube.com/watch?v=gqbXnYhvB5E&t=264s
 
 const ListTOP10 = () => {
 
   const [users, setUsers] = useState([])
-  const db = getFirestore(firebaseConfig)
+
+  const db = getFirestore(app)
   const usersCollectionRef = collection(db, "users")
 
   // trás todos os dados que estão cadastrados no banco

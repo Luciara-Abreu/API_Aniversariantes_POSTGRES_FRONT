@@ -1,8 +1,8 @@
 import { collection, getDocs, getFirestore } from "firebase/firestore"
-import firebaseConfig from "../../libs/firebase";
+import { app } from "../../api/libs/firebase";
 // https://www.youtube.com/watch?v=gqbXnYhvB5E&t=264s
 
-  const db = getFirestore(firebaseConfig)
+  const db = getFirestore(app)
   const usersCollectionRef = collection(db, "users")
 
 
@@ -20,6 +20,9 @@ import firebaseConfig from "../../libs/firebase";
   
   const UserAll = userAll()
   console.log('Aniversario ===> ', UserAll)
+
+
+
 export {
   UserAll
 }

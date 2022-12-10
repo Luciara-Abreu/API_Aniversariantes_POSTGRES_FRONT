@@ -1,7 +1,7 @@
 var  {} = require("dotenv/config")
 var express = require("express")
 var admin = require("firebase-admin")
-var serviceAccount = require("../db/account/accountKey.json")
+var serviceAccount = require("../db/accountKey.json")
 
 
 
@@ -13,7 +13,7 @@ const app = express()
 const port = 6000  
 
 
-//GET 
+//GET Lista todos os usuários
 app.get('/listUsers', (req, res)=> {
   admin.firestore()
   .collection("users")

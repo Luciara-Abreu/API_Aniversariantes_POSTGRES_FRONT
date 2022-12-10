@@ -1,6 +1,9 @@
 
-import ConsultUsersMes from "../../components/consultUsersMes"
-import Theme from "../../components/Theme"
+
+import ConsultUsersMes from "../../shared/components/consultUsersMes";
+import Theme from "../../shared/components/Theme";
+
+
 
 
 const ConsultaMes = () => {

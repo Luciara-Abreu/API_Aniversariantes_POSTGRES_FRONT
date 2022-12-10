@@ -7,29 +7,23 @@ import AddAniver from '../pages/addAniver';
 import CriarConta from '../pages/criarConta';
 import Dashboard from '../pages/dashboard';
 import Top10 from '../pages/top10';
+import { RequireAuth } from '../contexts/Auth/RequireAuth';
 
 
 export const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path='/login'  exact component={Login}/>;
+        <Route path='/login'       exact component={Login}/>;
         <Route path='/'            exact component={Dashboard}/>
         <Route path='/top10'             component={Top10}/>
         <Route path='/consultaMes'       component={ConsultaMes}/>
-
+        <RequireAuth>
         <Route path="/addAniver"         component={AddAniver} />
         <Route path='/criarConta'        component={CriarConta}/>
         <Route path='/editar'            component={EditUsers}/> 
+        </RequireAuth>
       </Switch>
     </BrowserRouter>
   )
   }
-
-/**
- *       <RequireAuth>
-        <Route path='/addAniver'   exact component={AddAniver}/>
-        </RequireAuth>
-
-       <Route path='/login'       exact component={Login}/>
- */

@@ -3,8 +3,9 @@ import { useHistory } from 'react-router-dom'
 import cake from '../../assets/Gifs/cake2.gif'
 import * as  S from './styles'
 import { ChangeEvent, useContext, useState } from 'react'
-import AuthGoogle from '../../services/authGoogle'
-import { AuthContext } from '../../contexts/Auth/AuthContext'
+import { AuthContext } from '../../shared/contexts/Auth/AuthContext'
+import AuthGoogle from '../../shared/services/authGoogle'
+
 //import { AuthContext } from '../../contexts/Auth/AuthContext'
 
 const Login = () => {  

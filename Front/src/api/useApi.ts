@@ -1,4 +1,6 @@
 import axios from 'axios';
+import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { auth } from './libs/firebase';
 
 const api = axios.create({
     baseURL: process.env.REACT_APP_API
@@ -13,16 +15,12 @@ export const useApi = () => ({
         return response.data;
     },
     signin: async (email: string, password: string) => {
-        return {
-            user: { id: 3, name: 'José', email: 'jose@gmail.com' },
-            token: '123456789'
-        };
-        const response = await api.post('/signin', { email, password });
-        return response.data;
+        const response = await signInWithEmailAndPassword(auth, email, password );
+        console.log('usuário =====>',response)
+        return response;
     },
-    logout: async () => {
-        return { status: true };
-        const response = await api.post('/logout');
-        return response.data;
+
+    logout:  async () => {
+        await signOut(auth);
     }
 });

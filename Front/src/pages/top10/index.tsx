@@ -1,7 +1,5 @@
-//import { useRef } from 'react';
-import Theme from '../../components/Theme';
-import ListTOP10 from '../../components/listTop10';
-
+import ListTOP10 from "../../shared/components/listTop10"
+import Theme from "../../shared/components/Theme"
 
 const Top10 = () => {
 

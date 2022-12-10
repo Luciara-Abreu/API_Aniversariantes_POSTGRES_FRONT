@@ -1,16 +1,16 @@
 //import { useRef } from 'react';
-import AddUsers from '../../components/addUsers';
-import Theme from '../../components/Theme';
-import { RequireAuth } from '../../contexts/Auth/RequireAuth';
+
+import AddUsers from "../../shared/components/addUsers";
+import Theme from "../../shared/components/Theme";
+
+
 
  const AddAniver = () => {
 
   return (
-    <RequireAuth>
       <Theme>   
         <AddUsers />  
       </Theme>
-    </RequireAuth>
   );
 }
 

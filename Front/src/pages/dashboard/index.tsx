@@ -1,6 +1,5 @@
-//import { useRef } from 'react';
-import Carrocel from '../../components/carrocel';
-import Theme from '../../components/Theme';
+import Carrocel from "../../shared/components/carrocel";
+import Theme from "../../shared/components/Theme";
 
  const Dashboard = () => {
 

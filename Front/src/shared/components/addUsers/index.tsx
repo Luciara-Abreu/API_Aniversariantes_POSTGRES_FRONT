@@ -1,7 +1,7 @@
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import firebaseConfig from '../../libs/firebase';
+import { app } from '../../api/libs/firebase';
 import { Container, WrapInput, ContainerButton, BesideInputContainer } from './styles';
 
 
@@ -17,7 +17,7 @@ const AddUsers: React.FC = () => {
   const [birthDate, setBirthDate] = useState("")
   const [fone, setFone] = useState("")  
 
-  const db = getFirestore(firebaseConfig)
+  const db = getFirestore(app)
   const usersCollectionRef = collection(db, "users")
   
   //Add novos usuários no  banco de dados

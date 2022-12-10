@@ -1,6 +1,6 @@
+import AddAdmin from "../../shared/components/addAdmin"
 
-import AddAdmin from '../../components/addAdmin'
-
+;
 const CriarConta = ()=>{
 
   return ( 
