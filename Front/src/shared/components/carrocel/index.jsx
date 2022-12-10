@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import button from '../../assets/Imag/216151_right_chevron_icon.png'
+import button from '../../../../src/assets/Imag/216151_right_chevron_icon.png'
 import ListUsers from '../listUsers/index'
 import { Container, ContainerCarrocel, ContainerButtons, ButtonRight, ButtonLefth } from './styles'
 

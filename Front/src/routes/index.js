@@ -1,13 +1,13 @@
 import { BrowserRouter, Route,  Switch } from 'react-router-dom';
 
 import Login from '../pages/login';
-import EditUsers from '../components/editUsers';
+import EditUsers from '../shared/components/editUsers';
 import ConsultaMes from '../pages/consultaMes';
 import AddAniver from '../pages/addAniver';
 import CriarConta from '../pages/criarConta';
 import Dashboard from '../pages/dashboard';
 import Top10 from '../pages/top10';
-import { RequireAuth } from '../contexts/Auth/RequireAuth';
+import { RequireAuth } from '../shared/contexts/Auth/RequireAuth';
 
 
 export const Routes = () => {

@@ -1,7 +1,7 @@
 import { addDoc, collection, getDocs, getFirestore } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
-import { app } from '../../api/libs/firebase';
-import logo from '../../assets/Gifs/tresGatinhos.gif'
+import { app } from '../../../../src/api/libs/firebase'
+import logo from '../../../assets/Gifs/tresGatinhos.gif'
 import {
   Container, ContainerLogin, WrapLogin, LoginForm, LoginFormTitle, LogoForm, WrapInput,
   ContainerLoginFormBtn, DivLogo

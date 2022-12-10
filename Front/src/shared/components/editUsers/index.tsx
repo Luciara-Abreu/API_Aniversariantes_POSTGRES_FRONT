@@ -1,6 +1,6 @@
 import { collection, addDoc, getDocs, getFirestore} from "firebase/firestore"
 import { Container, WrapInput, ContainerButton, BesideInputContainer } from './styles'
-import { app } from "../../api/libs/firebase"
+import { app } from '../../../../src/api/libs/firebase'
 import { ChangeEvent, useEffect } from 'react'
 import { useForm } from "react-hook-form"
 import { FormAction } from "../../interfaces/User"

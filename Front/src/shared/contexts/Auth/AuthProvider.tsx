@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useApi } from '../../api/useApi';
+import { useApi } from "../../../api/useApi";
 import { IUserType } from "../../interfaces/User";
 import { AuthContext } from "./AuthContext";
 

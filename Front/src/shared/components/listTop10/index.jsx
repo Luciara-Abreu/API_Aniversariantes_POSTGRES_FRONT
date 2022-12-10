@@ -1,7 +1,7 @@
 
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 import { useState, useEffect } from "react"
-import { app } from "../../api/libs/firebase";
+import { app } from '../../../../src/api/libs/firebase'
 import { Container, TitleTop10, SubTitles, HR, Data, BesideInputContainer } from './styles'
 // https://www.youtube.com/watch?v=gqbXnYhvB5E&t=264s
 

@@ -1,7 +1,7 @@
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { app } from '../../api/libs/firebase';
+import { app } from '../../../../src/api/libs/firebase'
 import { Container, WrapInput, ContainerButton, BesideInputContainer } from './styles';
 
 
