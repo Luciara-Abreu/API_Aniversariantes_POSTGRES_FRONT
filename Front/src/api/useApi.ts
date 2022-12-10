@@ -14,13 +14,13 @@ export const useApi = () => ({
         const response = await api.post('/validate', { token });
         return response.data;
     },
-    signin: async (email: string, password: string) => {
+    /*signin: async (email: string, password: string) => {
         const response = await api.post('/login', { auth, email, password  });    
         console.log('usuário =====>',response)
         return response;
-    },
+    },*/
 
-    logout:  async () => {
+    signout:  async () => {
         await signOut(auth);
     }
 });

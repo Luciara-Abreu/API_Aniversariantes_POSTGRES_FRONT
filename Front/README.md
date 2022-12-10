@@ -43,4 +43,5 @@ https://youtu.be/ss4BXa-WfgI = Galeria de Fotos em React (com Typescript e Fireb
 
 // https://youtu.be/iD94avNeoXM 01:23 = B7Daily #6 - Sistema de Login com React (ContextAPI, Router, Token e Persistência) / https://github.com/suporteb7web/b7daily-live6
 ----------------------------------------------------------------------
+https://youtu.be/9bXhf_TELP4 = React Firebase Authentication Tutorial | Firebase 9 Tutorial
 ----------------------------------------------------------------------
