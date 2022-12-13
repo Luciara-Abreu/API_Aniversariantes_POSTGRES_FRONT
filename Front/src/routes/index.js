@@ -14,11 +14,11 @@ export const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path='/login'       exact component={Login}/>;
-        <Route path='/'            exact component={Dashboard}/>
+        <Route path='/'             exact component={Login}/>;
+        <RequireAuth>
+        <Route path='/Dashboard'         component={Dashboard}/>
         <Route path='/top10'             component={Top10}/>
         <Route path='/consultaMes'       component={ConsultaMes}/>
-        <RequireAuth>
         <Route path="/addAniver"         component={AddAniver} />
         <Route path='/criarConta'        component={CriarConta}/>
         <Route path='/editar'            component={EditUsers}/> 

@@ -1,8 +1,8 @@
 
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 import { useState, useEffect } from "react"
-import { app } from '../../../../src/api/libs/firebase'
-import { Container, TitleTop10, SubTitles, HR, Data, BesideInputContainer } from './styles'
+import { app } from '../../../libs/firebase'
+import * as S from './styles'
 // https://www.youtube.com/watch?v=gqbXnYhvB5E&t=264s
 
 const ListTOP10 = () => {
@@ -23,27 +23,27 @@ const ListTOP10 = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const getUsers = async () => {
+  /*const getUsers = async () => {
     const data = await getDocs(usersCollectionRef)
     return console.log(data);
-  }
+  }*/
 
 
   return (
-    <Container>
-      <TitleTop10>OS PRÓXIMOS 10 ANIVERSARIANTES DO MÊS</TitleTop10>
+    <S.Container>
+      <S.TitleTop10>OS PRÓXIMOS 10 ANIVERSARIANTES DO MÊS</S.TitleTop10>
 
-      <SubTitles>
+      <S.SubTitles>
         <p className="Name">Nome</p>
         <p className="birthdate">Data Nasc.</p>
         <p className="email">Email</p>
         <p className="whatsApp">WhatsApp.</p>
-      </SubTitles>
+      </S.SubTitles>
 
 
-      <HR> _________________________________________________________________________________________________________ </HR>
-      <BesideInputContainer>
-        <Data className="ContainerName">
+      <S.HR> _________________________________________________________________________________________________________ </S.HR>
+      <S.BesideInputContainer>
+        <S.Data className="ContainerName">
           <ul>
             {users.map(users => {
               return (
@@ -53,9 +53,9 @@ const ListTOP10 = () => {
               )
             })}
           </ul>
-        </Data>
+        </S.Data>
 
-        <Data className="ContainerBirthdate">
+        <S.Data className="ContainerBirthdate">
           <ul>
             {users.map(users => {
               return (
@@ -65,9 +65,9 @@ const ListTOP10 = () => {
               )
             })}
           </ul>
-        </Data>
+        </S.Data>
 
-        <Data className="ContainerEmail">
+        <S.Data className="ContainerEmail">
           <ul>
             {users.map(users => {
               return (
@@ -77,8 +77,8 @@ const ListTOP10 = () => {
               )
             })}
           </ul>
-        </Data>
-        <Data className="ContainerWhatsApp">
+        </S.Data>
+        <S.Data className="ContainerWhatsApp">
           <ul>
             {users.map(users => {
               return (
@@ -88,16 +88,9 @@ const ListTOP10 = () => {
               )
             })}
           </ul>
-        </Data>
-      </BesideInputContainer>
-    </Container>
+        </S.Data>
+      </S.BesideInputContainer>
+    </S.Container>
   )
 }
 export default ListTOP10
-/*
-<h1>Nome: {name}{setName}</h1> 
-<h1>E-mail: {email}{setEmail}</h1>
-<h1>Data de nascimento: {birthDate}{setBirthDate}</h1>
-<h1>diversos: {users} {setUsers}</h1>
-
-*/

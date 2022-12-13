@@ -2,7 +2,7 @@
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 import { useState, useEffect } from "react"
 import { Container, ContainerSemana, Semanas, TileSemana, SubTitles, HR, Data } from './styles'
-import { app } from '../../../../src/api/libs/firebase'
+import { app } from '../../../libs/firebase'
 //import { DiaDaSemana } from "../../utils/validaDatas"
 // https://www.youtube.com/watch?v=gqbXnYhvB5E&t=264s
 
