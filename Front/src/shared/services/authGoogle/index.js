@@ -1,6 +1,6 @@
 //import * as firebase from "firebase/app";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { app } from '../../../api/libs/firebase';
+import { app } from '../../../libs/firebase';
 import GoogleButton from "../../components/buttons/buttonAuthGoogle";
 
 const provider = new GoogleAuthProvider();

@@ -3,17 +3,15 @@ import { useHistory } from 'react-router-dom'
 import cake from '../../assets/Gifs/cake2.gif'
 import * as  S from './styles'
 import { ChangeEvent, useState } from 'react'
-import AuthGoogle from '../../shared/services/authGoogle'
-import { auth } from '../../api/libs/firebase';
+import { auth } from '../../libs/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth'
+import AuthGoogle from '../../shared/services/authGoogle';
 
 
 const Login = () => {  
-  //const auth = useContext(AuthContext)
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  
+    
   const history = useHistory();
   const handleClick = () => {
     history.push('/criarConta')
@@ -27,44 +25,24 @@ const handlePasswordInput = (event: ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
 }
 
-/*const handleLogin = async () => {
-    if (email && password) {
-        const isLogged = await signInWithEmailAndPassword(auth, email, password );
-        if (isLogged) {
-            history.push('/');
-        } else {
-            alert("Não deu certo.");
-        }
-        console.log(isLogged)
-    }
-}
-*/
+
 
 const handleLogin = async () => {
-    const isLogged = await signInWithEmailAndPassword(
+  const messageError = 'E-mail ou senha invalida, Entre com seus dados'
+  
+  try {
+    const user = await signInWithEmailAndPassword(
       auth,
       email,
       password
-    )
-    if (isLogged) {
-      history.push('/');
-  } else {
-      alert("Não deu certo.");
-  }
-  console.log('usuário logado ====> ',email, password, isLogged)
-}
+    );
+    console.log('User Logado =>>>>',user);
+    history.push('/');
+  } catch (error) {
+    alert(messageError)
+  }}
 
-/*
-const handleLogin = () => {
-    if (email && password) {
-      history.push('/');
-    } else {
-          alert("Faça o login com seu e-mail e sua senha.");
-        }
-  }
-  */
-  
-  return (
+return (
     <S.Container>
       <S.ContainerLogin>
         <S.WrapLogin>
@@ -100,7 +78,7 @@ const handleLogin = () => {
               <button onClick={handleLogin}className="login-form-btn">Login</button>
             </S.ContainerLoginFormBtn>
 
-            <AuthGoogle />
+            <AuthGoogle/>
             <S.CriarConta className="text-criarConta">
             <div className="txt1">Não possui conta?</div>
             <button onClick={handleClick} className="txt2">Criar Conta</button>
