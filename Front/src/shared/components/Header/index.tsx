@@ -1,13 +1,12 @@
-import React, { useContext } from "react";
+import React, { useState } from "react";
 import * as S from './styles';
 import ButtonsMenu from "../buttons/buttonsMenu";
-import { AuthContext } from "../../contexts/Auth/AuthContext";
-
-
 // https://youtu.be/AXKc4WhgLSA - criar header com typeScript
 
 const Header: React.FC = () => {  
-  const auth = useContext(AuthContext)
+    const [user] = useState();
+
+ 
 
   return (
 <S.HeaderContainer>
@@ -15,7 +14,7 @@ const Header: React.FC = () => {
     <S.Title>     
       **AGENDA ANIVERSARIANTES **
     </S.Title>
-    <p>Seja bem vindo(a) {auth?.user?.name}!</p>
+    <p>Seja bem vindo(a) {user}!</p>
   </S.ContainerUp>   
   <S.ContainerMenu>  
     <ButtonsMenu />
@@ -26,4 +25,3 @@ const Header: React.FC = () => {
 
 export default Header
 
- /* <DashboardButton>Dashboar</DashboardButton>*/

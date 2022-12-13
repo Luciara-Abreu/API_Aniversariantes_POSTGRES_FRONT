@@ -1,36 +1,34 @@
-import { addDoc, collection, getDocs, getFirestore } from 'firebase/firestore';
-import { useState, useEffect } from 'react';
-import { app } from '../../../../src/api/libs/firebase'
+import { useState } from 'react';
 import logo from '../../../assets/Gifs/tresGatinhos.gif'
+import { auth } from '../../../api/libs/firebase'
+import { createUserWithEmailAndPassword } from "firebase/auth"
 import {
   Container, ContainerLogin, WrapLogin, LoginForm, LoginFormTitle, LogoForm, WrapInput,
   ContainerLoginFormBtn, DivLogo
 } from './styles';
+import { useHistory } from 'react-router-dom';
 
 const AddAdmin = () => {
+  const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-  //https://www.youtube.com/watch?v=gqbXnYhvB5E 20:58
+  const history = useHistory()
 
-  const db = getFirestore(app)
-  const admCollectionRef = collection(db, "admin")
 
-  //Add novos usuários no  banco de dados
-  async function creatAdmin() {
-    const adm = await addDoc(admCollectionRef, {
-      email, password
-    })
-    console.log(adm)
-  }
-  //Tras todos usuários da tabela
-  useEffect(() => {
-    const getUsers = async () => {
-      const data = await getDocs(admCollectionRef)
-      const admUser = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }))
-      console.log(admUser)
+  const register = async () => {
+    try {
+      const user = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      console.log(user);
+      history.push('/');
+    } catch (error) {
+      console.log(error.message);
     }
-    getUsers()
-  }, [])
+  }
+
 
   return (
     <Container>
@@ -41,6 +39,7 @@ const AddAdmin = () => {
             <DivLogo>
               <LogoForm><img src={logo} alt="CakeNiver" /></LogoForm>
             </DivLogo>
+
             <WrapInput>
               <input
                 className={email !== "" ? 'has-val input' : 'input'}
@@ -62,7 +61,7 @@ const AddAdmin = () => {
             </WrapInput>
 
             <ContainerLoginFormBtn>
-              <button className="login-form-btn" onClick={creatAdmin}>Cadastrar</button>
+              <button className="login-form-btn" onClick={register}>Cadastrar</button>
             </ContainerLoginFormBtn>
           </LoginForm>
         </WrapLogin>
@@ -73,4 +72,3 @@ const AddAdmin = () => {
 }
 
 export default AddAdmin
-
