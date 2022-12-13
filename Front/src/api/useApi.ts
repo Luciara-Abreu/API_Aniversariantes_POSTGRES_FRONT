@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { signOut } from 'firebase/auth';
-import { auth } from './libs/firebase';
+import { auth } from '../libs/firebase';
 
 const api = axios.create({
     baseURL: process.env.REACT_APP_API

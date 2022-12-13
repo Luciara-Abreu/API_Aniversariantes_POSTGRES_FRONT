@@ -1,5 +1,5 @@
 import { useHistory} from "react-router-dom";
-import { auth } from '../../../api/libs/firebase'
+import { auth } from '../../../libs/firebase'
 
 
 export const RequireAuth = ({ children }: { children: JSX.Element }) => {     

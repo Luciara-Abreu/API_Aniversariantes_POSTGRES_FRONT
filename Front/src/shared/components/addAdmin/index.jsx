@@ -1,15 +1,11 @@
 import { useState } from 'react';
 import logo from '../../../assets/Gifs/tresGatinhos.gif'
-import { auth } from '../../../api/libs/firebase'
+import { auth } from '../../../libs/firebase'
 import { createUserWithEmailAndPassword } from "firebase/auth"
-import {
-  Container, ContainerLogin, WrapLogin, LoginForm, LoginFormTitle, LogoForm, WrapInput,
-  ContainerLoginFormBtn, DivLogo
-} from './styles';
+import * as S from './styles';
 import { useHistory } from 'react-router-dom';
 
 const AddAdmin = () => {
-  const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const history = useHistory()
@@ -31,16 +27,16 @@ const AddAdmin = () => {
 
 
   return (
-    <Container>
-      <ContainerLogin>
-        <WrapLogin>
-          <LoginForm>
-            <LoginFormTitle>Faça um gatinho feliz! Se cadastre no App!</LoginFormTitle>
-            <DivLogo>
-              <LogoForm><img src={logo} alt="CakeNiver" /></LogoForm>
-            </DivLogo>
+    <S.Container>
+      <S.ContainerLogin>
+        <S.WrapLogin>
+          <S.LoginForm>
+            <S.LoginFormTitle>Faça um gatinho feliz! Se cadastre no App!</S.LoginFormTitle>
+            <S.DivLogo>
+              <S.LogoForm><img src={logo} alt="CakeNiver" /></S.LogoForm>
+            </S.DivLogo>
 
-            <WrapInput>
+            <S.WrapInput>
               <input
                 className={email !== "" ? 'has-val input' : 'input'}
                 type='email'
@@ -48,9 +44,9 @@ const AddAdmin = () => {
                 onChange={e => setEmail(e.target.value)}
               />
               <span className='FocusInput' data-placeholder='Email'></span>
-            </WrapInput>
+            </S.WrapInput>
 
-            <WrapInput>
+            <S.WrapInput>
               <input
                 className={password !== "" ? 'has-val input' : 'input'}
                 type='password'
@@ -58,15 +54,15 @@ const AddAdmin = () => {
                 onChange={e => setPassword(e.target.value)}
               />
               <span className='FocusInput' data-placeholder='Password'></span>
-            </WrapInput>
+            </S.WrapInput>
 
-            <ContainerLoginFormBtn>
+            <S.ContainerLoginFormBtn>
               <button className="login-form-btn" onClick={register}>Cadastrar</button>
-            </ContainerLoginFormBtn>
-          </LoginForm>
-        </WrapLogin>
-      </ContainerLogin>
-    </Container>
+            </S.ContainerLoginFormBtn>
+          </S.LoginForm>
+        </S.WrapLogin>
+      </S.ContainerLogin>
+    </S.Container>
 
   )
 }

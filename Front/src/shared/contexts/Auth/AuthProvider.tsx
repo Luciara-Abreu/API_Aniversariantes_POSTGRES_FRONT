@@ -1,6 +1,4 @@
-import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { useEffect, useState } from "react";
-import { auth } from "../../../api/libs/firebase";
 import { useApi } from "../../../api/useApi";
 import { IUserType } from "../../interfaces/User";
 import { AuthContext } from "./AuthContext";

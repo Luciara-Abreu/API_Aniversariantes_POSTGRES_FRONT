@@ -96,23 +96,6 @@ const Data = styled.div`
   }
   `
 
-const SubTitless = styled.div`  
-    display: flex;  
-    justify-content: space-between;
-    margin: 3px 0px -12px 0;
-    p.Name{
-      width: 77%;
-      margin: 0 10px 0 10px;
-      padding: 0 0 0 10px;
-      text-shadow:0px 0px 3px #f05be6;
-  } 
-    p.birthdate{
-      width: 23%;
-      margin: 0 10px 0 10px;
-      text-shadow:0px 0px 3px #f05be6;
-  } 
-  `
-
   const SubTitles = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;  

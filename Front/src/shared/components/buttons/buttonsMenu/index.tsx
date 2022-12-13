@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { ContainerButton } from './styles';
-import { auth } from '../../../../api/libs/firebase'
+import { auth } from '../../../../libs/firebase'
 import { signOut } from 'firebase/auth';
 import { IUserType } from '../../../interfaces/User';
 

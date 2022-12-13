@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom'
 import cake from '../../assets/Gifs/cake2.gif'
 import * as  S from './styles'
 import { ChangeEvent, useState } from 'react'
-import { auth } from '../../api/libs/firebase';
+import { auth } from '../../libs/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import AuthGoogle from '../../shared/services/authGoogle';
 

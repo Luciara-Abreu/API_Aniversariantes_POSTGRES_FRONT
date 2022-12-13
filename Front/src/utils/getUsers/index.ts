@@ -1,5 +1,5 @@
 import { collection, getDocs, getFirestore } from "firebase/firestore"
-import { app } from "../../api/libs/firebase";
+import { app } from "../../libs/firebase";
 // https://www.youtube.com/watch?v=gqbXnYhvB5E&t=264s
 
   const db = getFirestore(app)
