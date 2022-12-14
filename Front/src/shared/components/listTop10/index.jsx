@@ -1,32 +1,25 @@
 
-import { collection, getDocs, getFirestore } from "firebase/firestore"
+import { getDocs } from "firebase/firestore"
 import { useState, useEffect } from "react"
-import { app } from '../../../libs/firebase'
+import { userRef } from "../../../libs/firebase"
 import * as S from './styles'
 // https://www.youtube.com/watch?v=gqbXnYhvB5E&t=264s
 
 const ListTOP10 = () => {
-
   const [users, setUsers] = useState([])
 
-  const db = getFirestore(app)
-  const usersCollectionRef = collection(db, "users")
+
 
   // trás todos os dados que estão cadastrados no banco
   useEffect(() => {
     const getUsers = async () => {
-      const data = await getDocs(usersCollectionRef)
+      const data = await getDocs(userRef)
       const usersCadastrados = (data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
       setUsers(usersCadastrados)
     }
     getUsers()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-
-  /*const getUsers = async () => {
-    const data = await getDocs(usersCollectionRef)
-    return console.log(data);
-  }*/
 
 
   return (

@@ -4,6 +4,7 @@ import { getAuth } from 'firebase/auth';
 import 'firebase/compat/auth'
 import 'firebase/compat/firestore'
 import "firebase/database";
+import { collection, getFirestore } from "firebase/firestore";
 
 
 var firebaseConfig = { 
@@ -18,3 +19,7 @@ var firebaseConfig = {
 }
 export const app = initializeApp(firebaseConfig)
 export const auth = getAuth(app)
+
+const db = getFirestore(app)
+const usersCollectionRef = collection(db, "users")
+export const userRef = usersCollectionRef

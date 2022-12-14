@@ -38,6 +38,7 @@ https://youtu.be/W1Ed9TEMGJU = Formulário multi-etapas em React (com Typescript
 ----------------------------------------------------------------------
 Aulas maravilhosas!!
 https://youtu.be/W1Ed9TEMGJU = Formulário multi-etapas em React (com Typescript) - Projeto 5 - Desafio 5em5 (React) / https://github.com/suporteb7web/multiform-react
+obs.: Esse ensina a usar o dispatch e useReducer 
 
 https://youtu.be/ss4BXa-WfgI = Galeria de Fotos em React (com Typescript e Firebase) - Projeto 3 - Desafio 5em5 (React) / https://github.com/suporteb7web/gallery-react
 
