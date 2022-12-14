@@ -5,7 +5,7 @@ API/node_modules
 API/src/db
 *.
 
-
+.env
 
 # dependencies
 /node_modules

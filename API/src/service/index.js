@@ -1,7 +1,7 @@
 var  {} = require("dotenv/config")
 var express = require("express")
 var admin = require("firebase-admin")
-var serviceAccount = require("../db/accountKey.json")
+var serviceAccount = require("../firebase/accountKey.json")
 
 
 
