@@ -1,8 +1,6 @@
-var  {} = require("dotenv/config")
 var express = require("express")
 var admin = require("firebase-admin")
-var serviceAccount = require("../firebase/accountKey.json")
-
+var serviceAccount = require("../db/account/accountKey.json")
 
 
 admin.initializeApp({
@@ -13,7 +11,7 @@ const app = express()
 const port = 6000  
 
 
-//GET Lista todos os usuários
+//GET 
 app.get('/listUsers', (req, res)=> {
   admin.firestore()
   .collection("users")

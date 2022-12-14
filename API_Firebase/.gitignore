@@ -1,11 +1,11 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 
-API/node_modules
-API/src/db
+API_Firebase/node_modules
+API_Firebase/src/db
 *.
 
-.env
+
 
 # dependencies
 /node_modules
