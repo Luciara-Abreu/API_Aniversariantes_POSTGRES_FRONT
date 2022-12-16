@@ -1,6 +1,7 @@
 const { Sequelize } = require("sequelize")
-//const db = require("../db/index.js")
 const db = require("../db")
+
+
 /**
  * Postagem model
  */

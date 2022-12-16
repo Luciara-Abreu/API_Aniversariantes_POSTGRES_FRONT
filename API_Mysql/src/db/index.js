@@ -12,10 +12,4 @@ sequelize.authenticate().then(function(){
     console.log('Falha ao se conectar' + err.message)
 })
 
-//module.exports = sequelize
-
-var db = {};
-db.sequelize = sequelize;
-db.Sequelize = Sequelize;
-module.exports = db;
-
+module.exports = sequelize
