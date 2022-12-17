@@ -20,7 +20,7 @@ Mysql
 [
 	{
 		"name": "Almeida Junior",
-		"birthDate": "05/12/1990",
+		"birthDate": "1990-12-18",
     "sexualOrientation": "Masculino",
 		"email": "junior.a@gmail.com",
 		"lastEmail": "",
@@ -28,7 +28,7 @@ Mysql
 	},
 	{
 		"name": "Margarida Catarina Da Silva Madureira",
-		"birthDate": "17/10/1976",
+    "birthDate": "1989-12-13",
 		"sexualOrientation": "Feminina",
 		"email": "marga.catarina@gmail.com",
     "lastEmail": "",
@@ -42,17 +42,17 @@ Mysql
 		"lastEmail": "",
 		"fone": "54 985554331"
 	},
-	{
-		"name": "Vera Scheski",
-		"birthDate": "07/12/1980",
-		"sexualOrientation": "Feminina",
-		"email": "Vera@gmail.com ",
+{
+		"name": "Petúnia Flores da Rosa",
+    "birthDate": "1980-12-23",
+    "sexualOrientation": "Feminina",
+		"email": "petunia@gmail.com",
 		"lastEmail": "",
-		"fone": "51 987776655"
+		"fone": "54 985554331"
 	},
-	{
+ {
 		"name": "Camila Ribeiro Ernestides ",
-		"birthDate": "09/11/1980",
+		"birthDate":  "1982-12-14",
 		"sexualOrientation": "Feminina",
 		"email": "camila@gmail.com",
 		"lastEmail": "",
@@ -60,7 +60,7 @@ Mysql
 	},
 	{
 		"name": "Andersom Pedro Antonio",
-		"birthDate": "25/12/1978",
+		"birthDate": "1990-03-18",
 		"sexualOrientation": "Masculino",
 		"email": "anderson.p.a@gmail.com",
 		"lastEmail": "",
@@ -68,31 +68,31 @@ Mysql
 	},
 	{
 		"name": "Nayelle Benedita de Almeida",
-		"birthDate": "01/01/2011",
+		"birthDate": "2011-01-21",
 		"sexualOrientation": "Feminina",
 		"email": "nayelle@gmail.com",
 		"lastEmail": "",
 		"fone": "34 999999394"
 	},
 	{
-		"name": "Luci Abreu",
-		"birthDate": "22/11/1980",
+	  "name": "Luci Abreu",
+		"birthDate": "1980-12-22",
 		"sexualOrientation": "Feminina",
 		"email": "luciara.abreu@gmail.com",
 		"lastEmail": "",
-		"fone": "98 453113338"
+		"fone": "51 984539391"
 	},
 	{
-		"name": "Aparecida Hippolyte Léon da Rocha",
-		"birthDate": "25/11/1980",
+			"name": "Aparecida Hippolyte Léon da Rocha",
+		"birthDate": "1980-05-07",
 		"sexualOrientation": "Masculino",
 		"email": "aparecida.h@gmail.com",
 		"lastEmail": "",
 		"fone": "44 2136654551"
 	},
 	{
-		"name": "Éder Schelski Dias ",
-		"birthDate": "18/11/1979",
+	 "name": "Éder Schelski Dias ",
+		"birthDate": "1979-12-18",
 		"sexualOrientation": "Masculino",
 		"email": "eder.dias18@gmail.com",
 		"lastEmail": "",
@@ -100,23 +100,23 @@ Mysql
 	},
 	{
 		"name": "Pedro Antonio Denizard Rivail ",
-		"birthDate": "25/11/1979",
+		"birthDate": "1979-07-25",
 		"sexualOrientation": "Masculino",
 		"email": "pedro.a@gmail.com",
 		"lastEmail": "",
 		"fone": "21 223135461"
 	},
 	{
-		"name": "Anna Catarina",
-		"birthDate": "05/10/1970",
+	"name": "Anna Catarina",
+		"birthDate": "1970-08-02",
 		"sexualOrientation": "Feminino",
 		"email": "anna.anna@gmail.com",
 		"lastEmail": "",
 		"fone": "51 354354213"
 	},
 	{
-		"name": "Pedro Muller ",
-		"birthDate": "30/03/1973",
+	 "name": "Pedro Muller ",
+		"birthDate": "1973-09-22",
 		"sexualOrientation": "Masculino",
 		"email": "pedro.muller@gmail.com",
 		"lastEmail": "",
