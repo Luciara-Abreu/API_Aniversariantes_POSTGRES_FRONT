@@ -6,8 +6,9 @@ const sequelize = new Sequelize('db_aniver','root','123456', {
 })
 
  
-sequelize.authenticate().then(function(){
-    console.log('Conectado com sucesso!')
+sequelize.authenticate()
+.then(function(){
+    console.log('Conectado!')
 }).catch(function(err){
     console.log('Falha ao se conectar' + err.message)
 })

@@ -1,27 +1,35 @@
 const { Sequelize } = require("sequelize")
-const db = require("../db/index.js")
+const db = require("../db")
 /**
  * User model
  */
-const User = db.define('user', {
+const User = db.define('users', {
   name: {
-    type: Sequelize.STRING,
+    type: db.Sequelize.STRING,
   },
   birthDate: {
-    type: Sequelize.DATE
+    type: db.Sequelize.STRING
   },
   sexualOrientation:{
-    type: Sequelize.STRING
+    type: db.Sequelize.STRING
   },
   email: {
-    type: Sequelize.STRING,
+    type: db.Sequelize.STRING,
   },
   lastEmail: {
-    type: Sequelize.STRING,
+    type: db.Sequelize.STRING,
   },
   fone:{
-    type: Sequelize.INTEGER
+    type: db.Sequelize.STRING
   },
 });
 
+//se não existir a tabela, crie a tabela.
+//User.sync()
+
+//Aqui força criar a tabela e essa instrução pode sobreescrever a tabela existente. 
 //User.sync({force: true})
+
+//Essa instrução valida se tem algo diferente na tabela e atualiza a mesma caso tenha mudanças
+//User.sync({alter: true})
+module.exports = User

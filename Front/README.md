@@ -46,3 +46,4 @@ https://youtu.be/ss4BXa-WfgI = Galeria de Fotos em React (com Typescript e Fireb
 ----------------------------------------------------------------------
 https://youtu.be/9bXhf_TELP4 = React Firebase Authentication Tutorial | Firebase 9 Tutorial
 ----------------------------------------------------------------------
+https://youtu.be/vfrEAz0BSbA = React #5 - Como consumir dados da API com React

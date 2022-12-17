@@ -1,11 +1,6 @@
-const { Sequelize } = require("sequelize")
 const db = require("../db")
 
-
-/**
- * Postagem model
- */
-const Postagem = db.define('postagems', {
+const Post = db.define('post', {
   titulo:{
     type: db.Sequelize.STRING
   },
@@ -14,17 +9,17 @@ const Postagem = db.define('postagems', {
   }
 })
 
-//Criar a tabela
+
+//Criação da tabela
 //Postagem.sync({force: true})
 
+module.exports = Post;
 
 
-// criar a postagem
-
-/**
- *
+/** Inserir de forma manual
 Postagem.create({
   titulo: 'Felicitações',
   conteudo: '“Desejo a você um ótimo aniversário, e que você possa realizar todos os desejos do seu coração.” “Parabéns, que o seu dia seja tão especial quanto você. Desejo muito amor, paz, felicidade e saúde.” '
 })
- */
+
+*/
