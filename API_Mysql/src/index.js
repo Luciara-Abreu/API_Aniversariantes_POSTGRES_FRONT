@@ -11,9 +11,9 @@ console.log('********************* Rotas *********************')
 
 app.get('/ListAniver', aniverController.getAll);
 app.get('/Aniver/:id', aniverController.getOne);
-app.post('/AddAniver', aniverController.createOne);
-app.patch('/UpdateAniver/:id', aniverController.updateOne);
-app.delete('/DeleteAniver/:id', aniverController.deleteOne);
+app.post('/AddAniver', aniverController.create);
+app.patch('/UpdateAniver/:id', aniverController.update);
+app.delete('/DeleteAniver/:id', aniverController.delete);
 
 
 app.listen(port, () => console.log( `Server running on port ================>>>>`, {port}));

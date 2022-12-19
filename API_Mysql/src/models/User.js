@@ -28,7 +28,7 @@ const User = db.define('users', {
 //User.sync()
 
 //Aqui força criar a tabela e essa instrução pode sobreescrever a tabela existente. 
-User.sync({force: true})
+//User.sync({force: true})
 
 //Essa instrução valida se tem algo diferente na tabela e atualiza a mesma caso tenha mudanças
 //User.sync({alter: true})

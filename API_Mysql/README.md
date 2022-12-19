@@ -15,6 +15,8 @@ Mysql
   https://youtu.be/U4OUBjnjBWU = Curso de Node.js - Handlebars #19  
   npm install --save express-handlebars
   O handlebars facilita aocesso aos dados do back-end lá no front
+--------------------------------------------------------------------------------------
+	https://jasonwatmore.com/post/2021/11/22/nodejs-mysql-crud-api-example-and-tutorial
   
 
 [
