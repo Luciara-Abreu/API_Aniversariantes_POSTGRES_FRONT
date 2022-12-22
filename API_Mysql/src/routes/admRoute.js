@@ -5,7 +5,7 @@ const admController = require('../controller/admController')
 //Informar a aplicação que posso receber os dados em formato Json
 //router.use(express.json())
 
-console.log('********************* Rotas *********************')
+console.log('**************** Rotas de Adm *********************')
 
 router.get('/ListAdm', admController.getAll);
 router.get('/Adm/:id', admController.getOne);

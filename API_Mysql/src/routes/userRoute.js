@@ -5,7 +5,7 @@ const userController = require('../controller/userController')
 //Informar a aplicação que posso receber os dados em formato Json
 //router.use(express.json())
 
-console.log('********************* Rotas *********************')
+console.log('**************** Rotas de User *********************')
 
 router.get('/ListAniver', userController.getAll);
 router.get('/Aniver/:id', userController.getOne);
