@@ -19,6 +19,18 @@ Mysql
 	https://jasonwatmore.com/post/2021/11/22/nodejs-mysql-crud-api-example-and-tutorial
 	https://github.com/cornflourblue/node-mysql-crud-api
   
+--------------------------------------------------------------------------------------
+Comandos para criar as models 
+Se não existir a tabela, crie a tabela.
+User.sync()
+
+Aqui força criar a tabela e essa instrução pode sobreescrever a tabela existente. 
+User.sync({force: true})
+
+instrução atualiza a tabela caso tenha mudanças
+User.sync({alter: true})
+
+--------------------------------------------------------------------------------------	
 
 [
 	{

@@ -1,4 +1,5 @@
 const db = require("../db")
+const User = require("./User")
 
 const Post = db.define('post', {
   titulo:{
@@ -8,10 +9,16 @@ const Post = db.define('post', {
     type: db.Sequelize.TEXT
   }
 })
+Post.belongsTo(User, {
+  constraint: true,
+  foreingkey: 'user_id'
+})
 
 
 //Criação da tabela
-//Postagem.sync({force: true})
+//Post.sync({force: true})
+
+
 
 module.exports = Post;
 
