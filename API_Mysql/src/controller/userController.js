@@ -48,8 +48,7 @@ exports.create = app.post('/AddAniver', async (req, res)=> {
 })
 
 //O verbo PUT faz com que vc atualize todo o objeto e caso esqueca de algum ele seta null ou exclui
-
-
+//O verbo Patch apenas um de cada vez
   
 exports.update = app.patch('/UpdateAniver/:id',  async (req, res)=> {
   const data = {
