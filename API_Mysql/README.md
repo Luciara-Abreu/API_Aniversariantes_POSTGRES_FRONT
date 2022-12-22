@@ -17,6 +17,7 @@ Mysql
   O handlebars facilita aocesso aos dados do back-end lá no front
 --------------------------------------------------------------------------------------
 	https://jasonwatmore.com/post/2021/11/22/nodejs-mysql-crud-api-example-and-tutorial
+	https://github.com/cornflourblue/node-mysql-crud-api
   
 
 [

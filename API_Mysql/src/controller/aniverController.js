@@ -49,26 +49,40 @@ exports.create = app.post('/AddAniver', async (req, res)=> {
 
 //O verbo PUT faz com que vc atualize todo o objeto e caso esqueca de algum ele seta null ou exclui
 
-// Atualizando aniversariante com o verbo patch que atualiza apenas um dado 
-exports.update = app.patch('/UpdateAniver/:id', async (req, res)=> {
-  await User.update('UPDATE Users SET',{where: {id: req.params.id}})
-  .then(()=>{
+
+  
+exports.update = app.patch('/UpdateAniver/:id',  async (req, res)=> {
+  const data = {
+    name: req.body.name,
+    birthDate: req.body.birthDate,
+    sexualOrientation: req.body.sexualOrientation,
+    email: req.body.email,
+    lastEmail: req.body.lastEmail,
+    fone: req.body.fone
+  } 
+  await User.update(data,{ where: { id: req.params.id }}
+).then(()=>{
     return res.json({
-      erro:false,
-      messagem: `Dados atualizados com sucesso!!`
+      messagem: `Aniversariante atualizado com sucesso!!`
     })
   }).catch(()=>{
     return res.status(400).json({
-      erro:true,
       messagem: 'Erro: Não foi possivel atualizar o Aniversariante. Tente novamente!'
     })
-  })
-})
+  })  
+})  
 
 
-
-// Deletando um aniversariante 
-exports.delete = app.patch('/DeleteAniver', async (req, res)=> {
-  let id = req.params.id;
-  res.status(200).send(`Requisição recebida com sucesso! ${id}`);
-})
+// Deletando um aniversariante data,{ where: { id: req.params.id }}
+exports.delete = app.delete('/DeleteAniver/:id', async (req, res)=> {
+   await User.destroy({where: {id: req.params.id}})
+  .then(()=>{
+    return res.json({
+      messagem: `Aniversariante deletado com sucesso!!`
+    })
+  }).catch(()=>{
+    return res.status(400).json({
+      messagem: 'Erro: Não foi possivel deletar o Aniversariante. Tente novamente!'
+    })
+  })  
+})  
