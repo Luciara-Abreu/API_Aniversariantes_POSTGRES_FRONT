@@ -36,7 +36,6 @@ exports.create = app.post('/AddAniver', async (req, res)=> {
   await User.create(req.body)
   .then(()=>{
     return res.json({
-      erro:false,
       messagem: 'Aniversariante adicionado com sucesso!!'
     })
   }).catch(()=>{

@@ -36,7 +36,6 @@ exports.create = app.post('/AddPost', async (req, res)=> {
   await Post.create(req.body)
   .then(()=>{
     return res.json({
-      erro:false,
       messagem: 'Post adicionado com sucesso!!'
     })
   }).catch(()=>{
