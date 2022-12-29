@@ -84,3 +84,5 @@ exports.delete = app.delete('/DeleteAniver/:id', async (req, res)=> {
     })
   })  
 })  
+
+const token = jwt()
