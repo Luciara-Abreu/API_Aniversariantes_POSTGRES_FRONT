@@ -21,4 +21,13 @@ https://www.aluiziodeveloper.com.br/eslint/
 -- configuar o Prettier
 [ok] https://www.aluiziodeveloper.com.br/prettier/
 yarn add prettier -D
+
+
+-- Configurando a importações
+[ok] https://github.com/aluiziodeveloper/api-vendas/blob/main/project.md
+
+
+-- instalar bibliotecas
+[ok] yarn add express cors express-async-errors
+[ok] yarn add -D @types/express @types/cors
 ---
