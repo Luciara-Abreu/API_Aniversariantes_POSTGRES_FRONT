@@ -30,4 +30,7 @@ yarn add prettier -D
 -- instalar bibliotecas
 [ok] yarn add express cors express-async-errors
 [ok] yarn add -D @types/express @types/cors
+
+-- Configuração diferente do typeorm atulizado
+[ok] https://www.youtube.com/watch?v=j8cm2C5-xn8
 ---
