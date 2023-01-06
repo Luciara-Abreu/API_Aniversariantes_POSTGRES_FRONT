@@ -1,22 +1,23 @@
-import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm'
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
 import { User } from './User'
 
 @Entity('posts')
 export class Post {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn('increment')
   id: number
 
-  @Column({ type: 'text' })
+  @Column()
   title: string
 
-  @Column({ type: 'date' })
+  @Column()
   content: string
 
-  @Column({ type: 'timestamp' })
+  @CreateDateColumn()
   created_at: Date
 
-  @Column({ type: 'timestamp' })
+  @UpdateDateColumn()
   updated_at: Date
+
 
   @ManyToOne(()=> User, user => user.posts)
   @JoinColumn({name: 'userID'})

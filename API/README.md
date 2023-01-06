@@ -61,3 +61,5 @@ migrationsTableName: 'custom_migration_table'
   entities: [`${__dirname}/**/entities/*.{ts,js}`],
   migrations: [`${__dirname}/src/shared/entities/migrations/*.{ts,js}`]
 */
+
+

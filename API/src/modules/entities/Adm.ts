@@ -3,15 +3,8 @@ import { User } from './User'
 
 @Entity('adms')
 export class Adm extends User {
-  @PrimaryGeneratedColumn()
-  id: number
 
-  @Column({ type: 'text' })
+  @Column({ type: 'int' })
   Password: string
 
-  @Column({ type: 'timestamp' })
-  created_at: Date
-
-  @Column({ type: 'timestamp' })
-  updated_at: Date
 }

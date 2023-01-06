@@ -1,10 +1,10 @@
 import 'reflect-metadata'
 import express, { NextFunction, Request, Response } from 'express'
-import { AppDataSource } from '../../data-source'
 
 import cors from 'cors'
 import routes from './routes'
 import AppError from '@shared/errors/AppError'
+import { AppDataSource } from 'src/data-source'
 
 const app = express()
 
