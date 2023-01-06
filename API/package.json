@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts",
     "lint": "eslint . --ext .ts",
-    "lint-fix": "eslint . --ext .ts --fix"
+    "lint-fix": "eslint . --ext .ts --fix",
+    "typeorm": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:generate ./src/shared/migrations/Migration_",
+		"migration:run": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:run"
   },
   "devDependencies": {
     "@types/cors": "^2.8.13",
@@ -31,3 +33,6 @@
     "typeorm": "^0.3.11"
   }
 }
+
+
+

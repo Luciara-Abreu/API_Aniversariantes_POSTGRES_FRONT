@@ -32,5 +32,32 @@ yarn add prettier -D
 [ok] yarn add -D @types/express @types/cors
 
 -- Configuração diferente do typeorm atulizado
+     https://typeorm.io/migrations
 [ok] https://www.youtube.com/watch?v=j8cm2C5-xn8
----
+
+-- Configurando o docker - Docker no Windows 10 - Corrigindo o Erro WSL 2
+[ok] https://www.youtube.com/watch?v=I1bOOV2CJM8
+
+-- Criando o containner
+[ok] docker run --name postgres -e POSTGRES_PASSWORD=123456=docker -p 5432:5432 -d postgres
+     para validar se o container está em execução rodamos o codigo = docker ps
+
+-- Instalar Dbeaver
+[ok] https://dbeaver.io/download/
+
+-- Configurar as Migrations
+Essa configuração fica no package.jason
+"typeorm": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:generate ./src/shared/migrations/default",
+
+https://www.youtube.com/watch?v=j8cm2C5-xn8 = {
+  26:50 - Criando entidades
+  39:55 - Gerando migrations automáticas
+  }
+https://typeorm.io/migrations
+[ok]
+
+/*
+migrationsTableName: 'custom_migration_table'
+  entities: [`${__dirname}/**/entities/*.{ts,js}`],
+  migrations: [`${__dirname}/src/shared/entities/migrations/*.{ts,js}`]
+*/

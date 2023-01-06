@@ -1,5 +1,7 @@
 import 'reflect-metadata'
 import express, { NextFunction, Request, Response } from 'express'
+import { AppDataSource } from '../../data-source'
+
 import cors from 'cors'
 import routes from './routes'
 import AppError from '@shared/errors/AppError'
@@ -11,6 +13,7 @@ app.use(express.json())
 
 app.use(routes)
 
+//middleware
 app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
   if (error instanceof AppError) {
     return res.status(error.statusCode).json({
@@ -23,7 +26,24 @@ app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
     message: 'Internal server error',
   })
 })
+console.log('✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨')
+console.log('')
+AppDataSource.initialize().then(() => {
+  const app = express()
 
-app.listen(3333, () => {
-  console.log(`Server started on port ✨✨✨ 3333 ✨✨✨ `)
+  app.use(express.json())
+  app.get('/', (req, res) => {
+    return res.json('DB inicializado com sucesso')
+  })
+  return app.listen(process.env.PORT, () => {
+    console.log(`Data Base started on port  🏆 `, process.env.PORT, '🏆')
+    console.log('')
+    console.log('✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨')
+  })
 })
+
+/*app.listen(3333, () => {
+  console.log(`Server started on port ✨✨✨ 3333 ✨✨✨ `)
+  console.log('--------------------------------------------------------------')
+})
+*/
