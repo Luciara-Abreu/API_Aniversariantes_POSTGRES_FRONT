@@ -5,6 +5,6 @@ import { User } from './User'
 export class Adm extends User {
 
   @Column({ type: 'int' })
-  Password: string
+  password: string
 
 }
