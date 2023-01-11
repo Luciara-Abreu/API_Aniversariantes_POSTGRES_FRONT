@@ -8,6 +8,7 @@ route.get('/Aniver/:id', new UserController().listOneAniver)
 route.get('ListAniver', new UserController().listAllAniver)
 route.patch('/UpdateAniver/:id', new UserController().updateAniver)
 route.delete('/DeleteAniver/:id', new UserController().deleteAniver)
+
 console.log('')
 console.log('----------------------------------------')
 export default route

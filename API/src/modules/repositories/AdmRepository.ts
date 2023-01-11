@@ -1,6 +1,7 @@
 import { Adm } from '@modules/entities/Adm'
-import { AppDataSource } from 'src/data-source'
+import AppDataSource from 'src/data-source'
 
-const dataSource = AppDataSource
 
-export const AdmRepository = dataSource.getRepository(Adm)
+
+
+export const AdmRepository = AppDataSource.getRepository(Adm)

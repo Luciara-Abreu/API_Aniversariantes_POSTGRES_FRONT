@@ -1,4 +1,4 @@
-import { User } from '../modules/entities/User'
+import { User } from '@modules/entities/User'
 import { UserRepository } from '../modules/repositories/UserRepository'
 import { Request, Response } from 'express'
 

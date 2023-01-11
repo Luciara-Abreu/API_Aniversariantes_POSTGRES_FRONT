@@ -1,9 +1,7 @@
-import { User } from '../../modules/entities/User'
-import { AppDataSource } from 'src/data-source'
+import AppDataSource from 'src/data-source'
+import { User } from '../entities/User'
 
-const dataSource = AppDataSource
-
-export const UserRepository = dataSource.getRepository(User)
+export const UserRepository = AppDataSource.getRepository(User)
 const user = new User()
 user.name
 user.birthDate

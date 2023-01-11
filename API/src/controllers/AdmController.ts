@@ -1,4 +1,4 @@
-import { Adm } from '@modules/entities/Adm'
+import { Adm } from '../modules/entities/Adm'
 import { AdmRepository } from '@modules/repositories/AdmRepository'
 import { Request, Response } from 'express'
 import { UserController } from './UserController'

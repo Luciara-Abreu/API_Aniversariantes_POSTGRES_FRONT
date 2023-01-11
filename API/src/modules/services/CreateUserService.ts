@@ -1,7 +1,5 @@
-import { AppDataSource } from 'src/data-source'
+import AppDataSource from 'src/data-source'
 import { UserRepository } from '../repositories/UserRepository'
-
-const dataSource = AppDataSource
 
 interface IUserRequest {
   name: string
@@ -15,14 +13,7 @@ interface IUserRequest {
 // https://youtu.be/FDnuLtSxEEQ
 
 class CreateUserService {
-  public async execute({
-    name,
-    birthDate,
-    sexualOrientation,
-    email,
-    lastEmail,
-    fone,
-  }: IUserRequest) {
-    //const usersRepo = getRepository(UserRepository)
+  public async execute({ name, birthDate, sexualOrientation, email, lastEmail, fone }: IUserRequest) {
+    //const usersRepo = AppDataSource.getRepository(UserRepository)
   }
 }
