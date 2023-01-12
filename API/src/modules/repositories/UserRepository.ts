@@ -1,7 +1,7 @@
 import AppDataSource from 'src/data-source'
-import { User } from '../entities/User'
+import User from 'src/entities/User'
 
-export const UserRepository = AppDataSource.getRepository(User)
+const userRepository = AppDataSource.getRepository(User)
 const user = new User()
 user.name
 user.birthDate
@@ -10,4 +10,6 @@ user.email
 user.lastEmail
 user.fone
 
-UserRepository.save(user)
+userRepository.save(user)
+
+export default userRepository

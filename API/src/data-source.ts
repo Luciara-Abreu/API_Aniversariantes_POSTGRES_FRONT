@@ -3,7 +3,6 @@ import 'reflect-metadata'
 import { DataSource } from 'typeorm'
 import express from 'express'
 
-
 const app = express()
 app.use(express.json())
 
@@ -16,12 +15,12 @@ const AppDataSource = new DataSource({
   username: process.env.DB_USER,
   password: process.env.DB_PASS,
   database: process.env.DB_DBNAME,
-  entities: [`${__dirname}/modules/entities/**.ts`],
+  entities: [`${__dirname}/**/entities/*.{ts, js}`],
   migrations: [`${__dirname}/**/migrations/*.{ts,js}`],
 })
 
 AppDataSource.initialize()
-  .then(async () => {
+  .then(() => {
     return app.listen(process.env.PORT, () => {
       console.log(`Connection initialized with database.  🏆 `, process.env.PORT, '🏆')
       console.log('')
@@ -30,7 +29,11 @@ AppDataSource.initialize()
   })
   .catch(error => console.log(error))
 
-export const getDataSource = (delay = 3000): Promise<DataSource> => {
+export default AppDataSource
+
+/**
+ *
+ * const getDataSource = (delay = 3000): Promise<DataSource> => {
   if (AppDataSource.isInitialized) return Promise.resolve(AppDataSource)
 
   return new Promise((resolve, reject) => {
@@ -40,5 +43,4 @@ export const getDataSource = (delay = 3000): Promise<DataSource> => {
     }, delay)
   })
 }
-
-export default AppDataSource
+ */

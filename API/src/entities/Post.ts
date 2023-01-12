@@ -1,8 +1,11 @@
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
-import { User } from './User'
+import User from './User'
+
+
+
 
 @Entity('posts')
-export class Post {
+class Post {
   @PrimaryGeneratedColumn('increment')
   id: number
 
@@ -18,9 +21,9 @@ export class Post {
   @UpdateDateColumn()
   updated_at: Date
 
-
   @ManyToOne(()=> User, user => user.posts)
   @JoinColumn({name: 'userID'})
   user: User
-
 }
+
+export default Post

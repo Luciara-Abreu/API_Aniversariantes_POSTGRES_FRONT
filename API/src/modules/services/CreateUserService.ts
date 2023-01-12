@@ -1,5 +1,5 @@
+import UserRepository from '@modules/repositories/UserRepository'
 import AppDataSource from 'src/data-source'
-import { UserRepository } from '../repositories/UserRepository'
 
 interface IUserRequest {
   name: string
@@ -8,6 +8,7 @@ interface IUserRequest {
   email: string
   lastEmail: string
   fone: number
+  
 }
 
 // https://youtu.be/FDnuLtSxEEQ

@@ -1,21 +1,22 @@
-import { User } from '@modules/entities/User'
-import { UserRepository } from '../modules/repositories/UserRepository'
 import { Request, Response } from 'express'
+import User from 'src/entities/User'
 
-export class UserController {
+import userRepository from '../modules/repositories/UserRepository'
+
+class UserController {
   async createUser(req: Request, res: Response): Promise<User> {
     const { name, birthDate, sexualOrientation, email, lastEmail, fone } = req.body
-    const newUSer = UserRepository.create()
+    const newUser = userRepository.create()
 
-    await UserRepository.save(newUSer)
-    return newUSer
+    await userRepository.save(newUser)
+    return newUser
   }
 
   async listOneAniver(req: Request, res: Response) {
     const { id } = req.params
 
     try {
-      const user = await UserRepository.findOneBy({ id: String(id) })
+      const user = await userRepository.findOneBy({ id: Number(id) })
 
       if (!user) {
         return res.status(404).json({ message: 'Aniversariante não existe' })
@@ -28,7 +29,7 @@ export class UserController {
 
   async listAllAniver(req: Request, res: Response) {
     try {
-      const users = await UserRepository.find()
+      const users = await userRepository.find()
       return res.json(users)
     } catch (error) {
       console.log(error)
@@ -39,8 +40,8 @@ export class UserController {
   async updateAniver(req: Request, res: Response) {
     const { id } = req.params
 
-    return await UserRepository.update(
-      { id: String(id) },
+    return await userRepository.update(
+      { id: Number(id) },
       {
         name: req.body.name,
         birthDate: req.body.birthDate,
@@ -54,6 +55,8 @@ export class UserController {
 
   async deleteAniver(req: Request, res: Response) {
     const { id } = req.params
-    await UserRepository.delete({ id: String(id) })
+    await userRepository.delete({ id: Number(id) })
   }
 }
+
+export default UserController

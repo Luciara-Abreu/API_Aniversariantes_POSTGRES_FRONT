@@ -1,22 +1,13 @@
-import { Adm } from '../modules/entities/Adm'
-import { AdmRepository } from '@modules/repositories/AdmRepository'
+import admRepository from '@modules/repositories/AdmRepository'
 import { Request, Response } from 'express'
-import { UserController } from './UserController'
+import Adm from 'src/entities/Adm'
 
-export class AdmController extends UserController {
+class AdmController {
   async createAdm(req: Request, res: Response): Promise<Adm> {
     const { name, birthDate, sexualOrientation, email, lastEmail, fone, password } = req.body
-    const newAdm = AdmRepository.create({
-      name,
-      birthDate,
-      sexualOrientation,
-      email,
-      lastEmail,
-      fone,
-      password,
-    })
+    const newAdm = admRepository.create()
 
-    await AdmRepository.save(newAdm)
+    await admRepository.save(newAdm)
     return newAdm
   }
 
@@ -24,7 +15,7 @@ export class AdmController extends UserController {
     const { id } = req.params
 
     try {
-      const user = await AdmRepository.findOneBy({ id: String(id) })
+      const user = await admRepository.findOneBy({ id: Number(id) })
 
       if (!user) {
         return res.status(404).json({ message: 'Aniversariante não existe' })
@@ -37,7 +28,7 @@ export class AdmController extends UserController {
 
   async listAllAdm(req: Request, res: Response) {
     try {
-      const users = await AdmRepository.find()
+      const users = await admRepository.find()
       return res.json(users)
     } catch (error) {
       console.log(error)
@@ -49,8 +40,8 @@ export class AdmController extends UserController {
     const { id } = req.params
     const { name, birthDate, sexualOrientation, email, lastEmail, fone } = req.body
 
-    return await AdmRepository.update(
-      { id: String(id) },
+    return await admRepository.update(
+      { id: Number(id) },
       {
         name: req.body.name,
         birthDate: req.body.birthDate,
@@ -64,6 +55,8 @@ export class AdmController extends UserController {
 
   async deleteAdm(req: Request, res: Response) {
     const { id } = req.params
-    await AdmRepository.delete({ id: String(id) })
+    await admRepository.delete({ id: Number(id) })
   }
 }
+
+export default AdmController

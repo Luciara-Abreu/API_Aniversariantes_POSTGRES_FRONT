@@ -1,5 +1,5 @@
 import express from 'express'
-import { AdmController } from 'src/controllers/AdmController'
+import AdmController from 'src/controllers/AdmController'
 
 const RouteAdm = express()
 
@@ -10,4 +10,5 @@ RouteAdm.get('ListAllAdm', new AdmController().listAllAdm)
 RouteAdm.patch('/UpdateAdm/:id', new AdmController().updateAdm)
 RouteAdm.delete('/DeleteAdm/:id', new AdmController().deleteAdm)
 console.log('')
+
 export default RouteAdm

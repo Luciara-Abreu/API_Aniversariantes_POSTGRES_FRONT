@@ -1,24 +1,24 @@
 import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
-import { Post } from './Post'
+import Post from './Post'
 
 @Entity('users')
-export class User {
+class User {
   @PrimaryGeneratedColumn('increment')
-  id: string
+  id: number
 
-  @Column()
+  @Column({ type: 'text' })
   name: string
 
   @CreateDateColumn()
   birthDate: Date
 
-  @Column()
+  @Column({ type: 'text' })
   sexualOrientation: string
 
-  @Column()
+  @Column({ type: 'text' })
   email: string
 
-  @Column()
+  @Column({ type: 'text' })
   lastEmail: string
 
   @Column({ type: 'text' })
@@ -31,5 +31,7 @@ export class User {
   updated_at: Date
 
   @OneToMany(() => Post, post => post.user)
-  posts: []
+  posts: Post[]
 }
+
+export default User

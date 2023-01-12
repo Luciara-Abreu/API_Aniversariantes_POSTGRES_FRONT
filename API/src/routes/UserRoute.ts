@@ -1,14 +1,15 @@
 import express from 'express'
-import { UserController } from 'src/controllers/UserController'
-const route = express()
+import UserController from 'src/controllers/UserController'
+const RouteUser = express()
 
 console.log('********** Rotas de User ***************')
-route.post('/AddAniver', new UserController().createUser)
-route.get('/Aniver/:id', new UserController().listOneAniver)
-route.get('ListAniver', new UserController().listAllAniver)
-route.patch('/UpdateAniver/:id', new UserController().updateAniver)
-route.delete('/DeleteAniver/:id', new UserController().deleteAniver)
+RouteUser.post('/AddAniver', new UserController().createUser)
+RouteUser.get('/Aniver/:id', new UserController().listOneAniver)
+RouteUser.get('ListAniver', new UserController().listAllAniver)
+RouteUser.patch('/UpdateAniver/:id', new UserController().updateAniver)
+RouteUser.delete('/DeleteAniver/:id', new UserController().deleteAniver)
 
 console.log('')
 console.log('----------------------------------------')
-export default route
+
+export default RouteUser

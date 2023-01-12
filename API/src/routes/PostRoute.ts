@@ -1,14 +1,14 @@
 import express from 'express'
-import { UserController } from 'src/controllers/UserController'
-const route = express()
+import PostController from 'src/controllers/PostController'
+
+const RoutePost = express()
 
 console.log('********** Rotas de Posts **************')
-route.post('/AddAniver', new UserController().createUser)
-route.get('/Aniver/:id', new UserController().listOneAniver)
-route.get('ListAniver', new UserController().listAllAniver)
-route.patch('/UpdateAniver/:id', new UserController().updateAniver)
-route.delete('/DeleteAniver/:id', new UserController().deleteAniver)
+RoutePost.post('/AddPost', new PostController().createPost)
+RoutePost.get('/ListOnePost/:id', new PostController().listOnePost)
+RoutePost.get('ListPostss', new PostController().listAllPosts)
+RoutePost.patch('/UpdatePost/:id', new PostController().updatePost)
+RoutePost.delete('/DeletePost/:id', new PostController().deletePost)
 console.log('')
 
-
-export default route
+export default RoutePost
