@@ -2,6 +2,7 @@ import 'dotenv/config'
 import 'reflect-metadata'
 import { DataSource } from 'typeorm'
 import express from 'express'
+import { User } from './entities/UserEntity'
 
 const app = express()
 app.use(express.json())
@@ -15,8 +16,10 @@ const AppDataSource = new DataSource({
   username: process.env.DB_USER,
   password: process.env.DB_PASS,
   database: process.env.DB_DBNAME,
-  entities: [`${__dirname}/**/entities/*.{ts, js}`],
+  entities: [`${__dirname}/**/entities/*.{ts,js}`],
   migrations: [`${__dirname}/**/migrations/*.{ts,js}`],
+  synchronize: true,
+  logging: false,
 })
 
 AppDataSource.initialize()

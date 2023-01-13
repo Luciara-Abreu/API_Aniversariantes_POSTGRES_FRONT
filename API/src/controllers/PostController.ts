@@ -1,6 +1,7 @@
 import postRepository from '@modules/repositories/PostRepository'
 import { Request, Response } from 'express'
-import Post from 'src/entities/Post'
+import Post from 'src/entities/PostEntity'
+
 
 
 class PostController {
@@ -28,8 +29,8 @@ class PostController {
 
   async listAllPosts(req: Request, res: Response) {
     try {
-      const users = await postRepository.find()
-      return res.json(users)
+      const posts = await postRepository.find()
+      return res.json(posts)
     } catch (error) {
       console.log(error)
       return res.status(500).json({ message: 'Internal Sever Error' })

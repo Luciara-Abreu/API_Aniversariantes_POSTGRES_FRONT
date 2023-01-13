@@ -1,6 +1,6 @@
 import admRepository from '@modules/repositories/AdmRepository'
 import { Request, Response } from 'express'
-import Adm from 'src/entities/Adm'
+import Adm from 'src/entities/AdmEntity'
 
 class AdmController {
   async createAdm(req: Request, res: Response): Promise<Adm> {
@@ -13,13 +13,13 @@ class AdmController {
 
   async listOneAdm(req: Request, res: Response) {
     const { id } = req.params
-
     try {
-      const user = await admRepository.findOneBy({ id: Number(id) })
+      const oneAdm = await admRepository.findOneBy({ id: Number(id) })
 
-      if (!user) {
+      if (!oneAdm) {
         return res.status(404).json({ message: 'Aniversariante não existe' })
       }
+      return oneAdm
     } catch (error) {
       console.log(error)
       return res.status(500).json({ message: 'Internal Sever Error' })
@@ -28,8 +28,8 @@ class AdmController {
 
   async listAllAdm(req: Request, res: Response) {
     try {
-      const users = await admRepository.find()
-      return res.json(users)
+      const adms = await admRepository.find()
+      return res.json(adms)
     } catch (error) {
       console.log(error)
       return res.status(500).json({ message: 'Internal Sever Error' })
@@ -38,7 +38,6 @@ class AdmController {
 
   async updateAdm(req: Request, res: Response) {
     const { id } = req.params
-    const { name, birthDate, sexualOrientation, email, lastEmail, fone } = req.body
 
     return await admRepository.update(
       { id: Number(id) },

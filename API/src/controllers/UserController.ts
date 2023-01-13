@@ -1,12 +1,19 @@
 import { Request, Response } from 'express'
-import User from 'src/entities/User'
-
+import { User } from 'src/entities/UserEntity'
 import userRepository from '../modules/repositories/UserRepository'
 
 class UserController {
   async createUser(req: Request, res: Response): Promise<User> {
-    const { name, birthDate, sexualOrientation, email, lastEmail, fone } = req.body
-    const newUser = userRepository.create()
+
+    const newUser = userRepository.create(
+      {
+      name: req.body.name,
+      birthDate: req.body.birthDate,
+      sexualOrientation: req.body.sexualOrientation,
+      email: req.body.email,
+      lastEmail: req.body.lastEmail,
+      fone: req.body.fone,
+    })
 
     await userRepository.save(newUser)
     return newUser

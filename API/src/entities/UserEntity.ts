@@ -1,14 +1,10 @@
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
-import  User  from './User'
+import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
+import Post from './PostEntity'
 
-@Entity('adms')
-class Adm {
-
-  @PrimaryGeneratedColumn('increment')
+@Entity('users')
+export class User {
+  @PrimaryGeneratedColumn()
   id: number
-
-  @Column({ type: 'int' })
-  password: string
 
   @Column({ type: 'text' })
   name: string
@@ -34,5 +30,8 @@ class Adm {
   @UpdateDateColumn()
   updated_at: Date
 
+  @OneToMany(() => Post, post => post.user)
+  posts: Post[]
 }
-export default Adm
+
+
