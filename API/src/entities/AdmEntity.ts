@@ -1,13 +1,11 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
 
-
 @Entity('adms')
 class Adm {
-
   @PrimaryGeneratedColumn()
   id: number
 
-  @Column({ type: 'int' })
+  @Column({ type: 'text' })
   password: string
 
   @Column({ type: 'text' })
@@ -33,6 +31,5 @@ class Adm {
 
   @UpdateDateColumn()
   updated_at: Date
-
 }
 export default Adm

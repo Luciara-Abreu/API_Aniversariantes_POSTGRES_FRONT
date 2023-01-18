@@ -1,15 +1,31 @@
 import postRepository from '@modules/repositories/PostRepository'
+import userRepository from '@modules/repositories/UserRepository'
 import { Request, Response } from 'express'
 import Post from 'src/entities/PostEntity'
 
-
-
 class PostController {
-  async createPost(req: Request, res: Response): Promise<Post> {
+  async createPost(req: Request, res: Response) {
     const { title, content } = req.body
-    const newPost = postRepository.create()
-    await postRepository.save(newPost)
-    return newPost
+    const { idUser } = req.params
+
+    try {
+      const user = await userRepository.findOneBy({ id: Number(idUser) })
+
+      if (!user) {
+        return res.status(404).json({ message: 'Usuário não existe' })
+      }
+
+      const newPost = postRepository.create({
+        title,
+        content,
+      })
+
+      await postRepository.save(newPost)
+      return res.status(201).json(newPost)
+    } catch (error) {
+      console.log(error)
+      return res.status(500).json({ message: 'Internal Sever Error' })
+    }
   }
 
   async listOnePost(req: Request, res: Response) {
