@@ -9,11 +9,12 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.listen(8081, () => {
-  console.log(`Server started on port     🏆  8081 🏆 `)
-  console.log('----------------------------------------')
-})
-
 app.use(RouteUser)
 app.use(RouteAdm)
 app.use(RoutePost)
+
+app.listen(8081, () => {
+  console.log('✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨')
+  console.log(`Server started on port ............... 🏆  8081 🏆 `)
+  console.log('---------------------------------------------------')
+})

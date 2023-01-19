@@ -19,7 +19,7 @@ export class User {
   email: string
 
   @Column({ type: 'text' })
-  lastEmail: string
+  lastEmail: string | undefined
 
   @Column({ type: 'text' })
   fone: number

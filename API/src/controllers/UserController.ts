@@ -37,6 +37,10 @@ class UserController {
     }
   }
 
+  getAll() {
+    return userRepository.find()
+  }
+
   async listAllAnivers(req: Request, res: Response) {
     try {
       const users = await userRepository.query(`SELECT * FROM USERS`)
