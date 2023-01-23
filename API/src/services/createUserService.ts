@@ -1,16 +1,23 @@
 import userRepository from '@modules/repositories/UserRepository'
 import AppError from '@shared/errors/AppError'
 import { User } from 'src/entities/UserEntity'
-import { IUserType } from 'src/interfaces/User'
+
+interface IUserType {
+  name: string
+  birthDate: Date
+  sexualOrientation: string
+  email: string
+  lastEmail: string | undefined
+  fone: number
+}
 
 class CreateUserService {
   public async execute({ name, birthDate, sexualOrientation, email, lastEmail, fone }: IUserType): Promise<User> {
-    const userRepo = userRepository
-    const userExist = await userRepo.findByName(name, birthDate)
+    const userExist = await userRepository.findOneBy({ name, birthDate, sexualOrientation, email, lastEmail, fone })
     if (userExist) {
-      throw new AppError('There is user already exists with this data', 400)
+      throw new AppError('User alread exist')
     }
-    const newUser = await userRepository.create({
+    const salveUser = await userRepository.create({
       name,
       birthDate,
       sexualOrientation,
@@ -18,8 +25,9 @@ class CreateUserService {
       lastEmail,
       fone,
     })
-    await userRepo.save(newUser)
-    return newUser
+
+    await userRepository.save(salveUser)
+    return salveUser
   }
 }
 

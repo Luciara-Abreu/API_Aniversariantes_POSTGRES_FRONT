@@ -1,15 +1,17 @@
 import userRepository from '@modules/repositories/UserRepository'
 import AppError from '@shared/errors/AppError'
-import { IUserType } from 'src/interfaces/User'
 
+interface IRequest {
+  id: string
+}
 class DeleteUserService {
-  public async execute({ id }: IUserType): Promise<void> {
-    const userRepo = userRepository
-    const user = await userRepo.findOneBy({ id: Number(id) })
+  public async execute({ id }: IRequest): Promise<void> {
+    const user = await userRepository.findOneBy({ id })
+
     if (!user) {
-      throw new AppError('User not found', 400)
+      throw new AppError('user not found.');
     }
-    await userRepo.remove(user)
+    await userRepository.remove(user);
   }
 }
 

@@ -1,19 +1,24 @@
 import userRepository from '@modules/repositories/UserRepository'
 import AppError from '@shared/errors/AppError'
 import { User } from 'src/entities/UserEntity'
-import { IUserType } from 'src/interfaces/User'
 
+interface IUserType {
+  id: string
+  name: string
+  birthDate: Date
+  sexualOrientation: string
+  email: string
+  lastEmail: string | undefined
+  fone: number
+}
 class UpdateUserService {
   public async execute({ id, name, birthDate, sexualOrientation, email, lastEmail, fone }: IUserType): Promise<User> {
-    const userRepo = userRepository
-    const user = await userRepo.findOneBy({ id: Number(id) })
+    const user = await userRepository.findOneBy({ id })
+
     if (!user) {
-      throw new AppError('User not found', 400)
+      throw new AppError('User not found.')
     }
-    const userExist = await userRepo.findByName(name, birthDate)
-    if (userExist && name !== user.name) {
-      throw new AppError('There is user already exists with this data', 400)
-    }
+
     user.name = name
     user.birthDate = birthDate
     user.sexualOrientation = sexualOrientation
@@ -21,9 +26,17 @@ class UpdateUserService {
     user.lastEmail = lastEmail
     user.fone = fone
 
-    await userRepo.save(user)
+    await userRepository.save(user)
+
     return user
   }
 }
 
 export default UpdateUserService
+
+/**
+ *   const userExists = await userRepository.findByName(name)
+    if (userExists) {
+      throw new AppError('There is already one User with this name.')
+    }
+ */
