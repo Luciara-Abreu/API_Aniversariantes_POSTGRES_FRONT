@@ -6,10 +6,13 @@ interface IRequest {
   id: string
 }
 class ListOneUserService {
-  public async execute({ id }: IRequest): Promise<User> {
+  public async execute({ id }: IRequest): Promise<User | null> {
     const user = await userRepository.findOneBy({ id })
+
     if (!user) {
-      throw new AppError('Product not found.')
+      //throw Error('User not found.....') cai o servidor
+      //throw new AppError('user not found / Usuário não encontrado.') cai o servidor
+      console.log('User not found.')
     } else {
       console.log(user)
     }

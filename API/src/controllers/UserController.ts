@@ -56,9 +56,7 @@ class UserController {
     const { id } = request.params
 
     const deleteUSer = new DeleteUserService()
-
     await deleteUSer.execute({ id })
-
     return response.json([])
   }
 }

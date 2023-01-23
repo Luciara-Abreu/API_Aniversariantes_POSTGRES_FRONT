@@ -12,21 +12,24 @@ interface IUserType {
   fone: number
 }
 class UpdateUserService {
-  public async execute({ id, name, birthDate, sexualOrientation, email, lastEmail, fone }: IUserType): Promise<User> {
+  public async execute({ id, name, birthDate, sexualOrientation, email, lastEmail, fone }: IUserType): Promise<User | null> {
     const user = await userRepository.findOneBy({ id })
 
-    if (!user) {
-      throw new AppError('User not found.')
+    if (user) {
+      user.name = name
+      user.birthDate = birthDate
+      user.sexualOrientation = sexualOrientation
+      user.email = email
+      user.lastEmail = lastEmail
+      user.fone = fone
+
+      await userRepository.save(user)
+      console.log(`User atualizado com sucesso!`)
+    } else {
+      //throw Error('User not found.....') cai o servidor
+      //throw new AppError('user not found / Usuário não encontrado.') cai o servidor
+      console.log('User not found.')
     }
-
-    user.name = name
-    user.birthDate = birthDate
-    user.sexualOrientation = sexualOrientation
-    user.email = email
-    user.lastEmail = lastEmail
-    user.fone = fone
-
-    await userRepository.save(user)
 
     return user
   }
