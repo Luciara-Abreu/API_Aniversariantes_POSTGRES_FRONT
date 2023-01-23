@@ -1,11 +1,11 @@
 import { ResolveOptions } from 'dns'
 import { Request, Response } from 'express'
-import CreateUserService from 'src/services/createUserService'
-import DeleteUserService from 'src/services/deleteUserServer'
-import ListAllUserService from 'src/services/listAllUserService'
-import ListOneUserService from 'src/services/listOneUserService'
-import UpdateUserService from 'src/services/UpdateUserService'
-import userRepository from '../modules/repositories/UserRepository'
+import CreateUserService from 'src/services/userServices/createUserService'
+import DeleteUserService from 'src/services/userServices/deleteUserServer'
+import ListAllUserService from 'src/services/userServices/listAllUserService'
+import ListOneUserService from 'src/services/userServices/listOneUserService'
+import UpdateUserService from 'src/services/userServices/UpdateUserService'
+
 
 class UserController {
   public async createUser(req: Request, res: Response): Promise<Response> {
