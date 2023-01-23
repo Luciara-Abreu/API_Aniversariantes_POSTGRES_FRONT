@@ -1,6 +1,7 @@
 import { ResolveOptions } from 'dns'
 import { Request, Response } from 'express'
 import CreateUserService from 'src/services/createUserService'
+import DeleteUserService from 'src/services/deleteUserServer'
 import ListAllUserService from 'src/services/listAllUserService'
 import ListOneUserService from 'src/services/listOneUserService'
 import UpdateUserService from 'src/services/UpdateUserService'
@@ -51,10 +52,14 @@ class UserController {
     return res.json(thisUser)
   }
 
-  async deleteAniver(req: Request, res: Response) {
-    const { id } = req.params
-    await userRepository.delete({ id })
+  public async deleteAniver(request: Request, response: Response): Promise<Response> {
+    const { id } = request.params
+
+    const deleteUSer = new DeleteUserService()
+
+    await deleteUSer.execute({ id })
+
+    return response.json([])
   }
 }
-
 export default UserController
