@@ -11,8 +11,7 @@ class DeleteUserService {
       await userRepository.remove(user)
       console.log(`User ${user.name} deletado com sucesso!`)
     } else {
-      // throw new AppError('user not found / Usuário não encontrado.')
-      console.log('User not found')
+      throw new AppError('user not found 👻')
     }
   }
 }

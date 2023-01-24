@@ -10,9 +10,7 @@ class ListOneUserService {
     const user = await userRepository.findOneBy({ id })
 
     if (!user) {
-      //throw Error('User not found.....') cai o servidor
-      //throw new AppError('user not found / Usuário não encontrado.') cai o servidor
-      console.log('User not found.')
+      throw new AppError('user not found 👻')
     } else {
       console.log(user)
     }

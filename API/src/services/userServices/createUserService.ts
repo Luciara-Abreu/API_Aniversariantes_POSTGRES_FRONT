@@ -15,9 +15,9 @@ class CreateUserService {
   public async execute({ name, birthDate, sexualOrientation, email, lastEmail, fone }: IUserType): Promise<User> {
     const userExist = await userRepository.findOneBy({ name, birthDate, sexualOrientation, email, lastEmail, fone })
     if (userExist) {
-      throw new AppError('User alread exist')
+      throw new AppError('User alread exist with this data 🤪')
     }
-    const salveUser = await userRepository.create({
+    const salveUser = userRepository.create({
       name,
       birthDate,
       sexualOrientation,

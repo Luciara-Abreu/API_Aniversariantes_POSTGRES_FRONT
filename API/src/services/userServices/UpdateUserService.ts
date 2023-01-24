@@ -26,9 +26,7 @@ class UpdateUserService {
       await userRepository.save(user)
       console.log(`User atualizado com sucesso!`)
     } else {
-      //throw Error('User not found.....') cai o servidor
-      //throw new AppError('user not found / Usuário não encontrado.') cai o servidor
-      console.log('User not found.')
+       throw new AppError('user not found 👻')
     }
 
     return user
