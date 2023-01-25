@@ -51,7 +51,9 @@ Essa configuração fica no package.jason
 
 https://www.youtube.com/watch?v=j8cm2C5-xn8 = {
   26:50 - Criando entidades
-  39:55 - Gerando migrations automáticas
+  40:00 - Gerando migrations automáticas -
+  comando ==> yarn typeorm - cria migrations de todas as entidades existentes.
+  commando ==>  yarn  migration:run = popula ou atualiza os campos da tabela
   }
 https://typeorm.io/migrations
 [ok]
