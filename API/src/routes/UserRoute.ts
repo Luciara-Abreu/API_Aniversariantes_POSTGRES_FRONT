@@ -14,10 +14,10 @@ RouteUser.post(
   celebrate({
     [Segments.BODY]: {
       name: Joi.string().required(),
-      birthDate: Joi.date(),
+      birthDate: Joi.date().required(),
       sexualOrientation: Joi.string().required(),
       email: Joi.string().required(),
-      lastEmail: Joi.string(),
+      lastEmail: Joi.string().required(),
       fone: Joi.string().required(),
     },
   }),
@@ -36,8 +36,34 @@ RouteUser.get(
 
 RouteUser.get('/ListAllAnivers', userController.listAllAnivers)
 
-RouteUser.patch('/UpdateAniver/:id', userController.updateAniver)
-RouteUser.delete('/DeleteAniver/:id', userController.deleteAniver)
+RouteUser.patch(
+  '/UpdateAniver/:id',
+  celebrate({
+    [Segments.BODY]: {
+      name: Joi.string().required(),
+      birthDate: Joi.date().required(),
+      sexualOrientation: Joi.string().required(),
+      email: Joi.string().required(),
+      lastEmail: Joi.string().required(),
+      fone: Joi.string().required(),
+      avatar: Joi.string()
+    },
+    [Segments.PARAMS]: {
+      id: Joi.string().required(),
+    },
+  }),
+  userController.updateAniver,
+)
+
+RouteUser.delete(
+  '/DeleteAniver/:id',
+  celebrate({
+    [Segments.PARAMS]: {
+      id: Joi.string().required(),
+    },
+  }),
+  userController.deleteAniver,
+)
 
 console.log('')
 
