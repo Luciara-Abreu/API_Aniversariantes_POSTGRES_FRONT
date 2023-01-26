@@ -4,7 +4,7 @@ import Post from './PostEntity'
 @Entity('users')
 export class User {
   @PrimaryGeneratedColumn()
-  id: string
+  id: number
 
   @Column({ type: 'text' })
   name: string
@@ -23,6 +23,9 @@ export class User {
 
   @Column({ type: 'text' })
   fone: number
+
+  @Column({ type: 'varchar' })
+  avatar: string | undefined | null
 
   @CreateDateColumn()
   created_at: Date

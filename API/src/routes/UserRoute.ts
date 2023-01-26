@@ -9,6 +9,8 @@ console.log('')
 console.log('----------------------------------------')
 
 console.log('********** Rotas de User ***************')
+RouteUser.get('/ListAllAnivers', userController.listAllAnivers)
+
 RouteUser.post(
   '/AddAniver',
   celebrate({
@@ -19,6 +21,7 @@ RouteUser.post(
       email: Joi.string().required(),
       lastEmail: Joi.string().required(),
       fone: Joi.string().required(),
+      avatar: Joi.string(),
     },
   }),
   userController.createUser,
@@ -34,26 +37,7 @@ RouteUser.get(
   userController.listOneAniver,
 )
 
-RouteUser.get('/ListAllAnivers', userController.listAllAnivers)
-
-RouteUser.patch(
-  '/UpdateAniver/:id',
-  celebrate({
-    [Segments.BODY]: {
-      name: Joi.string().required(),
-      birthDate: Joi.date().required(),
-      sexualOrientation: Joi.string().required(),
-      email: Joi.string().required(),
-      lastEmail: Joi.string().required(),
-      fone: Joi.string().required(),
-      avatar: Joi.string()
-    },
-    [Segments.PARAMS]: {
-      id: Joi.string().required(),
-    },
-  }),
-  userController.updateAniver,
-)
+RouteUser.patch('/UpdateAniver/:id', userController.updateAniver)
 
 RouteUser.delete(
   '/DeleteAniver/:id',

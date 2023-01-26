@@ -1,4 +1,3 @@
-import { ResolveOptions } from 'dns'
 import { Request, Response } from 'express'
 import CreateUserService from 'src/services/userServices/createUserService'
 import DeleteUserService from 'src/services/userServices/deleteUserServer'
@@ -6,10 +5,9 @@ import ListAllUserService from 'src/services/userServices/listAllUserService'
 import ListOneUserService from 'src/services/userServices/listOneUserService'
 import UpdateUserService from 'src/services/userServices/UpdateUserService'
 
-
 class UserController {
   public async createUser(req: Request, res: Response): Promise<Response> {
-    const { name, birthDate, sexualOrientation, email, lastEmail, fone } = req.body
+    const { name, birthDate, sexualOrientation, email, lastEmail, fone, avatar } = req.body
     const addneWUser = new CreateUserService()
     const thisUser = await addneWUser.execute({
       name,
@@ -18,6 +16,7 @@ class UserController {
       email,
       lastEmail,
       fone,
+      avatar,
     })
     return res.json(thisUser)
   }
@@ -36,7 +35,7 @@ class UserController {
   }
 
   async updateAniver(req: Request, res: Response): Promise<Response> {
-    const { name, birthDate, sexualOrientation, email, lastEmail, fone } = req.body
+    const { name, birthDate, sexualOrientation, email, lastEmail, fone, avatar } = req.body
     const { id } = req.params
 
     const userForUpdate = new UpdateUserService()
@@ -48,6 +47,7 @@ class UserController {
       email,
       lastEmail,
       fone,
+      avatar
     })
     return res.json(thisUser)
   }

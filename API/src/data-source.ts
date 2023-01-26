@@ -2,7 +2,6 @@ import 'dotenv/config'
 import 'reflect-metadata'
 import { DataSource } from 'typeorm'
 import express from 'express'
-import { User } from './entities/UserEntity'
 
 const app = express()
 app.use(express.json())

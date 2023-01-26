@@ -1,4 +1,5 @@
---------------------------------------------------------------------------------------
+---
+
 https://www.udemy.com/course/api-restful-de-vendas/learn/lecture/23696420#content
 criar o package json
 [ok] yarn init -y
@@ -22,17 +23,15 @@ https://www.aluiziodeveloper.com.br/eslint/
 [ok] https://www.aluiziodeveloper.com.br/prettier/
 yarn add prettier -D
 
-
 -- Configurando a importações
 [ok] https://github.com/aluiziodeveloper/api-vendas/blob/main/project.md
-
 
 -- instalar bibliotecas
 [ok] yarn add express cors express-async-errors
 [ok] yarn add -D @types/express @types/cors
 
 -- Configuração diferente do typeorm atulizado
-     https://typeorm.io/migrations
+https://typeorm.io/migrations
 [ok] https://www.youtube.com/watch?v=j8cm2C5-xn8
 
 -- Configurando o docker - Docker no Windows 10 - Corrigindo o Erro WSL 2
@@ -40,7 +39,7 @@ yarn add prettier -D
 
 -- Criando o containner
 [ok] docker run --name postgres -e POSTGRES_PASSWORD=123456=docker -p 5432:5432 -d postgres
-     para validar se o container está em execução rodamos o codigo = docker ps
+para validar se o container está em execução rodamos o codigo = docker ps
 
 -- Instalar Dbeaver
 [ok] https://dbeaver.io/download/
@@ -50,20 +49,19 @@ Essa configuração fica no package.jason
 "typeorm": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:generate ./src/shared/migrations/default",
 
 https://www.youtube.com/watch?v=j8cm2C5-xn8 = {
-  26:50 - Criando entidades
-  40:00 - Gerando migrations automáticas -
-  comando ==> yarn typeorm - cria migrations de todas as entidades existentes.
-  commando ==>  yarn  migration:run = popula ou atualiza os campos da tabela
-  }
+26:50 - Criando entidades
+40:00 - Gerando migrations automáticas -
+comando ==> yarn typeorm - cria migrations de todas as entidades existentes.
+commando ==> yarn migration:run = popula ou atualiza os campos da tabela
+}
 https://typeorm.io/migrations
 [ok]
 
-/*
+/\*
 migrationsTableName: 'custom_migration_table'
 
-  entities: [`${__dirname}/**/entities/*.{ts,js}`],
-  migrations: [`${__dirname}/src/shared/entities/migrations/*.{ts,js}`]
-*/
+entities: [`${__dirname}/**/entities/*.{ts,js}`],
+migrations: [`${__dirname}/src/shared/entities/migrations/*.{ts,js}`]
+\*/
 console.log('✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨')
 console.log('')
-

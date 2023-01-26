@@ -1,18 +1,10 @@
 import userRepository from '@modules/repositories/UserRepository'
 import AppError from '@shared/errors/AppError'
 import { User } from 'src/entities/UserEntity'
+import IUserType from 'src/interfaces/IUser'
 
-interface IUserType {
-  id: string
-  name: string
-  birthDate: Date
-  sexualOrientation: string
-  email: string
-  lastEmail: string | undefined
-  fone: number
-}
 class UpdateUserService {
-  public async execute({ id, name, birthDate, sexualOrientation, email, lastEmail, fone }: IUserType): Promise<User | null> {
+  public async execute({ id, name, birthDate, sexualOrientation, email, lastEmail, fone, avatar }: IUserType): Promise<User | null> {
     const user = await userRepository.findOneBy({ id })
 
     if (user) {
@@ -22,11 +14,12 @@ class UpdateUserService {
       user.email = email
       user.lastEmail = lastEmail
       user.fone = fone
+      user.avatar = avatar
 
       await userRepository.save(user)
       console.log(`User atualizado com sucesso!`)
     } else {
-       throw new AppError('user not found 👻')
+      throw new AppError('user not found 👻')
     }
 
     return user
