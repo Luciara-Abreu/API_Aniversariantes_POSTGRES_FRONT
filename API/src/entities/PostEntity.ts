@@ -1,15 +1,10 @@
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
 import { User } from './UserEntity'
 
-
-
-
-
-
 @Entity('posts')
 class Post {
-  @PrimaryGeneratedColumn('increment')
-  id: number
+  @PrimaryGeneratedColumn()
+  id: string
 
   @Column()
   title: string
@@ -23,8 +18,8 @@ class Post {
   @UpdateDateColumn()
   updated_at: Date
 
-  @ManyToOne(()=> User, user => user.posts)
-  @JoinColumn({name: 'userID'})
+  @ManyToOne(() => User, user => user.posts)
+  @JoinColumn({ name: 'userID' })
   user: User
 }
 

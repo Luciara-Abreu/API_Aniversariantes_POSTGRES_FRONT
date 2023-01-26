@@ -4,7 +4,7 @@ import Post from './PostEntity'
 @Entity('users')
 export class User {
   @PrimaryGeneratedColumn()
-  id: number
+  id: string
 
   @Column({ type: 'text' })
   name: string

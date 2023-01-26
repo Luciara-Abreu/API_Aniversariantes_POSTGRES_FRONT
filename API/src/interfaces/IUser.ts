@@ -1,5 +1,5 @@
 interface IUserType {
-  id?: number
+  id?: string
   name: string
   birthDate: Date
   sexualOrientation: string

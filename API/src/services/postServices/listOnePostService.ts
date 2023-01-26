@@ -1,12 +1,11 @@
 import postRepository from '@modules/repositories/PostRepository'
 import AppError from '@shared/errors/AppError'
 import Post from 'src/entities/PostEntity'
-
 interface IRequest {
-  id: number
+  id: string
 }
 class ListOnePostService {
-  public async execute({ id }: IRequest): Promise<Post | null> {
+  public async execute({ id }: IRequest): Promise<Post> {
     const post = await postRepository.findOneBy({ id })
 
     if (!post) {

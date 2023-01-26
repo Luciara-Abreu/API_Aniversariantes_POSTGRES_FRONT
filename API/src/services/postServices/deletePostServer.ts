@@ -2,7 +2,7 @@ import postRepository from '@modules/repositories/PostRepository'
 import AppError from '@shared/errors/AppError'
 
 interface IRequest {
-  id: number
+  id: string
 }
 class DeletePostService {
   public async execute({ id }: IRequest): Promise<void> {
