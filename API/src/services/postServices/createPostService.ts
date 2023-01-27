@@ -16,8 +16,9 @@ class CreateUserService {
       user,
     })
 
-    await userRepository.save(salvePost)
+    await postRepository.save(salvePost)
     return salvePost
   }
 }
 export default CreateUserService
+
