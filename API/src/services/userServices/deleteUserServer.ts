@@ -1,4 +1,4 @@
-import userRepository from '@modules/repositories/UserRepository'
+import userRepository from 'src/repositories/UserRepository'
 import AppError from '@shared/errors/AppError'
 
 interface IRequest {

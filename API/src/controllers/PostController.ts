@@ -1,4 +1,3 @@
-import userRepository from '@modules/repositories/UserRepository'
 import { Request, Response } from 'express'
 import CreatePostService from 'src/services/postServices/createPostService'
 import DeletePostService from 'src/services/postServices/deletePostServer'
@@ -7,24 +6,16 @@ import ListOnePostService from 'src/services/postServices/listOnePostService'
 import UpdatePostService from 'src/services/postServices/UpdatePostService'
 
 class PostController {
-  async createPost(req: Request, res: Response): Promise<Response> {
-    const { title, content } = req.body
-    const { idUser } = req.params
-    const addNewPost = new CreatePostService()
-    try {
-      const user = await userRepository.findOneBy({ id: idUser })
-      if (!user) {
-        return res.status(404).json({ message: 'Usuário não existe' })
-      }
-      const newPost = addNewPost.execute({
-        title,
-        content,
-      })
-      return res.status(201).json(newPost)
-    } catch (error) {
-      console.log(error)
-      return res.status(500).json({ message: 'Internal Sever Error' })
-    }
+  async createPost(req: Request, res: Response) {
+    const { title, content, userID } = req.body
+
+    const addneWPost = new CreatePostService()
+    const thisPost = await addneWPost.execute({
+      title,
+      content,
+      userID,
+    })
+    return res.json(thisPost)
   }
 
   async listOnePost(req: Request, res: Response) {

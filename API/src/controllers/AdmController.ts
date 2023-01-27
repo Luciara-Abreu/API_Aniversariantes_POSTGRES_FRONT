@@ -1,4 +1,4 @@
-import admRepository from '@modules/repositories/AdmRepository'
+import admRepository from 'src/repositories/AdmRepository'
 import { Request, Response } from 'express'
 import Adm from 'src/entities/AdmEntity'
 

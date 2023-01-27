@@ -1,4 +1,4 @@
-import postRepository from '@modules/repositories/PostRepository'
+import postRepository from 'src/repositories/PostRepository'
 import AppError from '@shared/errors/AppError'
 
 interface IRequest {

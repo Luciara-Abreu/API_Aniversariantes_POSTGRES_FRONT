@@ -1,22 +1,23 @@
-import postRepository from '@modules/repositories/PostRepository'
+import userRepository from 'src/repositories/UserRepository'
 import AppError from '@shared/errors/AppError'
 import Post from 'src/entities/PostEntity'
 import IPostType from 'src/interfaces/IPost'
+import postRepository from 'src/repositories/PostRepository'
 
-
-class CreatePostService {
-  public async execute({ title, content }: IPostType): Promise<Post> {
-    const postExist = await postRepository.findOneBy({ title, content })
-    if (postExist) {
-      throw new AppError('Post alread exist with this data 🤪')
+class CreateUserService {
+  public async execute({ title, content, userID }: IPostType): Promise<Post> {
+    const user = await userRepository.findOneBy({ id: userID })
+    if (!user) {
+      throw new AppError('User does not exist 🤪')
     }
     const salvePost = postRepository.create({
-      title, content
+      title,
+      content,
+      user,
     })
 
-    await postRepository.save(salvePost)
+    await userRepository.save(salvePost)
     return salvePost
   }
 }
-
-export default CreatePostService
+export default CreateUserService

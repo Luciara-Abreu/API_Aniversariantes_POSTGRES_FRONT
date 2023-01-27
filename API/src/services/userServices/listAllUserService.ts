@@ -1,4 +1,4 @@
-import userRepository from '@modules/repositories/UserRepository'
+import userRepository from 'src/repositories/UserRepository'
 import { User } from 'src/entities/UserEntity'
 
 class ListAllUserService {

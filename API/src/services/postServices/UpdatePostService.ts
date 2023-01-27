@@ -1,4 +1,4 @@
-import postRepository from '@modules/repositories/PostRepository'
+import postRepository from 'src/repositories/PostRepository'
 import AppError from '@shared/errors/AppError'
 import Post from 'src/entities/PostEntity'
 import IPostType from 'src/interfaces/IPost'
@@ -12,7 +12,7 @@ class UpdatePostService {
       post.content = content
 
       await postRepository.save(post)
-      console.log(`Post atualizado com sucesso!`)
+      console.log(`Post atualizado com sucesso! ${post}`)
     } else {
       throw new AppError('Post not found 👻')
     }
