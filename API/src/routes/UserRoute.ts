@@ -11,7 +11,8 @@ console.log('----------------------------------------')
 console.log('********** Rotas de User ***************')
 RouteUser.get('/ListAllAnivers', userController.listAllAnivers)
 
-RouteUser.post('/AddAniver',
+RouteUser.post(
+  '/AddAniver',
   celebrate({
     [Segments.BODY]: {
       name: Joi.string().required(),
@@ -26,7 +27,8 @@ RouteUser.post('/AddAniver',
   userController.createUser,
 )
 
-RouteUser.get('/Aniver/:id',
+RouteUser.get(
+  '/Aniver/:id',
   celebrate({
     [Segments.PARAMS]: {
       id: Joi.string().required(),
@@ -35,9 +37,27 @@ RouteUser.get('/Aniver/:id',
   userController.listOneAniver,
 )
 
-RouteUser.patch('/UpdateAniver/:id', userController.updateAniver)
+RouteUser.patch(
+  '/UpdateAniver/:id',
+  celebrate({
+    [Segments.BODY]: {
+      name: Joi.string().required(),
+      birthDate: Joi.date().required(),
+      sexualOrientation: Joi.string().required(),
+      email: Joi.string().required(),
+      lastEmail: Joi.string().required(),
+      fone: Joi.string().required(),
+      avatar: Joi.string(),
+    },
+    [Segments.PARAMS]: {
+      id: Joi.string().uuid().required(),
+    },
+  }),
+  userController.updateAniver,
+)
 
-RouteUser.delete('/DeleteAniver/:id',
+RouteUser.delete(
+  '/DeleteAniver/:id',
   celebrate({
     [Segments.PARAMS]: {
       id: Joi.string().required(),

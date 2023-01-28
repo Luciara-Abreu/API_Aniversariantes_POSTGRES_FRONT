@@ -1,61 +1,65 @@
-import admRepository from 'src/repositories/AdmRepository'
 import { Request, Response } from 'express'
-import Adm from 'src/entities/AdmEntity'
+import CreateAdmService from 'src/services/admServices/createAdmService'
+import DeleteAdmService from 'src/services/admServices/deleteAdmServer'
+import ListAllAdmService from 'src/services/admServices/listAllAdmService'
+import ListOneAdmService from 'src/services/admServices/listOneAdmService'
+import UpdateAdmService from 'src/services/admServices/UpdateAdmService'
 
 class AdmController {
-  async createAdm(req: Request, res: Response): Promise<Adm> {
-    const { name, birthDate, sexualOrientation, email, lastEmail, fone, password } = req.body
-    const newAdm = admRepository.create()
-
-    await admRepository.save(newAdm)
-    return newAdm
+  public async createAdm(req: Request, res: Response): Promise<Response> {
+    const { name, birthDate, sexualOrientation, email, lastEmail, fone, avatar, password } = req.body
+    const addNewAdm = new CreateAdmService()
+    const thisAdm = await addNewAdm.execute({
+      name,
+      birthDate,
+      sexualOrientation,
+      email,
+      lastEmail,
+      fone,
+      avatar,
+      password,
+    })
+    return res.json(thisAdm)
   }
 
-  async listOneAdm(req: Request, res: Response) {
+  public async listOneAdm(req: Request, res: Response): Promise<Response> {
     const { id } = req.params
-    try {
-      const oneAdm = await admRepository.findOneBy({ id: Number(id) })
-
-      if (!oneAdm) {
-        return res.status(404).json({ message: 'Aniversariante não existe' })
-      }
-      return oneAdm
-    } catch (error) {
-      console.log(error)
-      return res.status(500).json({ message: 'Internal Sever Error' })
-    }
+    const showAdm = new ListOneAdmService()
+    const thisAdm = await showAdm.execute({ id })
+    return res.json(thisAdm)
   }
 
   async listAllAdm(req: Request, res: Response) {
-    try {
-      const adms = await admRepository.find()
-      return res.json(adms)
-    } catch (error) {
-      console.log(error)
-      return res.status(500).json({ message: 'Internal Sever Error' })
-    }
+    const listAdm = new ListAllAdmService()
+    const showAdm = await listAdm.execute()
+    return res.json(showAdm)
   }
 
-  async updateAdm(req: Request, res: Response) {
+  async updateAdm(req: Request, res: Response): Promise<Response> {
+    const { name, birthDate, sexualOrientation, email, lastEmail, fone, avatar, password } = req.body
     const { id } = req.params
 
-    return await admRepository.update(
-      { id: Number(id) },
-      {
-        name: req.body.name,
-        birthDate: req.body.birthDate,
-        sexualOrientation: req.body.sexualOrientation,
-        email: req.body.email,
-        lastEmail: req.body.lastEmail,
-        fone: req.body.fone,
-      },
-    )
+    const admForUpdate = new UpdateAdmService()
+    const thisAdm = await admForUpdate.execute({
+      id,
+      name,
+      birthDate,
+      sexualOrientation,
+      email,
+      lastEmail,
+      fone,
+      avatar,
+      password,
+    })
+    return res.json(thisAdm)
   }
 
-  async deleteAdm(req: Request, res: Response) {
-    const { id } = req.params
-    await admRepository.delete({ id: Number(id) })
+  public async deleteAdm(request: Request, response: Response): Promise<Response> {
+    const { id } = request.params
+
+    const deleteAdm = new DeleteAdmService()
+    await deleteAdm.execute({ id })
+    return response.json([])
   }
 }
-
 export default AdmController

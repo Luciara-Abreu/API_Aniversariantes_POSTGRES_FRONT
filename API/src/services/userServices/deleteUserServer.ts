@@ -9,7 +9,7 @@ class DeleteUserService {
     const user = await userRepository.findOneBy({ id })
     if (user) {
       await userRepository.remove(user)
-      console.log(`User ${user.name} deletado com sucesso!`)
+      console.log(`User ${user.name} do ${user.id}, deletado com sucesso!`)
     } else {
       throw new AppError('user not found 👻')
     }
