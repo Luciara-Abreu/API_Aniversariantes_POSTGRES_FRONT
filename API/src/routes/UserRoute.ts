@@ -11,8 +11,7 @@ console.log('----------------------------------------')
 console.log('********** Rotas de User ***************')
 RouteUser.get('/ListAllAnivers', userController.listAllAnivers)
 
-RouteUser.post(
-  '/AddAniver',
+RouteUser.post('/AddAniver',
   celebrate({
     [Segments.BODY]: {
       name: Joi.string().required(),
@@ -27,8 +26,7 @@ RouteUser.post(
   userController.createUser,
 )
 
-RouteUser.get(
-  '/Aniver/:id',
+RouteUser.get('/Aniver/:id',
   celebrate({
     [Segments.PARAMS]: {
       id: Joi.string().required(),
@@ -39,8 +37,7 @@ RouteUser.get(
 
 RouteUser.patch('/UpdateAniver/:id', userController.updateAniver)
 
-RouteUser.delete(
-  '/DeleteAniver/:id',
+RouteUser.delete('/DeleteAniver/:id',
   celebrate({
     [Segments.PARAMS]: {
       id: Joi.string().required(),

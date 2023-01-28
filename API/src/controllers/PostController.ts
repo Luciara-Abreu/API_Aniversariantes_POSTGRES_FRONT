@@ -9,8 +9,8 @@ class PostController {
   async createPost(req: Request, res: Response) {
     const { title, content, userID } = req.body
 
-    const addneWPost = new CreatePostService()
-    const thisPost = await addneWPost.execute({
+    const addNewPost = new CreatePostService()
+    const thisPost = await addNewPost.execute({
       title,
       content,
       userID,
@@ -18,17 +18,17 @@ class PostController {
     return res.json(thisPost)
   }
 
-  async listOnePost(req: Request, res: Response) {
+  public async listOnePost(req: Request, res: Response): Promise<Response> {
     const { id } = req.params
-
     const showPost = new ListOnePostService()
-    const listPost = await showPost.execute({ id })
-    return res.json(listPost)
+    const thisPost = await showPost.execute({ id })
+    return res.json(thisPost)
   }
 
+  //RoutePost.get('ListAllPosts', postController.listAllPosts)
   async listAllPosts(req: Request, res: Response) {
-    const listposts = new ListAllPostService()
-    const showPosts = await listposts.execute()
+    const listPosts = new ListAllPostService()
+    const showPosts = await listPosts.execute()
     return res.json(showPosts)
   }
 
