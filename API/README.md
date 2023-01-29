@@ -65,3 +65,8 @@ migrations: [`${__dirname}/src/shared/entities/migrations/*.{ts,js}`]
 \*/
 console.log('✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨')
 console.log('')
+
+----------------------------------------------------
+encrypt passwords with bcryptjs e também a typagem
+yarn add bcryptjs
+yarn add -D @types/bcryptjs
