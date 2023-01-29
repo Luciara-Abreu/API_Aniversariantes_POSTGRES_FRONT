@@ -5,7 +5,11 @@ import IUserType from 'src/interfaces/IUser'
 
 class CreateUserService {
   public async execute({ name, birthDate, sexualOrientation, email, lastEmail, fone, avatar }: IUserType): Promise<User> {
-    const userExist = await userRepository.findOneBy({ name, birthDate, sexualOrientation, email, lastEmail, fone, avatar })
+    const emailExist = await userRepository.findByEmail(email)
+    if (emailExist) {
+      throw new AppError('Email adress alread used 🤪')
+    }
+    const userExist = await userRepository.findByNameAndDate(name, birthDate)
     if (userExist) {
       throw new AppError('User alread exist with this data 🤪')
     }

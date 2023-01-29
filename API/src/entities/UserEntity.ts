@@ -25,7 +25,7 @@ export class User {
   fone: number
 
   @Column({ type: 'varchar' })
-  avatar: string | undefined | null
+  avatar: string
 
   @CreateDateColumn()
   created_at: Date
