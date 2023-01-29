@@ -18,7 +18,7 @@ RouteUser.post(
       name: Joi.string().required(),
       birthDate: Joi.date().required(),
       sexualOrientation: Joi.string().required(),
-      email: Joi.string().required(),
+      email: Joi.string().email().required(),
       lastEmail: Joi.string().required(),
       fone: Joi.string().required(),
       avatar: Joi.string(),
