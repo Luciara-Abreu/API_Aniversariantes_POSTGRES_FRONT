@@ -6,7 +6,7 @@ interface IUserType {
   email: string
   lastEmail: string | undefined
   fone: number
-  avatar: string | undefined
+  avatar: string 
 }
 
 export default IUserType

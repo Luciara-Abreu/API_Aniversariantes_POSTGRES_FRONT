@@ -7,6 +7,7 @@ import RouteUser from 'src/routes/UserRoute'
 import RouteAdm from 'src/routes/AdmRoute'
 import RoutePost from 'src/routes/PostRoute'
 import AppError from '@shared/errors/AppError'
+import RouteAuth from 'src/routes/AuthRoute'
 
 const app = express()
 app.use(cors())
@@ -16,6 +17,7 @@ app.use(errors())
 app.use(RouteUser)
 app.use(RouteAdm)
 app.use(RoutePost)
+app.use(RouteAuth)
 
 //middleware
 app.use((error: Error, request: Request, response: Response, next: NextFunction) => {
