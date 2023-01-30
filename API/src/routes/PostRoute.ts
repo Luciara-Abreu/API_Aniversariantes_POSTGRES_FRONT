@@ -1,6 +1,7 @@
 import { celebrate, Joi, Segments } from 'celebrate'
 import express from 'express'
 import PostController from 'src/controllers/PostController'
+import isAuthenticated from 'src/middlewares/AuthMiddleware/isAuthenticated'
 
 const RoutePost = express()
 const postController = new PostController()
@@ -20,6 +21,7 @@ RoutePost.get(
 
 RoutePost.post(
   '/AddPost',
+  isAuthenticated,
   celebrate({
     [Segments.BODY]: {
       title: Joi.string().required(),
@@ -32,6 +34,7 @@ RoutePost.post(
 
 RoutePost.patch(
   '/UpdatePost/:id',
+  isAuthenticated,
   celebrate({
     [Segments.BODY]: {
       title: Joi.string().required(),
@@ -47,6 +50,7 @@ RoutePost.patch(
 
 RoutePost.delete(
   '/DeletePost/:id',
+  isAuthenticated,
   celebrate({
     [Segments.PARAMS]: {
       id: Joi.string().required(),

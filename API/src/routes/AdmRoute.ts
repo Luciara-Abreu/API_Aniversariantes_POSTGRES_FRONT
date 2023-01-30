@@ -1,6 +1,7 @@
 import { celebrate, Joi, Segments } from 'celebrate'
 import express from 'express'
 import AdmController from 'src/controllers/AdmController'
+import isAuthenticated from 'src/middlewares/AuthMiddleware/isAuthenticated'
 
 const RouteAdm = express()
 
@@ -36,6 +37,7 @@ RouteAdm.get(
 
 RouteAdm.patch(
   '/UpdateAdm/:id',
+  isAuthenticated,
   celebrate({
     [Segments.BODY]: {
       name: Joi.string().required(),
@@ -56,6 +58,7 @@ RouteAdm.patch(
 
 RouteAdm.delete(
   '/DeleteAdm/:id',
+  isAuthenticated,
   celebrate({
     [Segments.PARAMS]: {
       id: Joi.string().required(),

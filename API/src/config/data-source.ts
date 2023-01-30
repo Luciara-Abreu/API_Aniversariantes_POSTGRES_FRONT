@@ -15,8 +15,8 @@ const AppDataSource = new DataSource({
   username: process.env.DB_USER,
   password: process.env.DB_PASS,
   database: process.env.DB_DBNAME,
-  entities: [`${__dirname}/**/entities/*.{ts,js}`],
-  migrations: [`${__dirname}/**/migrations/*.{ts,js}`],
+  entities: [`src/entities/*.{ts,js}`],
+  migrations: [`src/migrations/*.{ts,js}`],
   synchronize: true,
   logging: false,
 })
@@ -32,16 +32,7 @@ AppDataSource.initialize()
 
 export default AppDataSource
 
-/**
- *
- * const getDataSource = (delay = 3000): Promise<DataSource> => {
-  if (AppDataSource.isInitialized) return Promise.resolve(AppDataSource)
-
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (AppDataSource.isInitialized) resolve(AppDataSource)
-      else reject('Failed to create connection with database')
-    }, delay)
-  })
-}
- */
+//Só acho o caminho quando a data-source está fora do config então não posso usar
+// dessa meneira descrita abaixo
+// entities: [`${__dirname}/**/entities/*.{ts,js}`],
+// migrations: [`${__dirname}/**/migrations/*.{ts,js}`],

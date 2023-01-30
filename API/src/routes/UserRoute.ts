@@ -1,6 +1,7 @@
 import { celebrate, Joi, Segments } from 'celebrate'
 import express from 'express'
 import UserController from 'src/controllers/UserController'
+import isAuthenticated from 'src/middlewares/AuthMiddleware/isAuthenticated'
 
 const RouteUser = express()
 const userController = new UserController()
@@ -13,6 +14,7 @@ RouteUser.get('/ListAllAnivers', userController.listAllAnivers)
 
 RouteUser.post(
   '/AddAniver',
+  isAuthenticated,
   celebrate({
     [Segments.BODY]: {
       name: Joi.string().required(),
@@ -39,6 +41,7 @@ RouteUser.get(
 
 RouteUser.patch(
   '/UpdateAniver/:id',
+  isAuthenticated,
   celebrate({
     [Segments.BODY]: {
       name: Joi.string().required(),
@@ -58,6 +61,7 @@ RouteUser.patch(
 
 RouteUser.delete(
   '/DeleteAniver/:id',
+  isAuthenticated,
   celebrate({
     [Segments.PARAMS]: {
       id: Joi.string().required(),
