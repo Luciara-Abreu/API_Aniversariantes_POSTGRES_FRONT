@@ -3,6 +3,7 @@ import Adm from 'src/entities/AdmEntity'
 import admRepository from 'src/repositories/AdmRepository'
 import { compare } from 'bcryptjs'
 import jwt, { Secret, sign } from 'jsonwebtoken'
+import authConfig from '@config/auth'
 
 interface IAuthType {
   email: string
@@ -17,18 +18,15 @@ interface IResponse {
 class CreateAuthService {
   public async execute({ email, password }: IAuthType): Promise<IResponse> {
     const adm = await admRepository.findByEmail(email)
-    const SECRET_KEY: Secret = '263c8651eb9b7183a3554008aaf05df0'
-
     if (!adm) {
       throw new AppError('Incorrect email/password combination 🤪', 401)
     }
-
     const admConfirmed = await compare(password, adm.password)
     if (!admConfirmed) {
       throw new AppError('Incorrect email/password combination 🤪', 401)
     }
-    const token = jwt.sign({ id: adm.id?.toString(), name: adm.name }, SECRET_KEY, {
-      expiresIn: '1 days',
+    const token = jwt.sign({ id: adm.id?.toString(), name: adm.name }, authConfig.jwt.Secret, {
+      expiresIn: authConfig.jwt.expiresIn,
     })
 
     /* professor não deu certo mas eu consegui seguindo um pouco esse site
