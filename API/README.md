@@ -80,3 +80,5 @@ yarn add -D @types/jsonwebtoken
 md5 - nessse site vc digita algo doido e ele cria um rash e vc add esse rash no
 segundo parametro na configuração do token com jsonwebtokeno
  https://md5decrypt.net/en/
+ 
+ ----------------------------------------------------

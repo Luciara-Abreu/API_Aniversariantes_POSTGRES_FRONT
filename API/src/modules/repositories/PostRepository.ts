@@ -1,4 +1,4 @@
-import AppDataSource from 'src/data-source'
+import AppDataSource from 'src/config/data-source'
 import Post from 'src/entities/PostEntity'
 
 
