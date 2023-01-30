@@ -67,6 +67,16 @@ console.log('✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨'
 console.log('')
 
 ----------------------------------------------------
+encriptografar as senhas
 encrypt passwords with bcryptjs e também a typagem
 yarn add bcryptjs
 yarn add -D @types/bcryptjs
+----------------------------------------------------
+JWT
+Criar token a partir da senha encriptofrafada
+yarn add jsonwebtoken
+yarn add -D @types/jsonwebtoken
+----------------------------------------------------
+md5 - nessse site vc digita algo doido e ele cria um rash e vc add esse rash no
+segundo parametro na configuração do token com jsonwebtokeno
+ https://md5decrypt.net/en/
