@@ -80,5 +80,13 @@ yarn add -D @types/jsonwebtoken
 md5 - nessse site vc digita algo doido e ele cria um rash e vc add esse rash no
 segundo parametro na configuração do token com jsonwebtokeno
  https://md5decrypt.net/en/
- 
+
  ----------------------------------------------------
+ ainda sobre JTW
+https://dev.to/juliecherner/authentication-with-jwt-tokens-in-typescript-with-express-3gb1
+  ----------------------------------------------------
+  agora instalar o multer para auxiliar o usuário a fazer upload da imagem do avatar.
+
+  yarn add multer
+  yarn add -D @types/multer
+
