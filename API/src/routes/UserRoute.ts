@@ -10,7 +10,7 @@ console.log('')
 console.log('----------------------------------------')
 
 console.log('********** Rotas de User ***************')
-RouteUser.get('/ListAllAnivers', userController.listAllAnivers)
+RouteUser.get('/ListAllAnivers',isAuthenticated, userController.listAllAnivers)
 
 RouteUser.post(
   '/AddAniver',

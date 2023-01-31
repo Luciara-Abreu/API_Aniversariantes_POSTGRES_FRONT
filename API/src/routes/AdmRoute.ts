@@ -4,9 +4,10 @@ import AdmController from 'src/controllers/AdmController'
 import isAuthenticated from 'src/middlewares/AuthMiddleware/isAuthenticated'
 
 const RouteAdm = express()
+const admController = new AdmController()
 
 console.log('********** Rotas de Adms ***************')
-RouteAdm.get('/ListAllAdm', new AdmController().listAllAdm)
+RouteAdm.get('/ListAllAdm', isAuthenticated, admController.listAllAdm)
 
 RouteAdm.post(
   '/AddAdm',
@@ -22,17 +23,18 @@ RouteAdm.post(
       password: Joi.string().required(),
     },
   }),
-  new AdmController().createAdm,
+  admController.createAdm,
 )
 
 RouteAdm.get(
   '/listOneAdm/:id',
+  isAuthenticated,
   celebrate({
     [Segments.PARAMS]: {
       id: Joi.string().required(),
     },
   }),
-  new AdmController().listOneAdm,
+  admController.listOneAdm,
 )
 
 RouteAdm.patch(
@@ -53,7 +55,7 @@ RouteAdm.patch(
       id: Joi.string().required(),
     },
   }),
-  new AdmController().updateAdm,
+  admController.updateAdm,
 )
 
 RouteAdm.delete(
@@ -64,7 +66,7 @@ RouteAdm.delete(
       id: Joi.string().required(),
     },
   }),
-  new AdmController().deleteAdm,
+  admController.deleteAdm,
 )
 
 console.log('')

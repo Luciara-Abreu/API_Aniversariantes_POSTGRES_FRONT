@@ -31,6 +31,7 @@ class UserController {
   async listAllAnivers(req: Request, res: Response) {
     const listUsers = new ListAllUserService()
     const showUsers = await listUsers.execute()
+    console.log('Quem solicitou a lista de usuários na requisição????====> ', req.adm)
     return res.json(showUsers)
   }
 
@@ -47,7 +48,7 @@ class UserController {
       email,
       lastEmail,
       fone,
-      avatar
+      avatar,
     })
     return res.json(thisUser)
   }
