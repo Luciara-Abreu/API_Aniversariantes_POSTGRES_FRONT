@@ -44,16 +44,16 @@ RouteUser.patch(
   isAuthenticated,
   celebrate({
     [Segments.BODY]: {
-      name: Joi.string().required(),
-      birthDate: Joi.date().required(),
-      sexualOrientation: Joi.string().required(),
-      email: Joi.string().required(),
-      lastEmail: Joi.string().required(),
-      fone: Joi.string().required(),
+      name: Joi.string(),
+      birthDate: Joi.date(),
+      sexualOrientation: Joi.string(),
+      email: Joi.string(),
+      lastEmail: Joi.string(),
+      fone: Joi.string(),
       avatar: Joi.string(),
     },
     [Segments.PARAMS]: {
-      id: Joi.string().uuid().required(),
+      id: Joi.string().required(),
     },
   }),
   userController.updateAniver,

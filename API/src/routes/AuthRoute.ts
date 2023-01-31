@@ -15,8 +15,8 @@ RouteAuth.post(
       password: Joi.string(),
     },
   }),
-  authController.createAdm
-  )
+  authController.createAdm,
+)
 console.log('')
 
 export default RouteAuth

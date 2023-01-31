@@ -21,11 +21,10 @@ RoutePost.get(
 
 RoutePost.post(
   '/AddPost',
-  isAuthenticated,
   celebrate({
     [Segments.BODY]: {
       title: Joi.string().required(),
-      content: Joi.date().required(),
+      content: Joi.string().required(),
       userID: Joi.string().required(),
     },
   }),
@@ -37,12 +36,12 @@ RoutePost.patch(
   isAuthenticated,
   celebrate({
     [Segments.BODY]: {
-      title: Joi.string().required(),
-      content: Joi.date().required(),
+      title: Joi.string(),
+      content: Joi.string(),
       userID: Joi.string().required(),
     },
     [Segments.PARAMS]: {
-      id: Joi.string().uuid().required(),
+      id: Joi.string().required(),
     },
   }),
   postController.updatePost,
