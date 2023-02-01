@@ -9,6 +9,7 @@ import RoutePost from 'src/routes/PostRoute'
 import AppError from '@shared/errors/AppError'
 import RouteAuth from 'src/routes/AuthRoute'
 import RouteAvatar from 'src/routes/AvatarRoute'
+import uploadConfig from '@config/upload'
 
 const app = express()
 app.use(cors())
@@ -19,7 +20,8 @@ app.use(RouteUser)
 app.use(RouteAdm)
 app.use(RoutePost)
 app.use(RouteAuth)
-app.use(RouteAvatar)
+//app.use(RouteAvatar)
+app.use('/files', express.static(uploadConfig.directory))
 
 //middleware
 app.use((error: Error, request: Request, response: Response, next: NextFunction) => {
