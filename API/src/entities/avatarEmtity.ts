@@ -1,16 +1,14 @@
+import { ByteLengthQueuingStrategy } from 'node:stream/web'
 import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
-import  User  from './UserEntity'
+import User from './UserEntity'
 
-@Entity('posts')
-class Post {
+@Entity('avatars')
+class Avatar {
   @PrimaryGeneratedColumn()
   id: string
 
-  @Column()
-  title: string
-
-  @Column()
-  content: string
+  @Column({ type: 'text' })
+  avatar: string
 
   @CreateDateColumn()
   created_at: Date
@@ -18,9 +16,8 @@ class Post {
   @UpdateDateColumn()
   updated_at: Date
 
-  @ManyToOne(() => User, user => user.posts)
+  @ManyToOne(() => User, user => user.avatars)
   @JoinColumn({ name: 'userID' })
   user: User
 }
-
-export default Post
+export default Avatar

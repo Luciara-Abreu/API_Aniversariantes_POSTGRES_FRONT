@@ -1,16 +1,39 @@
 import { Request, Response } from 'express'
-import UpdateAvatarService from 'src/services/avatarServices/createAvatarService'
+import CreateAvatarService from 'src/services/avatarServices/createAvatarService'
+import DeleteAvatarService from 'src/services/avatarServices/deleteAvatarServer'
+import UpdateAvatarService from 'src/services/avatarServices/updateAvatarService'
 
-class AvatarController {
-  async updateAvatar(req: Request, res: Response): Promise<Response> {
-    const avatarUpdate = new UpdateAvatarService()
+class AvatartController {
+  async createAvatar(req: Request, res: Response) {
+    const { avatar, userID } = req.body
 
-    const adm = await avatarUpdate.execute({
-      id: req.adm.id,
-      avatarFilename: req.file!.filename,
+    const addAvatarUser = new CreateAvatarService()
+    const thisAvatar = await addAvatarUser.execute({
+      avatar,
+      userID,
     })
+    return res.json(thisAvatar)
+  }
 
-    return res.json(adm)
+  async updateAvatar(req: Request, res: Response) {
+    const { id } = req.params
+    const { avatar } = req.body
+
+    const AvatarForUpdate = new UpdateAvatarService()
+    const thisAvatar = await AvatarForUpdate.execute({
+      id,
+      avatar,
+    })
+    return res.json(thisAvatar)
+  }
+
+  async deleteAvatar(req: Request, res: Response) {
+    const { id } = req.params
+
+    const thisAvatar = new DeleteAvatarService()
+    await thisAvatar.execute({ id })
+    return res.json([])
   }
 }
-export default AvatarController
+
+export default AvatartController

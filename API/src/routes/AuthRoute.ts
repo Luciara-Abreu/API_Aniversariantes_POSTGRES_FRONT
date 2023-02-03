@@ -11,7 +11,7 @@ RouteAuth.post(
   '/AuthAdm',
   celebrate({
     [Segments.BODY]: {
-      email: Joi.string().email().required(),
+      email: Joi.string().email(),
       password: Joi.string(),
     },
   }),

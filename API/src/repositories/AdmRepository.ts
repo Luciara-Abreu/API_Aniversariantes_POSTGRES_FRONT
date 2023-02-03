@@ -1,5 +1,6 @@
 import AppDataSource from 'src/config/data-source'
 import Adm from 'src/entities/AdmEntity'
+import User from 'src/entities/UserEntity'
 
 const admRepository = AppDataSource.getRepository(Adm).extend({
   async findByName(name: string): Promise<Adm | null> {

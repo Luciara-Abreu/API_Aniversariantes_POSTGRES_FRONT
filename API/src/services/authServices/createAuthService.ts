@@ -25,7 +25,7 @@ class CreateAuthService {
     if (!admConfirmed) {
       throw new AppError('Incorrect email/password combination 🤪', 401)
     }
-    const token = jwt.sign({ id: adm.id?.toString(), name: adm.name }, authConfig.jwt.Secret, {
+    const token = jwt.sign({ id: adm.id?.toString(), name: adm.name }, authConfig.jwt.secret, {
       expiresIn: authConfig.jwt.expiresIn,
     })
 

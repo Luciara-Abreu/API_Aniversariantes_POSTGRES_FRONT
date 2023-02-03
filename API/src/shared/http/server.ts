@@ -20,8 +20,8 @@ app.use(RouteUser)
 app.use(RouteAdm)
 app.use(RoutePost)
 app.use(RouteAuth)
-//app.use(RouteAvatar)
-app.use('/files', express.static(uploadConfig.directory))
+app.use(RouteAvatar)
+//app.use('/files', express.static(uploadConfig.directory))
 
 //middleware
 app.use((error: Error, request: Request, response: Response, next: NextFunction) => {

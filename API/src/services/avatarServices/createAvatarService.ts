@@ -1,29 +1,24 @@
+import userRepository from 'src/repositories/UserRepository'
 import AppError from '@shared/errors/AppError'
-import Adm from 'src/entities/AdmEntity'
-import admRepository from 'src/repositories/AdmRepository'
-import IAvatarType from 'src/interfaces/IAvatar'
-import path from 'path'
-import uploadConfig from '@config/upload'
-import fs from 'fs'
-
-class UpdateAvatarService {
-  public async execute({ id, avatarFilename }: IAvatarType): Promise<Adm> {
-    const adm = await admRepository.findOneBy({ id })
-    if (!adm) {
-      throw new AppError('Adm not found')
+import Avatar from 'src/entities/avatarEmtity'
+import avatarRepository from 'src/repositories/AvatarRepository'
+interface IAvatarType {
+  avatar: string
+  userID: string
+}
+class CreateAvatarService {
+  public async execute({ avatar, userID }: IAvatarType): Promise<Avatar> {
+    const user = await userRepository.findOneBy({ id: userID })
+    if (!user) {
+      throw new AppError('User does not exist 🤪')
     }
-    if (adm.avatar) {
-      const admAvatarFilePath = path.join(uploadConfig.directory, adm.avatar)
-      const admAvatarExist = await fs.promises.stat(admAvatarFilePath)
+    const newAvatar = avatarRepository.create({
+      avatar,
+      user,
+    })
 
-      if (admAvatarExist) {
-        await fs.promises.unlink(admAvatarFilePath)
-      }
-    }
-    adm.avatar = avatarFilename
-    await admRepository.save(adm)
-    return adm
+    await avatarRepository.save(newAvatar)
+    return newAvatar
   }
 }
-
-export default UpdateAvatarService
+export default CreateAvatarService

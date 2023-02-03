@@ -1,8 +1,9 @@
-import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
+import { Column, CreateDateColumn, Entity, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
+import Avatar from './avatarEmtity'
 import Post from './PostEntity'
 
 @Entity('users')
-export class User {
+class User {
   @PrimaryGeneratedColumn()
   id: string
 
@@ -24,9 +25,6 @@ export class User {
   @Column({ type: 'text' })
   fone: number
 
-  @Column({ type: 'varchar' })
-  avatar: string
-
   @CreateDateColumn()
   created_at: Date
 
@@ -35,4 +33,8 @@ export class User {
 
   @OneToMany(() => Post, post => post.user)
   posts: Post[]
+
+  @OneToOne(() => Avatar, avatar => avatar.user)
+  avatars: Avatar
 }
+export default User

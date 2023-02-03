@@ -2,17 +2,48 @@ import { celebrate, Joi, Segments } from 'celebrate'
 import express from 'express'
 import AvatarController from 'src/controllers/AvatarController'
 import isAuthenticated from 'src/middlewares/AuthMiddleware/isAuthenticated'
-import uploadConfig from '@config/upload'
-import multer from 'multer'
 
 const RouteAvatar = express()
 const avatarController = new AvatarController()
-const upload = multer(uploadConfig)
 
-console.log('********* Rotas de Avatar *************')
+console.log('********** Rotas de Avatar **************')
 
-RouteAvatar.patch('/avatar', isAuthenticated, upload.single('avatar'), avatarController.updateAvatar)
+RouteAvatar.post(
+  '/AddAvatar',
+  celebrate({
+    [Segments.BODY]: {
+      avatar: Joi.string(),
+      userID: Joi.string(),
+    },
+  }),
+  avatarController.createAvatar,
+)
 
+RouteAvatar.patch(
+  '/UpdateAvatar/:id',
+  isAuthenticated,
+  celebrate({
+    [Segments.BODY]: {
+      avatar: Joi.string(),
+      userID: Joi.string(),
+    },
+    [Segments.PARAMS]: {
+      id: Joi.string(),
+    },
+  }),
+  avatarController.updateAvatar,
+)
+
+RouteAvatar.delete(
+  '/DeleteAvatar/:id',
+  isAuthenticated,
+  celebrate({
+    [Segments.PARAMS]: {
+      id: Joi.string().required(),
+    },
+  }),
+  avatarController.deleteAvatar,
+)
 console.log('')
 
 export default RouteAvatar
