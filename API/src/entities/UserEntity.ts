@@ -1,4 +1,4 @@
-import { Column, CreateDateColumn, Entity, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
+import { Column, CreateDateColumn, Entity, OneToMany, OneToOne, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
 import Avatar from './avatarEmtity'
 import Post from './PostEntity'
 
@@ -36,5 +36,6 @@ class User {
 
   @OneToOne(() => Avatar, avatar => avatar.user)
   avatars: Avatar
+  admTokens: any
 }
 export default User
