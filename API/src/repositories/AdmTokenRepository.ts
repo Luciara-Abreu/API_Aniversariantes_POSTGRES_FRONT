@@ -1,5 +1,4 @@
 import AppDataSource from 'src/config/data-source'
-import Adm from 'src/entities/AdmEntity'
 import AdmToken from 'src/entities/AdmTokenEntity'
 
 
