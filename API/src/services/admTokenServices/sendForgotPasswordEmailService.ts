@@ -1,9 +1,10 @@
 import AppError from '@shared/errors/AppError'
-import Adm from 'src/entities/AdmEntity'
-import IAdmType from 'src/interfaces/IAdm'
 import admRepository from 'src/repositories/AdmRepository'
 import admTokenRepository from 'src/repositories/AdmTokenRepository'
 
+interface IAdmType {
+  email: string
+}
 class SendForgotPasswordEmailService {
   public async execute({ email }: IAdmType): Promise<void> {
     const adm = await admRepository.findByEmail(email)

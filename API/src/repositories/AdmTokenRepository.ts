@@ -1,20 +1,24 @@
-import AppDataSource from 'src/config/data-source'
+import AppDataSource from '@config/data-source'
+import AppError from '@shared/errors/AppError'
 import AdmToken from 'src/entities/AdmTokenEntity'
+import { Repository } from 'typeorm'
 
-
-const admTokenRepository = AppDataSource.getRepository(AdmToken).extend({
-  async findByToken(token: string): Promise<AdmToken | null> {
+const AdmTokenRepository = AppDataSource.getRepository(AdmToken).extend({
+  async findByToken(token: string): Promise<AdmToken | undefined> {
     const admToken = await this.findOne({
       where: {
         token,
       },
     })
+    if (!admToken) {
+      throw new AppError('Token does not exist')
+    }
     return admToken
   },
 
-  async generete(userID: string): Promise<AdmToken | null> {
+  async generete(admID: string): Promise<AdmToken | undefined> {
     const admToken = await this.create({
-      userID
+      admID
     })
     await this.save(admToken)
     return admToken
@@ -24,4 +28,4 @@ const admTokenRepository = AppDataSource.getRepository(AdmToken).extend({
 
 })
 
-export default admTokenRepository
+export default AdmTokenRepository

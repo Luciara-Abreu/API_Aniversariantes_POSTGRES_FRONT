@@ -1,6 +1,6 @@
 import userRepository from 'src/repositories/UserRepository'
 import AppError from '@shared/errors/AppError'
-import  User  from 'src/entities/UserEntity'
+import User from 'src/entities/UserEntity'
 import IUserType from 'src/interfaces/IUser'
 
 class CreateUserService {
@@ -20,7 +20,6 @@ class CreateUserService {
       email,
       lastEmail,
       fone,
-      avatar,
     })
 
     await userRepository.save(salveUser)

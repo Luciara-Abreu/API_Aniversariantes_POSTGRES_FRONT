@@ -4,7 +4,7 @@ import  User  from 'src/entities/UserEntity'
 import IUserType from 'src/interfaces/IUser'
 
 class UpdateUserService {
-  public async execute({ id, name, birthDate, sexualOrientation, email, lastEmail, fone, avatar }: IUserType): Promise<User | null> {
+  public async execute({ id, name, birthDate, sexualOrientation, email, lastEmail, fone }: IUserType): Promise<User | undefined> {
     const user = await userRepository.findOneBy({ id })
 
     if (user) {
@@ -14,7 +14,6 @@ class UpdateUserService {
       user.email = email
       user.lastEmail = lastEmail
       user.fone = fone
-      user.avatar = avatar
 
       await userRepository.save(user)
       console.log(`User atualizado com sucesso!`)

@@ -1,6 +1,6 @@
 interface IAvatarType {
   avatar: string
-  userAvatar: string | null
+  userAvatar: string 
   userID: string
   id: string
   avatarFilename: string

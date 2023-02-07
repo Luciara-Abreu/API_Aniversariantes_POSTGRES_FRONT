@@ -4,7 +4,7 @@ import Adm from 'src/entities/AdmEntity'
 import IAdmType from 'src/interfaces/IAdm'
 
 class UpdateUserService {
-  public async execute({ id, name, birthDate, sexualOrientation, email, lastEmail, fone, avatar, password }: IAdmType): Promise<Adm | null> {
+  public async execute({ id, name, birthDate, sexualOrientation, email, lastEmail, fone, avatar, password }: IAdmType): Promise<Adm | undefined> {
     const adm = await admRepository.findOneBy({ id })
 
     if (adm) {

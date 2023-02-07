@@ -4,7 +4,7 @@ import Post from 'src/entities/PostEntity'
 import IPostType from 'src/interfaces/IPost'
 
 class UpdatePostService {
-  public async execute({ id, title, content }: IPostType): Promise<Post | null> {
+  public async execute({ id, title, content }: IPostType): Promise<Post | undefined> {
     const post = await postRepository.findOneBy({ id })
 
     if (post) {
