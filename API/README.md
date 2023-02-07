@@ -94,5 +94,11 @@ https://dev.to/juliecherner/authentication-with-jwt-tokens-in-typescript-with-ex
  Solução.:  recarregando o VS com o comando Ctrl + shift + p e pesquisando Desenvolvedor: Recarregar janela
   ----------------------------------------------------
 biblioteca de data e hota => https://date-fns.org/
+----------------------------------------------------
+enviar e-mails para uma caixa de entrada fake para teste de envios de e-mail
+https://ethereal.email/
+ yarn add nodemailer
+ yarn add -D @types/nodemailer
+ ----------------------------------------------------
 
 
