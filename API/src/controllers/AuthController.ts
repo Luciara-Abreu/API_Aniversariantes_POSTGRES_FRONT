@@ -1,10 +1,10 @@
 import { Request, Response } from 'express'
-import CreateAuthService from 'src/services/authServices/createAuthService'
+import CreateSessionsService from 'src/services/CreateSessionsService/createSessionsService'
 
 class AuthController {
   public async createAdm(req: Request, res: Response): Promise<Response> {
     const { email, password } = req.body
-    const authAdm = new CreateAuthService()
+    const authAdm = new CreateSessionsService()
     const thisAdm = await authAdm.execute({
       email,
       password,

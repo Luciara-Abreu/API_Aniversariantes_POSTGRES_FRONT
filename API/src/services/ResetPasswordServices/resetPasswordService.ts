@@ -29,6 +29,7 @@ class ResetPasswordService {
     }
     //usar o rash do bcryptjs para criptografar a senha.
     adm.password = await hash(password, 8)
+    await admRepository.save(adm)
   }
 }
 
