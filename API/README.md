@@ -89,4 +89,10 @@ https://dev.to/juliecherner/authentication-with-jwt-tokens-in-typescript-with-ex
 
   yarn add multer
   yarn add -D @types/multer
+  ----------------------------------------------------
+ Contém itens enfatizados
+ Solução.:  recarregando o VS com o comando Ctrl + shift + p e pesquisando Desenvolvedor: Recarregar janela
+  ----------------------------------------------------
+biblioteca de data e hota => https://date-fns.org/
+
 
