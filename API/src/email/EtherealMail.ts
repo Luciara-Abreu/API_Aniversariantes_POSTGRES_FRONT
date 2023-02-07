@@ -1,14 +1,13 @@
 // Use at least Nodemailer v4.1.0
 import nodemailer from 'nodemailer'
-
-interface ISendMail {
-  to: string
-  body: string
-}
-
+import { ISendMail } from 'src/interfaces/IEmail'
+import HandlebarTemplate from './HandlebarTemplate'
 class EtherealEmail {
-  static async sendEmail({ to, body }: ISendMail): Promise<void> {
+  static async sendEmail({ to, from, subject, templateData }: ISendMail): Promise<void> {
     const account = await nodemailer.createTestAccount()
+
+    const mailTemplate = new HandlebarTemplate()
+
     const transporter = nodemailer.createTransport({
       host: account.smtp.host,
       port: account.smtp.port,
@@ -18,14 +17,22 @@ class EtherealEmail {
         pass: account.pass,
       },
     })
+
     const message = await transporter.sendMail({
-      from: 'testeu@gmail.com',
-      to: 'luciara.abreu@gmail.com',
-      subject: 'Recuperação de senha',
-      text: body,
+      from: {
+        name: from?.name || 'Equipe API Vendas',
+        address: from?.email || 'equipe@apivendas.com.br',
+      },
+      to: {
+        name: to.name,
+        address: to.email,
+      },
+      subject,
+      html: await mailTemplate.parse(templateData),
     })
+
     console.log('Message sent: %s', message.messageId)
-    console.log('Message sent: %s', nodemailer.getTestMessageUrl(message))
+    console.log('Preview URL: %s', nodemailer.getTestMessageUrl(message))
   }
 }
 export default EtherealEmail
