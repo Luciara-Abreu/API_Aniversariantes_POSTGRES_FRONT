@@ -20,12 +20,21 @@ class SendForgotPasswordEmailService {
       email,
     })
 
-    const token = await admTokenRepository.generete(adm.id)
+    const { token } = await admTokenRepository.generete(adm.id)
     //console.log(token)
     await EtherealEmail.sendEmail({
-      to: email,
-      body: `Solicitação de redefinição de senha recebida.
-      Use o token para redefinir sua senha  =>  ${token?.token}`,
+      to: {
+        name: adm.name,
+        email: adm.email,
+      },
+      subject: '[API ANIVERSARIANTES] Recuperação de senha',
+      templateData: {
+        file: `Olá {{name}}, Para redefinir sua senha use esse código => {{token}}`,
+        variables: {
+          name: adm.name,
+          token: token,
+        },
+      },
     })
   }
 }

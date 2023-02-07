@@ -16,7 +16,7 @@ const AdmTokenRepository = AppDataSource.getRepository(AdmToken).extend({
     return admToken
   },
 
-  async generete(admID: string): Promise<AdmToken | undefined> {
+  async generete(admID: string): Promise<AdmToken> {
     const admToken = await this.create({
       admID
     })
