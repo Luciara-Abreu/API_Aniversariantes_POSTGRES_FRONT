@@ -6,8 +6,8 @@ API Agenda Aniversariantes
 
 - [ok] Restful
 - [ok] Javascript
-- [ok] Node.js,
-- [ok] ExpressJS,
+- [ok] Node.js
+- [ok] ExpressJS
 - [ok] Postgres
 - [ok] Ethereal.email
 - [ok] handlebarsjs
@@ -16,6 +16,10 @@ API Agenda Aniversariantes
 - [ok] Typescript
 - [ok] TypeORM
 - [ok] Redis
+- [?]
+- [?]
+- [?]
+- [?]
 
 ## Em desenvolvimento
 
@@ -26,7 +30,10 @@ Front-End Agenda Aniversariantes
 - [ok] Typescript
 - [ok] styled-Components
 - [ok] React
-- [ok]
+- [?]
+- [?]
+- [?]
+- [?]
 
 ---
 
