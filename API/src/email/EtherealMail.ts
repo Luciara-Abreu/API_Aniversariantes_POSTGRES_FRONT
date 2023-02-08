@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer'
 import { ISendMail } from 'src/interfaces/IEmail'
 import HandlebarTemplate from './HandlebarTemplate'
 class EtherealEmail {
-  static async sendEmail({ to, from, subject, templateData }: ISendMail): Promise<void> {
+  static async  sendMail({ to, from, subject, templateData }: ISendMail): Promise<void> {
     const account = await nodemailer.createTestAccount()
 
     const mailTemplate = new HandlebarTemplate()
@@ -20,8 +20,8 @@ class EtherealEmail {
 
     const message = await transporter.sendMail({
       from: {
-        name: from?.name || 'Equipe API Vendas',
-        address: from?.email || 'equipe@apivendas.com.br',
+        name: from?.name || 'Equipe API Aniversariantes',
+        address: from?.email || 'equipe@apianiversariantes.com.br',
       },
       to: {
         name: to.name,

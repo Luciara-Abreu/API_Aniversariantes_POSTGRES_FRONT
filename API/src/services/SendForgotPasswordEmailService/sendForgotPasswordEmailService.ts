@@ -1,7 +1,8 @@
 import AppError from '@shared/errors/AppError'
 import admRepository from 'src/repositories/AdmRepository'
 import admTokenRepository from 'src/repositories/AdmTokenRepository'
-import EtherealEmail from 'src/email/EtherealMail'
+import EtherealMail from 'src/email/EtherealMail'
+import path, { resolve } from 'path'
 
 interface IAdmType {
   email: string
@@ -16,23 +17,23 @@ class SendForgotPasswordEmailService {
     if (!adm) {
       throw new AppError('Adm does not found 👻')
     }
-    const salveAdm = admRepository.create({
-      email,
-    })
 
     const { token } = await admTokenRepository.generete(adm.id)
-    //console.log(token)
-    await EtherealEmail.sendEmail({
+
+    //const forgotResetPassword = path.resolve(__dirname, '..', '..', 'views', 'forgot_password.hbs')
+    const forgotResetPassword = resolve(`src/views/forgot_password.hbs`)
+
+    await EtherealMail.sendMail({
       to: {
         name: adm.name,
         email: adm.email,
       },
       subject: '[API ANIVERSARIANTES] Recuperação de senha',
       templateData: {
-        file: `Olá {{name}}, Para redefinir sua senha use esse código => {{token}}`,
+        file: forgotResetPassword,
         variables: {
           name: adm.name,
-          token: token,
+          link: `http://localhost:8081/reset?token=${token}`,
         },
       },
     })
