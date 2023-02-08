@@ -28,14 +28,14 @@ Front-End Agenda Aniversariantes
 ----------------------------------------------------------------------------
 A aplicação terá.:
 
-Página de dashboard com os aniversariantes do da semana.
-Terá uma pagina com consulta de aniversariante do Mês.
-Terá uma págica com a busca de aniversarante pelo nome onde poderemos enviar uma mensagem de felicitação que deverá chegar ou our e-mail ou no whatsApp do aniversariante.
-Terá a página de cadastro,
-Terá a página de login para adiministrador,
-Terá a página de recuperação de senha para adiministrador.
-terá a página de cadastro de administrador
-Terá a página de cadastro de aniversariantes.
+* Página de dashboard com os aniversariantes do da semana.
+* Terá uma pagina com consulta de aniversariante do Mês.
+* Terá uma págica com a busca de aniversarante pelo nome onde poderemos enviar uma mensagem de felicitação que deverá chegar ou our e-mail ou no whatsApp do aniversariante.
+* Terá a página de login para adiministrador,
+* Terá a página de recuperação de senha para adiministrador.
+* terá a página de cadastro de administrador
+* Terá a página de cadastro de aniversariantes
+* Terá a página de alteração de dados dos aniversariantes ou exclusão de dados.
 
 
 
