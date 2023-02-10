@@ -1,7 +1,13 @@
 import IUserType from './IUser'
 
-interface IAdmType extends IUserType {
+interface IAdmTypeUndefined extends IUserType {
+  id?: string
   password?: string
+  old_password?: string
+}
+interface IAdmType extends IUserType {
+  id?: string
+  password: string
   old_password?: string
 }
 
