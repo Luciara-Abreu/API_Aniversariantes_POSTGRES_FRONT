@@ -4,31 +4,13 @@ import Adm from 'src/entities/AdmEntity'
 import IAdmType from 'src/interfaces/IAdm'
 import { compare, hash } from 'bcryptjs'
 
-
-class UpdateUserService {
-  public async execute({ id, name, birthDate, sexualOrientation, email, lastEmail, fone, avatar, password, old_password }: IAdmType): Promise<Adm | undefined> {
+class UpdateAdmService {
+  public async execute({ id, name, birthDate, sexualOrientation, email, lastEmail, fone, avatar, password }: IAdmType): Promise<Adm> {
     const adm = await admRepository.findOneBy({ id })
 
-    if (!adm) {
-      throw new AppError('adm not found 👻')
-    }
+    console.log(adm)
 
-    const admUpdateEmail = await admRepository.findByEmail(email)
-
-    if (admUpdateEmail && admUpdateEmail.id !== id) {
-      throw new AppError('There is already onde user this email')
-    }
-    if (password && !old_password) {
-      throw new AppError('Old password is required')
-    }
-    if(password && old_password){
-      const checkOldPassword = await compare(old_password, adm.password)
-
-      if(checkOldPassword){
-        throw new AppError('Old password does not match')
-      }
-      adm.password = await hash(password, 8)
-    }
+    if (adm) {
       adm.name = name
       adm.birthDate = birthDate
       adm.sexualOrientation = sexualOrientation
@@ -36,11 +18,15 @@ class UpdateUserService {
       adm.lastEmail = lastEmail
       adm.fone = fone
       adm.avatar = avatar
+      adm.password = password
 
       await admRepository.save(adm)
       console.log(`adm atualizado com sucesso!`)
+    } else {
+      throw new AppError('adm not found 👻')
+    }
 
     return adm
   }
 }
-export default UpdateUserService
+export default UpdateAdmService
