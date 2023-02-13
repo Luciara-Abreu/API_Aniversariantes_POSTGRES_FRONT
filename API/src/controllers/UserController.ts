@@ -31,7 +31,6 @@ class UserController {
   async listAllAnivers(req: Request, res: Response) {
     const listUsers = new ListAllUserService()
     const showUsers = await listUsers.execute()
-    //console.log('Quem solicitou a lista de usuários na requisição????====> ', req.adm)
     return res.json(showUsers)
   }
 

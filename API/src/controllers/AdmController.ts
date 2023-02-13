@@ -36,7 +36,7 @@ class AdmController {
   }
 
   async updateAdm(req: Request, res: Response): Promise<Response> {
-    const { name, birthDate, sexualOrientation, email, lastEmail, fone, avatar, password, old_password } = req.body
+    const { name, birthDate, sexualOrientation, email, lastEmail, fone, avatar, password } = req.body
     const { id } = req.params
 
     const admForUpdate = new UpdateAdmService()
@@ -49,8 +49,7 @@ class AdmController {
       lastEmail,
       fone,
       avatar,
-      password,
-      old_password
+      password
     })
     return res.json(thisAdm)
   }
