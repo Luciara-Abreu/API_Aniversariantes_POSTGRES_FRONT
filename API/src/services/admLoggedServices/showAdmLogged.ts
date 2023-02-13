@@ -1,4 +1,4 @@
-import admRepository from '@modules/repositories/AdmRepository'
+import admRepository from 'src/repositories/AdmRepository'
 import AppError from '@shared/errors/AppError'
 import Adm from 'src/entities/AdmEntity'
 
