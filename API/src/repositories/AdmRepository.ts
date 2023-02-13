@@ -1,4 +1,4 @@
-import AppError from '@shared/errors/AppError';
+import AppError from '@shared/errors/AppError'
 import AppDataSource from 'src/config/data-source'
 import Adm from 'src/entities/AdmEntity'
 
@@ -14,18 +14,7 @@ const AdmRepository = AppDataSource.getRepository(Adm).extend({
     }
     return adm
   },
-  async findByNameAndDate(name: string, birthDate: Date): Promise<Adm | undefined> {
-    const adm = await this.findOne({
-      where: {
-        name,
-        birthDate,
-      },
-    })
-    if (!adm) {
-      throw new AppError('Adm does not exist')
-    }
-    return adm
-  },
+
   async findByEmail(email: string): Promise<Adm | undefined> {
     const adm = await this.findOne({
       where: {
@@ -48,15 +37,14 @@ const AdmRepository = AppDataSource.getRepository(Adm).extend({
     }
     return adm
   },
-  async findById(id: string): Promise<Adm | undefined> {
-    const adm = await this.findOne({
-      where: {
-        id,
-      },
-    })
+
+  async findById(id: string): Promise<Adm> {
+    const adm = await this.findOneBy({ id })
+
     if (!adm) {
       throw new AppError('Adm does not exist')
     }
+
     return adm
   },
 })
