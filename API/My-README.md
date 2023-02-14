@@ -1,8 +1,9 @@
--------------------------------------------------------------------------------
+---
 
 Construindo uma API Restful de Agenda de Aniversariantes Javascript com Node.js,
 ExpressJS, Typescript, TypeORM, Postgres, Redis, etc.
--------------------------------------------------------------------------------
+
+---
 
 https://www.udemy.com/course/api-restful-de-vendas/learn/lecture/23696420#content
 criar o package json
@@ -70,65 +71,98 @@ migrations: [`${__dirname}/src/shared/entities/migrations/*.{ts,js}`]
 console.log('✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨')
 console.log('')
 
--------------------------------------------------------------------------------
+---
+
 encriptografar as senhas
 encrypt passwords with bcryptjs e também a typagem
 yarn add bcryptjs
 yarn add -D @types/bcryptjs
--------------------------------------------------------------------------------
+
+---
+
 JWT
 Criar token a partir da senha encriptofrafada
 yarn add jsonwebtoken
 yarn add -D @types/jsonwebtoken
--------------------------------------------------------------------------------
+
+---
+
 md5 - nessse site vc digita algo doido e ele cria um rash e vc add esse rash no
 segundo parametro na configuração do token com jsonwebtokeno
- https://md5decrypt.net/en/
+https://md5decrypt.net/en/
 
- -------------------------------------------------------------------------------
- ainda sobre JTW
+---
+
+ainda sobre JTW
 https://dev.to/juliecherner/authentication-with-jwt-tokens-in-typescript-with-express-3gb1
-  -------------------------------------------------------------------------------
-  agora instalar o multer para auxiliar o usuário a fazer upload da imagem do avatar.
 
-  yarn add multer
-  yarn add -D @types/multer
-  -------------------------------------------------------------------------------
- Contém itens enfatizados
- Solução.:  recarregando o VS com o comando Ctrl + shift + p e pesquisando Desenvolvedor: Recarregar janela
-  -------------------------------------------------------------------------------
-biblioteca de data e hota => https://date-fns.org/
--------------------------------------------------------------------------------
+---
+
+agora instalar o multer para auxiliar o usuário a fazer upload da imagem do avatar.
+
+yarn add multer
+yarn add -D @types/multer
+
+---
+
+Contém itens enfatizados
+Solução.: recarregando o VS com o comando Ctrl + shift + p e pesquisando Desenvolvedor: Recarregar janela
+
+---
+
+## biblioteca de data e hota => https://date-fns.org/
+
 enviar e-mails para uma caixa de entrada fake para teste de envios de e-mail
 https://ethereal.email/
- yarn add nodemailer
- yarn add -D @types/nodemailer
- -------------------------------------------------------------------------------
- Usaremos o handlebar para criar um tamplete bunitinho para o reset de senha.
- https://handlebarsjs.com/
+yarn add nodemailer
+yarn add -D @types/nodemailer
 
- -------------------------------------------------------------------------------
+---
 
- -------------------------------------------------------------------------------
+Usaremos o handlebar para criar um tamplete bunitinho para o reset de senha.
+https://handlebarsjs.com/
 
- -------------------------------------------------------------------------------
+---
 
- -------------------------------------------------------------------------------
+\***\* No repositório
+async findByName(name: string): Promise<Adm | null> {
+/**
 
- -------------------------------------------------------------------------------
+- Desta forma ele trás todo objeto e complica para fazer validações.
+  const adm = await this.findOne({
+  where: {
+  name,
+  },
+  })
+  \*/
+  const adm = await this.findOneBy({ name }) // Desta trás apenas o name
+  return adm
+  },
 
- -------------------------------------------------------------------------------
+---
+    /* Rotas de Perfil do Usuário
+    Se eu for atualizar apenas o nome e email, coloco apenas esses dois campos, mas se for
+    atualizar a senha, tenho que colocar nome, email, a senha nova e a antiga e tbm a confirmação.
+      "old_password": "123456",
+      "password": "123456",
+      "password_confirmation": "123456"
+    */
+---
 
- -------------------------------------------------------------------------------
+---
 
- -------------------------------------------------------------------------------
+---
 
- -------------------------------------------------------------------------------
+---
 
- -------------------------------------------------------------------------------
+---
 
- -------------------------------------------------------------------------------
+---
 
- -------------------------------------------------------------------------------
+---
 
+---
 
+---
+
+---
