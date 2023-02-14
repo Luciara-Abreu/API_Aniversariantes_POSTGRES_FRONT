@@ -8,7 +8,8 @@ interface IRequest {
 
 class ShowProfileService {
   public async execute({ id }: IRequest): Promise<Adm> {
-    const adm = await admRepository.findOneBy({ id })
+    //const adm = await admRepository.findOneBy({ id })
+    const adm = await admRepository.findById(id)
     console.log('ADM LOGADO ===> ', adm)
     if (!adm) {
       throw new AppError('Adm not found.')
