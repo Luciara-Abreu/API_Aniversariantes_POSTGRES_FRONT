@@ -4,11 +4,15 @@ import Adm from 'src/entities/AdmEntity'
 
 const AdmRepository = AppDataSource.getRepository(Adm).extend({
   async findByName(name: string): Promise<Adm | undefined> {
-    const adm = await this.findOne({
+    /**
+ * Desta forma ele trás todo objeto e complica para fazer validações.
+  const adm = await this.findOne({
       where: {
         name,
       },
     })
+  */
+    const adm = await this.findOneBy({ name })
     if (!adm) {
       throw new AppError('Adm does not exist')
     }
@@ -16,22 +20,15 @@ const AdmRepository = AppDataSource.getRepository(Adm).extend({
   },
 
   async findByEmail(email: string): Promise<Adm | undefined> {
-    const adm = await this.findOne({
-      where: {
-        email,
-      },
-    })
+    const adm = await this.findOneBy({ email })
     if (!adm) {
       throw new AppError('Adm does not exist')
     }
     return adm
   },
+
   async findBybirthDate(birthDate: Date): Promise<Adm | undefined> {
-    const adm = await this.findOne({
-      where: {
-        birthDate,
-      },
-    })
+    const adm = await this.findOneBy({ birthDate })
     if (!adm) {
       throw new AppError('Adm does not exist')
     }
