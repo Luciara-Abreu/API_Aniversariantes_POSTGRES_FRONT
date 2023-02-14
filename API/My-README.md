@@ -1,10 +1,10 @@
---- ****************************************************************************
-
+--- ************************************\*\*\*\*************************************
+🟡
 Construindo uma API Restful de Agenda de Aniversariantes Javascript com Node.js,
 ExpressJS, Typescript, TypeORM, Postgres, Redis, etc.
 
---- ****************************************************************************
-
+--- ************************************\*\*\*\*************************************
+🟡
 https://www.udemy.com/course/api-restful-de-vendas/learn/lecture/23696420#content
 criar o package json
 [ok] yarn init -y
@@ -35,10 +35,28 @@ yarn add prettier -D
 [ok] yarn add express cors express-async-errors
 [ok] yarn add -D @types/express @types/cors
 
--- Configuração diferente do typeorm atulizado
+--- ************************************\*\*\*\*************************************
+🟡 -- Configuração diferente do typeorm atulizado - com Guido Cerqueira
 https://typeorm.io/migrations
 [ok] https://www.youtube.com/watch?v=j8cm2C5-xn8
 
+Repositório do projeto: https://github.com/guidocerqueira/api...
+
+00:00 - Introdução
+01:49 - Configuração do projeto com o TypeScript
+13:20 - Configuração do TypeORM
+21:08 - Configuração do Express.js
+26:50 - Criando entidades
+39:55 - Gerando migrations automáticas
+51:09 - Criando mais entidades (Relacionamento N:N)
+01:02:11 - Criando controladores e repositórios
+01:20:20 - Cadastro com relacionamentos
+01:29:56 - Buscando registros com TypeORM
+01:50:25 - Listagem de registros com TypeORM
+
+
+--- ************************************\*\*\*\*************************************
+🟡
 -- Configurando o docker - Docker no Windows 10 - Corrigindo o Erro WSL 2
 [ok] https://www.youtube.com/watch?v=I1bOOV2CJM8
 
@@ -71,44 +89,45 @@ migrations: [`${__dirname}/src/shared/entities/migrations/*.{ts,js}`]
 console.log('✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨')
 console.log('')
 
---- ****************************************************************************
-
+--- ************************************\*\*\*\*************************************
+🟡
 encriptografar as senhas
 encrypt passwords with bcryptjs e também a typagem
 yarn add bcryptjs
 yarn add -D @types/bcryptjs
 
---- ****************************************************************************
-
+--- ************************************\*\*\*\*************************************
+🟡
 JWT
 Criar token a partir da senha encriptofrafada
 yarn add jsonwebtoken
 yarn add -D @types/jsonwebtoken
 
---- ****************************************************************************
-
+--- ************************************\*\*\*\*************************************
+🟡
 md5 - nessse site vc digita algo doido e ele cria um rash e vc add esse rash no
 segundo parametro na configuração do token com jsonwebtokeno
 https://md5decrypt.net/en/
 
---- ****************************************************************************
-
+--- ************************************\*\*\*\*************************************
+🟡
 ainda sobre JTW
 https://dev.to/juliecherner/authentication-with-jwt-tokens-in-typescript-with-express-3gb1
 
---- ****************************************************************************
-
+--- ************************************\*\*\*\*************************************
+🟡
 agora instalar o multer para auxiliar o usuário a fazer upload da imagem do avatar.
 
 yarn add multer
 yarn add -D @types/multer
 
---- ****************************************************************************
-
+--- ************************************\*\*\*\*************************************
+🟡
 Contém itens enfatizados
 Solução.: recarregando o VS com o comando Ctrl + shift + p e pesquisando Desenvolvedor: Recarregar janela
 
---- ****************************************************************************
+--- ************************************\*\*\*\*************************************
+🟡
 
 ## biblioteca de data e hota => https://date-fns.org/
 
@@ -117,12 +136,13 @@ https://ethereal.email/
 yarn add nodemailer
 yarn add -D @types/nodemailer
 
---- ****************************************************************************
+--- ************************************\*\*\*\*************************************
 
 Usaremos o handlebar para criar um tamplete bunitinho para o reset de senha.
 https://handlebarsjs.com/
 
---- ****************************************************************************
+--- ************************************\*\*\*\*************************************
+🟡
 
 \***\* No repositório
 async findByName(name: string): Promise<Adm | null> {
@@ -139,30 +159,56 @@ async findByName(name: string): Promise<Adm | null> {
   return adm
   },
 
---- ****************************************************************************
-    /* Rotas de Perfil do Usuário
-    Se eu for atualizar apenas o nome e email, coloco apenas esses dois campos, mas se for
-    atualizar a senha, tenho que colocar nome, email, a senha nova e a antiga e tbm a confirmação.
-      "old_password": "123456",
-      "password": "123456",
-      "password_confirmation": "123456"
-    */
---- ****************************************************************************
--- Modulo 09 de criação de recursos do módulo custmers( clientes) eu nõa vou usar.
---- ****************************************************************************
+--- ************************************\*\*\*\*************************************
+🟡
+/_ Rotas de Perfil do Usuário
+Se eu for atualizar apenas o nome e email, coloco apenas esses dois campos, mas se for
+atualizar a senha, tenho que colocar nome, email, a senha nova e a antiga e tbm a confirmação.
+"old_password": "123456",
+"password": "123456",
+"password_confirmation": "123456"
+_/
+--- ************************************\*\*\*\*************************************
+🟡 Modulo 09 de criação de recursos do módulo custmers( clientes) eu nõa vou usar.
+🟡 Modulo 11 de criação de recursos do módulo custmers( Pedidos de compras) eu nõa vou usar.
+--- ************************************\*\*\*\*************************************
+🟡 Modulo 12 - implementar paginação com typeORM
+https://typeorm.io/select-query-builder#using-pagination
+--- ************************************\*\*\*\*************************************
+🟡
 
---- ****************************************************************************
+--- ************************************\*\*\*\*************************************
+🟡
 
---- ****************************************************************************
+--- ************************************\*\*\*\*************************************
+🟡
 
---- ****************************************************************************
+--- ************************************\*\*\*\*************************************
+🟡
 
---- ****************************************************************************
+--- ************************************\*\*\*\*************************************
+🟡
 
---- ****************************************************************************
+--- ************************************\*\*\*\*************************************
+🟡
 
---- ****************************************************************************
+--- ************************************\*\*\*\*************************************
+🟡
 
---- ****************************************************************************
+--- ************************************\*\*\*\*************************************
+🟡
 
---- ****************************************************************************
+--- ************************************\*\*\*\*************************************
+🟡
+
+--- ************************************\*\*\*\*************************************
+🟡
+
+--- ************************************\*\*\*\*************************************
+🟡
+
+--- ************************************\*\*\*\*************************************
+🟡
+
+--- ************************************\*\*\*\*************************************
+🟡

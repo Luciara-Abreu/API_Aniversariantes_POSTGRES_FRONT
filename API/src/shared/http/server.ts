@@ -2,6 +2,7 @@ import 'reflect-metadata'
 import express, { NextFunction, Request, Response } from 'express'
 import 'express-async-errors'
 import { errors } from 'celebrate'
+import { pagination } from 'typeorm-pagination'
 import cors from 'cors'
 import RouteUser from 'src/routes/UserRoute'
 import RouteAdm from 'src/routes/AdmRoute'
@@ -16,6 +17,7 @@ import RouteAdmLogged from 'src/routes/AdmLoggedRoute'
 const app = express()
 app.use(cors())
 app.use(express.json())
+app.use(pagination)
 app.use(errors())
 
 app.use(RouteUser)
