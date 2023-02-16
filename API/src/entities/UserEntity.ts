@@ -31,10 +31,13 @@ class User {
   @UpdateDateColumn()
   updated_at: Date
 
-  @OneToMany(() => Post, post => post.user)
+  /*@OneToMany(() => Post, post => post.user)
+  posts: Post[]*/
+
+  @OneToMany(() => User, user => user.posts)
   posts: Post[]
 
-  @OneToOne(() => Avatar, avatar => avatar.user)
+  @OneToOne(() => User, user => user.avatars)
   avatars: Avatar
   admTokens: any
 }
