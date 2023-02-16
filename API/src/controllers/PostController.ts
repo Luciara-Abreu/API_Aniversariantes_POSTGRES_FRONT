@@ -25,7 +25,7 @@ class PostController {
     const thisPost = await showPost.execute({ id })
     return res.json(thisPost)
   }
-
+//('**************************** Minha criação solita ****************************')
   public async listUserAndTheirPost(req: Request, res: Response) {
     const { id } = req.params
     const { userID } = req.body
@@ -35,11 +35,10 @@ class PostController {
       userID,
     })
     //console.log('List All post of controller = > ', thisUser)
-    //console.log('**************************** NOVA CONSULTA ****************************')
+//('**************************** Minha criação solita ****************************')
     return res.json(thisUser)
   }
 
-  //RoutePost.get('ListAllPosts', postController.listAllPosts)
   async listAllPosts(req: Request, res: Response) {
     const listPosts = new ListAllPostService()
     const showPosts = await listPosts.execute()
