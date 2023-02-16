@@ -12,6 +12,9 @@ class Post {
   @Column()
   content: string
 
+  @Column()
+  userID: string
+
   @CreateDateColumn()
   created_at: Date
 
