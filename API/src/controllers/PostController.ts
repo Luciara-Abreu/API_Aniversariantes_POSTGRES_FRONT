@@ -32,10 +32,11 @@ class PostController {
     const showUser = new ListAllPostOftheAUserService()
     const thisUser = await showUser.execute({
       id,
-      userID
+      userID,
     })
-    console.log('List All post of controller = > ',thisUser)
-    return thisUser
+    //console.log('List All post of controller = > ', thisUser)
+    //console.log('**************************** NOVA CONSULTA ****************************')
+    return res.json(thisUser)
   }
 
   //RoutePost.get('ListAllPosts', postController.listAllPosts)
