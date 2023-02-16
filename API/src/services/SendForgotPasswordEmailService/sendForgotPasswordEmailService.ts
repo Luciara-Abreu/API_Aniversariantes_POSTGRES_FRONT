@@ -33,7 +33,7 @@ class SendForgotPasswordEmailService {
         file: forgotResetPassword,
         variables: {
           name: adm.name,
-          link: `http://localhost:8081/reset?token=${token}`,
+          link: `${process.env.APP_WEB_URL}/reset?token=${token}`,
         },
       },
     })
