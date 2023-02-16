@@ -9,7 +9,8 @@ const RouteAvatar = express()
 const avatarController = new AvatarController()
 const upload = multer(uploadConfig)
 
-console.log('********* Rotas de Avatar *************')
+console.log('************ Rotas de Avatar **********************')
+
 
 RouteAvatar.patch('/avatar', isAuthenticated, upload.single('avatar'), avatarController.updateAvatar)
 
