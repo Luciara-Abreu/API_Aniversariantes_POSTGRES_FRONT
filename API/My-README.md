@@ -175,7 +175,9 @@ _/
 🟡 Modulo 12 - implementar paginação com typeORM
 https://typeorm.io/select-query-builder#using-pagination
 --- ************************************\*\*\*\*************************************
-🟡
+🟡 Paginação = > trás os 10 usuários e suas mensagens de aniversário.
+const user = await userRepository.createQueryBuilder('user').leftJoinAndSelect('user.posts', 'posts').take(10).getMany()
+
 
 --- ************************************\*\*\*\*************************************
 🟡
