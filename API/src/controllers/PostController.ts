@@ -3,6 +3,7 @@ import CreatePostService from 'src/services/postServices/createPostService'
 import DeletePostService from 'src/services/postServices/deletePostServer'
 import ListAllPostService from 'src/services/postServices/listAllPostService'
 import ListOnePostService from 'src/services/postServices/listOnePostService'
+import ListAllPostOftheAUserService from 'src/services/postServices/listOneUserAndTheirPostsService'
 import UpdatePostService from 'src/services/postServices/UpdatePostService'
 
 class PostController {
@@ -23,6 +24,18 @@ class PostController {
     const showPost = new ListOnePostService()
     const thisPost = await showPost.execute({ id })
     return res.json(thisPost)
+  }
+
+  public async listUserAndTheirPost(req: Request, res: Response) {
+    const { id } = req.params
+    const { userID } = req.body
+    const showUser = new ListAllPostOftheAUserService()
+    const thisUser = await showUser.execute({
+      id,
+      userID
+    })
+    console.log('List All post of controller = > ',thisUser)
+    return thisUser
   }
 
   //RoutePost.get('ListAllPosts', postController.listAllPosts)

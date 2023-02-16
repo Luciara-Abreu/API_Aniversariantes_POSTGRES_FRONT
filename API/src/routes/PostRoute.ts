@@ -20,6 +20,16 @@ RoutePost.get(
   postController.listOnePost,
 )
 
+RoutePost.get(
+  '/AniverAndPost/:id',
+  celebrate({
+    [Segments.PARAMS]: {
+      id: Joi.string().required(),
+    },
+  }),
+  postController.listUserAndTheirPost,
+)
+
 RoutePost.post(
   '/AddPost',
   celebrate({
