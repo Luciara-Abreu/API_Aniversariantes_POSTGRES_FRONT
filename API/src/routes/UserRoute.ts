@@ -37,17 +37,6 @@ RouteUser.get(
   }),
   userController.listOneAniver,
 )
-
-RouteUser.get(
-  '/AniverAndPost/:id',
-  celebrate({
-    [Segments.PARAMS]: {
-      id: Joi.string().required(),
-    },
-  }),
-  userController.listUserAndTheirPost,
-)
-
 RouteUser.patch(
   '/UpdateAniver/:id',
   isAuthenticated,
