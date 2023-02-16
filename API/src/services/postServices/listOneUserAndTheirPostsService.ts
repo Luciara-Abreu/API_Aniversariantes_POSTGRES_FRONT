@@ -1,30 +1,34 @@
 import AppError from '@shared/errors/AppError'
 import postRepository from 'src/repositories/PostRepository'
-import Post from 'src/entities/PostEntity'
 import userRepository from 'src/repositories/UserRepository'
+import Post from 'src/entities/PostEntity'
+import User from 'src/entities/UserEntity'
 
 interface IRequest {
   id: string
   userID: string
 }
-/*class ListOneUserAndTheirPostService {
-  public async execute({ id }: IRequest): Promise<Post> {
-    const posts = await postRepository.findByUserID(id)
-    if (!posts) {
-      throw new AppError('Dont exist post')
-    }
-    return posts
-  }
+interface IResponse {
+  user: User
+  listPosts: Post[]
 }
-*/
 class ListAllPostOftheAUserService {
-  public async execute({ id }: IRequest): Promise<Post[]> {
+  public async execute({ id, userID }: IRequest): Promise<IResponse> {
+    const user = await userRepository.findById(id)
+    if (!user) {
+      throw new AppError('Opz!! User does not exist')
+    }
     const listPosts = await postRepository.find({
       where: {
         userID: id,
       },
     })
-    return listPosts
+    const showList = {
+      user,
+      listPosts,
+    }
+
+    return showList
   }
 }
 
