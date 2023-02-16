@@ -6,7 +6,8 @@ import isAuthenticated from 'src/middlewares/AuthMiddleware/isAuthenticated'
 const RouteAvatar = express()
 const avatarController = new AvatarController()
 
-console.log('********** Rotas de Avatar **************')
+console.log('************* Rotas de Avatar *********************')
+
 
 RouteAvatar.post(
   '/AddAvatar',

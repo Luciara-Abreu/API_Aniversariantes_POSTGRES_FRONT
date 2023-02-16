@@ -7,10 +7,9 @@ const RouteUser = express()
 const userController = new UserController()
 
 console.log('')
-console.log('----------------------------------------')
-
-console.log('********** Rotas de User ***************')
-RouteUser.get('/ListAllAnivers',isAuthenticated, userController.listAllAnivers)
+console.log('---------------------------------------------------')
+console.log('************* Rotas de User ***********************')
+RouteUser.get('/ListAllAnivers', isAuthenticated, userController.listAllAnivers)
 
 RouteUser.post(
   '/AddAniver',
@@ -37,6 +36,16 @@ RouteUser.get(
     },
   }),
   userController.listOneAniver,
+)
+
+RouteUser.get(
+  '/AniverAndPost/:id',
+  celebrate({
+    [Segments.PARAMS]: {
+      id: Joi.string().required(),
+    },
+  }),
+  userController.listUserAndTheirPost,
 )
 
 RouteUser.patch(
