@@ -9,17 +9,11 @@ const postRepository = AppDataSource.getRepository(Post).extend({
     })
     if (!list) {
       throw new AppError('Repository-> Dont exist post for user')
-    } else {
-      console.log('Repository userID-> ', list)
-    }
+    } 
     return list
   },
 })
 
 export default postRepository
 
-/*const post = await this.findOne({
-      relations: {
-        user: true,
-      },
-    })*/
+
