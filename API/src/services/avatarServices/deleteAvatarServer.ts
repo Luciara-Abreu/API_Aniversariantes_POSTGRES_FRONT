@@ -9,7 +9,7 @@ class DeleteAvatarService {
     const avatar = await avatarRepository.findOneBy({ id })
     if (avatar) {
       await avatarRepository.remove(avatar)
-      console.log(`post ${avatar} deletado com sucesso!`)
+      console.log(`Avatar ${avatar} deletado com sucesso!`)
     } else {
       throw new AppError('Avatar not found 👻')
     }

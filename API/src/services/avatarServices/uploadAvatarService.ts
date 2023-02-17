@@ -8,7 +8,7 @@ import fs from 'fs'
 
 class UpdateAvatar {
   public async execute({ id, avatarFilename }: IAvatarType): Promise<Adm> {
-    const adm = await admRepository.findOneBy({ id })
+    const adm = await admRepository.findById( id )
     if (!adm) {
       throw new AppError('User not found')
     }
@@ -20,7 +20,7 @@ class UpdateAvatar {
         await fs.promises.unlink(admAvatarFilePath)
       }
     }
-    adm.avatar = avatarFilename
+    adm = avatarFilename
     await admRepository.save(adm)
     return adm
   }

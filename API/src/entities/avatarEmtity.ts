@@ -1,6 +1,5 @@
-import { ByteLengthQueuingStrategy } from 'node:stream/web'
-import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
-import User from './UserEntity'
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToOne, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
+import Adm from './AdmEntity'
 
 @Entity('avatars')
 class Avatar {
@@ -10,14 +9,17 @@ class Avatar {
   @Column({ type: 'text' })
   avatar: string
 
+  @Column({ type: 'varchar' })
+  admID: string
+
   @CreateDateColumn()
   created_at: Date
 
   @UpdateDateColumn()
   updated_at: Date
 
-  @ManyToOne(() => User, user => user.avatars)
-  @JoinColumn({ name: 'userID' })
-  user: User
+  @ManyToOne(() => Adm, adm => adm.avatar)
+  @JoinColumn({ name: 'admID' })
+  adm: Adm
 }
 export default Avatar

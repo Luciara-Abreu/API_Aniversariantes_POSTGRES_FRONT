@@ -8,13 +8,12 @@ const avatarController = new AvatarController()
 
 console.log('************* Rotas de Avatar *********************')
 
-
 RouteAvatar.post(
   '/AddAvatar',
   celebrate({
     [Segments.BODY]: {
       avatar: Joi.string(),
-      userID: Joi.string(),
+      admID: Joi.string(),
     },
   }),
   avatarController.createAvatar,
@@ -26,7 +25,6 @@ RouteAvatar.patch(
   celebrate({
     [Segments.BODY]: {
       avatar: Joi.string(),
-      userID: Joi.string(),
     },
     [Segments.PARAMS]: {
       id: Joi.string(),

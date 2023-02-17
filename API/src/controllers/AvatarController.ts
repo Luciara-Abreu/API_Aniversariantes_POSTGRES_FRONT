@@ -5,23 +5,23 @@ import UpdateAvatarService from 'src/services/avatarServices/updateAvatarService
 
 class AvatartController {
   async createAvatar(req: Request, res: Response) {
-    const { avatar, userID } = req.body
+    const { avatar, admID } = req.body
 
     const addAvatarUser = new CreateAvatarService()
     const thisAvatar = await addAvatarUser.execute({
       avatar,
-      userID,
+      admID,
     })
     return res.json(thisAvatar)
   }
 
   async updateAvatar(req: Request, res: Response) {
-    const { id } = req.params
+    const { admID } = req.params
     const { avatar } = req.body
 
     const AvatarForUpdate = new UpdateAvatarService()
     const thisAvatar = await AvatarForUpdate.execute({
-      id,
+      admID,
       avatar,
     })
     return res.json(thisAvatar)

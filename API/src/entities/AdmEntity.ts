@@ -1,13 +1,18 @@
-import { Column, Entity } from 'typeorm'
+import { Column, Entity, OneToOne } from 'typeorm'
 
 import User from './UserEntity'
-
+import { Exclude } from 'class-transformer'
+import Avatar from './avatarEmtity'
 @Entity('adms')
 class Adm extends User {
   @Column({ type: 'text' })
+  @Exclude()
   password: string
-  avatar: any
+
+  @OneToOne(() => Adm, adm => adm.avatar)
+  avatar: Avatar
 }
+
 export default Adm
 
 /**
