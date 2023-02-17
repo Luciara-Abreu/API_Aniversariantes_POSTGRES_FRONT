@@ -1,3 +1,5 @@
+---✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨
+
 [
 {
 "name": "Dinara Moura",
@@ -181,7 +183,7 @@
 }
 ]
 
----
+---✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨
 
 {
 "title": "COISAS QUE VOCÊ DEVE DEIXAR IR",
@@ -198,3 +200,36 @@
 "content": "✨Uma das lições mais tristes da história é a seguinte: Se formos enganados durante muito tempo, temos tendencia a rejeitar qualquer prova de fraude. Deixamos de estar interessados em descobrir a verdade. A fraude apanhou-nos. É demasiado doloroso reconhecer. nem que seja para nós mesmos, que fomos enganados. Uma vez que damos a um charatão poder sobre nós mesmos, quase nunca recuperamos. (-Carl Sagan) ... ❤",
 "userID": "34"
 }
+---✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨
+
+
+[
+	{
+		"name": "Eder Dias",
+		"birthDate": "1979-03-18T03:00:00.000Z",
+		"sexualOrientation": "M",
+		"email": "eder.dias@gmail.com",
+		"lastEmail": "",
+		"fone": "55 123123123",
+		"password": "123456"
+	},
+	{
+		"name": "Veranice S Dias",
+		"birthDate": "1965-06-04T00:00:00.000Z",
+		"sexualOrientation": "F",
+		"email": "veranice.sd@gmail.com",
+		"lastEmail": "-",
+		"fone": "55 483483483",
+		"password": "123456"
+	},
+	{
+		"name": "Luci Abreu",
+		"birthDate": "1993-12-22T00:00:00.000Z",
+		"sexualOrientation": "F",
+		"email": "luciara.abreu@gmail.com",
+		"lastEmail": "-",
+		"fone": "55 3333333333",
+    "password": "123456"
+	}
+]
+---✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨
