@@ -31,14 +31,8 @@ class User {
   @UpdateDateColumn()
   updated_at: Date
 
-  /*@OneToMany(() => Post, post => post.user)
-  posts: Post[]*/
-
   @OneToMany(() => User, user => user.posts)
   posts: Post[]
 
-  @OneToOne(() => User, user => user.avatars)
-  avatars: Avatar
-  admTokens: any
 }
 export default User

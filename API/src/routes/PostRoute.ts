@@ -10,6 +10,18 @@ console.log('************* Rotas de Posts **********************')
 
 RoutePost.get('/ListAllPosts', postController.listAllPosts)
 
+RoutePost.post(
+  '/AddPost',
+  celebrate({
+    [Segments.BODY]: {
+      title: Joi.string().required(),
+      content: Joi.string().required(),
+      userID: Joi.string().required(),
+    },
+  }),
+  postController.createPost,
+)
+
 RoutePost.get(
   '/ListOnePost/:id',
   celebrate({
@@ -30,17 +42,6 @@ RoutePost.get(
   postController.listUserAndTheirPost,
 )
 
-RoutePost.post(
-  '/AddPost',
-  celebrate({
-    [Segments.BODY]: {
-      title: Joi.string().required(),
-      content: Joi.string().required(),
-      userID: Joi.string().required(),
-    },
-  }),
-  postController.createPost,
-)
 
 RoutePost.patch(
   '/UpdatePost/:id',
