@@ -180,7 +180,9 @@ const user = await userRepository.createQueryBuilder('user').leftJoinAndSelect('
 
 
 --- ************************************\*\*\*\*************************************
-🟡
+🟡  Venom - bot - para enviar mensagens para WhatsApp
+ inicio da aula 27:00 - https://www.youtube.com/watch?v=uCoSzw9L0SQ'
+yarn add venom-bot
 
 --- ************************************\*\*\*\*************************************
 🟡
