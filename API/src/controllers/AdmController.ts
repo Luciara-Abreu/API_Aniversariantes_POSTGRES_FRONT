@@ -1,3 +1,4 @@
+import { instanceToPlain } from 'class-transformer'
 import { Request, Response } from 'express'
 import CreateAdmService from 'src/services/admServices/createAdmService'
 import DeleteAdmService from 'src/services/admServices/deleteAdmServer'
@@ -17,22 +18,25 @@ class AdmController {
       lastEmail,
       fone,
       avatar,
-      password
+      password,
     })
-    return res.json(thisAdm)
+    const adm = instanceToPlain(thisAdm)
+    return res.json(adm)
   }
 
   public async listOneAdm(req: Request, res: Response): Promise<Response> {
     const { id } = req.params
     const showAdm = new ListOneAdmService()
     const thisAdm = await showAdm.execute({ id })
-    return res.json(thisAdm)
+    const adm = instanceToPlain(thisAdm)
+    return res.json(adm)
   }
 
   async listAllAdm(req: Request, res: Response) {
     const listAdm = new ListAllAdmService()
     const showAdm = await listAdm.execute()
-    return res.json(showAdm)
+    const adm = instanceToPlain(showAdm)
+    return res.json(adm)
   }
 
   async updateAdm(req: Request, res: Response): Promise<Response> {
@@ -49,9 +53,10 @@ class AdmController {
       lastEmail,
       fone,
       avatar,
-      password
+      password,
     })
-    return res.json(thisAdm)
+    const adm = instanceToPlain(thisAdm)
+    return res.json(adm)
   }
 
   public async deleteAdm(request: Request, response: Response): Promise<Response> {
