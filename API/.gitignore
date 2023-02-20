@@ -1,11 +1,22 @@
 .idea/
 .vscode/
-node_modules/
+/node_modules/
+node_modules
+.node_modules/
+./build
+!.build/.keep
+.
+.lock ou .tmp
 build/
 temp/
 .env
 coverage
 ormconfig.json
+# ignore all logs
+*.log
+/tokens
+./tokens
+.tokens
 
 
 uploads/*
