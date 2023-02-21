@@ -26,6 +26,8 @@ AppDataSource.initialize()
     return app.listen(process.env.PORT, () => {
       console.log(`Connection initialized with database.  🏆 `, process.env.PORT, '🏆')
       console.log('✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨')
+      console.log('')
+      console.log('')
     })
   })
   .catch(error => console.log(error))
