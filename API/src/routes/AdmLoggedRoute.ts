@@ -6,7 +6,7 @@ import isAuthenticated from 'src/middlewares/AuthMiddleware/isAuthenticated'
 const RouteAdmLogged = express()
 const admLoggedController = new AdmLoggedController()
 
-console.log('************* Rotas de AdmLogged ******************')
+console.log('********************** Rotas de AdmLogged ******************')
 console.log('')
 console.log('✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨')
 
