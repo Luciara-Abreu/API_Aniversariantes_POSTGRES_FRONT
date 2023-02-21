@@ -5,7 +5,7 @@ import AuthController from 'src/controllers/AuthController'
 const RouteAuth = express()
 const authController = new AuthController()
 
-console.log('************* Rota de Auth ************************')
+console.log('********************** Rota de Auth ************************')
 
 RouteAuth.post(
   '/AuthAdm',

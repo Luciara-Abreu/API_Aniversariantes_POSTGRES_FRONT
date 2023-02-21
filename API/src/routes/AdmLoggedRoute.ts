@@ -8,7 +8,7 @@ const admLoggedController = new AdmLoggedController()
 
 console.log('************* Rotas de AdmLogged ******************')
 console.log('')
-console.log('✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨')
+console.log('✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨')
 
 RouteAdmLogged.get(
   '/Show/',

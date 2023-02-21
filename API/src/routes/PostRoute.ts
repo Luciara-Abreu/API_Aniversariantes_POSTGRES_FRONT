@@ -6,7 +6,7 @@ import isAuthenticated from 'src/middlewares/AuthMiddleware/isAuthenticated'
 const RoutePost = express()
 const postController = new PostController()
 
-console.log('************* Rotas de Posts **********************')
+console.log('********************** Rotas de Posts **********************')
 
 RoutePost.get('/ListAllPosts', postController.listAllPosts)
 

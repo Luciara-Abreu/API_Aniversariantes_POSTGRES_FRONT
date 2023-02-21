@@ -24,10 +24,8 @@ const AppDataSource = new DataSource({
 AppDataSource.initialize()
   .then(() => {
     return app.listen(process.env.PORT, () => {
-      console.log('')
-      console.log('✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨')
-      console.log(`Connection initialized with database.  🏆 `, process.env.PORT, '🏆')
-      console.log('✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨')
+      console.log(`✨ 🏆 Connection initialized with database. 🏆 `, process.env.PORT, '🏆   ✨')
+      console.log('✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨')
       console.log('')
     })
   })

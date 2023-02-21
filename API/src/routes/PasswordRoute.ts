@@ -7,7 +7,7 @@ const RoutePassword = express()
 const forgotPasswordController = new ForgotPasswordController()
 const resetPasswordController = new ResetPasswordController()
 
-console.log('************* Rota de RoutePassword ***************')
+console.log('********************** Rota de RoutePassword ***************')
 
 RoutePassword.post(
   '/forgot',
