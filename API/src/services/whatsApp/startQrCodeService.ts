@@ -7,8 +7,6 @@ interface QRCode {
 }
 
 class StartQrCodeService {
-  private client: Whatsapp
-
   constructor() {
     this.initialize()
   }
