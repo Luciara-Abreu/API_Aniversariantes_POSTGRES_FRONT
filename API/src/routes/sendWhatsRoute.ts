@@ -16,8 +16,8 @@ RouteSendWhats.get('/Start', startController.StartQrCode)
 
 RouteSendWhats.post('/Send', async (req: Request, res: Response) => {
   const { number, message } = req.body
-  const sendWhats = sender.sendText({ number, message })
-  return res.json(sendWhats)
+  sender.sendText({ number, message })
+  return res.status(200).json('Mensagem enviada com Sucesso!')
 })
 
 export default RouteSendWhats
