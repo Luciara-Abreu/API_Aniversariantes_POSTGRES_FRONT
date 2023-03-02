@@ -9,8 +9,8 @@ class CreateUserService {
     if (emailExist) {
       throw new AppError('Email adress alread used 🤪')
     }
-    const userExist = await userRepository.findByNameAndDate(name, birthDate)
-    if (userExist) {
+    const nameExist = await userRepository.findByName(name)
+    if (nameExist) {
       throw new AppError('User alread exist with this data 🤪')
     }
     const salveUser = userRepository.create({
