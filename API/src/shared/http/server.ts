@@ -13,12 +13,16 @@ import RouteAvatar from 'src/routes/AvatarRoute'
 //import uploadConfig from '@config/upload'
 import RoutePassword from 'src/routes/PasswordRoute'
 import RouteAdmLogged from 'src/routes/AdmLoggedRoute'
+import RouteSendWhats from 'src/routes/sendWhatsRoute'
 
 const app = express()
 app.use(cors())
 app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
 app.use(pagination)
 app.use(errors())
+app.set('views enginie', 'ejs')
+app.use(express.static(__dirname + '/API/src/images/'))
 
 app.use(RouteUser)
 app.use(RouteAdm)
@@ -27,6 +31,7 @@ app.use(RouteAuth)
 app.use(RouteAvatar)
 app.use(RoutePassword)
 app.use(RouteAdmLogged)
+app.use(RouteSendWhats)
 //app.use('/files', express.static(uploadConfig.directory))
 
 //middleware
@@ -45,7 +50,8 @@ app.use((error: Error, request: Request, response: Response, next: NextFunction)
 })
 
 app.listen(8081, () => {
-  console.log('✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨')
-  console.log(`Server started on port ............... 🏆  8081 🏆 `)
-  console.log('---------------------------------------------------')
+  console.log('')
+  console.log('✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨✨')
+  console.log(`✨ 🏆 Server started on port .............. 🏆  8081 🏆   ✨`)
+  console.log('✨   --------------------------------------------------   ✨')
 })
